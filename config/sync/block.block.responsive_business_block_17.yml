@@ -1,0 +1,30 @@
+uuid: 867259f9-8512-4ac5-94e2-289a6b56e093
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1be2a384-8bbd-4941-ac10-c4d0104ccef8'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: responsive_business_block_17
+theme: bartik
+region: content
+weight: -24
+provider: null
+plugin: 'block_content:1be2a384-8bbd-4941-ac10-c4d0104ccef8'
+settings:
+  id: 'block_content:1be2a384-8bbd-4941-ac10-c4d0104ccef8'
+  label: 'Report a Problem'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /contact

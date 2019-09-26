@@ -1,0 +1,8 @@
+uuid: 713a49b9-a2e3-4803-8cea-1e7c311f0092
+langcode: en
+status: true
+dependencies: {  }
+id: menu-follow-us
+label: 'Follow Us'
+description: 'Social Media links'
+locked: false

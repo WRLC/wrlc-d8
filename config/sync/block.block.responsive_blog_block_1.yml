@@ -1,0 +1,30 @@
+uuid: 1a31b2d9-6333-4474-a417-1777e170d706
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:0e642e5a-20e5-4e14-8fb3-71f7ba55f576'
+  module:
+    - block_content
+    - system
+  theme:
+    - responsive_blog
+id: responsive_blog_block_1
+theme: responsive_blog
+region: ''
+weight: 0
+provider: null
+plugin: 'block_content:0e642e5a-20e5-4e14-8fb3-71f7ba55f576'
+settings:
+  id: 'block_content:0e642e5a-20e5-4e14-8fb3-71f7ba55f576'
+  label: 'The Consortium'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

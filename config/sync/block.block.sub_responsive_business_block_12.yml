@@ -1,0 +1,30 @@
+uuid: e5facd19-9344-49be-968d-bfbc3c5e45f8
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:0662bb1d-5e47-474d-8ea7-8a4d7f501bfd'
+  module:
+    - block_content
+    - system
+  theme:
+    - sub_responsive_business
+id: sub_responsive_business_block_12
+theme: sub_responsive_business
+region: ''
+weight: -34
+provider: null
+plugin: 'block_content:0662bb1d-5e47-474d-8ea7-8a4d7f501bfd'
+settings:
+  id: 'block_content:0662bb1d-5e47-474d-8ea7-8a4d7f501bfd'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /ga

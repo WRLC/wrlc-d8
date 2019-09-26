@@ -1,0 +1,30 @@
+uuid: f88fcf85-13d7-46f9-81e9-b426fbaf6c3b
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:6e02dc79-292c-4ac1-b68a-20c198ecb9fc'
+  module:
+    - block_content
+    - system
+  theme:
+    - responsive_blog
+id: responsive_blog_block_3
+theme: responsive_blog
+region: ''
+weight: 0
+provider: null
+plugin: 'block_content:6e02dc79-292c-4ac1-b68a-20c198ecb9fc'
+settings:
+  id: 'block_content:6e02dc79-292c-4ac1-b68a-20c198ecb9fc'
+  label: 'Technology and Innovation'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

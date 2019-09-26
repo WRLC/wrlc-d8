@@ -1,0 +1,30 @@
+uuid: 1206a4d1-f73d-4138-bf05-0a6038c69cb3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e6de3d78-b3a6-4e89-8444-bf3ac1ca058a'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: responsive_business_block_24
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:e6de3d78-b3a6-4e89-8444-bf3ac1ca058a'
+settings:
+  id: 'block_content:e6de3d78-b3a6-4e89-8444-bf3ac1ca058a'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /gw

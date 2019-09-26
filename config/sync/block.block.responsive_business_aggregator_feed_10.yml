@@ -1,0 +1,27 @@
+uuid: 13ab27b2-7968-4391-87f8-4d61e0f278bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - aggregator
+    - system
+  theme:
+    - bartik
+id: responsive_business_aggregator_feed_10
+theme: bartik
+region: content
+weight: -15
+provider: null
+plugin: aggregator_feed_block
+settings:
+  id: aggregator_feed_block
+  label: 'Howard University'
+  provider: aggregator
+  label_display: visible
+  block_count: 5
+  feed: '10'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /hu

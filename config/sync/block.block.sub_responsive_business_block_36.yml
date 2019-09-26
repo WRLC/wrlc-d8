@@ -1,0 +1,30 @@
+uuid: d08aa16f-f39c-4053-9bdd-31eef831ba85
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:62aadcdc-df9f-45bf-a6fb-cc1b1c66ff06'
+  module:
+    - block_content
+    - system
+  theme:
+    - sub_responsive_business
+id: sub_responsive_business_block_36
+theme: sub_responsive_business
+region: ''
+weight: -22
+provider: null
+plugin: 'block_content:62aadcdc-df9f-45bf-a6fb-cc1b1c66ff06'
+settings:
+  id: 'block_content:62aadcdc-df9f-45bf-a6fb-cc1b1c66ff06'
+  label: 'Operational Status'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

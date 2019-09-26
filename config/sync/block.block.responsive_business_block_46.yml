@@ -1,0 +1,30 @@
+uuid: 80ac88a4-c748-424b-ab1f-ac5c5a69bb05
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:73dab990-7823-4cc4-800d-fb9ba502cc63'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: responsive_business_block_46
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:73dab990-7823-4cc4-800d-fb9ba502cc63'
+settings:
+  id: 'block_content:73dab990-7823-4cc4-800d-fb9ba502cc63'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/employment\n/employment/*"
