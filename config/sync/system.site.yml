@@ -1,0 +1,14 @@
+uuid: 259657b9-419d-4474-8e64-239dea2e9a99
+name: 'Washington Research Library Consortium'
+mail: shields@wrlc.org
+slogan: ''
+page:
+  403: /
+  404: /
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

@@ -1,0 +1,18 @@
+uuid: acacbd2d-5c1a-4c3b-a493-af70f64a5a29
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.book
+id: node.book.title
+field_name: title
+entity_type: node
+bundle: book
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

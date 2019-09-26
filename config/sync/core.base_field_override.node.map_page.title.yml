@@ -1,0 +1,18 @@
+uuid: f1ab2022-491b-483f-b336-6eee3e4b455e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.map_page
+id: node.map_page.title
+field_name: title
+entity_type: node
+bundle: map_page
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

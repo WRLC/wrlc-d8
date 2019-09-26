@@ -1,0 +1,8 @@
+uuid: c6d73217-04f2-4b22-a835-860cfb46139d
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_map_page
+label: 'Map Page comment'
+target_entity_type_id: node
+description: null

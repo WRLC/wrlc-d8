@@ -1,0 +1,8 @@
+uuid: 4235f9e6-7f7e-408a-82a3-465562eabfad
+langcode: en
+status: true
+dependencies: {  }
+id: menu-google-bar
+label: 'Google Bar'
+description: ''
+locked: false

@@ -1,0 +1,24 @@
+uuid: fa78ce33-b2db-4147-a82a-fc6930331abc
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - sub_responsive_business
+id: sub_responsive_business_menu_menu_about_us
+theme: sub_responsive_business
+region: ''
+weight: -26
+provider: null
+plugin: 'system_menu_block:menu-about-us'
+settings:
+  id: broken
+  label: ''
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/mission\n/organization\n/governance\n/employment\n/history\n/membership\n/organizational-chart\n/logo\n/directions\n/benefits\n/handbook\n/handbook/*\n/privacy-statement"

@@ -1,0 +1,8 @@
+uuid: c3bd4b91-649d-42b7-a21a-24bb607a4f6f
+langcode: en
+status: true
+dependencies: {  }
+id: menu-about-us
+label: 'About WRLC'
+description: 'Menu displayed on the "About Us" page'
+locked: false

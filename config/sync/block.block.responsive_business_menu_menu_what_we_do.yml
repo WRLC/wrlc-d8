@@ -1,0 +1,24 @@
+uuid: 4d99496c-58e3-47b5-aefb-3f48c4d3c881
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bartik
+id: responsive_business_menu_menu_what_we_do
+theme: bartik
+region: content
+weight: -11
+provider: null
+plugin: 'system_menu_block:menu-what-we-do'
+settings:
+  id: broken
+  label: ''
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/collections\n/discovery\n/preservation\n/sharing"

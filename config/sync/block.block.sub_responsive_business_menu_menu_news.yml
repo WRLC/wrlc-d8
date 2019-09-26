@@ -1,0 +1,24 @@
+uuid: caa415d4-85b9-4f10-bd87-365927d140ee
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - sub_responsive_business
+id: sub_responsive_business_menu_menu_news
+theme: sub_responsive_business
+region: ''
+weight: -38
+provider: null
+plugin: 'system_menu_block:menu-news'
+settings:
+  id: broken
+  label: ''
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/newsletter\n/news"

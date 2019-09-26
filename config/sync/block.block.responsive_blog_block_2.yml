@@ -1,0 +1,30 @@
+uuid: 1c0250b2-deb7-4a9a-9009-a4cc7fc68561
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:5187e20f-72b0-4547-87d1-27ab970228ec'
+  module:
+    - block_content
+    - system
+  theme:
+    - responsive_blog
+id: responsive_blog_block_2
+theme: responsive_blog
+region: ''
+weight: 0
+provider: null
+plugin: 'block_content:5187e20f-72b0-4547-87d1-27ab970228ec'
+settings:
+  id: 'block_content:5187e20f-72b0-4547-87d1-27ab970228ec'
+  label: 'Offsite Storage'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

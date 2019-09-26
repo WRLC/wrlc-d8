@@ -1,0 +1,19 @@
+uuid: a9be6fbc-1b5b-42b4-bcfd-51dc6a106c51
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
+id: anonymous
+label: 'anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access news feeds'
+  - 'access printer-friendly version'
+  - 'access site-wide contact form'
+  - 'search content'
+  - 'use text format filtered_html'
+  - 'view simplemenu'
