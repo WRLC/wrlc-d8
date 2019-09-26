@@ -29,6 +29,7 @@
         "drupal/google_analytics": "^3.0",
         "drupal/imce": "^1.7",
         "drupal/libraries": "^3.0@alpha",
+        "drupal/php": "^1.0",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
