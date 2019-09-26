@@ -35,6 +35,7 @@ web/sites/simpletest
 ######################
 *.log
 *.sql
+*.sql.gz
 
 # OS generated files #
 ######################
