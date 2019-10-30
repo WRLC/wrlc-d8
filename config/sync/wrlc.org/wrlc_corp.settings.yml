@@ -1,0 +1,29 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 0
+  path: 'public://wrlc-logo-8.png'
+favicon:
+  use_default: 0
+  path: 'public://favicon_0.ico'
+  mimetype: image/vnd.microsoft.icon
+show_breadcrumbs: 0
+slideshow_display: 1
+slide1_head: Welcome
+slide1_desc: 'The Washington Research Library Consortium (WRLC) was established as a non-profit corporation in 1987 to support and enhance the library and information services of universities in the Washington, DC metropolitan area.'
+slide1_url: mission
+slide1_image:
+  - '143'
+slide2_head: 'Sharing Expertise'
+slide2_desc: 'The Washington Research Library Consortium represents a community of nearly 600 library experts. The WRLC develops strategies for sharing expertise and services within the consortium through a program of training and education, identifying expertise, and shared/sharing staff in order to build relationships across the consortium.'
+slide2_url: /sharing
+slide2_image:
+  - '144'
+slide3_head: 'Coordinated Collections'
+slide3_desc: 'The combined collections of The Washington Research Library Consortium total more than 12 million items . This extraordinary resource, and its ready access, is essential to enabling the success of learning and scholarship.  WRLC operates a Shared Collections Facility (SCF) that provides high-density, environmentally-controlled, retrievable storage for books, audiovisual or microform media, and archival boxes.'
+slide3_url: node/3
+slide3_image:
+  - '145'

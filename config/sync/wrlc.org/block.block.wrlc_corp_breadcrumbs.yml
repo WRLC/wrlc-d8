@@ -1,0 +1,22 @@
+uuid: 803bd891-6642-40b1-ae01-a1475dcf45aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - wrlc_corp
+_core:
+  default_config_hash: NQr0oD4xpdVUQYKiNIOzCtjpyeCQYCgNi1a4on8lyC0
+id: wrlc_corp_breadcrumbs
+theme: wrlc_corp
+region: highlighted
+weight: -9
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

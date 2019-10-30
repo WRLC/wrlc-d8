@@ -1,0 +1,31 @@
+uuid: 40a8c5bf-7a51-4cbd-ba53-4cebac326eab
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9f6a44f1-ca8b-4b14-b688-90e14688cac0'
+  module:
+    - block_content
+    - system
+  theme:
+    - wrlc_corp
+id: wrlc_corp_coordinatedcollections
+theme: wrlc_corp
+region: content
+weight: -4
+provider: null
+plugin: 'block_content:9f6a44f1-ca8b-4b14-b688-90e14688cac0'
+settings:
+  id: 'block_content:9f6a44f1-ca8b-4b14-b688-90e14688cac0'
+  label: 'Coordinated Collections'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: collections
+    negate: false
+    context_mapping: {  }

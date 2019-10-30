@@ -11,6 +11,7 @@ dependencies:
     - node.type.page
   module:
     - comment
+    - file
     - text
     - user
 _core:
@@ -30,15 +31,24 @@ content:
   comment_node_page:
     label: hidden
     type: comment_default
-    weight: 20
+    weight: 2
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
     region: content
-  links:
-    weight: 101
+  field_file:
+    type: file_default
+    weight: 1
     region: content
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
-  field_file: true
   field_tags: true

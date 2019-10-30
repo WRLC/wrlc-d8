@@ -1,0 +1,31 @@
+uuid: 7f884cd3-a25d-47cd-bb75-71c3ab96b09b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:41352f62-1d3c-43a0-96d4-d860f7b744da'
+  module:
+    - block_content
+    - system
+  theme:
+    - wrlc_corp
+id: wrlc_corp_fontpageblurb
+theme: wrlc_corp
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:41352f62-1d3c-43a0-96d4-d860f7b744da'
+settings:
+  id: 'block_content:41352f62-1d3c-43a0-96d4-d860f7b744da'
+  label: 'Font page blurb'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

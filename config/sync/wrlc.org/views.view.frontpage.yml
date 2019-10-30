@@ -30,16 +30,16 @@ display:
         options: {  }
       empty:
         area_text_custom:
-          admin_label: ''
-          content: 'No front page content has been created yet.<br/>Follow the <a target="_blank" href="https://www.drupal.org/docs/user_guide/en/index.html">User Guide</a> to start building your site.'
-          empty: true
-          field: area_text_custom
-          group_type: group
           id: area_text_custom
-          label: ''
-          relationship: none
           table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
           tokenize: false
+          content: ''
+          label: ''
           plugin_id: text_custom
         node_listing_empty:
           admin_label: ''
@@ -59,9 +59,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
           empty: true
-          title: 'Welcome to [site:name]'
+          title: 'Welcome to the [site:name]'
+          label: ''
           plugin_id: title
       exposed_form:
         type: basic
@@ -261,8 +261,8 @@ display:
       sitename_title: true
       path: rss.xml
       displays:
-        page_1: page_1
-        default: ''
+        default: '0'
+        page_1: '0'
       pager:
         type: some
         options:

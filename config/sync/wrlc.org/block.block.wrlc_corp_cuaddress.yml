@@ -1,0 +1,31 @@
+uuid: 1debe7b3-0a43-40a3-8606-a59783b936a0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b334c793-1176-4e83-adf2-471e1fbb8a09'
+  module:
+    - block_content
+    - system
+  theme:
+    - wrlc_corp
+id: wrlc_corp_cuaddress
+theme: wrlc_corp
+region: content
+weight: -12
+provider: null
+plugin: 'block_content:b334c793-1176-4e83-adf2-471e1fbb8a09'
+settings:
+  id: 'block_content:b334c793-1176-4e83-adf2-471e1fbb8a09'
+  label: 'CU Address'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /cu
+    negate: false
+    context_mapping: {  }
