@@ -1,0 +1,31 @@
+uuid: dc90f350-8f43-43b0-8e18-5c2036ca8708
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:227255b3-0760-41ba-a65b-b30a7ebbf03f'
+  module:
+    - block_content
+    - system
+  theme:
+    - wrlc_corp
+id: wrlc_corp_aulogo
+theme: wrlc_corp
+region: content_top
+weight: -8
+provider: null
+plugin: 'block_content:227255b3-0760-41ba-a65b-b30a7ebbf03f'
+settings:
+  id: 'block_content:227255b3-0760-41ba-a65b-b30a7ebbf03f'
+  label: 'AU logo'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /au
+    negate: false
+    context_mapping: {  }

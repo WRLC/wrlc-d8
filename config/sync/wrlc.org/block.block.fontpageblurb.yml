@@ -1,0 +1,31 @@
+uuid: 66efd3b2-a4a2-4f71-87e7-bc625ca768c2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:41352f62-1d3c-43a0-96d4-d860f7b744da'
+  module:
+    - block_content
+    - system
+  theme:
+    - nexus
+id: fontpageblurb
+theme: nexus
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:41352f62-1d3c-43a0-96d4-d860f7b744da'
+settings:
+  id: 'block_content:41352f62-1d3c-43a0-96d4-d860f7b744da'
+  label: 'Font page blurb'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

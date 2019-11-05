@@ -1,0 +1,31 @@
+uuid: 2bec1164-8eb9-4d25-b024-b0808bc7c31f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:73dab990-7823-4cc4-800d-fb9ba502cc63'
+  module:
+    - block_content
+    - system
+  theme:
+    - wrlc_corp
+id: wrlc_corp_benefitsfooterforemploymentposts
+theme: wrlc_corp
+region: content
+weight: -1
+provider: null
+plugin: 'block_content:73dab990-7823-4cc4-800d-fb9ba502cc63'
+settings:
+  id: 'block_content:73dab990-7823-4cc4-800d-fb9ba502cc63'
+  label: 'Benefits footer for employment posts'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/employment\r\n/employment/*"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,31 @@
+uuid: 5ea730b5-3ea5-4c55-bc40-9d64abe844aa
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:227255b3-0760-41ba-a65b-b30a7ebbf03f'
+  module:
+    - block_content
+    - system
+  theme:
+    - nexus
+id: aulogo
+theme: nexus
+region: content_top
+weight: -8
+provider: null
+plugin: 'block_content:227255b3-0760-41ba-a65b-b30a7ebbf03f'
+settings:
+  id: 'block_content:227255b3-0760-41ba-a65b-b30a7ebbf03f'
+  label: 'AU logo'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /au
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,22 @@
+uuid: 1693e260-5523-49f2-85e2-d159f014188a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - wrlc_corp
+_core:
+  default_config_hash: s_aYY5hLMsr1NWYy58YvgJ_E8n2civYXbvKYrvJbA_4
+id: wrlc_corp_content
+theme: wrlc_corp
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

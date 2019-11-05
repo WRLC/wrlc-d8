@@ -1,0 +1,31 @@
+uuid: e7610253-4256-4ae5-9825-0b723d00dc24
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:72819ea8-581c-45ca-8ae5-44c184a6db4e'
+  module:
+    - block_content
+    - system
+  theme:
+    - wrlc_corp
+id: gtaddress
+theme: wrlc_corp
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:72819ea8-581c-45ca-8ae5-44c184a6db4e'
+settings:
+  id: 'block_content:72819ea8-581c-45ca-8ae5-44c184a6db4e'
+  label: 'GT Address'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /gt
+    negate: false
+    context_mapping: {  }

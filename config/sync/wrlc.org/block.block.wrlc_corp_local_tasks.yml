@@ -1,0 +1,22 @@
+uuid: ac02f29e-55e3-4199-8def-784d1f2adda5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - wrlc_corp
+_core:
+  default_config_hash: WP75ZQbROrW2UhKukrbjizRFzKkjtpVYs1DWS8bL8oA
+id: wrlc_corp_local_tasks
+theme: wrlc_corp
+region: help
+weight: 30
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

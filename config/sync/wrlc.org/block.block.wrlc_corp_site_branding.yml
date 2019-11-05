@@ -1,0 +1,25 @@
+uuid: b61f5f44-c2b4-4fe3-9208-d7bd9026813e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - wrlc_corp
+_core:
+  default_config_hash: 32P1o_YHecHsgAQuN019rNAZ1xrWwYTqhFO0k_EG_qE
+id: wrlc_corp_site_branding
+theme: wrlc_corp
+region: header
+weight: -11
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

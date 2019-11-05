@@ -1,0 +1,27 @@
+uuid: 56d84314-df69-43ad-9a6e-4a7ccacf46c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nexus
+_core:
+  default_config_hash: _TaW9xs_AMZ323Xy33YJyVAYEBMy5JH_hOmlJbzgNnM
+id: nexus_page_title
+theme: nexus
+region: content_top
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /au
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,30 @@
+uuid: ef3aa413-c3cc-4d2b-9940-0f352d9320fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.wrlc-members
+  module:
+    - system
+  theme:
+    - wrlc_corp
+id: wrlc_corp_wrlcmembers
+theme: wrlc_corp
+region: footer_first
+weight: -9
+provider: null
+plugin: 'system_menu_block:wrlc-members'
+settings:
+  id: 'system_menu_block:wrlc-members'
+  label: 'WRLC Members'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: "/au\r\n/cu\r\n/ga\r\n/gm\r\n/gt\r\n/gw\r\n/hu\r\n/mu\r\n/dc"
+    negate: false
+    context_mapping: {  }

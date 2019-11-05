@@ -1,0 +1,27 @@
+uuid: 47606daf-ab72-4904-9a89-7d29b4d43f1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - wrlc_corp
+_core:
+  default_config_hash: 5usur55fAPabYWfM45tzAMcOLUZ4fr8Rf_bVHfBwXYo
+id: wrlc_corp_main_navigation
+theme: wrlc_corp
+region: main_navigation
+weight: -10
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }
