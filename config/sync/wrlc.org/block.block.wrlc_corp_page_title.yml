@@ -22,6 +22,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /au
+    pages: "/au\r\n/cu\r\n/ga\r\n/gt\r\n/gw\r\n/gm\r\n/hu\r\n/mu\r\n/dc\r\n/collections"
     negate: true
     context_mapping: {  }

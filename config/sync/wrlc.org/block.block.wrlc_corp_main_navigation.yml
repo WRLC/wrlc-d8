@@ -13,7 +13,7 @@ _core:
 id: wrlc_corp_main_navigation
 theme: wrlc_corp
 region: main_navigation
-weight: -10
+weight: -14
 provider: null
 plugin: 'system_menu_block:main'
 settings:

@@ -1,0 +1,17 @@
+uuid: 1d0174f3-039c-4b57-a281-b034a39042a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: home_page
+label: 'Home Page'
+code: ".node h2.title a, h1.page-title {\r\n    color: inherit;\r\n    font-size: 32px;\r\n    line-height:inherit;\r\n    font-weight: normal;\r\n    margin-bottom: 20px;\r\n    margin-top: 10px;\r\n    text-align:center;\r\n}\r\n\r\n.search-block-form {\r\n    position: absolute;\r\n    margin-top: -68px;\r\n    right: 19px;\r\n    top: -492px;\r\n    z-index: 1000;\r\n}\r\n\r\n\r\n"
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/collections"
+    negate: false
+conditions_require_all: true

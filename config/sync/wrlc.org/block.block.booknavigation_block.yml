@@ -10,7 +10,7 @@ dependencies:
 id: booknavigation_block
 theme: wrlc_corp
 region: sidebar_first
-weight: -10
+weight: -13
 provider: null
 plugin: book_navigation
 settings:

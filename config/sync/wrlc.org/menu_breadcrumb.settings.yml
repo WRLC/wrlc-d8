@@ -1,0 +1,95 @@
+determine_menu: true
+disable_admin_page: true
+append_current_page: false
+current_page_as_link: false
+stop_on_first_match: false
+append_member_page: false
+member_page_as_link: false
+remove_home: false
+add_home: true
+front_title: 0
+exclude_empty_url: false
+derived_active_trail: false
+menu_breadcrumb_menus:
+  main:
+    enabled: 1
+    weight: -10
+    taxattach: 0
+    langhandle: 0
+  menu-about-us:
+    weight: 0
+    enabled: 0
+    taxattach: 0
+    langhandle: 0
+  devel:
+    weight: 0
+    enabled: 0
+    taxattach: 0
+    langhandle: 0
+  employment:
+    weight: 0
+    enabled: 0
+    taxattach: 0
+    langhandle: 0
+  menu-follow-us:
+    weight: 0
+    enabled: 0
+    taxattach: 0
+    langhandle: 0
+  footer:
+    weight: 0
+    enabled: 0
+    taxattach: 0
+    langhandle: 0
+  menu-for-library-staff:
+    weight: 0
+    enabled: 0
+    taxattach: 0
+    langhandle: 0
+  menu-for-visitors:
+    weight: 0
+    enabled: 0
+    taxattach: 0
+    langhandle: 0
+  menu-for-wrlc-staff:
+    weight: 0
+    enabled: 0
+    taxattach: 0
+    langhandle: 0
+  menu-google-bar:
+    weight: 0
+    enabled: 0
+    taxattach: 0
+    langhandle: 0
+  admin:
+    weight: 0
+    enabled: 0
+    taxattach: 0
+    langhandle: 0
+  tools:
+    weight: 0
+    enabled: 0
+    taxattach: 0
+    langhandle: 0
+  menu-news:
+    weight: 0
+    enabled: 0
+    taxattach: 0
+    langhandle: 0
+  account:
+    weight: 0
+    enabled: 0
+    taxattach: 0
+    langhandle: 0
+  wrlc-members:
+    weight: 0
+    enabled: 0
+    taxattach: 0
+    langhandle: 0
+  menu-what-we-do:
+    weight: 0
+    enabled: 0
+    taxattach: 0
+    langhandle: 0
+_core:
+  default_config_hash: dp50LLB10ui-pYgDqHSZdREslQ7DqY71aF20tyaas6I

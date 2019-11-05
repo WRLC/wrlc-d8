@@ -8,8 +8,8 @@ dependencies:
     - wrlc_corp
 id: searchform
 theme: wrlc_corp
-region: main_navigation
-weight: -9
+region: highlighted
+weight: -12
 provider: null
 plugin: search_form_block
 settings:

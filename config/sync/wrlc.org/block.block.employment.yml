@@ -11,7 +11,7 @@ dependencies:
 id: employment
 theme: wrlc_corp
 region: sidebar_first
-weight: -9
+weight: -12
 provider: null
 plugin: 'system_menu_block:employment'
 settings:
