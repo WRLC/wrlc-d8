@@ -1,0 +1,35 @@
+uuid: cde14d90-f825-4c95-9347-b071fae63be1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+    - user
+  theme:
+    - bootstrap_subtheme
+_core:
+  default_config_hash: CcxMUXh59uGF9jT9SLxBv0S0GJJtsWh2Q1I2Al7tTB4
+id: bootstrap_subtheme_user_account_menu
+theme: bootstrap_subtheme
+region: footer
+weight: -13
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User Account Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

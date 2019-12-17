@@ -1,0 +1,20 @@
+uuid: 45f2f777-3895-4ad7-864b-5cf3c9a81c86
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - sub_responsive_business
+id: sub_responsive_business_system_main
+theme: sub_responsive_business
+region: ''
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

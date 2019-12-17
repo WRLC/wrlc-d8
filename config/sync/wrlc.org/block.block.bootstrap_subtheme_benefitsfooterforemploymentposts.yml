@@ -1,0 +1,31 @@
+uuid: ebbf0ac6-cf62-4271-99a2-fdd317840cab
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:73dab990-7823-4cc4-800d-fb9ba502cc63'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_benefitsfooterforemploymentposts
+theme: bootstrap_subtheme
+region: content
+weight: 4
+provider: null
+plugin: 'block_content:73dab990-7823-4cc4-800d-fb9ba502cc63'
+settings:
+  id: 'block_content:73dab990-7823-4cc4-800d-fb9ba502cc63'
+  label: 'Benefits footer for employment posts'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/employment\r\n/employment/*"
+    negate: false
+    context_mapping: {  }

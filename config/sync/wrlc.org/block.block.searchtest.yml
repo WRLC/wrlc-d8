@@ -1,0 +1,25 @@
+uuid: d71a75ec-2ad1-4131-9e1b-4f4eff7ef214
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:54f25840-be01-4434-829d-e81c3bafff05'
+  module:
+    - block_content
+  theme:
+    - bootstrap_subtheme
+id: searchtest
+theme: bootstrap_subtheme
+region: highlighted
+weight: -14
+provider: null
+plugin: 'block_content:54f25840-be01-4434-829d-e81c3bafff05'
+settings:
+  id: 'block_content:54f25840-be01-4434-829d-e81c3bafff05'
+  label: 'search test'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,31 @@
+uuid: 805af830-e9d1-422e-a527-02e1251c3827
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b334c793-1176-4e83-adf2-471e1fbb8a09'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_cuaddress
+theme: bootstrap_subtheme
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:b334c793-1176-4e83-adf2-471e1fbb8a09'
+settings:
+  id: 'block_content:b334c793-1176-4e83-adf2-471e1fbb8a09'
+  label: 'CU Address'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /cu
+    negate: false
+    context_mapping: {  }

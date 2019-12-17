@@ -1,0 +1,31 @@
+uuid: ad8c259a-80f3-4bce-9612-7cbf341d7e0f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:96a41aba-71e4-4f17-b5ec-d083963667ae'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_gmaddress
+theme: bootstrap_subtheme
+region: content
+weight: -4
+provider: null
+plugin: 'block_content:96a41aba-71e4-4f17-b5ec-d083963667ae'
+settings:
+  id: 'block_content:96a41aba-71e4-4f17-b5ec-d083963667ae'
+  label: 'gm address'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /gm
+    negate: false
+    context_mapping: {  }

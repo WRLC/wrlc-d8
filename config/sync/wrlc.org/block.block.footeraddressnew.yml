@@ -1,0 +1,25 @@
+uuid: d8a2a599-53f7-4392-b4be-da53ede3fcdd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0b58f2e1-dad8-4195-9ca2-93d58533315e'
+  module:
+    - block_content
+  theme:
+    - bootstrap_subtheme
+id: footeraddressnew
+theme: bootstrap_subtheme
+region: content
+weight: 6
+provider: null
+plugin: 'block_content:0b58f2e1-dad8-4195-9ca2-93d58533315e'
+settings:
+  id: 'block_content:0b58f2e1-dad8-4195-9ca2-93d58533315e'
+  label: 'Footer Address New'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,30 @@
+uuid: 3078e513-a8cf-4605-bbb4-b1444459e087
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.employment
+  module:
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_employment
+theme: bootstrap_subtheme
+region: sidebar_second
+weight: -12
+provider: null
+plugin: 'system_menu_block:employment'
+settings:
+  id: 'system_menu_block:employment'
+  label: Employment
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: "/employment\r\n/employment/*\r\n/benefits"
+    negate: false
+    context_mapping: {  }

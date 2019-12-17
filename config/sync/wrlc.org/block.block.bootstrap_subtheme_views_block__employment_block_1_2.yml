@@ -1,0 +1,30 @@
+uuid: 6d5e5be0-1bc9-4939-9afb-6c999d4ca177
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.employment
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_views_block__employment_block_1_2
+theme: bootstrap_subtheme
+region: content
+weight: 3
+provider: null
+plugin: 'views_block:employment-block_1'
+settings:
+  id: 'views_block:employment-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /employment
+    negate: false
+    context_mapping: {  }

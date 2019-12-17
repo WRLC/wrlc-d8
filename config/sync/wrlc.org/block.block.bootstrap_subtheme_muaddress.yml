@@ -1,0 +1,31 @@
+uuid: 3a107e26-5a02-4633-90ac-5ed89dc92a45
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b9161925-8968-4217-a676-9f88cd745a04'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_muaddress
+theme: bootstrap_subtheme
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:b9161925-8968-4217-a676-9f88cd745a04'
+settings:
+  id: 'block_content:b9161925-8968-4217-a676-9f88cd745a04'
+  label: 'MU address'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /mu
+    negate: false
+    context_mapping: {  }

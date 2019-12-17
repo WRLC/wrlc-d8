@@ -1,0 +1,31 @@
+uuid: 82a06d57-d30f-4637-b392-8b4ba20c3507
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:227255b3-0760-41ba-a65b-b30a7ebbf03f'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_aulogo
+theme: bootstrap_subtheme
+region: content
+weight: -12
+provider: null
+plugin: 'block_content:227255b3-0760-41ba-a65b-b30a7ebbf03f'
+settings:
+  id: 'block_content:227255b3-0760-41ba-a65b-b30a7ebbf03f'
+  label: 'AU logo'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /au
+    negate: false
+    context_mapping: {  }

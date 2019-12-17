@@ -1,0 +1,27 @@
+uuid: 2721fde0-628c-4461-bfda-1e582fd3f612
+langcode: en
+status: true
+dependencies:
+  module:
+    - book
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_booknavigation_block
+theme: bootstrap_subtheme
+region: content
+weight: -11
+provider: null
+plugin: book_navigation
+settings:
+  id: book_navigation
+  label: 'Table of Contents'
+  provider: book
+  label_display: visible
+  block_mode: 'all pages'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/handbook\r\n/handbook/*"
+    negate: false
+    context_mapping: {  }

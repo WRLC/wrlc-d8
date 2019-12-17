@@ -1,0 +1,31 @@
+uuid: 91a08713-c7bb-4bca-9436-726276f89732
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e782f4dd-8705-4032-abcd-39a764664c5c'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_membersfooterlistjson
+theme: bootstrap_subtheme
+region: content
+weight: 5
+provider: null
+plugin: 'block_content:e782f4dd-8705-4032-abcd-39a764664c5c'
+settings:
+  id: 'block_content:e782f4dd-8705-4032-abcd-39a764664c5c'
+  label: 'members footer list JSON'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/au\r\n/cu\r\n/ga\r\n/gm\r\n/gt\r\n/gw\r\n/hu\r\n/mu\r\n/dc\r\n<front>"
+    negate: false
+    context_mapping: {  }

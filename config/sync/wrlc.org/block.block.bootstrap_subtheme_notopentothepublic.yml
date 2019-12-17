@@ -1,0 +1,31 @@
+uuid: 37e34f95-7961-46a1-a3f1-2e4531f48a20
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b1731907-9a9b-491c-8cac-8a23529f3cfd'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_notopentothepublic
+theme: bootstrap_subtheme
+region: highlighted
+weight: -11
+provider: null
+plugin: 'block_content:b1731907-9a9b-491c-8cac-8a23529f3cfd'
+settings:
+  id: 'block_content:b1731907-9a9b-491c-8cac-8a23529f3cfd'
+  label: 'Not open to the public'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /directions
+    negate: false
+    context_mapping: {  }

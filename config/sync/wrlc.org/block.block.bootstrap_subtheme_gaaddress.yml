@@ -1,0 +1,31 @@
+uuid: b93d2884-104a-4374-a38f-0d17b21666ec
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0662bb1d-5e47-474d-8ea7-8a4d7f501bfd'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_gaaddress
+theme: bootstrap_subtheme
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:0662bb1d-5e47-474d-8ea7-8a4d7f501bfd'
+settings:
+  id: 'block_content:0662bb1d-5e47-474d-8ea7-8a4d7f501bfd'
+  label: 'GA Address'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /ga
+    negate: false
+    context_mapping: {  }

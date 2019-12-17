@@ -1,0 +1,31 @@
+uuid: ef8c336e-f10a-4ed1-9f17-f21766b66609
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9f6a44f1-ca8b-4b14-b688-90e14688cac0'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_coordinatedcollections
+theme: bootstrap_subtheme
+region: content
+weight: 1
+provider: null
+plugin: 'block_content:9f6a44f1-ca8b-4b14-b688-90e14688cac0'
+settings:
+  id: 'block_content:9f6a44f1-ca8b-4b14-b688-90e14688cac0'
+  label: 'Coordinated Collections'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: collections
+    negate: false
+    context_mapping: {  }

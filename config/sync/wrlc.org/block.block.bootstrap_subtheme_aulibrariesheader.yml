@@ -1,0 +1,31 @@
+uuid: 28dba312-09d6-4d2e-8640-0af8b035160b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d07c8c41-7e40-4621-8bb2-191fcb23b8ba'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_aulibrariesheader
+theme: bootstrap_subtheme
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:d07c8c41-7e40-4621-8bb2-191fcb23b8ba'
+settings:
+  id: 'block_content:d07c8c41-7e40-4621-8bb2-191fcb23b8ba'
+  label: 'AU libraries header'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /au
+    negate: false
+    context_mapping: {  }

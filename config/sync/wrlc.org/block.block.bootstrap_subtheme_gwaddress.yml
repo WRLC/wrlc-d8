@@ -1,0 +1,31 @@
+uuid: ee1b5518-c4ad-4e4a-b427-3105242d08ca
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e8f45b50-73cb-4624-a2eb-d7bca9a0f5bb'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_gwaddress
+theme: bootstrap_subtheme
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:e8f45b50-73cb-4624-a2eb-d7bca9a0f5bb'
+settings:
+  id: 'block_content:e8f45b50-73cb-4624-a2eb-d7bca9a0f5bb'
+  label: 'GW Address'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /gw
+    negate: false
+    context_mapping: {  }
