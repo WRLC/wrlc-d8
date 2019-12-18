@@ -2870,18 +2870,18 @@
     },
     {
         "name": "drupal/asset_injector",
-        "version": "2.4.0",
-        "version_normalized": "2.4.0.0",
+        "version": "2.6.0",
+        "version_normalized": "2.6.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/asset_injector.git",
-            "reference": "8.x-2.4"
+            "reference": "8.x-2.6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/asset_injector-8.x-2.4.zip",
-            "reference": "8.x-2.4",
-            "shasum": "c377e8aa7ff9a0fcb180586173540450f22c93bc"
+            "url": "https://ftp.drupal.org/files/projects/asset_injector-8.x-2.6.zip",
+            "reference": "8.x-2.6",
+            "shasum": "e861e46740c264b9313e7a52878e789f11af5ec2"
         },
         "require": {
             "drupal/core": "~8.0"
@@ -2892,8 +2892,8 @@
                 "dev-2.x": "2.x-dev"
             },
             "drupal": {
-                "version": "8.x-2.4",
-                "datestamp": "1540573084",
+                "version": "8.x-2.6",
+                "datestamp": "1575588784",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
