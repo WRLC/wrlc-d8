@@ -23,24 +23,35 @@
         "drupal/adminimal_admin_toolbar": "^1.9",
         "drupal/adminimal_theme": "^1.5",
         "drupal/asset_injector": "^2.4",
+        "drupal/authorization": "^1.0@beta",
         "drupal/better_search": "^1.4",
         "drupal/bootstrap": "^3.20",
         "drupal/bootstrap_mint": "^5.0",
         "drupal/captcha": "^1.0@beta",
         "drupal/console": "^1.0.2",
+        "drupal/content_access": "^1.0@alpha",
         "drupal/core": "^8.7.0",
         "drupal/ctools": "^3.2",
+        "drupal/draggableviews": "^1.2",
         "drupal/drupal8_zymphonies_theme": "^1.4",
         "drupal/easy_breadcrumb": "^1.12",
         "drupal/expandable_search": "^1.1",
         "drupal/fontawesome": "^2.14",
         "drupal/front": "^1.0@beta",
         "drupal/google_analytics": "^3.0",
+        "drupal/iframe": "^1.11",
         "drupal/imce": "^1.7",
+        "drupal/ldap": "^3.0@beta",
         "drupal/libraries": "^3.0@alpha",
         "drupal/menu_breadcrumb": "^1.11",
         "drupal/nexus": "^1.4",
+        "drupal/noreqnewpass": "^1.1",
+        "drupal/office_hours": "^1.2",
+        "drupal/pathauto": "^1.6",
         "drupal/php": "^1.0",
+        "drupal/realname": "^1.0@RC",
+        "drupal/view_profiles_perms": "^1.0",
+        "drupal/webform": "^5.6",
         "drush/drush": "^9.0.0",
         "tomboone/d8-scripts": "^0.1.0",
         "vlucas/phpdotenv": "^2.4",
@@ -73,10 +84,15 @@
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "@mvgit"
         ],
         "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "@mvgit"
+        ],
+        "mvgit": [
+            "( find * -type d -name .git && find * -type f -name .gitmodules ) | xargs -I{} mv {} {}_"
         ]
     },
     "extra": {
