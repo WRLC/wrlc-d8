@@ -1,0 +1,42 @@
+uuid: b5f74601-1476-48fa-af37-8fc4c474ef3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_wrlc_forms.default
+    - field.field.node.wrlc_forms.body
+    - field.field.node.wrlc_forms.comment_node_wrlc_forms
+    - field.field.node.wrlc_forms.field_tags
+    - node.type.wrlc_forms
+  module:
+    - comment
+    - text
+    - user
+id: node.wrlc_forms.default
+targetEntityType: node
+bundle: wrlc_forms
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_node_wrlc_forms:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_tags: true

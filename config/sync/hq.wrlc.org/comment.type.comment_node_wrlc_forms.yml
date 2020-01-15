@@ -1,0 +1,8 @@
+uuid: b6f3d2fd-ea5f-41b3-8db6-c5f062d4b186
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_wrlc_forms
+label: 'WRLC Forms comment'
+target_entity_type_id: node
+description: null

@@ -1,0 +1,18 @@
+uuid: bc9887e4-2584-440d-8f88-a1241885fb8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.wrlc_forms
+id: node.wrlc_forms.title
+field_name: title
+entity_type: node
+bundle: wrlc_forms
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

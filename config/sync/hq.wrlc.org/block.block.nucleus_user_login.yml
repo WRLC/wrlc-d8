@@ -1,0 +1,25 @@
+uuid: a2be399b-63d7-41df-a907-b8a7a1c37b13
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - nucleus
+id: nucleus_user_login
+theme: nucleus
+region: ''
+weight: -7
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: ''
+  provider: user
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

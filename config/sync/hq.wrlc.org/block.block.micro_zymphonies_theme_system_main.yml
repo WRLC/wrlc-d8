@@ -1,0 +1,20 @@
+uuid: 7897a881-b1bb-4b28-8e40-73e194b50809
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - micro_zymphonies_theme
+id: micro_zymphonies_theme_system_main
+theme: micro_zymphonies_theme
+region: ''
+weight: -21
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

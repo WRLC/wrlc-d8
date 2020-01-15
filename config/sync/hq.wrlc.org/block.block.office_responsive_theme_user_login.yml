@@ -1,0 +1,25 @@
+uuid: 971208c2-9de7-440c-9c1b-db4aff199519
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - office_responsive_theme
+id: office_responsive_theme_user_login
+theme: office_responsive_theme
+region: ''
+weight: -6
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: ''
+  provider: user
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

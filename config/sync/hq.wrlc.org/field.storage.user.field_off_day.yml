@@ -1,0 +1,36 @@
+uuid: 672e97a4-9245-45ba-82fc-67fa063b097a
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_off_day
+field_name: field_off_day
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Monday
+      label: Monday
+    -
+      value: Tuesday
+      label: Tuesday
+    -
+      value: Wednesday
+      label: Wednesday
+    -
+      value: Thursday
+      label: Thursday
+    -
+      value: Friday
+      label: Friday
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

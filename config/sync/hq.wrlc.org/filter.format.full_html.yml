@@ -1,0 +1,10 @@
+uuid: 035c8136-cd4d-4b7d-b81b-8900c0556fc9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: WNeK5FbcY8pXgEpbD_KgRzlF1-5PL3BJXwqaBctPTqw
+name: 'Full HTML'
+format: full_html
+weight: 1
+filters: {  }

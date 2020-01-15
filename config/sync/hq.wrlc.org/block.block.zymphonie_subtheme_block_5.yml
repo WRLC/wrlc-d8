@@ -1,0 +1,30 @@
+uuid: 2cf1e639-cac9-48e4-bf51-9c4fe2aa1c12
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:7c46f119-5804-4338-ac6f-c3f681eecd2d'
+  module:
+    - block_content
+    - system
+  theme:
+    - zymphonie_subtheme
+id: zymphonie_subtheme_block_5
+theme: zymphonie_subtheme
+region: ''
+weight: -20
+provider: null
+plugin: 'block_content:7c46f119-5804-4338-ac6f-c3f681eecd2d'
+settings:
+  id: 'block_content:7c46f119-5804-4338-ac6f-c3f681eecd2d'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,16 @@
+uuid: 2ecd1e40-1f44-419e-b55f-b7c045103ddf
+langcode: en
+status: true
+dependencies: {  }
+id: content_admin
+label: 'content admin'
+weight: 4
+is_admin: null
+permissions:
+  - 'create page content'
+  - 'delete any page content'
+  - 'delete own page content'
+  - 'edit any page content'
+  - 'edit own page content'
+  - 'use text format filtered_html'
+  - 'use text format full_html'

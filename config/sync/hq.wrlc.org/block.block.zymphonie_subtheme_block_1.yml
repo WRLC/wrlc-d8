@@ -1,0 +1,30 @@
+uuid: d34dc5af-727b-43b0-8779-222c31b7fd64
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:4e8a4489-a9dd-49e3-93a7-6de8c246428d'
+  module:
+    - block_content
+    - system
+  theme:
+    - zymphonie_subtheme
+id: zymphonie_subtheme_block_1
+theme: zymphonie_subtheme
+region: ''
+weight: -14
+provider: null
+plugin: 'block_content:4e8a4489-a9dd-49e3-93a7-6de8c246428d'
+settings:
+  id: 'block_content:4e8a4489-a9dd-49e3-93a7-6de8c246428d'
+  label: 'Quick Links'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\n/safety-disaster-handbook\n/safety-disaster-handbook/*"

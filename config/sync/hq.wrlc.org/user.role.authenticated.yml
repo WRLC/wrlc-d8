@@ -1,0 +1,26 @@
+uuid: 27433a69-2c9e-4af5-96df-bcedbcdb65a9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+id: authenticated
+label: 'authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access block refresh content'
+  - 'access comments'
+  - 'access content'
+  - 'access printer-friendly version'
+  - 'access user profiles'
+  - 'create page content'
+  - 'delete own page content'
+  - 'edit any page content'
+  - 'edit own page content'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use advanced search'
+  - 'use text format filtered_html'
+  - 'use text format full_html'

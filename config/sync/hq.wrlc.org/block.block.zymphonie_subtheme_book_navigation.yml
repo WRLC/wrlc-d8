@@ -1,0 +1,26 @@
+uuid: 455fa3cf-770c-47dd-827b-52f99f609c91
+langcode: en
+status: false
+dependencies:
+  module:
+    - book
+    - system
+  theme:
+    - zymphonie_subtheme
+id: zymphonie_subtheme_book_navigation
+theme: zymphonie_subtheme
+region: ''
+weight: 0
+provider: null
+plugin: book_navigation
+settings:
+  id: book_navigation
+  label: ''
+  provider: book
+  label_display: '0'
+  block_mode: 'book pages'
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /safety-disaster-handbook

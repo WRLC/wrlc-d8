@@ -1,0 +1,30 @@
+uuid: a98564b5-5f58-4310-9379-aa09adf37acd
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:ab801f60-2eea-4201-89a3-fe469be1913c'
+  module:
+    - block_content
+    - system
+  theme:
+    - zymphonie_subtheme
+id: zymphonie_subtheme_block_14
+theme: zymphonie_subtheme
+region: ''
+weight: -16
+provider: null
+plugin: 'block_content:ab801f60-2eea-4201-89a3-fe469be1913c'
+settings:
+  id: 'block_content:ab801f60-2eea-4201-89a3-fe469be1913c'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /metrics-monitoring

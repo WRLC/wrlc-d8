@@ -1,0 +1,30 @@
+uuid: 900c7a7e-db17-45c7-aa68-72b284aeff71
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+  module:
+    - block_content
+    - system
+  theme:
+    - nucleus
+id: nucleus_block_3
+theme: nucleus
+region: ''
+weight: -4
+provider: null
+plugin: 'block_content:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+settings:
+  id: 'block_content:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /content/twitter

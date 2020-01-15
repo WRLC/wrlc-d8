@@ -1,0 +1,25 @@
+uuid: d7767f00-4d30-4a23-83fb-fcf51447a990
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - micro_zymphonies_theme
+id: micro_zymphonies_theme_user_login
+theme: micro_zymphonies_theme
+region: ''
+weight: -17
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: ''
+  provider: user
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

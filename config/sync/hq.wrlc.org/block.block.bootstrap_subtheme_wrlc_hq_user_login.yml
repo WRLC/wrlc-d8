@@ -1,0 +1,25 @@
+uuid: 362d0eb4-291a-4ffa-8848-6c5367a9a37d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_wrlc_hq_user_login
+theme: bootstrap_subtheme
+region: sidebar_second
+weight: -12
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: ''
+  provider: user
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,30 @@
+uuid: e692086f-8c81-4cd8-b891-1d84b40ab4b7
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:ab801f60-2eea-4201-89a3-fe469be1913c'
+  module:
+    - block_content
+    - system
+  theme:
+    - micro_zymphonies_theme
+id: micro_zymphonies_theme_block_14
+theme: micro_zymphonies_theme
+region: ''
+weight: -16
+provider: null
+plugin: 'block_content:ab801f60-2eea-4201-89a3-fe469be1913c'
+settings:
+  id: 'block_content:ab801f60-2eea-4201-89a3-fe469be1913c'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /metrics-monitoring

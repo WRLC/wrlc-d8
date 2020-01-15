@@ -1,0 +1,30 @@
+uuid: 23dc8571-eee7-4c30-8f01-433ccd890e07
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ab801f60-2eea-4201-89a3-fe469be1913c'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_wrlc_hq_block_14
+theme: bootstrap_subtheme
+region: content
+weight: -1
+provider: null
+plugin: 'block_content:ab801f60-2eea-4201-89a3-fe469be1913c'
+settings:
+  id: 'block_content:ab801f60-2eea-4201-89a3-fe469be1913c'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /metrics-monitoring

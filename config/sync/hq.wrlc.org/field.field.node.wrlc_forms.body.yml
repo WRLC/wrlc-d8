@@ -1,0 +1,23 @@
+uuid: d0dcf91f-85f6-4ad9-be12-3ef02a0e2f3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.wrlc_forms
+  module:
+    - text
+id: node.wrlc_forms.body
+field_name: body
+entity_type: node
+bundle: wrlc_forms
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

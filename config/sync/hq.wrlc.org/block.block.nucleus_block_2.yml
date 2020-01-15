@@ -1,0 +1,25 @@
+uuid: d81c151a-b2f2-48d2-88fc-8c02ac9c7ccb
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:b974c056-f858-4632-9773-f239aa021928'
+  module:
+    - block_content
+  theme:
+    - nucleus
+id: nucleus_block_2
+theme: nucleus
+region: ''
+weight: 0
+provider: null
+plugin: 'block_content:b974c056-f858-4632-9773-f239aa021928'
+settings:
+  id: 'block_content:b974c056-f858-4632-9773-f239aa021928'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

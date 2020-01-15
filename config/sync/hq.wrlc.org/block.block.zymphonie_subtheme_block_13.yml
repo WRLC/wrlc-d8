@@ -1,0 +1,30 @@
+uuid: 57940cf3-f596-4888-8e7f-3d4910c1de48
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:f1549055-f878-4f07-b7b5-ec855a6ee97e'
+  module:
+    - block_content
+    - system
+  theme:
+    - zymphonie_subtheme
+id: zymphonie_subtheme_block_13
+theme: zymphonie_subtheme
+region: ''
+weight: 0
+provider: null
+plugin: 'block_content:f1549055-f878-4f07-b7b5-ec855a6ee97e'
+settings:
+  id: 'block_content:f1549055-f878-4f07-b7b5-ec855a6ee97e'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /staff-calendar

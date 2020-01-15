@@ -1,0 +1,30 @@
+uuid: 35030288-3dad-4199-8df5-19812dd53c50
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+  module:
+    - block_content
+    - system
+  theme:
+    - adminimal
+id: adminimal_block_3
+theme: adminimal
+region: ''
+weight: -4
+provider: null
+plugin: 'block_content:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+settings:
+  id: 'block_content:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /content/twitter

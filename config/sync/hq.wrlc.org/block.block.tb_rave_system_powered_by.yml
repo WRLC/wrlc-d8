@@ -1,0 +1,20 @@
+uuid: 3fb285bc-3738-4703-9614-a1f645cc268b
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - tb_rave
+id: tb_rave_system_powered_by
+theme: tb_rave
+region: ''
+weight: -8
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

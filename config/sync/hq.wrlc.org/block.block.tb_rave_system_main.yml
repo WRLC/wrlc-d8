@@ -1,0 +1,20 @@
+uuid: 5f75c674-6153-41f9-aa40-885957ffcaa5
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - tb_rave
+id: tb_rave_system_main
+theme: tb_rave
+region: ''
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

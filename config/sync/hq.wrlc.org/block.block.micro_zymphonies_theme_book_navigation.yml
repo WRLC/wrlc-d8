@@ -1,0 +1,26 @@
+uuid: f7688e38-4077-47dd-a947-04090977e306
+langcode: en
+status: false
+dependencies:
+  module:
+    - book
+    - system
+  theme:
+    - micro_zymphonies_theme
+id: micro_zymphonies_theme_book_navigation
+theme: micro_zymphonies_theme
+region: ''
+weight: 0
+provider: null
+plugin: book_navigation
+settings:
+  id: book_navigation
+  label: ''
+  provider: book
+  label_display: '0'
+  block_mode: 'book pages'
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /safety-disaster-handbook

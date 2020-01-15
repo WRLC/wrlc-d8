@@ -1,0 +1,30 @@
+uuid: 7abbdbb2-4074-469d-ad42-c3f99efb9782
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_wrlc_hq_block_3
+theme: bootstrap_subtheme
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+settings:
+  id: 'block_content:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /content/twitter

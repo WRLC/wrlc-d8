@@ -1,0 +1,30 @@
+uuid: 47db79ee-5df1-469f-b670-9dac0ef2e9e3
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:7c46f119-5804-4338-ac6f-c3f681eecd2d'
+  module:
+    - block_content
+    - system
+  theme:
+    - micro_zymphonies_theme
+id: micro_zymphonies_theme_block_5
+theme: micro_zymphonies_theme
+region: ''
+weight: -20
+provider: null
+plugin: 'block_content:7c46f119-5804-4338-ac6f-c3f681eecd2d'
+settings:
+  id: 'block_content:7c46f119-5804-4338-ac6f-c3f681eecd2d'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

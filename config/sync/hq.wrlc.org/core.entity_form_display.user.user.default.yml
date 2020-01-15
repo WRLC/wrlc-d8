@@ -1,0 +1,100 @@
+uuid: 3140eb2c-d8d7-4ec1-83be-dee6e26423cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_cell_phone
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_full_name
+    - field.field.user.user.field_job_title
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_off_day
+    - field.field.user.user.field_office_hours
+    - field.field.user.user.field_office_phone
+    - field.field.user.user.field_telework
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - image
+    - office_hours
+    - path
+    - user
+_core:
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: -10
+    region: content
+  contact:
+    weight: 5
+    region: content
+  field_cell_phone:
+    weight: 3
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_job_title:
+    weight: 1
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_off_day:
+    weight: 16
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_office_hours:
+    weight: 14
+    type: office_hours_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_office_phone:
+    weight: 2
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_telework:
+    weight: 15
+    type: office_hours_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  language:
+    weight: 0
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 6
+    region: content
+  user_picture:
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    type: image_image
+    weight: 31
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_first_name: true
+  field_full_name: true
+  field_last_name: true

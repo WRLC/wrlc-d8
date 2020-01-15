@@ -1,0 +1,20 @@
+uuid: b177c44d-2633-4786-9b95-92ec4464edfb
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - tst_subtheme
+id: tst_subtheme_system_main
+theme: tst_subtheme
+region: ''
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

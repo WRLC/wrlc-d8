@@ -1,0 +1,33 @@
+uuid: 413443e6-81c6-46f2-8415-250c2d2ed87c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_wrlc_forms
+    - node.type.wrlc_forms
+  module:
+    - comment
+id: node.wrlc_forms.comment_node_wrlc_forms
+field_name: comment_node_wrlc_forms
+entity_type: node
+bundle: wrlc_forms
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 0
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 0
+  per_page: 50
+  anonymous: 0
+  form_location: false
+  preview: 0
+field_type: comment

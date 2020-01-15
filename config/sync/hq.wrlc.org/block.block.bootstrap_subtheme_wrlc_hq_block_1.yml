@@ -1,0 +1,30 @@
+uuid: cd4ab2d1-d9c6-453d-b7a8-c87b105d5472
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4e8a4489-a9dd-49e3-93a7-6de8c246428d'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_wrlc_hq_block_1
+theme: bootstrap_subtheme
+region: footer
+weight: -12
+provider: null
+plugin: 'block_content:4e8a4489-a9dd-49e3-93a7-6de8c246428d'
+settings:
+  id: 'block_content:4e8a4489-a9dd-49e3-93a7-6de8c246428d'
+  label: 'Quick Links'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\n/safety-disaster-handbook\n/safety-disaster-handbook/*"

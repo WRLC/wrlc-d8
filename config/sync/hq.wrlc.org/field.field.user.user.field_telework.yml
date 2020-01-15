@@ -1,0 +1,21 @@
+uuid: 69e410a9-abba-4ece-88e7-5a5016816a94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_telework
+  module:
+    - office_hours
+    - user
+id: user.user.field_telework
+field_name: field_telework
+entity_type: user
+bundle: user
+label: Telework
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: office_hours

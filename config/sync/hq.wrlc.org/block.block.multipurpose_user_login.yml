@@ -1,0 +1,25 @@
+uuid: 6d0e11cf-3e60-4018-9979-6a7e80f6ce05
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - multipurpose
+id: multipurpose_user_login
+theme: multipurpose
+region: ''
+weight: -7
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: ''
+  provider: user
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

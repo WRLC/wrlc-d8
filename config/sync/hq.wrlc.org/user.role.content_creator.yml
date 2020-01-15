@@ -1,0 +1,14 @@
+uuid: 3b0ab5bf-6f80-4caa-8160-ce3f6684191c
+langcode: en
+status: true
+dependencies: {  }
+id: content_creator
+label: 'content creator'
+weight: 3
+is_admin: null
+permissions:
+  - 'create page content'
+  - 'delete own page content'
+  - 'edit own page content'
+  - 'use text format filtered_html'
+  - 'use text format full_html'

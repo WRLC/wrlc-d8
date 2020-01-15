@@ -1,0 +1,25 @@
+uuid: c7643638-a8c8-45c1-91dc-651dbf7116d8
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - tst_subtheme
+id: tst_subtheme_user_login
+theme: tst_subtheme
+region: ''
+weight: -7
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: ''
+  provider: user
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

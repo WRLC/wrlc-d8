@@ -1,0 +1,16 @@
+uuid: 0a862df4-eab1-410a-a92c-fc02ce9b6cd0
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - book
+_core:
+  default_config_hash: 2gWGA-X4ERc4McStS7cMEG3ZBpDEqfNRDPTjB1v674Y
+name: 'Book page'
+type: book
+description: '<em>Books</em> have a built-in hierarchical navigation. Use for handbooks or tutorials.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

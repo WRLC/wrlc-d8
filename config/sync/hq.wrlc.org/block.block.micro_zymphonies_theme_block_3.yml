@@ -1,0 +1,30 @@
+uuid: be54311b-a85f-4054-9a0d-d2699a241ee4
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+  module:
+    - block_content
+    - system
+  theme:
+    - micro_zymphonies_theme
+id: micro_zymphonies_theme_block_3
+theme: micro_zymphonies_theme
+region: ''
+weight: -19
+provider: null
+plugin: 'block_content:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+settings:
+  id: 'block_content:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /content/twitter

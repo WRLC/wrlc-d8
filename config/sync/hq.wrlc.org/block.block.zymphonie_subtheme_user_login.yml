@@ -1,0 +1,25 @@
+uuid: 6e283422-e19a-4185-86cf-4ed069e11f1f
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - zymphonie_subtheme
+id: zymphonie_subtheme_user_login
+theme: zymphonie_subtheme
+region: ''
+weight: -17
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: ''
+  provider: user
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

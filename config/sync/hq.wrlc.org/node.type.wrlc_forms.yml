@@ -1,0 +1,18 @@
+uuid: 2a4f5d2c-a766-4a8b-a058-2c284ed150c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'WRLC Forms'
+type: wrlc_forms
+description: 'Content for creating WRLC forms.  Protected from public access to avoid deleting javascript in code.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

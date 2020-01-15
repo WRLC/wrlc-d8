@@ -1,0 +1,20 @@
+uuid: 49b71378-afb5-42d6-8e20-b879c24058b9
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - office_responsive_theme
+id: office_responsive_theme_system_main
+theme: office_responsive_theme
+region: ''
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

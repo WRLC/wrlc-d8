@@ -1,0 +1,20 @@
+uuid: b905669f-a80c-4e1f-a0e5-3a8bdfc695d5
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - nucleus
+id: nucleus_system_main
+theme: nucleus
+region: ''
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

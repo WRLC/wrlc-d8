@@ -1,0 +1,30 @@
+uuid: 50cd758b-4616-4dc2-add4-829bd8411947
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:ee0a93b7-14fe-40d2-8286-0c5fe3d09efd'
+  module:
+    - block_content
+    - system
+  theme:
+    - micro_zymphonies_theme
+id: micro_zymphonies_theme_block_10
+theme: micro_zymphonies_theme
+region: ''
+weight: 0
+provider: null
+plugin: 'block_content:ee0a93b7-14fe-40d2-8286-0c5fe3d09efd'
+settings:
+  id: 'block_content:ee0a93b7-14fe-40d2-8286-0c5fe3d09efd'
+  label: 'Current Projects'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

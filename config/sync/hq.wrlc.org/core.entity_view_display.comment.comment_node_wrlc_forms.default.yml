@@ -1,0 +1,19 @@
+uuid: 6d71f71c-dfbb-4ddd-b816-a11d7986950f
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_wrlc_forms
+    - field.field.comment.comment_node_wrlc_forms.comment_body
+id: comment.comment_node_wrlc_forms.default
+targetEntityType: comment
+bundle: comment_node_wrlc_forms
+mode: default
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_body: true

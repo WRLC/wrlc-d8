@@ -1,0 +1,26 @@
+uuid: 70909f8d-89b5-44ce-8b72-090cf7893e8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.wrlc_forms
+    - taxonomy.vocabulary.tags
+id: node.wrlc_forms.field_tags
+field_name: field_tags
+entity_type: node
+bundle: wrlc_forms
+label: Category
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      tags: tags
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

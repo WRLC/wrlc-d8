@@ -1,0 +1,26 @@
+uuid: aa6239f4-ad3a-465e-8d5b-3663536f8ede
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+    - system
+  theme:
+    - nucleus
+id: nucleus_search_form
+theme: nucleus
+region: ''
+weight: -10
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: ''
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/node/add/*'

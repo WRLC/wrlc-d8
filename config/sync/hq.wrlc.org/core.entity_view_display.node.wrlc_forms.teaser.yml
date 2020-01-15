@@ -1,0 +1,34 @@
+uuid: babc306c-a071-4f92-86a6-c0cc48f7a568
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.wrlc_forms.body
+    - field.field.node.wrlc_forms.comment_node_wrlc_forms
+    - field.field.node.wrlc_forms.field_tags
+    - node.type.wrlc_forms
+  module:
+    - text
+    - user
+id: node.wrlc_forms.teaser
+targetEntityType: node
+bundle: wrlc_forms
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_wrlc_forms: true
+  field_tags: true

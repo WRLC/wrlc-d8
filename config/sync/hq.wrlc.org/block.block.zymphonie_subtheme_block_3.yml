@@ -1,0 +1,30 @@
+uuid: 6d96fa4f-d850-4714-b011-b8ebb0e393f3
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+  module:
+    - block_content
+    - system
+  theme:
+    - zymphonie_subtheme
+id: zymphonie_subtheme_block_3
+theme: zymphonie_subtheme
+region: ''
+weight: -19
+provider: null
+plugin: 'block_content:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+settings:
+  id: 'block_content:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /content/twitter

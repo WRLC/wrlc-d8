@@ -1,0 +1,30 @@
+uuid: 5f870bcd-fe24-499d-962f-41d9a477b925
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7c46f119-5804-4338-ac6f-c3f681eecd2d'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_wrlc_hq_block_5
+theme: bootstrap_subtheme
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:7c46f119-5804-4338-ac6f-c3f681eecd2d'
+settings:
+  id: 'block_content:7c46f119-5804-4338-ac6f-c3f681eecd2d'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

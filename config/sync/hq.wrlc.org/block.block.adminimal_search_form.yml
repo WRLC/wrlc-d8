@@ -1,0 +1,26 @@
+uuid: da35f541-9f3d-4db6-947d-454af9b8995f
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+    - system
+  theme:
+    - adminimal
+id: adminimal_search_form
+theme: adminimal
+region: ''
+weight: -10
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: ''
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/node/add/*'

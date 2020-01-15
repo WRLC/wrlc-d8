@@ -1,0 +1,8 @@
+uuid: e900a755-4fef-4025-b129-f267b3476699
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_page
+label: 'Intranet Content Page comment'
+target_entity_type_id: node
+description: null

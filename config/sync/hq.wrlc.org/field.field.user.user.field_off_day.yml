@@ -1,0 +1,21 @@
+uuid: a9d61b60-6676-4af1-843f-86057ca35bba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_off_day
+  module:
+    - options
+    - user
+id: user.user.field_off_day
+field_name: field_off_day
+entity_type: user
+bundle: user
+label: 'Off (Flex Schedule)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

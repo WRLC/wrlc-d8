@@ -1,0 +1,22 @@
+uuid: 8b563c44-7f1a-4869-a31a-500b068e1cb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_office_phone
+  module:
+    - user
+id: user.user.field_office_phone
+field_name: field_office_phone
+entity_type: user
+bundle: user
+label: 'Office Phone'
+description: 'Format: xxx-xxx-xxxx'
+required: true
+translatable: false
+default_value:
+  -
+    value: 301-390-
+default_value_callback: ''
+settings: {  }
+field_type: string

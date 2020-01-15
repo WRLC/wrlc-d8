@@ -1,0 +1,25 @@
+uuid: dd1b6e8e-0ad2-4a5b-8e3e-905aba759bcc
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - responsive_blog
+id: responsive_blog_user_login
+theme: responsive_blog
+region: ''
+weight: -6
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: ''
+  provider: user
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,69 @@
+uuid: c8af4a11-3169-497a-89b6-629f3757a8c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_cell_phone
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_full_name
+    - field.field.user.user.field_job_title
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_off_day
+    - field.field.user.user.field_office_hours
+    - field.field.user.user.field_office_phone
+    - field.field.user.user.field_telework
+    - field.field.user.user.user_picture
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_cell_phone:
+    label: inline
+    weight: 3
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_job_title:
+    label: inline
+    weight: 1
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_office_phone:
+    label: inline
+    weight: 2
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  member_for:
+    weight: 5
+    region: content
+  user_picture:
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: content
+    type: image
+    weight: 6
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_first_name: true
+  field_full_name: true
+  field_last_name: true
+  field_off_day: true
+  field_office_hours: true
+  field_telework: true
+  realname: true

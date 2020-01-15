@@ -1,0 +1,30 @@
+uuid: facdba27-4bfe-4871-8e4e-1a074432292b
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:ddcf145d-07e1-45e5-acc4-be2680d7e770'
+  module:
+    - block_content
+    - system
+  theme:
+    - zymphonie_subtheme
+id: zymphonie_subtheme_block_4
+theme: zymphonie_subtheme
+region: ''
+weight: -18
+provider: null
+plugin: 'block_content:ddcf145d-07e1-45e5-acc4-be2680d7e770'
+settings:
+  id: 'block_content:ddcf145d-07e1-45e5-acc4-be2680d7e770'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

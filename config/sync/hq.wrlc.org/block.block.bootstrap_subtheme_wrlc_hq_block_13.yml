@@ -1,0 +1,30 @@
+uuid: 04185366-8ee3-4f3c-aa12-38ce950d2d61
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f1549055-f878-4f07-b7b5-ec855a6ee97e'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_wrlc_hq_block_13
+theme: bootstrap_subtheme
+region: content
+weight: -9
+provider: null
+plugin: 'block_content:f1549055-f878-4f07-b7b5-ec855a6ee97e'
+settings:
+  id: 'block_content:f1549055-f878-4f07-b7b5-ec855a6ee97e'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /staff-calendar

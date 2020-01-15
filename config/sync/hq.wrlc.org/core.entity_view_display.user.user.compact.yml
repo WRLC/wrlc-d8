@@ -1,0 +1,48 @@
+uuid: 1d35a6a7-dcd1-4f1e-922f-60183215d61b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.compact
+    - field.field.user.user.field_cell_phone
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_full_name
+    - field.field.user.user.field_job_title
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_off_day
+    - field.field.user.user.field_office_hours
+    - field.field.user.user.field_office_phone
+    - field.field.user.user.field_telework
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
+id: user.user.compact
+targetEntityType: user
+bundle: user
+mode: compact
+content:
+  user_picture:
+    type: image
+    weight: 0
+    region: content
+    settings:
+      image_style: thumbnail
+      image_link: content
+    third_party_settings: {  }
+    label: hidden
+hidden:
+  field_cell_phone: true
+  field_first_name: true
+  field_full_name: true
+  field_job_title: true
+  field_last_name: true
+  field_off_day: true
+  field_office_hours: true
+  field_office_phone: true
+  field_telework: true
+  member_for: true
+  realname: true

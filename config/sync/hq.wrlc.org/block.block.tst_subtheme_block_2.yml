@@ -1,0 +1,25 @@
+uuid: 733d1634-af44-449c-8013-f9f7bc2c56e3
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:b974c056-f858-4632-9773-f239aa021928'
+  module:
+    - block_content
+  theme:
+    - tst_subtheme
+id: tst_subtheme_block_2
+theme: tst_subtheme
+region: ''
+weight: 0
+provider: null
+plugin: 'block_content:b974c056-f858-4632-9773-f239aa021928'
+settings:
+  id: 'block_content:b974c056-f858-4632-9773-f239aa021928'
+  label: ''
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
