@@ -1,9 +1,9 @@
-uuid: 70e9cc55-7dfc-4625-b342-473b14df542b
+uuid: 7add79b9-cfbf-457a-96d9-092422d4b9ae
 langcode: en
 status: false
 dependencies:
   content:
-    - 'block_content:basic:4e8a4489-a9dd-49e3-93a7-6de8c246428d'
+    - 'block_content:basic:52f8853c-d2b6-43fe-a56c-205ee73cb361'
   module:
     - block_content
     - system
@@ -14,9 +14,9 @@ theme: micro_zymphonies_theme
 region: ''
 weight: -14
 provider: null
-plugin: 'block_content:4e8a4489-a9dd-49e3-93a7-6de8c246428d'
+plugin: 'block_content:52f8853c-d2b6-43fe-a56c-205ee73cb361'
 settings:
-  id: 'block_content:4e8a4489-a9dd-49e3-93a7-6de8c246428d'
+  id: 'block_content:52f8853c-d2b6-43fe-a56c-205ee73cb361'
   label: 'Quick Links'
   provider: block_content
   label_display: visible

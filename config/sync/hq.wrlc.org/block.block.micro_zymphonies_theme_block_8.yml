@@ -1,9 +1,9 @@
-uuid: f329a187-c99d-4264-9726-0f1e1700ea80
+uuid: 107d50d8-684f-4cab-b96a-c52cf57127e4
 langcode: en
 status: false
 dependencies:
   content:
-    - 'block_content:basic:70a3f0c3-5eea-4dc3-8230-f0d667c225ba'
+    - 'block_content:basic:75739cbb-87cf-49bf-8e56-f56018138c8c'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: micro_zymphonies_theme
 region: ''
 weight: -17
 provider: null
-plugin: 'block_content:70a3f0c3-5eea-4dc3-8230-f0d667c225ba'
+plugin: 'block_content:75739cbb-87cf-49bf-8e56-f56018138c8c'
 settings:
-  id: 'block_content:70a3f0c3-5eea-4dc3-8230-f0d667c225ba'
+  id: 'block_content:75739cbb-87cf-49bf-8e56-f56018138c8c'
   label: ''
   provider: block_content
   label_display: '0'

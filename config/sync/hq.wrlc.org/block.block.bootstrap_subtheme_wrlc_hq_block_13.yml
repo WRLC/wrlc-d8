@@ -1,9 +1,9 @@
-uuid: 04185366-8ee3-4f3c-aa12-38ce950d2d61
+uuid: a41d0473-8d16-41a8-a93f-3659f94259e1
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:f1549055-f878-4f07-b7b5-ec855a6ee97e'
+    - 'block_content:basic:69216c15-c823-4c7e-8d0a-bde559d916ee'
   module:
     - block_content
     - system
@@ -12,11 +12,11 @@ dependencies:
 id: bootstrap_subtheme_wrlc_hq_block_13
 theme: bootstrap_subtheme
 region: content
-weight: -9
+weight: -11
 provider: null
-plugin: 'block_content:f1549055-f878-4f07-b7b5-ec855a6ee97e'
+plugin: 'block_content:69216c15-c823-4c7e-8d0a-bde559d916ee'
 settings:
-  id: 'block_content:f1549055-f878-4f07-b7b5-ec855a6ee97e'
+  id: 'block_content:69216c15-c823-4c7e-8d0a-bde559d916ee'
   label: ''
   provider: block_content
   label_display: '0'

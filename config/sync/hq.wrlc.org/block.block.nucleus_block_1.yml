@@ -1,9 +1,9 @@
-uuid: 039c836b-f1fd-4b7e-b225-90c40dd03f8c
+uuid: a09f5d92-9047-42e0-ba6d-c39c8b0f4129
 langcode: en
 status: false
 dependencies:
   content:
-    - 'block_content:basic:4e8a4489-a9dd-49e3-93a7-6de8c246428d'
+    - 'block_content:basic:52f8853c-d2b6-43fe-a56c-205ee73cb361'
   module:
     - block_content
     - system
@@ -14,9 +14,9 @@ theme: nucleus
 region: ''
 weight: -8
 provider: null
-plugin: 'block_content:4e8a4489-a9dd-49e3-93a7-6de8c246428d'
+plugin: 'block_content:52f8853c-d2b6-43fe-a56c-205ee73cb361'
 settings:
-  id: 'block_content:4e8a4489-a9dd-49e3-93a7-6de8c246428d'
+  id: 'block_content:52f8853c-d2b6-43fe-a56c-205ee73cb361'
   label: 'Quick Links'
   provider: block_content
   label_display: visible

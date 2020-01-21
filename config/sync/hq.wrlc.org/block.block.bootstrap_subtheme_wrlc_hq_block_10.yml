@@ -1,9 +1,9 @@
-uuid: 91496374-74a0-484f-aa8d-de9547462971
+uuid: d8651738-7fb3-4e5a-b487-206cf0fe7fc7
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:ee0a93b7-14fe-40d2-8286-0c5fe3d09efd'
+    - 'block_content:basic:08cd4c08-89d2-4701-b7fc-801f55fdbf96'
   module:
     - block_content
     - system
@@ -12,11 +12,11 @@ dependencies:
 id: bootstrap_subtheme_wrlc_hq_block_10
 theme: bootstrap_subtheme
 region: sidebar_second
-weight: -8
+weight: -7
 provider: null
-plugin: 'block_content:ee0a93b7-14fe-40d2-8286-0c5fe3d09efd'
+plugin: 'block_content:08cd4c08-89d2-4701-b7fc-801f55fdbf96'
 settings:
-  id: 'block_content:ee0a93b7-14fe-40d2-8286-0c5fe3d09efd'
+  id: 'block_content:08cd4c08-89d2-4701-b7fc-801f55fdbf96'
   label: 'Current Projects'
   provider: block_content
   label_display: visible

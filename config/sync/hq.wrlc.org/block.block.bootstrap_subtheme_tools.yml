@@ -1,4 +1,4 @@
-uuid: 23da546a-e6b0-4966-a18d-291619283ac2
+uuid: 380ce0ef-d028-4ec2-b9c6-629ee6dcc22c
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ _core:
 id: bootstrap_subtheme_tools
 theme: bootstrap_subtheme
 region: sidebar_second
-weight: -11
+weight: -10
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

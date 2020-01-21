@@ -1,9 +1,9 @@
-uuid: 35030288-3dad-4199-8df5-19812dd53c50
+uuid: fdda30df-7736-481f-9a4d-2bcd9183f4cd
 langcode: en
 status: false
 dependencies:
   content:
-    - 'block_content:basic:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+    - 'block_content:basic:f35dff97-10ad-42fd-a03c-723a8907ee96'
   module:
     - block_content
     - system
@@ -14,9 +14,9 @@ theme: adminimal
 region: ''
 weight: -4
 provider: null
-plugin: 'block_content:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+plugin: 'block_content:f35dff97-10ad-42fd-a03c-723a8907ee96'
 settings:
-  id: 'block_content:d111fae1-5679-4dd0-bafa-6378279cd9c2'
+  id: 'block_content:f35dff97-10ad-42fd-a03c-723a8907ee96'
   label: ''
   provider: block_content
   label_display: '0'

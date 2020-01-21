@@ -1,4 +1,4 @@
-uuid: 0d16c25b-2bc3-46cb-bc6e-30ddcabe8460
+uuid: 7b674253-dc7a-41a6-9e6b-3e5c2d07c411
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ _core:
 id: bootstrap_subtheme_main_menu
 theme: bootstrap_subtheme
 region: navigation
-weight: -10
+weight: -11
 provider: null
 plugin: 'system_menu_block:main'
 settings:

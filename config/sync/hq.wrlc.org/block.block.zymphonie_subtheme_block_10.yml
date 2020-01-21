@@ -1,9 +1,9 @@
-uuid: 6446592e-68e5-4917-8cf0-b4516605255a
+uuid: bd2b20f0-ec36-4470-82cf-3990d112f7b6
 langcode: en
 status: false
 dependencies:
   content:
-    - 'block_content:basic:ee0a93b7-14fe-40d2-8286-0c5fe3d09efd'
+    - 'block_content:basic:08cd4c08-89d2-4701-b7fc-801f55fdbf96'
   module:
     - block_content
     - system
@@ -14,9 +14,9 @@ theme: zymphonie_subtheme
 region: ''
 weight: 0
 provider: null
-plugin: 'block_content:ee0a93b7-14fe-40d2-8286-0c5fe3d09efd'
+plugin: 'block_content:08cd4c08-89d2-4701-b7fc-801f55fdbf96'
 settings:
-  id: 'block_content:ee0a93b7-14fe-40d2-8286-0c5fe3d09efd'
+  id: 'block_content:08cd4c08-89d2-4701-b7fc-801f55fdbf96'
   label: 'Current Projects'
   provider: block_content
   label_display: visible
