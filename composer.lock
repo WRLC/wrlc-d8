@@ -3734,17 +3734,17 @@
         },
         {
             "name": "drupal/iframe",
-            "version": "1.11.0",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/iframe.git",
-                "reference": "8.x-1.11"
+                "reference": "8.x-1.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/iframe-8.x-1.11.zip",
-                "reference": "8.x-1.11",
-                "shasum": "6f5a94349799d981063bf492ccd6e408efeef2d4"
+                "url": "https://ftp.drupal.org/files/projects/iframe-8.x-1.12.zip",
+                "reference": "8.x-1.12",
+                "shasum": "0e5ee4198cc0f69102fc81108399b4959542c28b"
             },
             "require": {
                 "drupal/core": "*"
@@ -3755,8 +3755,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.11",
-                    "datestamp": "1576447089",
+                    "version": "8.x-1.12",
+                    "datestamp": "1579368488",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
