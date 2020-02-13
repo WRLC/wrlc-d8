@@ -1,4 +1,4 @@
-uuid: b3fcd7dd-df3d-4d41-871e-cdc367a78c2f
+uuid: 4f25f3ae-8ec1-4f9e-ad2b-e042e77d1248
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: bootstrap_subtheme_wrlc_hq_system_main
 theme: bootstrap_subtheme
 region: content
-weight: -4
+weight: -12
 provider: null
 plugin: system_main_block
 settings:

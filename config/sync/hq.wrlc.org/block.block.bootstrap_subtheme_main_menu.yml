@@ -1,4 +1,4 @@
-uuid: 0d16c25b-2bc3-46cb-bc6e-30ddcabe8460
+uuid: 7b674253-dc7a-41a6-9e6b-3e5c2d07c411
 langcode: en
 status: true
 dependencies:
@@ -12,8 +12,8 @@ _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
 id: bootstrap_subtheme_main_menu
 theme: bootstrap_subtheme
-region: navigation
-weight: -10
+region: navigation_collapsible
+weight: -15
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -22,6 +22,6 @@ settings:
   provider: system
   label_display: '0'
   level: 1
-  depth: 1
-  expand_all_items: false
+  depth: 3
+  expand_all_items: true
 visibility: {  }

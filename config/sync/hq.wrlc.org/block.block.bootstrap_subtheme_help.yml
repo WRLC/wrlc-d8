@@ -1,4 +1,4 @@
-uuid: 014c7b08-6a0b-4e04-b871-27720efc5407
+uuid: bf0baaab-b208-4a7d-8f49-5efa863917ae
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: bootstrap_subtheme_help
 theme: bootstrap_subtheme
 region: help
-weight: -12
+weight: -11
 provider: null
 plugin: help_block
 settings:

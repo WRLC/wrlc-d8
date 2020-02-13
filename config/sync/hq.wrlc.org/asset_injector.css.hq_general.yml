@@ -1,0 +1,11 @@
+uuid: e46ccd38-2e3b-479f-95ea-50dd20a33fd5
+langcode: en
+status: true
+dependencies: {  }
+id: hq_general
+label: 'HQ General'
+code: ".logo img {\r\n  width:150px;\r\n}\r\n\r\n.navbar-default .navbar-nav > li > a {\r\n    color: #fff;\r\n}\r\n\r\n .navbar-default .navbar-nav > li > a:hover {\r\n    color: #f7f7f7;\r\n}\r\n\r\n.navbar-default .is-active {\r\n  color:#fff;\r\n}\r\n\r\n.navbar-default .navbar-brand {\r\n    color: #fff;\r\n}\r\n\r\n.navbar-default {\r\n    background-color: #337ab7;\r\n    border-color: #286090;\r\n}\r\n\r\ntd, th {padding:10px;}\r\n\r\nth {color:#fff; background-color:#454545;}\r\n\r\n.odd {background-color:#f8f8f8 !important;}\r\n\r\ntable {border:1px solid #e7e7e7; border-radius:5px;}\r\n\r\n.feed-icons {\r\n  display: none;\r\n}\r\n\r\n.view-empty {display:none;}"
+media: all
+preprocess: true
+conditions: {  }
+conditions_require_all: true

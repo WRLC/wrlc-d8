@@ -1,0 +1,31 @@
+uuid: c9082128-f5ab-4d6b-88e8-d219afaca400
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:48b22060-728a-441d-a90b-3fb6c7b143fa'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: formsbox
+theme: bootstrap_subtheme
+region: sidebar_second
+weight: -11
+provider: null
+plugin: 'block_content:48b22060-728a-441d-a90b-3fb6c7b143fa'
+settings:
+  id: 'block_content:48b22060-728a-441d-a90b-3fb6c7b143fa'
+  label: Forms
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

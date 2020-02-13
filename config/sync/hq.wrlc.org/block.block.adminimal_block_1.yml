@@ -1,9 +1,9 @@
-uuid: 54bd2078-9d94-48ed-b73a-6a6ba3874583
+uuid: d53723c4-19c4-492a-bd7b-830f6224e62b
 langcode: en
 status: false
 dependencies:
   content:
-    - 'block_content:basic:4e8a4489-a9dd-49e3-93a7-6de8c246428d'
+    - 'block_content:basic:52f8853c-d2b6-43fe-a56c-205ee73cb361'
   module:
     - block_content
     - system
@@ -14,9 +14,9 @@ theme: adminimal
 region: ''
 weight: -8
 provider: null
-plugin: 'block_content:4e8a4489-a9dd-49e3-93a7-6de8c246428d'
+plugin: 'block_content:52f8853c-d2b6-43fe-a56c-205ee73cb361'
 settings:
-  id: 'block_content:4e8a4489-a9dd-49e3-93a7-6de8c246428d'
+  id: 'block_content:52f8853c-d2b6-43fe-a56c-205ee73cb361'
   label: 'Quick Links'
   provider: block_content
   label_display: visible

@@ -1,0 +1,38 @@
+uuid: c6843f87-4468-454e-9166-966f64eefe5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - ctools
+    - system
+  theme:
+    - bootstrap_subtheme
+id: navigation
+theme: bootstrap_subtheme
+region: sidebar_second
+weight: -8
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Forms
+  provider: system
+  label_display: visible
+  level: 2
+  depth: 0
+  expand_all_items: true
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

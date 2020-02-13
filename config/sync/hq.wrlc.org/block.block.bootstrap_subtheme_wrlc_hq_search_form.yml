@@ -1,4 +1,4 @@
-uuid: 6503fe4d-4776-4db1-aaaf-ad3def17b26f
+uuid: 0aa7a190-5ff3-4c73-a5e8-7f7760626036
 langcode: en
 status: true
 dependencies:
@@ -11,13 +11,13 @@ _core:
   default_config_hash: Q-4EcGAsu26ICu4ejEz0uE1zv4akpiaOsizxgZfAmEw
 id: bootstrap_subtheme_wrlc_hq_search_form
 theme: bootstrap_subtheme
-region: navigation
-weight: -9
+region: sidebar_second
+weight: -15
 provider: null
 plugin: search_form_block
 settings:
   id: search_form_block
-  label: ''
+  label: 'Search form'
   provider: search
   label_display: '0'
   page_id: ''
@@ -26,3 +26,4 @@ visibility:
     id: request_path
     negate: true
     pages: '/node/add/*'
+    context_mapping: {  }

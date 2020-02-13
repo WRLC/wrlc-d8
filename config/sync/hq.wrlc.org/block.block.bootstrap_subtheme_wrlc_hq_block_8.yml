@@ -1,21 +1,21 @@
-uuid: 0986768f-2f3d-4c5c-a926-e7938cddc67e
+uuid: bd2b8f2e-5cc4-41b1-bed7-64ec8dd1322b
 langcode: en
 status: false
 dependencies:
   content:
-    - 'block_content:basic:70a3f0c3-5eea-4dc3-8230-f0d667c225ba'
+    - 'block_content:basic:75739cbb-87cf-49bf-8e56-f56018138c8c'
   module:
     - block_content
   theme:
     - bootstrap_subtheme
 id: bootstrap_subtheme_wrlc_hq_block_8
 theme: bootstrap_subtheme
-region: header
-weight: -11
+region: navigation
+weight: -14
 provider: null
-plugin: 'block_content:70a3f0c3-5eea-4dc3-8230-f0d667c225ba'
+plugin: 'block_content:75739cbb-87cf-49bf-8e56-f56018138c8c'
 settings:
-  id: 'block_content:70a3f0c3-5eea-4dc3-8230-f0d667c225ba'
+  id: 'block_content:75739cbb-87cf-49bf-8e56-f56018138c8c'
   label: ''
   provider: block_content
   label_display: '0'

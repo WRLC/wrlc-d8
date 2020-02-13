@@ -1,4 +1,4 @@
-uuid: 9ee7c586-027e-47b3-bf9b-07a0855096ea
+uuid: 3c86852e-f4e1-47fe-81fb-6d2ad337c620
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: bootstrap_subtheme_messages
 theme: bootstrap_subtheme
 region: highlighted
-weight: -12
+weight: -11
 provider: null
 plugin: system_messages_block
 settings:

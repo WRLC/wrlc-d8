@@ -1,0 +1,39 @@
+uuid: ae112326-3f75-4796-a819-0396f6569350
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:cefa6601-6882-4eee-9e4f-87a4d4b11ce3'
+  module:
+    - block_content
+    - ctools
+    - system
+  theme:
+    - bootstrap_subtheme
+id: forms
+theme: bootstrap_subtheme
+region: highlighted
+weight: 0
+provider: null
+plugin: 'block_content:cefa6601-6882-4eee-9e4f-87a4d4b11ce3'
+settings:
+  id: 'block_content:cefa6601-6882-4eee-9e4f-87a4d4b11ce3'
+  label: Forms
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      wrlc_forms: wrlc_forms
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

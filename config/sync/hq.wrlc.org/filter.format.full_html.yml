@@ -1,4 +1,4 @@
-uuid: 035c8136-cd4d-4b7d-b81b-8900c0556fc9
+uuid: 6cdaab80-8596-4fdd-85b0-9dcb7a56f463
 langcode: en
 status: true
 dependencies: {  }
@@ -7,4 +7,13 @@ _core:
 name: 'Full HTML'
 format: full_html
 weight: 1
-filters: {  }
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre> <u>'
+      filter_html_help: true
+      filter_html_nofollow: false

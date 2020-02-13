@@ -1,4 +1,4 @@
-uuid: 2f258057-e61b-464f-89e8-ca76d12c5e30
+uuid: 15f809cc-8f0e-4967-bbd2-f172993cbba7
 langcode: en
 status: true
 dependencies:
@@ -10,17 +10,18 @@ dependencies:
 id: bootstrap_subtheme_wrlc_hq_book_navigation
 theme: bootstrap_subtheme
 region: sidebar_second
-weight: -9
+weight: -12
 provider: null
 plugin: book_navigation
 settings:
   id: book_navigation
-  label: ''
+  label: 'Book navigation'
   provider: book
   label_display: '0'
   block_mode: 'book pages'
 visibility:
   request_path:
     id: request_path
-    negate: true
-    pages: /safety-disaster-handbook
+    negate: false
+    pages: ''
+    context_mapping: {  }
