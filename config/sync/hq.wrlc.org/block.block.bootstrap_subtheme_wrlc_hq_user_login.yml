@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - ctools
     - system
     - user
   theme:
@@ -10,12 +11,12 @@ dependencies:
 id: bootstrap_subtheme_wrlc_hq_user_login
 theme: bootstrap_subtheme
 region: sidebar_second
-weight: -11
+weight: -14
 provider: null
 plugin: user_login_block
 settings:
   id: user_login_block
-  label: ''
+  label: 'User login'
   provider: user
   label_display: '0'
 visibility:
@@ -23,3 +24,11 @@ visibility:
     id: request_path
     negate: false
     pages: '<front>'
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

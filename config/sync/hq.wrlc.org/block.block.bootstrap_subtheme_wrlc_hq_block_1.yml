@@ -1,6 +1,6 @@
 uuid: 6eec4d61-b132-4a6b-a0ae-ad178092f334
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic:52f8853c-d2b6-43fe-a56c-205ee73cb361'
@@ -12,7 +12,7 @@ dependencies:
 id: bootstrap_subtheme_wrlc_hq_block_1
 theme: bootstrap_subtheme
 region: content
-weight: -2
+weight: -4
 provider: null
 plugin: 'block_content:52f8853c-d2b6-43fe-a56c-205ee73cb361'
 settings:

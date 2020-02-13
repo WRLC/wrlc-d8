@@ -3,15 +3,23 @@ schemas:
   bootstrap_subtheme: 8000
 favicon:
   mimetype: image/vnd.microsoft.icon
-  path: ''
-  url: 'https://hq.wrlc8.lndo.site/themes/contrib/bootstrap/favicon.ico'
-  use_default: true
+  path: 'public://favicon.ico'
+  url: 'https://hq.wrlc8.lndo.site/themes/custom/bootstrap_subtheme/favicon.ico'
+  use_default: false
 features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
   node_user_picture: true
 logo:
-  path: ''
+  path: 'public://wrlc-logo-2-white.png'
   url: ''
-  use_default: true
+  use_default: false
+table_responsive: '-1'
+cdn_theme: bootstrap
+cdn_cache_ttl_versions: '604800'
+cdn_cache_ttl_themes: '604800'
+cdn_cache_ttl_assets: '0'
+cdn_cache_ttl_library: '0'
+reset_http_request_cache: ''
+table: ''

@@ -11,7 +11,7 @@ dependencies:
 id: bootstrap_subtheme_wrlc_hq_block_8
 theme: bootstrap_subtheme
 region: navigation
-weight: -9
+weight: -14
 provider: null
 plugin: 'block_content:75739cbb-87cf-49bf-8e56-f56018138c8c'
 settings:

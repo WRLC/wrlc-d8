@@ -1,6 +1,6 @@
-uuid: 7b674253-dc7a-41a6-9e6b-3e5c2d07c411
+uuid: d7de4322-3a81-4898-83c8-c797e3bd70a7
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.main
@@ -8,20 +8,23 @@ dependencies:
     - system
   theme:
     - bootstrap_subtheme
-_core:
-  default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
-id: bootstrap_subtheme_main_menu
+id: mainmenu
 theme: bootstrap_subtheme
-region: navigation_collapsible
+region: sidebar_first
 weight: -15
 provider: null
 plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
-  label: 'Main navigation'
+  label: 'Main menu'
   provider: system
-  label_display: '0'
+  label_display: visible
   level: 1
-  depth: 3
+  depth: 0
   expand_all_items: true
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

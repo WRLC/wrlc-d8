@@ -10,17 +10,18 @@ dependencies:
 id: bootstrap_subtheme_wrlc_hq_book_navigation
 theme: bootstrap_subtheme
 region: sidebar_second
-weight: -8
+weight: -12
 provider: null
 plugin: book_navigation
 settings:
   id: book_navigation
-  label: ''
+  label: 'Book navigation'
   provider: book
   label_display: '0'
   block_mode: 'book pages'
 visibility:
   request_path:
     id: request_path
-    negate: true
-    pages: /safety-disaster-handbook
+    negate: false
+    pages: ''
+    context_mapping: {  }

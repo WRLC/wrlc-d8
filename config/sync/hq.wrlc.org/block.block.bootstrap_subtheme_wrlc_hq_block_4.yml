@@ -1,6 +1,6 @@
 uuid: 7cb15f87-ac4b-420a-aca0-470cdffd29bf
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic:6795d17a-cfb1-4bad-9a55-79bef45a50d8'
@@ -11,13 +11,13 @@ dependencies:
     - bootstrap_subtheme
 id: bootstrap_subtheme_wrlc_hq_block_4
 theme: bootstrap_subtheme
-region: content
-weight: -10
+region: navigation
+weight: -15
 provider: null
 plugin: 'block_content:6795d17a-cfb1-4bad-9a55-79bef45a50d8'
 settings:
   id: 'block_content:6795d17a-cfb1-4bad-9a55-79bef45a50d8'
-  label: ''
+  label: 'WRLC Logo'
   provider: block_content
   label_display: '0'
   status: true
@@ -28,3 +28,4 @@ visibility:
     id: request_path
     negate: false
     pages: '<front>'
+    context_mapping: {  }

@@ -1,6 +1,6 @@
 uuid: 380ce0ef-d028-4ec2-b9c6-629ee6dcc22c
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.tools
@@ -13,7 +13,7 @@ _core:
 id: bootstrap_subtheme_tools
 theme: bootstrap_subtheme
 region: sidebar_second
-weight: -10
+weight: -7
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

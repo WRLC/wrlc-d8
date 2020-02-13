@@ -1,39 +1,39 @@
-uuid: d8651738-7fb3-4e5a-b487-206cf0fe7fc7
+uuid: ae112326-3f75-4796-a819-0396f6569350
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:08cd4c08-89d2-4701-b7fc-801f55fdbf96'
+    - 'block_content:basic:cefa6601-6882-4eee-9e4f-87a4d4b11ce3'
   module:
     - block_content
     - ctools
     - system
   theme:
     - bootstrap_subtheme
-id: bootstrap_subtheme_wrlc_hq_block_10
+id: forms
 theme: bootstrap_subtheme
-region: sidebar_second
-weight: -9
+region: highlighted
+weight: 0
 provider: null
-plugin: 'block_content:08cd4c08-89d2-4701-b7fc-801f55fdbf96'
+plugin: 'block_content:cefa6601-6882-4eee-9e4f-87a4d4b11ce3'
 settings:
-  id: 'block_content:08cd4c08-89d2-4701-b7fc-801f55fdbf96'
-  label: 'Current Projects'
+  id: 'block_content:cefa6601-6882-4eee-9e4f-87a4d4b11ce3'
+  label: Forms
   provider: block_content
   label_display: visible
   status: true
   info: ''
   view_mode: full
 visibility:
-  request_path:
-    id: request_path
-    negate: false
-    pages: /alerts
-    context_mapping: {  }
   'entity_bundle:node':
     id: 'entity_bundle:node'
     bundles:
-      page: page
+      wrlc_forms: wrlc_forms
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

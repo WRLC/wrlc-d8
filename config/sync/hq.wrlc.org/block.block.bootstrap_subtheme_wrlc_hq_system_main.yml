@@ -11,7 +11,7 @@ _core:
 id: bootstrap_subtheme_wrlc_hq_system_main
 theme: bootstrap_subtheme
 region: content
-weight: -6
+weight: -12
 provider: null
 plugin: system_main_block
 settings:

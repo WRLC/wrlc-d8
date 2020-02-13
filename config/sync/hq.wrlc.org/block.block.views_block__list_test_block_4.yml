@@ -1,0 +1,30 @@
+uuid: 22b13d04-ded0-460b-bf04-190872c6d49d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.list_test
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap_subtheme
+id: views_block__list_test_block_4
+theme: bootstrap_subtheme
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:list_test-block_4'
+settings:
+  id: 'views_block:list_test-block_4'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
