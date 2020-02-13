@@ -22,7 +22,7 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/adminimal_admin_toolbar": "^1.9",
         "drupal/adminimal_theme": "^1.5",
-        "drupal/asset_injector": "^2.4",
+        "drupal/asset_injector": "^2.6",
         "drupal/authorization": "^1.0@beta",
         "drupal/better_search": "^1.4",
         "drupal/bootstrap": "^3.20",
