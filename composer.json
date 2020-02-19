@@ -26,6 +26,7 @@
         "drupal/authorization": "^1.0@beta",
         "drupal/better_search": "^1.4",
         "drupal/bootstrap": "^3.20",
+        "drupal/bootstrap_datetime_picker": "^1.2",
         "drupal/bootstrap_mint": "^5.0",
         "drupal/captcha": "^1.0@beta",
         "drupal/console": "^1.0.2",
