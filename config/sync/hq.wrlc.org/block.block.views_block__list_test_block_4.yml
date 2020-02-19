@@ -1,6 +1,6 @@
 uuid: 22b13d04-ded0-460b-bf04-190872c6d49d
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.list_test

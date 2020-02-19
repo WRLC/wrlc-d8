@@ -38,7 +38,7 @@ content:
     third_party_settings: {  }
     region: content
   field_file:
-    label: above
+    label: hidden
     weight: 2
     type: file_default
     settings:
@@ -46,7 +46,7 @@ content:
     third_party_settings: {  }
     region: content
   field_tags:
-    label: above
+    label: hidden
     weight: 1
     type: entity_reference_label
     settings:
@@ -56,4 +56,6 @@ content:
   links:
     weight: 101
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

@@ -12,7 +12,7 @@ dependencies:
 id: bootstrap_subtheme_wrlc_hq_block_13
 theme: bootstrap_subtheme
 region: content
-weight: -15
+weight: -16
 provider: null
 plugin: 'block_content:69216c15-c823-4c7e-8d0a-bde559d916ee'
 settings:

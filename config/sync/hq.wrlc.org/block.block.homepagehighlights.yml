@@ -1,23 +1,23 @@
-uuid: 7cb15f87-ac4b-420a-aca0-470cdffd29bf
+uuid: 9f86d05f-c292-4dad-ba04-0be31c184b1f
 langcode: en
-status: false
+status: true
 dependencies:
   content:
-    - 'block_content:basic:6795d17a-cfb1-4bad-9a55-79bef45a50d8'
+    - 'block_content:basic:4e1b3e91-486a-49ee-8bed-1d648afc4418'
   module:
     - block_content
     - system
   theme:
     - bootstrap_subtheme
-id: bootstrap_subtheme_wrlc_hq_block_4
+id: homepagehighlights
 theme: bootstrap_subtheme
-region: navigation
-weight: -14
+region: content
+weight: -15
 provider: null
-plugin: 'block_content:6795d17a-cfb1-4bad-9a55-79bef45a50d8'
+plugin: 'block_content:4e1b3e91-486a-49ee-8bed-1d648afc4418'
 settings:
-  id: 'block_content:6795d17a-cfb1-4bad-9a55-79bef45a50d8'
-  label: 'WRLC Logo'
+  id: 'block_content:4e1b3e91-486a-49ee-8bed-1d648afc4418'
+  label: 'home page highlights'
   provider: block_content
   label_display: '0'
   status: true
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    negate: false
     pages: '<front>'
+    negate: false
     context_mapping: {  }

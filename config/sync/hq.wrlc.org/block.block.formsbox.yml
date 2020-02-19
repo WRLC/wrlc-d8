@@ -6,7 +6,6 @@ dependencies:
     - 'block_content:basic:48b22060-728a-441d-a90b-3fb6c7b143fa'
   module:
     - block_content
-    - system
   theme:
     - bootstrap_subtheme
 id: formsbox
@@ -23,9 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility:
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: false
-    context_mapping: {  }
+visibility: {  }

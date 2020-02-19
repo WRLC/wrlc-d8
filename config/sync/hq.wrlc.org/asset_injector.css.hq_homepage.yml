@@ -1,0 +1,17 @@
+uuid: 7cd8cf46-a5bd-41ef-8a6f-040694e924c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: hq_homepage
+label: 'HQ Homepage'
+code: ".container .jumbotron, .container-fluid .jumbotron {\r\n    padding-right: 15px;\r\n    padding-left: 15px;\r\n    border-radius: 0 0 6px 6px;\r\n}\r\n\r\n.navbar-default {\r\n    background-color: #337ab7;\r\n    border-color: #286090;\r\n    margin-top:-16px;\r\n    border-radius:0 0 0 0;\r\n}\r\n\r\n.navbar {\r\n    position: relative;\r\n    max-height: 75px;\r\n     margin-bottom: 0;\r\n    border: 0px solid transparent;\r\n}"
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+conditions_require_all: true

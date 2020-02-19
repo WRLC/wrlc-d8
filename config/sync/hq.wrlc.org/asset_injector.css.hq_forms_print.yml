@@ -1,0 +1,17 @@
+uuid: 81fbd3e1-7f6e-46b6-b136-5415c50001a5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: hq_forms_print
+label: 'HQ Forms Print'
+code: ".well {display:none;}\r\n\r\nbutton, input, select, textarea {\r\n    font-family: inherit;\r\n    font-size: 10px;\r\n    line-height: 10px;\r\n    border: none;\r\n}\r\n\r\ntd, th {\r\n    padding: 0!important;\r\n}\r\n\r\ntable {border:none!important;}\r\n.tabs {display:none;}\r\n\r\n#form-name {font-size:24px!important;}\r\n\r\n.print-hide {display:none!important;}\r\n\r\n.footer {display:none!important;}\r\n\r\n.checkbox {margin-right:10px;}\r\n\r\n\r\n#print-logo { display:block!important; }\r\n\r\n#total {font-weight:bold; font-size:18px; margin-top:20px; right:0; position:relative;}\r\n\r\n#leave-form input[type='checkbox'] {\r\n    -webkit-appearance:none;\r\n    width:20px;\r\n    height:20px;\r\n    background:white;\r\n    border-radius:100%;\r\n    position:absolute;\r\n    margin-top:0;\r\n    border:1px solid silver;\r\n}\r\n#leave-form input[type='checkbox']:checked {\r\n    background-color: #000; border:1px solid #000;\r\n}\r\n\r\n .leave-type { padding-left:25px;}\r\n\r\n.print-date {\r\n    position: absolute;\r\n    top: 0;\r\n    right: 44px;\r\n    font-size: 24px;\r\n}\r\n\r\n.page-header {\r\n    margin:0 0 0 120px;\r\n}\r\n\r\n#toolbar-administration {display:none;}\r\n\r\n.print-date-format {\r\n   \r\n    font-size: 24px;\r\n}"
+media: print
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    pages: /wrlc-leave-form
+    negate: false
+conditions_require_all: true
