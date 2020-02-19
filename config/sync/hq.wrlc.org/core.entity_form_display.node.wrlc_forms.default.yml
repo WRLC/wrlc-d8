@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.node.wrlc_forms.body
     - field.field.node.wrlc_forms.comment_node_wrlc_forms
+    - field.field.node.wrlc_forms.field_file
     - field.field.node.wrlc_forms.field_tags
     - node.type.wrlc_forms
   module:
     - comment
+    - file
     - path
     - text
 id: node.wrlc_forms.default
@@ -38,6 +40,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_file:
+    weight: 121
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
   field_tags:
     weight: 33
     type: options_buttons

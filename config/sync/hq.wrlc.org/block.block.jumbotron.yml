@@ -1,23 +1,23 @@
-uuid: 7cb15f87-ac4b-420a-aca0-470cdffd29bf
+uuid: 9bd7c36b-551c-4eb0-9e85-bbf27759e6a4
 langcode: en
-status: false
+status: true
 dependencies:
   content:
-    - 'block_content:basic:6795d17a-cfb1-4bad-9a55-79bef45a50d8'
+    - 'block_content:basic:8d918cfd-b047-4fb4-b87f-f81a7612f4cc'
   module:
     - block_content
     - system
   theme:
     - bootstrap_subtheme
-id: bootstrap_subtheme_wrlc_hq_block_4
+id: jumbotron
 theme: bootstrap_subtheme
-region: navigation
-weight: -14
+region: header
+weight: -16
 provider: null
-plugin: 'block_content:6795d17a-cfb1-4bad-9a55-79bef45a50d8'
+plugin: 'block_content:8d918cfd-b047-4fb4-b87f-f81a7612f4cc'
 settings:
-  id: 'block_content:6795d17a-cfb1-4bad-9a55-79bef45a50d8'
-  label: 'WRLC Logo'
+  id: 'block_content:8d918cfd-b047-4fb4-b87f-f81a7612f4cc'
+  label: Jumbotron
   provider: block_content
   label_display: '0'
   status: true
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    negate: false
     pages: '<front>'
+    negate: false
     context_mapping: {  }

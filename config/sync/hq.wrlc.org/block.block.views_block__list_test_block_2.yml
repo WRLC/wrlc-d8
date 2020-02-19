@@ -1,6 +1,6 @@
 uuid: e8bdd8dc-3d0f-4299-ad02-6a681fc4cfcd
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.list_test

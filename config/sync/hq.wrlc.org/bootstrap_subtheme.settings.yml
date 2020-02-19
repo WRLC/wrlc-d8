@@ -4,13 +4,8 @@ schemas:
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: 'public://favicon.ico'
-  url: 'https://hq.wrlc8.lndo.site/themes/custom/bootstrap_subtheme/favicon.ico'
+  url: 'https://www.hq.wrlc.org/sites/www.hq.wrlc.org/files/favicon.ico'
   use_default: false
-features:
-  comment_user_picture: true
-  comment_user_verification: true
-  favicon: true
-  node_user_picture: true
 logo:
   path: 'public://wrlc-logo-2-white.png'
   url: ''
@@ -23,3 +18,9 @@ cdn_cache_ttl_assets: '0'
 cdn_cache_ttl_library: '0'
 reset_http_request_cache: ''
 table: ''
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+table_striped: 0

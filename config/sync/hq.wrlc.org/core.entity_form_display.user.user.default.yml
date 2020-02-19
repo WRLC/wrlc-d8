@@ -29,9 +29,13 @@ content:
   account:
     weight: -10
     region: content
+    settings: {  }
+    third_party_settings: {  }
   contact:
     weight: 5
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_cell_phone:
     weight: 3
     type: string_textfield
@@ -74,9 +78,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  google_analytics:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   language:
     weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
@@ -86,6 +97,8 @@ content:
   timezone:
     weight: 6
     region: content
+    settings: {  }
+    third_party_settings: {  }
   user_picture:
     settings:
       progress_indicator: throbber

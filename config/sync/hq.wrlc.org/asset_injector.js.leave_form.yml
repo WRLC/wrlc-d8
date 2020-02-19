@@ -1,0 +1,20 @@
+uuid: 1a41723b-2b28-4e89-8e79-c2607dae6402
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: leave_form
+label: 'Leave Form'
+code: "// JavaScript Document\r\nfunction updForm(theForm) {\r\n\tif (theForm.name == \"floatingForm\") {\r\n\t\tif (theForm.dat1.value != \"\") {\r\n\t\t\ttheForm.cbox.checked = true;\r\n\t\t}\r\n\t} else {\r\n\t\tvar y = 0.0;\r\n\t\ty = (isNaN(parseFloat(theForm.hrs1.value))? 0 :\r\n\t\t\t  \t\tparseFloat(theForm.hrs1.value))\r\n\t\t\t+(isNaN(parseFloat(theForm.hrs2.value))? 0 :\r\n\t\t\t  \t\tparseFloat(theForm.hrs2.value))\r\n\t\t\t+(isNaN(parseFloat(theForm.hrs3.value))? 0 :\r\n\t\t\t  \t\tparseFloat(theForm.hrs3.value))\r\n\t\t\t+(isNaN(parseFloat(theForm.hrs4.value))? 0 :\r\n\t\t\t  \t\tparseFloat(theForm.hrs4.value));\r\n\t\ttheForm.hrst.value = Math.round( y*100 ) / 100;\r\n\t\tif (theForm.hrst.value == \"0\") {\r\n\t\t\ttheForm.cbox.checked = false;\r\n\t\t\ttheForm.hrst.value = \"\";\r\n\t\t} else {\r\n\t\t\ttheForm.cbox.checked = true;\r\n\t\t}\r\n\t}\r\n}\r\n\r\n\r\nfunction addUp(theForm) {\r\n\t\tvar y = 0.0;\r\n\t\ty = (isNaN(parseFloat(theForm.amt1.value))? 0 :\r\n\t\t  \t\t\tparseFloat(theForm.amt1.value))\r\n\t\t\t+(isNaN(parseFloat(theForm.amt2.value))? 0 :\r\n\t\t  \t\t\tparseFloat(theForm.amt2.value))\r\n\t\t\t+(isNaN(parseFloat(theForm.amt3.value))? 0 :\r\n\t\t  \t\t\tparseFloat(theForm.amt3.value))\r\n\t\t\t+(isNaN(parseFloat(theForm.amt4.value))? 0 :\r\n\t\t  \t\t\tparseFloat(theForm.amt4.value))\r\n\t\t\t+(isNaN(parseFloat(theForm.amt5.value))? 0 :\r\n\t\t  \t\t\tparseFloat(theForm.amt5.value))\r\n\t\t\t+(isNaN(parseFloat(theForm.amt6.value))? 0 :\r\n\t\t  \t\t\tparseFloat(theForm.amt6.value))\r\n\t\t\t+(isNaN(parseFloat(theForm.amt7.value))? 0 :\r\n\t\t  \t\t\tparseFloat(theForm.amt7.value))\r\n\t\t\t+(isNaN(parseFloat(theForm.amt8.value))? 0 :\r\n\t\t  \t\t\tparseFloat(theForm.amt8.value))\r\n\t\t\t+(isNaN(parseFloat(theForm.amt9.value))? 0 :\r\n\t\t  \t\t\tparseFloat(theForm.amt9.value))\r\n\t\t\t+(isNaN(parseFloat(theForm.amt10.value))? 0 :\r\n\t\t  \t\t\tparseFloat(theForm.amt10.value));\r\n\t\ttheForm.xtotl.value = Math.round( y*100 ) / 100;\r\n\t\ty = (isNaN(parseFloat(theForm.cash1.value))? 0 :\r\n\t\t  \t\t\tparseFloat(theForm.cash1.value))\r\n\t\t\t+(isNaN(parseFloat(theForm.cash2.value))? 0 :\r\n\t\t  \t\t\tparseFloat(theForm.cash2.value))\r\n\t\t\t+(isNaN(parseFloat(theForm.cash3.value))? 0 :\r\n\t\t  \t\t\tparseFloat(theForm.cash3.value))\r\n\t\t\t+(isNaN(parseFloat(theForm.lsbal.value))? 0 :\r\n\t\t  \t\t\tparseFloat(theForm.lsbal.value));\r\n\t\ttheForm.atotl.value = Math.round( y*100 ) / 100;\r\n\t\ttheForm.lessa.value = theForm.atotl.value;\r\n\t\ty = theForm.xtotl.value - theForm.lessa.value;\r\n\t\ttheForm.btotl.value = Math.round( y*100 ) / 100;\r\n\t\tif (theForm.btotl.value < 0) {\r\n\t\t\ttheForm.who[0].checked = true;\r\n\t\t\ttheForm.btotl.value = Math.abs(theForm.btotl.value);\r\n\t\t} else {\r\n\t\t\ttheForm.who[1].checked = true;\r\n\t\t}\r\n\t}\r\n\tfunction today() {\r\n\t\td = new Date();\r\n\t\treturn (d.getMonth()+1) + '/' + d.getDate() + '/' + d.getFullYear();\r\n\t}\r\n\t\r\n\t"
+noscript: ''
+noscriptRegion: {  }
+jquery: true
+header: true
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    pages: /wrlc-leave-form
+    negate: false
+conditions_require_all: true
