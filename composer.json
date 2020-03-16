@@ -42,7 +42,7 @@
         "drupal/google_analytics": "^3.0",
         "drupal/iframe": "^1.11",
         "drupal/imce": "^1.7",
-        "drupal/ldap": "^3.0@beta",
+        "drupal/ldap": "3.0-beta3",
         "drupal/libraries": "^3.0@alpha",
         "drupal/menu_breadcrumb": "^1.11",
         "drupal/nexus": "^1.4",
