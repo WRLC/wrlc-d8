@@ -3635,17 +3635,17 @@
     },
     {
         "name": "drupal/core",
-        "version": "8.8.3",
-        "version_normalized": "8.8.3.0",
+        "version": "8.8.4",
+        "version_normalized": "8.8.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/drupal/core.git",
-            "reference": "77971de6d6ade7366cdd3fadfc16c5d02e531446"
+            "reference": "34e59fcf702c1b3c497bbd6e92e68e546c5d15b8"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/drupal/core/zipball/77971de6d6ade7366cdd3fadfc16c5d02e531446",
-            "reference": "77971de6d6ade7366cdd3fadfc16c5d02e531446",
+            "url": "https://api.github.com/repos/drupal/core/zipball/34e59fcf702c1b3c497bbd6e92e68e546c5d15b8",
+            "reference": "34e59fcf702c1b3c497bbd6e92e68e546c5d15b8",
             "shasum": ""
         },
         "require": {
@@ -3811,7 +3811,7 @@
             "drupal/workflows": "self.version",
             "drupal/workspaces": "self.version"
         },
-        "time": "2020-03-04T18:01:37+00:00",
+        "time": "2020-03-18T16:26:33+00:00",
         "type": "drupal-core",
         "extra": {
             "drupal-scaffold": {
@@ -11778,17 +11778,17 @@
     },
     {
         "name": "webflo/drupal-core-require-dev",
-        "version": "8.8.3",
-        "version_normalized": "8.8.3.0",
+        "version": "8.8.4",
+        "version_normalized": "8.8.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/webflo/drupal-core-require-dev.git",
-            "reference": "392845307d7438202fdd68551320d309b5d9b4fe"
+            "reference": "28200e85238e07533adcc12cff807d5913727365"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/392845307d7438202fdd68551320d309b5d9b4fe",
-            "reference": "392845307d7438202fdd68551320d309b5d9b4fe",
+            "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/28200e85238e07533adcc12cff807d5913727365",
+            "reference": "28200e85238e07533adcc12cff807d5913727365",
             "shasum": ""
         },
         "require": {
@@ -11797,7 +11797,7 @@
             "behat/mink-selenium2-driver": "1.3.x-dev",
             "composer/composer": "^1.9.1",
             "drupal/coder": "^8.3.2",
-            "drupal/core": "8.8.3",
+            "drupal/core": "8.8.4",
             "jcalderonzumba/gastonjs": "^1.0.2",
             "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
             "justinrainbow/json-schema": "^5.2",
@@ -11812,7 +11812,7 @@
             "symfony/lock": "~3.4.0",
             "symfony/phpunit-bridge": "^3.4.3"
         },
-        "time": "2020-03-04T18:32:03+00:00",
+        "time": "2020-03-18T17:32:05+00:00",
         "type": "metapackage",
         "notification-url": "https://packagist.org/downloads/",
         "license": [
