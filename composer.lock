@@ -2370,8 +2370,7 @@
             "homepage": "https://www.drupal.org/project/authorization",
             "support": {
                 "source": "https://git.drupalcode.org/project/authorization"
-            },
-            "time": "2019-12-29T14:06:29+00:00"
+            }
         },
         {
             "name": "drupal/better_search",
@@ -2968,16 +2967,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.8.3",
+            "version": "8.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "77971de6d6ade7366cdd3fadfc16c5d02e531446"
+                "reference": "34e59fcf702c1b3c497bbd6e92e68e546c5d15b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/77971de6d6ade7366cdd3fadfc16c5d02e531446",
-                "reference": "77971de6d6ade7366cdd3fadfc16c5d02e531446",
+                "url": "https://api.github.com/repos/drupal/core/zipball/34e59fcf702c1b3c497bbd6e92e68e546c5d15b8",
+                "reference": "34e59fcf702c1b3c497bbd6e92e68e546c5d15b8",
                 "shasum": ""
             },
             "require": {
@@ -3194,7 +3193,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-03-04T18:01:37+00:00"
+            "time": "2020-03-18T16:26:33+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -11816,16 +11815,16 @@
         },
         {
             "name": "webflo/drupal-core-require-dev",
-            "version": "8.8.3",
+            "version": "8.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webflo/drupal-core-require-dev.git",
-                "reference": "392845307d7438202fdd68551320d309b5d9b4fe"
+                "reference": "28200e85238e07533adcc12cff807d5913727365"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/392845307d7438202fdd68551320d309b5d9b4fe",
-                "reference": "392845307d7438202fdd68551320d309b5d9b4fe",
+                "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/28200e85238e07533adcc12cff807d5913727365",
+                "reference": "28200e85238e07533adcc12cff807d5913727365",
                 "shasum": ""
             },
             "require": {
@@ -11834,7 +11833,7 @@
                 "behat/mink-selenium2-driver": "1.3.x-dev",
                 "composer/composer": "^1.9.1",
                 "drupal/coder": "^8.3.2",
-                "drupal/core": "8.8.3",
+                "drupal/core": "8.8.4",
                 "jcalderonzumba/gastonjs": "^1.0.2",
                 "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
                 "justinrainbow/json-schema": "^5.2",
@@ -11856,7 +11855,7 @@
             ],
             "description": "require-dev dependencies from drupal/core",
             "abandoned": "drupal/core-dev",
-            "time": "2020-03-04T18:32:03+00:00"
+            "time": "2020-03-18T17:32:05+00:00"
         }
     ],
     "aliases": [],
