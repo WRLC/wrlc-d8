@@ -5,24 +5,28 @@
  * Contains install, uninstall and update functions for IFrame.
  */
 
-use Drupal\field\Entity\FieldConfig;
 use Drupal\Core\Entity\Sql\SqlContentEntityStorage;
 
 /**
  * Implements hook_install().
  */
+/*
 function iframe_install() {
 }
+ */
 
 /**
  * Implements hook_uninstall().
  */
 function iframe_uninstall() {
-    // Remove the iframe fields.
-    $fields = entity_load_multiple_by_properties('field_storage_config', ['type' => 'iframe']);
-    foreach ($fields as $field) {
-        $field->delete();
-    }
+  // Remove all from cache.
+  \Drupal::cache('data')->deleteAll();
+  // Remove the iframe fields.
+  $storage = \Drupal::entityTypeManager()->getStorage('field_storage_config');
+  $fields = $storage->loadByProperties([
+    'type' => 'iframe',
+  ]);
+  $storage->delete($fields);
 }
 
 /**
@@ -76,4 +80,3 @@ function iframe_update_8101(&$sandbox) {
     }
   }
 }
-
