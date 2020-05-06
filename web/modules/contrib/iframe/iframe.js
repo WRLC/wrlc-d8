@@ -1,9 +1,11 @@
+/**
+ * @file
+ * See Issue "autoresize" https://www.drupal.org/node/360549 .*/
 
-/* see Issue "autoresize" https://www.drupal.org/node/360549 */
 (function ($) {
   Drupal.behaviors.iframeModule = {
-    attach: function(context, settings) {
-      $('iframe.autoresize').each(function() {
+    attach: function (context, settings) {
+      $('iframe.autoresize').each(function () {
         var offsetHeight = 20;
         var thisIframe = $(this);
         var iframeWaitInterval;
@@ -15,7 +17,8 @@
 
             try {
               contentheight = $(iframeDoc).find('body').height();
-            } catch (e) {
+            }
+            catch (e) {
               elem = $(iframe)[0];
               msg = $('<p><small>(' + Drupal.t('Iframe URL is not from the same domain - autoresize not working.') + ')</small></p>');
               $(elem).after(msg);
@@ -28,22 +31,21 @@
                 var frameElement = $(iframe)[0].frameElement || $(iframe)[0];
                 frameElement.style.height = (contentheight + offsetHeight) + 'px';
                 frameElement.scrolling = 'no';
-              } catch (e) {
+              }
+              catch (e) {
                 /* here, ist not an correctable error */
               }
             }
           }
         }
-        var delayedResize = function() {
+        var delayedResize = function () {
             resizeHeight(thisIframe);
         }
 
         iframeWaitInterval = setInterval(delayedResize, 300);
-        //setTimeout(delayedResize, 300);
-        //resizeHeight(thisIframe);
+        // setTimeout(delayedResize, 300);
+        // resizeHeight(thisIframe);
       });
     }
   }
 })(jQuery);
-
-
