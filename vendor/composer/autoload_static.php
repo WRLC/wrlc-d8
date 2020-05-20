@@ -29,6 +29,7 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
+        '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '952683d815ff0a7bf322b93c0be7e4e4' => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src/bootstrap.php',
         '5a12a5271c58108e0aa33355e6ac54ea' => __DIR__ . '/..' . '/drupal/console-core/src/functions.php',
@@ -53,7 +54,6 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
             'Zumba\\Mink\\Driver\\' => 18,
             'Zumba\\GastonJS\\' => 15,
             'ZipStream\\' => 10,
-            'Zend\\Stdlib\\' => 12,
             'Zend\\Feed\\' => 10,
             'Zend\\Escaper\\' => 13,
             'Zend\\Diactoros\\' => 15,
@@ -122,6 +122,7 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
             'Psy\\' => 4,
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
+            'Psr\\Http\\Client\\' => 16,
             'Psr\\Container\\' => 14,
             'Prophecy\\' => 9,
             'PhpParser\\' => 10,
@@ -134,6 +135,8 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         'L' => 
         array (
             'League\\Container\\' => 17,
+            'Laminas\\ZendFrameworkBridge\\' => 28,
+            'Laminas\\Stdlib\\' => 15,
         ),
         'J' => 
         array (
@@ -238,10 +241,6 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         'ZipStream\\' => 
         array (
             0 => __DIR__ . '/..' . '/maennchen/zipstream-php/src',
-        ),
-        'Zend\\Stdlib\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-stdlib/src',
         ),
         'Zend\\Feed\\' => 
         array (
@@ -441,7 +440,12 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Psr\\Http\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-client/src',
         ),
         'Psr\\Container\\' => 
         array (
@@ -466,6 +470,14 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         'League\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/container/src',
+        ),
+        'Laminas\\ZendFrameworkBridge\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src',
+        ),
+        'Laminas\\Stdlib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laminas/laminas-stdlib/src',
         ),
         'JsonSchema\\' => 
         array (
