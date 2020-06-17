@@ -52,7 +52,7 @@
         "drupal/php": "^1.0",
         "drupal/realname": "^1.0@RC",
         "drupal/search_api_solr": "^4.0",
-        "drupal/view_profiles_perms": "^1.0",
+        "drupal/view_profiles_perms": "^2.0",
         "drupal/webform": "^5.6",
         "drush/drush": "^9.0.0",
         "symfony/event-dispatcher": "4.3.4 as 3.4.35",

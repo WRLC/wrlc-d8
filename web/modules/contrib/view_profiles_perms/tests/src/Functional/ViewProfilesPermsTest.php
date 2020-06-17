@@ -24,6 +24,11 @@ class ViewProfilesPermsTest extends BrowserTestBase {
   ];
 
   /**
+   * {@inheritdoc}
+   */
+  protected $defaultTheme = 'stark';
+
+  /**
    * A user with the developer role.
    *
    * @var \Drupal\user\Entity\User
@@ -86,7 +91,7 @@ class ViewProfilesPermsTest extends BrowserTestBase {
     $assert->pageTextNotContains('Access Anonymous users profiles');
 
     // Tests for asserting access to profiles based on our permissions.
-    // - Developer role has 'access manager profiles'
+    // - Developer role has 'access manager users profiles'
     // - Manager role has no permissions
     //
     // By default Drupal only assigns 'access user profiles' to the
