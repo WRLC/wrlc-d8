@@ -23,6 +23,7 @@
         "drupal/acl": "^1.0@alpha",
         "drupal/adminimal_admin_toolbar": "^1.9",
         "drupal/adminimal_theme": "^1.5",
+        "drupal/advagg": "^4.1",
         "drupal/asset_injector": "^2.6",
         "drupal/authorization": "~1.0-dev",
         "drupal/better_search": "^1.4",
