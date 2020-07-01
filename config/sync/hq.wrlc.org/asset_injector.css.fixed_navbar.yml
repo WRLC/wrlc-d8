@@ -1,0 +1,18 @@
+uuid: 3ddd2f21-7f24-4978-b61b-8cab3876a576
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: fixed_navbar
+label: 'Fixed Navbar'
+code: "body.toolbar-fixed.toolbar-horizontal.toolbar-tray-open .navbar-fixed-top {\r\n    top: 95px;\r\n    position: fixed;\r\n}\r\n\r\nbody.toolbar-fixed .navbar-fixed-top {\r\n    top: 55px;\r\n    position: fixed;\r\n}\r\n\r\n.navbar-fixed-top {\r\n    top: 16px;\r\n    position: fixed !important;\r\n}"
+media: screen
+preprocess: true
+conditions:
+  current_theme:
+    id: current_theme
+    theme:
+      bootstrap_subtheme: bootstrap_subtheme
+    negate: false
+conditions_require_all: true

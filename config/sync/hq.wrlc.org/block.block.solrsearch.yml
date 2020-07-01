@@ -1,0 +1,25 @@
+uuid: bbec80ef-7e94-49d9-ae63-8717c8ec0f7d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e44818dd-cc2c-40b6-9302-05dbcce7a2d6'
+  module:
+    - block_content
+  theme:
+    - bootstrap_subtheme
+id: solrsearch
+theme: bootstrap_subtheme
+region: sidebar_second
+weight: -15
+provider: null
+plugin: 'block_content:e44818dd-cc2c-40b6-9302-05dbcce7a2d6'
+settings:
+  id: 'block_content:e44818dd-cc2c-40b6-9302-05dbcce7a2d6'
+  label: 'solr search'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
