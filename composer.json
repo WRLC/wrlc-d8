@@ -45,6 +45,7 @@
         "drupal/empty_page": "^3.0",
         "drupal/eva": "^2.1",
         "drupal/expandable_search": "^1.1",
+        "drupal/faq": "^1.0@alpha",
         "drupal/feeds": "^3.0@alpha",
         "drupal/fences": "^2.0@RC",
         "drupal/filefield_paths": "^1.0@beta",
