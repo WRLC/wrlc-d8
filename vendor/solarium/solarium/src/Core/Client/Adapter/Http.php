@@ -5,13 +5,12 @@ namespace Solarium\Core\Client\Adapter;
 use Solarium\Core\Client\Endpoint;
 use Solarium\Core\Client\Request;
 use Solarium\Core\Client\Response;
-use Solarium\Core\Configurable;
 use Solarium\Exception\HttpException;
 
 /**
  * Basic HTTP adapter using a stream.
  */
-class Http extends Configurable implements AdapterInterface, TimeoutAwareInterface
+class Http implements AdapterInterface, TimeoutAwareInterface
 {
     use TimeoutAwareTrait;
 
@@ -70,7 +69,7 @@ class Http extends Configurable implements AdapterInterface, TimeoutAwareInterfa
         $context = stream_context_create(
             ['http' => [
                     'method' => $method,
-                    'timeout' => $this->timeout ?? $endpoint->getTimeout(),
+                    'timeout' => $this->timeout,
                     'protocol_version' => 1.0,
                     'user_agent' => 'Solarium Http Adapter',
                 ],
@@ -111,7 +110,8 @@ class Http extends Configurable implements AdapterInterface, TimeoutAwareInterfa
                         $data
                     );
 
-                    $request->addHeader('Content-Type: text/xml; charset=utf-8');
+                    $charset = $request->getParam('ie') ?? 'utf-8';
+                    $request->addHeader('Content-Type: text/xml; charset='.$charset);
                 }
             }
         } elseif (Request::METHOD_PUT == $method) {

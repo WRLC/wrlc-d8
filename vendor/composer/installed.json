@@ -2827,18 +2827,18 @@
     },
     {
         "name": "drupal/admin_toolbar",
-        "version": "2.2.0",
-        "version_normalized": "2.2.0.0",
+        "version": "2.3.0",
+        "version_normalized": "2.3.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-            "reference": "8.x-2.2"
+            "reference": "8.x-2.3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-2.2.zip",
-            "reference": "8.x-2.2",
-            "shasum": "41ea0e3321e6d1e190c486be49a99e60446d8dd7"
+            "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-2.3.zip",
+            "reference": "8.x-2.3",
+            "shasum": "cf8ee1aa8adfc604db4394655e3ba4c423d5f24a"
         },
         "require": {
             "drupal/core": "^8.8.0 || ^9.0"
@@ -2846,8 +2846,8 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "8.x-2.2",
-                "datestamp": "1585017179",
+                "version": "8.x-2.3",
+                "datestamp": "1592535714",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -2857,7 +2857,7 @@
         "installation-source": "dist",
         "notification-url": "https://packages.drupal.org/8/downloads",
         "license": [
-            "GPL-2.0+"
+            "GPL-2.0-or-later"
         ],
         "authors": [
             {
@@ -2901,7 +2901,7 @@
             "Toolbar"
         ],
         "support": {
-            "source": "http://cgit.drupalcode.org/admin_toolbar",
+            "source": "https://git.drupalcode.org/project/admin_toolbar",
             "issues": "https://www.drupal.org/project/issues/admin_toolbar"
         }
     },
@@ -3013,30 +3013,27 @@
     },
     {
         "name": "drupal/asset_injector",
-        "version": "2.6.0",
-        "version_normalized": "2.6.0.0",
+        "version": "2.7.0",
+        "version_normalized": "2.7.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/asset_injector.git",
-            "reference": "8.x-2.6"
+            "reference": "8.x-2.7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/asset_injector-8.x-2.6.zip",
-            "reference": "8.x-2.6",
-            "shasum": "e861e46740c264b9313e7a52878e789f11af5ec2"
+            "url": "https://ftp.drupal.org/files/projects/asset_injector-8.x-2.7.zip",
+            "reference": "8.x-2.7",
+            "shasum": "95287280fc513b4d32f6fc81feac9ada0a6f7948"
         },
         "require": {
-            "drupal/core": "~8.0"
+            "drupal/core": "^8.8 || ^9"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-2.x": "2.x-dev"
-            },
             "drupal": {
-                "version": "8.x-2.6",
-                "datestamp": "1575588784",
+                "version": "8.x-2.7",
+                "datestamp": "1591636386",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -3176,30 +3173,27 @@
     },
     {
         "name": "drupal/bootstrap",
-        "version": "3.21.0",
-        "version_normalized": "3.21.0.0",
+        "version": "3.23.0",
+        "version_normalized": "3.23.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/bootstrap.git",
-            "reference": "8.x-3.21"
+            "reference": "8.x-3.23"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/bootstrap-8.x-3.21.zip",
-            "reference": "8.x-3.21",
-            "shasum": "e431093eb4f64712b02e691660a85cfa4fb49c88"
+            "url": "https://ftp.drupal.org/files/projects/bootstrap-8.x-3.23.zip",
+            "reference": "8.x-3.23",
+            "shasum": "9849be667cc678a91ad29f77c2baea2cf16878bc"
         },
         "require": {
-            "drupal/core": "~8.0"
+            "drupal/core": "^8 || ^9"
         },
         "type": "drupal-theme",
         "extra": {
-            "branch-alias": {
-                "dev-3.x": "3.x-dev"
-            },
             "drupal": {
-                "version": "8.x-3.21",
-                "datestamp": "1574417581",
+                "version": "8.x-3.23",
+                "datestamp": "1592175762",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -3209,7 +3203,7 @@
         "installation-source": "dist",
         "notification-url": "https://packages.drupal.org/8/downloads",
         "license": [
-            "GPL-2.0"
+            "GPL-2.0-or-later"
         ],
         "authors": [
             {
@@ -3231,7 +3225,7 @@
         "description": "Built to use Bootstrap, a sleek, intuitive, and powerful front-end framework for faster and easier web development.",
         "homepage": "https://www.drupal.org/project/bootstrap",
         "support": {
-            "source": "http://cgit.drupalcode.org/bootstrap",
+            "source": "https://git.drupalcode.org/project/bootstrap",
             "docs": "https://drupal-bootstrap.org",
             "issues": "https://www.drupal.org/project/issues/bootstrap",
             "irc": "irc://irc.freenode.org/drupal-bootstrap"
@@ -4553,53 +4547,68 @@
     },
     {
         "name": "drupal/google_analytics",
-        "version": "3.0.0",
-        "version_normalized": "3.0.0.0",
+        "version": "3.1.0",
+        "version_normalized": "3.1.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/google_analytics.git",
-            "reference": "8.x-3.0"
+            "reference": "8.x-3.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/google_analytics-8.x-3.0.zip",
-            "reference": "8.x-3.0",
-            "shasum": "18179854152cae44be2a5ed5de5550bc6e131c70"
+            "url": "https://ftp.drupal.org/files/projects/google_analytics-8.x-3.1.zip",
+            "reference": "8.x-3.1",
+            "shasum": "171dcac5a67cde66201754baaa52711f45e47a3b"
         },
         "require": {
-            "drupal/core": "~8.5"
+            "drupal/core": "^8.8.6|^9.0"
         },
         "require-dev": {
-            "drupal/php": "*",
-            "drupal/token": "*"
+            "drupal/token": "^1.7"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-3.x": "3.x-dev"
-            },
             "drupal": {
-                "version": "8.x-3.0",
-                "datestamp": "1548968580",
+                "version": "8.x-3.1",
+                "datestamp": "1591298584",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
                 }
+            },
+            "branch-alias": {
+                "dev-8.x-2.x": "2.x-dev"
             }
         },
         "installation-source": "dist",
         "notification-url": "https://packages.drupal.org/8/downloads",
         "license": [
-            "GPL-2.0+"
+            "GPL-2.0-or-later"
         ],
         "authors": [
             {
-                "name": "hass",
-                "homepage": "https://www.drupal.org/u/hass"
+                "name": "See contributors",
+                "homepage": "https://www.drupal.org/node/49388/committers"
             },
             {
-                "name": "See other contributors",
-                "homepage": "https://www.drupal.org/node/49388/committers"
+                "name": "budda",
+                "homepage": "https://www.drupal.org/user/13164"
+            },
+            {
+                "name": "ixismark",
+                "homepage": "https://www.drupal.org/user/3632333"
+            },
+            {
+                "name": "japerry",
+                "homepage": "https://www.drupal.org/user/45640"
+            },
+            {
+                "name": "pfaocle",
+                "homepage": "https://www.drupal.org/user/9740"
+            },
+            {
+                "name": "roberto.rivera.ixis",
+                "homepage": "https://www.drupal.org/user/3632325"
             }
         ],
         "description": "Allows your site to be tracked by Google Analytics by adding a Javascript tracking code to every page.",
@@ -5106,30 +5115,27 @@
     },
     {
         "name": "drupal/office_hours",
-        "version": "1.2.0",
-        "version_normalized": "1.2.0.0",
+        "version": "1.3.0",
+        "version_normalized": "1.3.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/office_hours.git",
-            "reference": "8.x-1.2"
+            "reference": "8.x-1.3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/office_hours-8.x-1.2.zip",
-            "reference": "8.x-1.2",
-            "shasum": "8d5e98536fd11fe84be6d81768944c463970f7fc"
+            "url": "https://ftp.drupal.org/files/projects/office_hours-8.x-1.3.zip",
+            "reference": "8.x-1.3",
+            "shasum": "92f3501b72de9bfce282981d8f1b2eec18822c29"
         },
         "require": {
-            "drupal/core": "*"
+            "drupal/core": "^8 || ^9"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
             "drupal": {
-                "version": "8.x-1.2",
-                "datestamp": "1561108381",
+                "version": "8.x-1.3",
+                "datestamp": "1592488115",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -5475,30 +5481,30 @@
     },
     {
         "name": "drupal/search_api_solr",
-        "version": "4.0.1",
-        "version_normalized": "4.0.1.0",
+        "version": "4.1.2",
+        "version_normalized": "4.1.2.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/search_api_solr.git",
-            "reference": "4.0.1"
+            "reference": "4.1.2"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.0.1.zip",
-            "reference": "4.0.1",
-            "shasum": "8c5b89633d15c0ec2e7f9e9b2f8df7281e36beed"
+            "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.1.2.zip",
+            "reference": "4.1.2",
+            "shasum": "3755e9d30b8bf1ab501244cde5850006f959e189"
         },
         "require": {
             "consolidation/annotated-command": "^2.12|^4.1",
             "drupal/core": "^8.8 || ^9",
-            "drupal/search_api": "~1.15",
+            "drupal/search_api": "~1.17",
             "ext-dom": "*",
             "ext-json": "*",
             "ext-simplexml": "*",
             "laminas/laminas-stdlib": "^3.2",
             "maennchen/zipstream-php": "^1.2|^2.0",
-            "php": "^7.1.3",
-            "solarium/solarium": "~5.0.3|~5.1.5|~5.2.0|~6.0.0"
+            "php": "^7.2",
+            "solarium/solarium": "^6.0"
         },
         "conflict": {
             "drupal/search_api_solr_multilingual": "<3.0.0"
@@ -5522,8 +5528,8 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "4.0.1",
-                "datestamp": "1589886627",
+                "version": "4.1.2",
+                "datestamp": "1592841316",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -8487,25 +8493,73 @@
         ]
     },
     {
-        "name": "psr/http-client",
+        "name": "psr/event-dispatcher",
         "version": "1.0.0",
         "version_normalized": "1.0.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/php-fig/http-client.git",
-            "reference": "496a823ef742b632934724bf769560c2a5c7c44e"
+            "url": "https://github.com/php-fig/event-dispatcher.git",
+            "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/php-fig/http-client/zipball/496a823ef742b632934724bf769560c2a5c7c44e",
-            "reference": "496a823ef742b632934724bf769560c2a5c7c44e",
+            "url": "https://api.github.com/repos/php-fig/event-dispatcher/zipball/dbefd12671e8a14ec7f180cab83036ed26714bb0",
+            "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0",
             "shasum": ""
         },
         "require": {
-            "php": "^7.0",
+            "php": ">=7.2.0"
+        },
+        "time": "2019-01-08T18:20:26+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\EventDispatcher\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Standard interfaces for event handling.",
+        "keywords": [
+            "events",
+            "psr",
+            "psr-14"
+        ]
+    },
+    {
+        "name": "psr/http-client",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/http-client.git",
+            "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/http-client/zipball/2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
+            "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.0 || ^8.0",
             "psr/http-message": "^1.0"
         },
-        "time": "2018-10-30T23:29:13+00:00",
+        "time": "2020-06-29T06:28:15+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -9507,41 +9561,39 @@
     },
     {
         "name": "solarium/solarium",
-        "version": "5.2.0",
-        "version_normalized": "5.2.0.0",
+        "version": "6.0.0",
+        "version_normalized": "6.0.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/solariumphp/solarium.git",
-            "reference": "9208b615cb2ed6f306be6e696431b6b71e4d42db"
+            "reference": "862fd56fd4ab1645e4f5cd976cfe94c2ce089c94"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/solariumphp/solarium/zipball/9208b615cb2ed6f306be6e696431b6b71e4d42db",
-            "reference": "9208b615cb2ed6f306be6e696431b6b71e4d42db",
+            "url": "https://api.github.com/repos/solariumphp/solarium/zipball/862fd56fd4ab1645e4f5cd976cfe94c2ce089c94",
+            "reference": "862fd56fd4ab1645e4f5cd976cfe94c2ce089c94",
             "shasum": ""
         },
         "require": {
             "ext-json": "*",
-            "php": "^7.1.3",
+            "php": "^7.2",
+            "psr/event-dispatcher": "^1.0",
             "psr/http-client": "^1.0",
             "psr/http-factory": "^1.0",
-            "symfony/event-dispatcher": "^4.3 || ^5.0"
+            "symfony/contracts": "^1.0 || ^2.0"
         },
         "require-dev": {
-            "friendsofphp/php-cs-fixer": "^2.16",
-            "guzzlehttp/guzzle": "^3.8 || ^6.2",
+            "guzzlehttp/guzzle": "^6.5",
             "nyholm/psr7": "^1.2",
-            "php-coveralls/php-coveralls": "^2.1",
             "php-http/guzzle6-adapter": "^2.0",
+            "phpstan/extension-installer": "^1.0",
+            "phpstan/phpstan": "^0.12",
+            "phpstan/phpstan-phpunit": "^0.12",
             "phpunit/phpunit": "^8.0",
-            "squizlabs/php_codesniffer": "^3.4",
-            "symfony/phpunit-bridge": "^5.0",
-            "zendframework/zend-http": "^2.8"
+            "roave/security-advisories": "dev-master",
+            "symfony/event-dispatcher": "^4.3 || ^5.0"
         },
-        "suggest": {
-            "minimalcode/search": "Query builder compatible with Solarium, allows simplified solr-query handling"
-        },
-        "time": "2020-04-03T22:16:30+00:00",
+        "time": "2020-06-22T09:07:55+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -10077,6 +10129,79 @@
                 "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                 "type": "tidelift"
             }
+        ]
+    },
+    {
+        "name": "symfony/contracts",
+        "version": "v1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/contracts.git",
+            "reference": "d3636025e8253c6144358ec0a62773cae588395b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/contracts/zipball/d3636025e8253c6144358ec0a62773cae588395b",
+            "reference": "d3636025e8253c6144358ec0a62773cae588395b",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1.3"
+        },
+        "require-dev": {
+            "psr/cache": "^1.0",
+            "psr/container": "^1.0",
+            "symfony/polyfill-intl-idn": "^1.10"
+        },
+        "suggest": {
+            "psr/cache": "When using the Cache contracts",
+            "psr/container": "When using the Service contracts",
+            "symfony/cache-contracts-implementation": "",
+            "symfony/event-dispatcher-implementation": "",
+            "symfony/http-client-contracts-implementation": "",
+            "symfony/service-contracts-implementation": "",
+            "symfony/translation-contracts-implementation": ""
+        },
+        "time": "2019-04-27T14:29:50+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Contracts\\": ""
+            },
+            "exclude-from-classmap": [
+                "**/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "A set of abstractions extracted out of the Symfony components",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "abstractions",
+            "contracts",
+            "decoupling",
+            "interfaces",
+            "interoperability",
+            "standards"
         ]
     },
     {
@@ -11207,17 +11332,17 @@
     },
     {
         "name": "symfony/polyfill-mbstring",
-        "version": "v1.17.0",
-        "version_normalized": "1.17.0.0",
+        "version": "v1.17.1",
+        "version_normalized": "1.17.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-mbstring.git",
-            "reference": "fa79b11539418b02fc5e1897267673ba2c19419c"
+            "reference": "7110338d81ce1cbc3e273136e4574663627037a7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fa79b11539418b02fc5e1897267673ba2c19419c",
-            "reference": "fa79b11539418b02fc5e1897267673ba2c19419c",
+            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7110338d81ce1cbc3e273136e4574663627037a7",
+            "reference": "7110338d81ce1cbc3e273136e4574663627037a7",
             "shasum": ""
         },
         "require": {
@@ -11226,11 +11351,15 @@
         "suggest": {
             "ext-mbstring": "For best performance"
         },
-        "time": "2020-05-12T16:47:27+00:00",
+        "time": "2020-06-06T08:46:27+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
                 "dev-master": "1.17-dev"
+            },
+            "thanks": {
+                "name": "symfony/polyfill",
+                "url": "https://github.com/symfony/polyfill"
             }
         },
         "installation-source": "dist",

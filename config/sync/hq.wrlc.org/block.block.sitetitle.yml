@@ -1,0 +1,31 @@
+uuid: e2e54439-10c0-41d3-aefe-16f85343b052
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b6644697-1299-4de4-a653-1277e1847b96'
+  module:
+    - block_content
+    - system
+  theme:
+    - bootstrap_subtheme
+id: sitetitle
+theme: bootstrap_subtheme
+region: sidebar_second
+weight: -16
+provider: null
+plugin: 'block_content:b6644697-1299-4de4-a653-1277e1847b96'
+settings:
+  id: 'block_content:b6644697-1299-4de4-a653-1277e1847b96'
+  label: 'Site Title'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -4,6 +4,58 @@ All notable changes to the solarium library will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+## [6.0.0]
+### Added
+- \Solarium\Component\Result\Facet\Buckets::getNumBuckets()
+
+### Changed
+- Thrown exceptions always implement Solarium\Exception\ExceptionInterface
+
+
+## [6.0.0-rc.1]
+### Added
+- \Solarium\Support\Utility::getXmlEncoding()
+- \Solarium\Component\Result\Facet\Buckets::getNumBuckets()
+- Added example 2.1.5.1.7-facet-json-terms.php
+
+### Fixed
+- MoreLikeThis result parsing fails on Solr Cloud
+- MinimumScoreFilter plugin might fail on Solr 7 in cloud mode
+
+
+## [6.0.0-beta.1]
+### Changed
+- PostBigRequest plugin now acts on PRE_EXECUTE_REQUEST event instead of POST_CREATE_REQUEST
+- CustomizeRequest plugin now acts on POST_CREATE_REQUEST event instead of PRE_EXECUTE_REQUEST
+
+### Removed
+- PHP 7.1 support
+
+
+## [6.0.0-alpha.1]
+### Added
+- Raw XML commands to update query
+- Raw XML from file in update query
+- Set input encoding for select and update queries
+- Create and configure Managed Resources
+
+### Changed
+- More strict types and type hinting
+- `AdapterInterface` does not extend `ConfigurableInterface` anymore
+- `Http` Adapter does not implement `ConfigurableInterface` anymore
+- `Psr18Adapter` does not implement `ConfigurableInterface` anymore
+- Solarium Client now accepts any PSR-15 compatible event dispatcher (previously it had to be symfony's event dispatcher)
+
+### Removed
+- Zend2HttpAdapter
+- GuzzleAdapter
+- Guzzle3Adapter
+- Endpoint::setTimeout and Endpoint::getTimeout
+- Passing local parameter options (e.g. ``key``, ``tag``, ``exclude``) without the ``local_`` prefix 
+- Support for Solr versions before 7.7
+
+
 ## [5.2.0]
 ### Added
 - PSR-18 http adapter

@@ -280,7 +280,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'uasKeHL2G4qyVA8mH6bQl4mTctkH2qpNMiCMT368K3z63smY0h3FDhYgpD9qPI9g_I9U0uBing';
 
 /**
  * Deployment identifier.
@@ -778,3 +778,13 @@ $settings['entity_update_backup'] = TRUE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $config_directories['sync'] = '../config/sync';
+$databases['default']['default'] = array (
+  'database' => 'database',
+  'username' => 'mariadb',
+  'password' => 'mariadb',
+  'prefix' => '',
+  'host' => 'libraries',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);

@@ -142,10 +142,8 @@ class Helper
             // when we get here the input is always a datetime object
             $input = $input->setTimezone(new \DateTimeZone('UTC'));
             // Solr seems to require the format PHP erroneously declares as ISO8601.
-            // @todo use DateTimeInterface as soon as we require PHP 7.2 at least:
-            // $iso8601 = $input->format(\DateTimeInterface::ISO8601);
             /** @noinspection DateTimeConstantsUsageInspection */
-            $iso8601 = $input->format(\DateTime::ISO8601);
+            $iso8601 = $input->format(\DateTimeInterface::ISO8601);
             $iso8601 = strstr($iso8601, '+', true); //strip timezone
             $iso8601 .= 'Z';
 
@@ -281,7 +279,6 @@ class Helper
 
     /**
      * Render a qparser plugin call.
-     *
      *
      * @param string $name
      * @param array  $params
@@ -462,8 +459,25 @@ class Helper
     }
 
     /**
-     * Render placeholders in a querystring.
+     * Escape text for use as parsed character data content in an XML element.
      *
+     * This escapes characters that can't appear as character data using their
+     * corresponding entity references. Per the definition of XML, "&" and "<"
+     * MUST be escaped when used in character data, ">" MUST be escaped in the
+     * string "]]>" and MAY be otherwise, so we escape it to be safe.
+     *
+     * @param string $data
+     *
+     * @return string
+     */
+    public function escapeXMLCharacterData(string $data): string
+    {
+        // we don't use htmlspecialchars because it only supports a limited number of character sets
+        return str_replace(['&', '<', '>'], ['&amp;', '&lt;', '&gt;'], $data);
+    }
+
+    /**
+     * Render placeholders in a querystring.
      *
      * @param array $matches
      *
