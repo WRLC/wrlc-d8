@@ -11,10 +11,9 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Solarium\Core\Client\Endpoint;
 use Solarium\Core\Client\Request;
 use Solarium\Core\Client\Response;
-use Solarium\Core\Configurable;
 use Solarium\Exception\HttpException;
 
-final class Psr18Adapter extends Configurable implements AdapterInterface
+final class Psr18Adapter implements AdapterInterface
 {
     /**
      * @var ClientInterface
@@ -36,7 +35,6 @@ final class Psr18Adapter extends Configurable implements AdapterInterface
         RequestFactoryInterface $requestFactory,
         StreamFactoryInterface $streamFactory
     ) {
-        parent::__construct();
         $this->httpClient = $httpClient;
         $this->requestFactory = $requestFactory;
         $this->streamFactory = $streamFactory;
@@ -120,10 +118,12 @@ final class Psr18Adapter extends Configurable implements AdapterInterface
         }
 
         if (!isset($headers['Content-Type'])) {
+            $charset = $request->getParam('ie') ?? 'utf-8';
+
             if (Request::METHOD_GET == $request->getMethod()) {
-                $headers['Content-Type'] = ['application/x-www-form-urlencoded; charset=utf-8'];
+                $headers['Content-Type'] = ['application/x-www-form-urlencoded; charset='.$charset];
             } else {
-                $headers['Content-Type'] = ['application/xml; charset=utf-8'];
+                $headers['Content-Type'] = ['application/xml; charset='.$charset];
             }
         }
 

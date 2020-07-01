@@ -2,11 +2,9 @@
 
 namespace Solarium\Core\Client;
 
+use Psr\EventDispatcher\EventDispatcherInterface;
 use Solarium\Core\Client\Adapter\AdapterInterface;
-use Solarium\Core\Client\Adapter\Curl;
 use Solarium\Core\Configurable;
-use Solarium\Core\ConfigurableInterface;
-use Solarium\Core\Event\Events;
 use Solarium\Core\Event\PostCreateQuery as PostCreateQueryEvent;
 use Solarium\Core\Event\PostCreateRequest as PostCreateRequestEvent;
 use Solarium\Core\Event\PostCreateResult as PostCreateResultEvent;
@@ -60,9 +58,6 @@ use Solarium\QueryType\Terms\Query as TermsQuery;
 use Solarium\QueryType\Terms\Result as TermsResult;
 use Solarium\QueryType\Update\Query\Query as UpdateQuery;
 use Solarium\QueryType\Update\Result as UpdateResult;
-use Symfony\Component\EventDispatcher\EventDispatcher;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use Symfony\Component\EventDispatcher\LegacyEventDispatcherProxy;
 
 /**
  * Main interface for interaction with Solr.
@@ -182,7 +177,6 @@ class Client extends Configurable implements ClientInterface
      * @var array
      */
     protected $options = [
-        'adapter' => Curl::class,
         'endpoint' => [
             'localhost' => [],
         ],
@@ -231,8 +225,6 @@ class Client extends Configurable implements ClientInterface
     ];
 
     /**
-     * EventDispatcher.
-     *
      * @var EventDispatcherInterface
      */
     protected $eventDispatcher;
@@ -261,13 +253,6 @@ class Client extends Configurable implements ClientInterface
     /**
      * Adapter instance.
      *
-     * If an adapter instance is set using {@link setAdapter()} this var will
-     * contain a reference to that instance.
-     *
-     * In all other cases the adapter is lazy-loading, it will be instantiated
-     * on first use by {@link getAdapter()} based on the 'adapter' entry in
-     * {@link $options}. This option can be set using {@link setAdapter()}
-     *
      * @var AdapterInterface
      */
     protected $adapter;
@@ -278,33 +263,14 @@ class Client extends Configurable implements ClientInterface
      * If options are passed they will be merged with {@link $options} using
      * the {@link setOptions()} method.
      *
-     * Deprecated behavior: If an EventDispatcher instance is provided this will be used instead of creating a new instance
-     *
      * @param AdapterInterface         $adapter
      * @param EventDispatcherInterface $eventDispatcher
      * @param array|null               $options
      */
-    public function __construct($adapter = null, EventDispatcherInterface $eventDispatcher = null, array $options = null)
+    public function __construct(AdapterInterface $adapter, EventDispatcherInterface $eventDispatcher, array $options = null)
     {
-        // BC layer for changed constructor signature
-        if (is_array($adapter)) {
-            $options = $adapter;
-        } elseif ($adapter instanceof AdapterInterface) {
-            $this->adapter = $adapter;
-            unset($this->options['adapter']);
-        } elseif (null !== $adapter) {
-            throw new \TypeError('first argument must be null, array or AdapterInterface');
-        }
-
-        if (null === $this->adapter) {
-            @trigger_error('Not passing an instance of AdapterInterface as the first constructor argument is deprecated in Solarium 5.2 and will cause an error in Solarium 6.', E_USER_DEPRECATED);
-        }
-
-        if (null === $eventDispatcher) {
-            @trigger_error('Not passing an instance of EventDispatcherInterface as the second constructor argument is deprecated in Solarium 5.2 and will cause an error in Solarium 6.', E_USER_DEPRECATED);
-        }
-
-        $this->eventDispatcher = LegacyEventDispatcherProxy::decorate($eventDispatcher);
+        $this->adapter = $adapter;
+        $this->eventDispatcher = $eventDispatcher;
 
         parent::__construct($options);
     }
@@ -516,38 +482,13 @@ class Client extends Configurable implements ClientInterface
     /**
      * Set the adapter.
      *
-     * The adapter has to be a class that implements the AdapterInterface
-     *
-     * If a string is passed it is assumed to be the classname and it will be
-     * instantiated on first use. This requires the availability of the class
-     * through autoloading or a manual require before calling this method.
-     * Any existing adapter instance will be removed by this method, this way an
-     * instance of the new adapter type will be created upon the next usage of
-     * the adapter (lazy-loading)
-     *
-     * If an adapter instance is passed it will replace the current adapter
-     * immediately, bypassing the lazy loading.
-     *
-     * @param string|Adapter\AdapterInterface $adapter
-     *
-     * @throws InvalidArgumentException
+     * @param AdapterInterface $adapter
      *
      * @return self Provides fluent interface
      */
-    public function setAdapter($adapter): ClientInterface
+    public function setAdapter(AdapterInterface $adapter): ClientInterface
     {
-        if (\is_string($adapter)) {
-            $this->adapter = null;
-            $this->setOption('adapter', $adapter);
-            @trigger_error('Passing a string to Client::setAdapter is deprecated since Solarium 5.2 and will cause an error in Solarium 6. Pass an instance of AdapterInterface instead.', E_USER_DEPRECATED);
-        } elseif ($adapter instanceof AdapterInterface) {
-            // forward options
-            $adapter->setOptions($this->getOption('adapteroptions'));
-            // overwrite existing adapter
-            $this->adapter = $adapter;
-        } else {
-            throw new InvalidArgumentException('Invalid adapter input for setAdapter');
-        }
+        $this->adapter = $adapter;
 
         return $this;
     }
@@ -555,23 +496,10 @@ class Client extends Configurable implements ClientInterface
     /**
      * Get the adapter instance.
      *
-     * If {@see $adapter} doesn't hold an instance a new one will be created by
-     * calling {@see createAdapter()}
-     *
-     * @param bool $autoload
-     *
      * @return AdapterInterface
      */
-    public function getAdapter(bool $autoload = true): AdapterInterface
+    public function getAdapter(): AdapterInterface
     {
-        if (func_num_args() > 0) {
-            @trigger_error('Passing a boolean argument to Client::getAdapter is deprecated since Solarium 5.2. The argument and lazy loading logic  will be removed in Solarium 6.');
-        }
-
-        if (null === $this->adapter && $autoload) {
-            $this->createAdapter();
-        }
-
         return $this->adapter;
     }
 
@@ -647,7 +575,7 @@ class Client extends Configurable implements ClientInterface
      */
     public function setEventDispatcher(EventDispatcherInterface $eventDispatcher): ClientInterface
     {
-        $this->eventDispatcher = LegacyEventDispatcherProxy::decorate($eventDispatcher);
+        $this->eventDispatcher = $eventDispatcher;
 
         return $this;
     }
@@ -787,7 +715,7 @@ class Client extends Configurable implements ClientInterface
     public function createRequest(QueryInterface $query): Request
     {
         $event = new PreCreateRequestEvent($query);
-        $this->eventDispatcher->dispatch($event, Events::PRE_CREATE_REQUEST);
+        $this->eventDispatcher->dispatch($event);
         if (null !== $event->getRequest()) {
             return $event->getRequest();
         }
@@ -800,7 +728,7 @@ class Client extends Configurable implements ClientInterface
         $request = $requestBuilder->build($query);
 
         $event = new PostCreateRequestEvent($query, $request);
-        $this->eventDispatcher->dispatch($event, Events::POST_CREATE_REQUEST);
+        $this->eventDispatcher->dispatch($event);
 
         return $request;
     }
@@ -818,7 +746,7 @@ class Client extends Configurable implements ClientInterface
     public function createResult(QueryInterface $query, $response): ResultInterface
     {
         $event = new PreCreateResultEvent($query, $response);
-        $this->eventDispatcher->dispatch($event, Events::PRE_CREATE_RESULT);
+        $this->eventDispatcher->dispatch($event);
         if (null !== $event->getResult()) {
             return $event->getResult();
         }
@@ -831,7 +759,7 @@ class Client extends Configurable implements ClientInterface
         }
 
         $event = new PostCreateResultEvent($query, $response, $result);
-        $this->eventDispatcher->dispatch($event, Events::POST_CREATE_RESULT);
+        $this->eventDispatcher->dispatch($event);
 
         return $result;
     }
@@ -847,7 +775,7 @@ class Client extends Configurable implements ClientInterface
     public function execute(QueryInterface $query, $endpoint = null): ResultInterface
     {
         $event = new PreExecuteEvent($query);
-        $this->eventDispatcher->dispatch($event, Events::PRE_EXECUTE);
+        $this->eventDispatcher->dispatch($event);
         if (null !== $event->getResult()) {
             return $event->getResult();
         }
@@ -857,7 +785,7 @@ class Client extends Configurable implements ClientInterface
         $result = $this->createResult($query, $response);
 
         $event = new PostExecuteEvent($query, $result);
-        $this->eventDispatcher->dispatch($event, Events::POST_EXECUTE);
+        $this->eventDispatcher->dispatch($event);
 
         return $result;
     }
@@ -878,7 +806,7 @@ class Client extends Configurable implements ClientInterface
         }
 
         $event = new PreExecuteRequestEvent($request, $endpoint);
-        $this->eventDispatcher->dispatch($event, Events::PRE_EXECUTE_REQUEST);
+        $this->eventDispatcher->dispatch($event);
         if (null !== $event->getResponse()) {
             $response = $event->getResponse(); //a plugin result overrules the standard execution result
         } else {
@@ -886,7 +814,7 @@ class Client extends Configurable implements ClientInterface
         }
 
         $event = new PostExecuteRequestEvent($request, $endpoint, $response);
-        $this->eventDispatcher->dispatch($event, Events::POST_EXECUTE_REQUEST);
+        $this->eventDispatcher->dispatch($event);
 
         return $response;
     }
@@ -1127,7 +1055,7 @@ class Client extends Configurable implements ClientInterface
         $type = strtolower($type);
 
         $event = new PreCreateQueryEvent($type, $options);
-        $this->eventDispatcher->dispatch($event, Events::PRE_CREATE_QUERY);
+        $this->eventDispatcher->dispatch($event);
         if (null !== $event->getQuery()) {
             return $event->getQuery();
         }
@@ -1144,7 +1072,7 @@ class Client extends Configurable implements ClientInterface
         }
 
         $event = new PostCreateQueryEvent($type, $options, $query);
-        $this->eventDispatcher->dispatch($event, Events::POST_CREATE_QUERY);
+        $this->eventDispatcher->dispatch($event);
 
         return $query;
     }
@@ -1390,10 +1318,6 @@ class Client extends Configurable implements ClientInterface
      */
     protected function init()
     {
-        if (null === $this->eventDispatcher) {
-            $this->eventDispatcher = new EventDispatcher();
-        }
-
         foreach ($this->options as $name => $value) {
             switch ($name) {
                 case 'endpoint':
@@ -1407,68 +1331,5 @@ class Client extends Configurable implements ClientInterface
                     break;
             }
         }
-    }
-
-    /**
-     * Create an adapter instance.
-     *
-     * The 'adapter' entry in {@link $options} will be used to create an
-     * adapter instance. This entry can be the default value of
-     * {@link $options}, a value passed to the constructor or a value set by
-     * using {@link setAdapter()}
-     *
-     * This method is used for lazy-loading the adapter upon first use in
-     * {@link getAdapter()}
-     *
-     * @throws InvalidArgumentException
-     *
-     * @deprecated Deprecated since Solarium 5.2 and will be removed in Solarium 6. Pass an instance of AdapterInterface to the constructor instead.
-     */
-    protected function createAdapter()
-    {
-        $adapterClass = $this->getOption('adapter');
-        $adapter = new $adapterClass();
-
-        // check interface
-        if (!($adapter instanceof AdapterInterface)) {
-            throw new InvalidArgumentException('An adapter must implement the AdapterInterface');
-        }
-
-        $adapter->setOptions($this->getOption('adapteroptions'));
-        $this->adapter = $adapter;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setOptions($options, bool $overwrite = false): ConfigurableInterface
-    {
-        if (is_array($options)) {
-            if (array_key_exists('adapter', $options)) {
-                @trigger_error('The Client option "adapter" is deprecated since Solarium 5.2 and will be removed in Solarium 6. Pass an instance of AdapterInterface to the constructor instead.', E_USER_DEPRECATED);
-            }
-
-            if (array_key_exists('adapteroptions', $options)) {
-                @trigger_error('The Client option "adapteroptions" is deprecated since Solarium 5.2 and will be removed in Solarium 6. Pass an instance of AdapterInterface to the constructor instead.', E_USER_DEPRECATED);
-            }
-        }
-
-        return parent::setOptions($options, $overwrite);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function setOption(string $name, $value): Configurable
-    {
-        if ('adapter' === $name) {
-            @trigger_error('The Client option "adapter" is deprecated since Solarium 5.2 and will be removed in Solarium 6. Pass an instance of AdapterInterface to the constructor instead.', E_USER_DEPRECATED);
-        }
-
-        if ('adapteroptions' === $name) {
-            @trigger_error('The Client option "adapteroptions" is deprecated since Solarium 5.2 and will be removed in Solarium 6. Pass an instance of AdapterInterface to the constructor instead.', E_USER_DEPRECATED);
-        }
-
-        return parent::setOption($name, $value);
     }
 }
