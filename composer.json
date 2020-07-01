@@ -42,6 +42,7 @@
         "drupal/drupal8_zymphonies_theme": "^1.4",
         "drupal/ds": "^3.7",
         "drupal/easy_breadcrumb": "^1.12",
+        "drupal/empty_page": "^3.0",
         "drupal/expandable_search": "^1.1",
         "drupal/fontawesome": "^2.14",
         "drupal/front": "^1.0@beta",
