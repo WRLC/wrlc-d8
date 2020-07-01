@@ -1,0 +1,34 @@
+{
+    "name": "kint-php/kint-js",
+    "description": "Renderer plugin for Kint that dumps to console.log()",
+    "require": {
+        "kint-php/kint": "^3.0@dev"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.0",
+        "seld/phar-utils": "^1.0",
+        "vimeo/psalm": "^2.0"
+    },
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Jonathan Vollebregt",
+            "email": "jnvsor@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files": ["init.php"],
+        "psr-4": {
+            "Kint\\Renderer\\": "src/"
+        }
+    },
+    "scripts": {
+        "format": [
+            "@format:php"
+        ],
+        "format:php": "php-cs-fixer fix",
+        "build": "php ./build.php",
+        "analyze": "psalm --show-info=false",
+        "clean": "rm -rf build/"
+    }
+}
