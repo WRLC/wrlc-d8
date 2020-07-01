@@ -30,6 +30,7 @@
         "drupal/bootstrap": "^3.20",
         "drupal/bootstrap_datetime_picker": "^1.2",
         "drupal/bootstrap_mint": "^5.0",
+        "drupal/calendar": "^1.0@alpha",
         "drupal/captcha": "^1.0@beta",
         "drupal/console": "^1.0.2",
         "drupal/content_access": "^1.0@alpha",
