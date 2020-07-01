@@ -47,6 +47,7 @@
         "drupal/expandable_search": "^1.1",
         "drupal/feeds": "^3.0@alpha",
         "drupal/fences": "^2.0@RC",
+        "drupal/filefield_paths": "^1.0@beta",
         "drupal/fontawesome": "^2.14",
         "drupal/front": "^1.0@beta",
         "drupal/google_analytics": "^3.0",
