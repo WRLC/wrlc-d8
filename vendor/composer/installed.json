@@ -8134,6 +8134,9 @@
                     "message": "Covered by Drupal's security advisory policy"
                 },
                 "package": "Field types"
+            },
+            "patches_applied": {
+                "Add source and destination module for migrate plugin": "https://www.drupal.org/files/issues/2018-07-18/2986682-2.patch"
             }
         },
         "installation-source": "dist",

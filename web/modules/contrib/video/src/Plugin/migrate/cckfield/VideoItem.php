@@ -8,7 +8,9 @@ use Drupal\migrate_drupal\Plugin\migrate\cckfield\CckFieldPluginBase;
 /**
  * @MigrateCckField(
  *   id = "video",
- *   core = {7}
+ *   core = {7},
+ *   source_module = "video",
+ *   destination_module = "video",
  * )
  */
 class VideoItem extends CckFieldPluginBase {

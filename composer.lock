@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3a4523e9eeab893cebbacd5283f550d",
+    "content-hash": "b8aec12566e1dfd5f3cde822fe757f6a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -7291,6 +7291,9 @@
                         "message": "Covered by Drupal's security advisory policy"
                     },
                     "package": "Field types"
+                },
+                "patches_applied": {
+                    "Add source and destination module for migrate plugin": "https://www.drupal.org/files/issues/2018-07-18/2986682-2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
