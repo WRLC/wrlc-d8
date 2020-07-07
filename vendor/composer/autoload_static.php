@@ -40,7 +40,9 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '952683d815ff0a7bf322b93c0be7e4e4' => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src/bootstrap.php',
+        '3917c79c5052b270641b5a200963dbc2' => __DIR__ . '/..' . '/kint-php/kint/init.php',
         '5a12a5271c58108e0aa33355e6ac54ea' => __DIR__ . '/..' . '/drupal/console-core/src/functions.php',
+        'ae3d48d62f3a5efa110fd4725eafae90' => __DIR__ . '/..' . '/kint-php/kint-js/init.php',
         'd511210698f02d87ca48e3972f64323e' => __DIR__ . '/../..' . '/load.environment.php',
     );
 
@@ -147,6 +149,12 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
             'Laminas\\Feed\\' => 13,
             'Laminas\\Escaper\\' => 16,
             'Laminas\\Diactoros\\' => 18,
+        ),
+        'K' => 
+        array (
+            'Kint\\Twig\\' => 10,
+            'Kint\\Renderer\\' => 14,
+            'Kint\\' => 5,
         ),
         'J' => 
         array (
@@ -496,6 +504,18 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         'Laminas\\Diactoros\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-diactoros/src',
+        ),
+        'Kint\\Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kint-php/kint-twig/src',
+        ),
+        'Kint\\Renderer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kint-php/kint-js/src',
+        ),
+        'Kint\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kint-php/kint/src',
         ),
         'JsonSchema\\' => 
         array (
@@ -1335,6 +1355,7 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         'SebastianBergmann\\Timer\\Timer' => __DIR__ . '/..' . '/phpunit/php-timer/src/Timer.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
         'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
+        'Spoons\\ScriptHandler' => __DIR__ . '/../..' . '/web/modules/contrib/devel/.spoons/ScriptHandler.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
         'TheSeer\\Tokenizer\\Exception' => __DIR__ . '/..' . '/theseer/tokenizer/src/Exception.php',
         'TheSeer\\Tokenizer\\NamespaceUri' => __DIR__ . '/..' . '/theseer/tokenizer/src/NamespaceUri.php',
