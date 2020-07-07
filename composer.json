@@ -60,6 +60,7 @@
         "drupal/login_security": "^1.5",
         "drupal/menu_breadcrumb": "^1.11",
         "drupal/message": "^1.0",
+        "drupal/message_notify": "^1.1",
         "drupal/nexus": "^1.4",
         "drupal/noreqnewpass": "^1.1",
         "drupal/office_hours": "^1.2",
