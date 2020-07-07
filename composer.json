@@ -74,6 +74,7 @@
         "drupal/realname": "^1.0@RC",
         "drupal/redirect": "^1.6",
         "drupal/replicate": "^1.0",
+        "drupal/rules": "^3.0@alpha",
         "drupal/search_api_solr": "^4.0",
         "drupal/view_profiles_perms": "^2.0",
         "drupal/webform": "^5.6",
