@@ -57,6 +57,7 @@
         "drupal/job_scheduler": "^3.1",
         "drupal/ldap": "^3.0-beta7",
         "drupal/libraries": "^3.0@alpha",
+        "drupal/login_security": "^1.5",
         "drupal/menu_breadcrumb": "^1.11",
         "drupal/nexus": "^1.4",
         "drupal/noreqnewpass": "^1.1",

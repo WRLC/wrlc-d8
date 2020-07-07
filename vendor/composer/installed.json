@@ -5971,6 +5971,72 @@
         }
     },
     {
+        "name": "drupal/login_security",
+        "version": "1.5.0",
+        "version_normalized": "1.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/login_security.git",
+            "reference": "8.x-1.5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/login_security-8.x-1.5.zip",
+            "reference": "8.x-1.5",
+            "shasum": "f903d4335282a178f6c73bb4f580ac876852ba73"
+        },
+        "require": {
+            "drupal/core": "^8"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "drupal": {
+                "version": "8.x-1.5",
+                "datestamp": "1528723384",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "cYu",
+                "homepage": "https://www.drupal.org/user/202205"
+            },
+            {
+                "name": "deekayen",
+                "homepage": "https://www.drupal.org/user/972"
+            },
+            {
+                "name": "deetergp",
+                "homepage": "https://www.drupal.org/user/1134002"
+            },
+            {
+                "name": "ilo",
+                "homepage": "https://www.drupal.org/user/118449"
+            },
+            {
+                "name": "jribeiro",
+                "homepage": "https://www.drupal.org/user/1975716"
+            },
+            {
+                "name": "shrop",
+                "homepage": "https://www.drupal.org/user/14767"
+            }
+        ],
+        "description": "Enable security options in the login flow of the site.",
+        "homepage": "https://www.drupal.org/project/login_security",
+        "support": {
+            "source": "https://git.drupalcode.org/project/login_security"
+        }
+    },
+    {
         "name": "drupal/menu_breadcrumb",
         "version": "1.13.0",
         "version_normalized": "1.13.0.0",
