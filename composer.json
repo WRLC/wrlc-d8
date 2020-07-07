@@ -69,6 +69,7 @@
         "drupal/pathauto": "^1.6",
         "drupal/php": "^1.0",
         "drupal/plupload": "^1.0@beta",
+        "drupal/prepopulate": "^2.3",
         "drupal/realname": "^1.0@RC",
         "drupal/search_api_solr": "^4.0",
         "drupal/view_profiles_perms": "^2.0",
