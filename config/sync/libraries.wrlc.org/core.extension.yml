@@ -74,6 +74,9 @@ module:
   migrate: 0
   migrate_drupal: 0
   migrate_drupal_ui: 0
+  migrate_plus: 0
+  migrate_tools: 0
+  migrate_upgrade: 0
   node: 0
   og: 0
   og_ui: 0
