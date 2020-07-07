@@ -82,6 +82,7 @@
         "drupal/video": "^1.4",
         "drupal/video_embed_field": "^2.4",
         "drupal/view_profiles_perms": "^2.0",
+        "drupal/views_bulk_operations": "^3.8",
         "drupal/webform": "^5.6",
         "drush/drush": "^9.0.0",
         "kint-php/kint": "^3.3",
