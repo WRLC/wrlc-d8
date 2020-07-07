@@ -54,6 +54,7 @@
         "drupal/google_analytics": "^3.0",
         "drupal/iframe": "^1.11",
         "drupal/imce": "^1.7",
+        "drupal/job_scheduler": "^3.1",
         "drupal/ldap": "^3.0-beta7",
         "drupal/libraries": "^3.0@alpha",
         "drupal/menu_breadcrumb": "^1.11",
