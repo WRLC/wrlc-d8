@@ -72,6 +72,7 @@
         "drupal/prepopulate": "^2.3",
         "drupal/publishcontent": "^1.2",
         "drupal/realname": "^1.0@RC",
+        "drupal/redirect": "^1.6",
         "drupal/search_api_solr": "^4.0",
         "drupal/view_profiles_perms": "^2.0",
         "drupal/webform": "^5.6",
