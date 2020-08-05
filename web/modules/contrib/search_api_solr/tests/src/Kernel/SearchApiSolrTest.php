@@ -28,7 +28,46 @@ class SearchApiSolrTest extends SolrBackendTestBase {
   use SolrCommitTrait;
   use InvokeMethodTrait;
 
-  protected $languageIds = ['en', 'de', 'de-at'];
+  protected $languageIds = [
+    'ar' => 'ar',
+    'bg' => 'bg',
+    'ca' => 'ca',
+    'cs' => 'cs',
+    'da' => 'da',
+    'de' => 'de',
+    'de-at' => 'de',
+    'el' => 'el',
+    'en' => 'en',
+    'es' => 'es',
+    'et' => 'et',
+    'fa' => 'fa',
+    'fi' => 'fi',
+    'fr' => 'fr',
+    'ga' => 'ga',
+    'hi' => 'hi',
+    'hr' => 'hr',
+    'id' => 'id',
+    'it' => 'it',
+    'ja' => 'ja',
+    'lv' => 'lv',
+    'nb' => 'nb',
+    'nl' => 'nl',
+    'nn' => 'nn',
+    'pl' => 'pl',
+    'pt-br' => 'pt_br',
+    'pt-pt' => 'pt_pt',
+    'ro' => 'ro',
+    'ru' => 'ru',
+    'sk' => 'sk',
+    'sr' => 'sr',
+    'sv' => 'sv',
+    'th' => 'th',
+    'tr' => 'tr',
+    'xx' => FALSE,
+    'uk' => 'uk',
+    'zh-hans' => 'zh_hans',
+    'zh-hant' => 'zh_hant',
+  ];
 
   /**
    * Modules to enable for this test.
@@ -53,7 +92,7 @@ class SearchApiSolrTest extends SolrBackendTestBase {
    * {@inheritdoc}
    */
   protected function installConfigs() {
-    foreach ($this->languageIds as $language_id) {
+    foreach (array_keys($this->languageIds) as $language_id) {
       ConfigurableLanguage::createFromLangcode($language_id)->save();
     }
 
@@ -215,6 +254,7 @@ class SearchApiSolrTest extends SolrBackendTestBase {
    * Checks backend specific features.
    */
   protected function checkBackendSpecificFeatures() {
+    $this->checkSchemaLanguages();
     $this->checkBasicAuth();
     $this->checkQueryParsers();
     $this->checkQueryConditions();
@@ -226,6 +266,56 @@ class SearchApiSolrTest extends SolrBackendTestBase {
     $this->checkRetrieveData();
     $this->clearIndex();
     $this->checkSearchResultSorts();
+  }
+
+  /**
+   * Tests the conversion of Search API queries into Solr queries.
+   */
+  protected function checkSchemaLanguages() {
+    /** @var \Drupal\search_api_solr\SolrBackendInterface $backend */
+    $backend = Server::load($this->serverId)->getBackend();
+    $connector = $backend->getSolrConnector();
+    $targeted_solr_major_version = (int) $connector->getSchemaTargetedSolrBranch();
+    $language_ids = $this->languageIds;
+    if (version_compare($targeted_solr_major_version, '9', '<')) {
+      // 'et' requires Solr 8.2, the jump-start-config targets 8.0.
+      $language_ids['et'] = FALSE;
+      if (version_compare($targeted_solr_major_version, '8', '<')) {
+        // 'ga' requires Solr 7.7, the jump-start-config targets 7.0.
+        $language_ids['ga'] = FALSE;
+        if (version_compare($targeted_solr_major_version, '7', '<')) {
+          $language_ids['bg'] = FALSE;
+          $language_ids['ca'] = FALSE;
+          $language_ids['da'] = FALSE;
+          $language_ids['fa'] = FALSE;
+          $language_ids['hi'] = FALSE;
+          $language_ids['hr'] = FALSE;
+          $language_ids['id'] = FALSE;
+          $language_ids['lv'] = FALSE;
+          $language_ids['nb'] = FALSE;
+          $language_ids['nn'] = FALSE;
+          $language_ids['pl'] = FALSE;
+          $language_ids['pt-br'] = FALSE;
+          $language_ids['pt-pt'] = FALSE;
+          $language_ids['ro'] = FALSE;
+          $language_ids['sr'] = FALSE;
+          $language_ids['sv'] = FALSE;
+          $language_ids['th'] = FALSE;
+          $language_ids['tr'] = FALSE;
+          $language_ids['zh-hans'] = FALSE;
+          $language_ids['zh-hant'] = FALSE;
+          if (version_compare($targeted_solr_major_version, '6', '<')) {
+            $language_ids['ar'] = FALSE;
+            $language_ids['ja'] = FALSE;
+            $language_ids['sk'] = FALSE;
+            if (version_compare($targeted_solr_major_version, '5', '<')) {
+              $language_ids['cs'] = FALSE;
+            }
+          }
+        }
+      }
+    }
+    $this->assertEquals($language_ids, $backend->getSchemaLanguageStatistics());
   }
 
   /**
@@ -1318,7 +1408,7 @@ class SearchApiSolrTest extends SolrBackendTestBase {
       }
     }
 
-    $config_name = 'name="drupal-' . SolrBackendInterface::SEARCH_API_SOLR_MIN_SCHEMA_VERSION . '-solr-' . $solr_major_version . '.x"';
+    $config_name = 'name="drupal-' . SolrBackendInterface::SEARCH_API_SOLR_MIN_SCHEMA_VERSION . '-solr-' . $solr_major_version . '.x-'. SEARCH_API_SOLR_JUMP_START_CONFIG_SET .'"';
     $this->assertStringContainsString($config_name, $config_files['solrconfig.xml']);
     $this->assertStringContainsString($config_name, $config_files['schema.xml']);
     $this->assertStringContainsString('solr.luceneMatchVersion=' . $solr_major_version, $config_files['solrcore.properties']);
