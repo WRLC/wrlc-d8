@@ -1,0 +1,1 @@
+0000000000000000000000000000000000000000 c42ffb7fcc6721cc749ec863026696a10bd8f81b Tom Boone <boone@wrlc.org> 1596658427 +0000	clone: from /var/www/.composer/cache/vcs/https---git.drupalcode.org-project-typed-data.git/
