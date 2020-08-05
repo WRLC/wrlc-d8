@@ -6868,17 +6868,17 @@
         },
         {
             "name": "drupal/search_api_solr",
-            "version": "4.1.2",
+            "version": "4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_api_solr.git",
-                "reference": "4.1.2"
+                "reference": "4.1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.1.2.zip",
-                "reference": "4.1.2",
-                "shasum": "3755e9d30b8bf1ab501244cde5850006f959e189"
+                "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.1.4.zip",
+                "reference": "4.1.4",
+                "shasum": "1afa5b3388de2bf285a93d9af4960fb4eedaeb13"
             },
             "require": {
                 "consolidation/annotated-command": "^2.12|^4.1",
@@ -6896,7 +6896,7 @@
                 "drupal/search_api_solr_multilingual": "<3.0.0"
             },
             "require-dev": {
-                "drupal/devel": "3.x-dev",
+                "drupal/devel": "^4.0",
                 "drupal/facets": "1.x-dev",
                 "drupal/geofield": "1.x-dev",
                 "drupal/search_api_autocomplete": "1.x-dev",
@@ -6914,8 +6914,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.1.2",
-                    "datestamp": "1592841316",
+                    "version": "4.1.4",
+                    "datestamp": "1594115649",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7273,8 +7273,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/typed_data",
                 "issues": "https://www.drupal.org/project/issues/typed_data"
-            },
-            "time": "2020-08-02T07:17:45+00:00"
+            }
         },
         {
             "name": "drupal/video",
@@ -9766,16 +9765,16 @@
         },
         {
             "name": "solarium/solarium",
-            "version": "6.0.0",
+            "version": "6.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solariumphp/solarium.git",
-                "reference": "862fd56fd4ab1645e4f5cd976cfe94c2ce089c94"
+                "reference": "5b5cee59f3f722d2a380e8f6ee384ccc05ac2a30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/862fd56fd4ab1645e4f5cd976cfe94c2ce089c94",
-                "reference": "862fd56fd4ab1645e4f5cd976cfe94c2ce089c94",
+                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/5b5cee59f3f722d2a380e8f6ee384ccc05ac2a30",
+                "reference": "5b5cee59f3f722d2a380e8f6ee384ccc05ac2a30",
                 "shasum": ""
             },
             "require": {
@@ -9820,7 +9819,7 @@
                 "search",
                 "solr"
             ],
-            "time": "2020-06-22T09:07:55+00:00"
+            "time": "2020-07-03T12:46:41+00:00"
         },
         {
             "name": "stack/builder",
