@@ -8,6 +8,7 @@ proxy:
     - wrlc8.lndo.site  # www.wrlc.org
     - hq.wrlc8.lndo.site  # www.hq.wrlc.org
     - libraries.wrlc8.lndo.site  # www.libraries.wrlc.org
+    - skills.wrlc8.lndo.site  # skills.wrlc.org
 services:
   # wrlc.org D7 database for migration
   wrlc7:
@@ -27,5 +28,8 @@ services:
     portforward: true
   # www.libraries.wrlc.org D7 database for migration
   libraries7:
+    type: mariadb:10.1
+    portforward: true
+  skills:
     type: mariadb:10.1
     portforward: true
