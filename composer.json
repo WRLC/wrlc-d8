@@ -51,6 +51,7 @@
         "drupal/field_group": "^3.1",
         "drupal/filefield_paths": "^1.0@beta",
         "drupal/fontawesome": "^2.14",
+        "drupal/form_options_attributes": "^1.2",
         "drupal/front": "^1.0@beta",
         "drupal/google_analytics": "^3.0",
         "drupal/iframe": "^1.11",
