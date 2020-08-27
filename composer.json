@@ -87,6 +87,7 @@
         "drupal/superfish": "^1.4",
         "drupal/tagclouds": "^1.0",
         "drupal/taxonomy_menu": "^3.4",
+        "drupal/telephone_validation": "^2.3",
         "drupal/video": "^1.4",
         "drupal/video_embed_field": "^2.4",
         "drupal/view_profiles_perms": "^2.0",
