@@ -3371,6 +3371,64 @@
         }
     },
     {
+        "name": "drupal/blockgroup",
+        "version": "1.5.0",
+        "version_normalized": "1.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/blockgroup.git",
+            "reference": "8.x-1.5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/blockgroup-8.x-1.5.zip",
+            "reference": "8.x-1.5",
+            "shasum": "1b927d75d90a3df000c7569acce003374ec671ab"
+        },
+        "require": {
+            "drupal/core": "^8 || ^9"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "drupal": {
+                "version": "8.x-1.5",
+                "datestamp": "1593778088",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "geek-merlin",
+                "homepage": "https://www.drupal.org/user/229048"
+            },
+            {
+                "name": "kiss.jozsef",
+                "homepage": "https://www.drupal.org/user/2848443"
+            },
+            {
+                "name": "leymannx",
+                "homepage": "https://www.drupal.org/user/2482808"
+            },
+            {
+                "name": "znerol",
+                "homepage": "https://www.drupal.org/user/63999"
+            }
+        ],
+        "description": "Add block groups to block configuration page.",
+        "homepage": "https://www.drupal.org/project/blockgroup",
+        "support": {
+            "source": "https://git.drupalcode.org/project/blockgroup"
+        }
+    },
+    {
         "name": "drupal/bootstrap",
         "version": "3.23.0",
         "version_normalized": "3.23.0.0",
