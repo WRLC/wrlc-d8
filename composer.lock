@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d7dfab90fa11f7a8ba172be681e53a1",
+    "content-hash": "5e6c65e4e1c8a1abde4135a1d6ff6ae8",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3108,6 +3108,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Isssue with BlockGroup": "https://www.drupal.org/files/issues/2020-03-06/issue-with-blockgroup-3084050-4.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

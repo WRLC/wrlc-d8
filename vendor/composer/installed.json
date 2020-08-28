@@ -3847,6 +3847,9 @@
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
                 }
+            },
+            "patches_applied": {
+                "Isssue with BlockGroup": "https://www.drupal.org/files/issues/2020-03-06/issue-with-blockgroup-3084050-4.patch"
             }
         },
         "installation-source": "dist",

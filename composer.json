@@ -159,6 +159,9 @@
         "patches": {
             "drupal/video": {
                 "Add source and destination module for migrate plugin": "https://www.drupal.org/files/issues/2018-07-18/2986682-2.patch"
+            },
+            "drupal/collapsiblock": {
+                "Isssue with BlockGroup": "https://www.drupal.org/files/issues/2020-03-06/issue-with-blockgroup-3084050-4.patch"
             }
         },
         "drupal-scaffold": {

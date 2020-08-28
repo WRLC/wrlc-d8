@@ -9,7 +9,10 @@
       var slidetype = settings.collapsiblock.slide_type;
       var activePages = settings.collapsiblock.active_pages;
       var slidespeed = parseInt(settings.collapsiblock.slide_speed, 10);
-      $('.collapsiblock').once('collapsiblock').each(function () {
+      $('.collapsiblock').filter(function () {
+        // Do not process elements that have siblings still waiting on Big Pipe.
+        return !$(this).siblings('[data-big-pipe-placeholder-id]').length;
+      }).once('collapsiblock').each(function () {
         var id = this.id.split("-").pop();
         var titleElt = $(this)[0];
         if (titleElt.children.length > 0) {
