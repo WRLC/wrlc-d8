@@ -3821,6 +3821,71 @@
         ]
     },
     {
+        "name": "drupal/collapsiblock",
+        "version": "2.1.0",
+        "version_normalized": "2.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/collapsiblock.git",
+            "reference": "8.x-2.1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/collapsiblock-8.x-2.1.zip",
+            "reference": "8.x-2.1",
+            "shasum": "e90acb456f6cfb52378478214c7435d95e93970f"
+        },
+        "require": {
+            "drupal/core": "^8 || ^9"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "drupal": {
+                "version": "8.x-2.1",
+                "datestamp": "1588032521",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            },
+            "patches_applied": {
+                "Isssue with BlockGroup": "https://www.drupal.org/files/issues/2020-03-06/issue-with-blockgroup-3084050-4.patch"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Darvanen",
+                "homepage": "https://www.drupal.org/user/1068770"
+            },
+            {
+                "name": "gagarine",
+                "homepage": "https://www.drupal.org/user/162439"
+            },
+            {
+                "name": "j0rd",
+                "homepage": "https://www.drupal.org/user/61506"
+            },
+            {
+                "name": "nedjo",
+                "homepage": "https://www.drupal.org/user/4481"
+            },
+            {
+                "name": "sonvir249",
+                "homepage": "https://www.drupal.org/user/3225171"
+            }
+        ],
+        "description": "Makes individual blocks collapsible.",
+        "homepage": "https://www.drupal.org/project/collapsiblock",
+        "support": {
+            "source": "https://git.drupalcode.org/project/collapsiblock"
+        }
+    },
+    {
         "name": "drupal/console",
         "version": "1.9.3",
         "version_normalized": "1.9.3.0",
