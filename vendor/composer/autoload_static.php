@@ -56,6 +56,10 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'l' => 
+        array (
+            'libphonenumber\\' => 15,
+        ),
         'c' => 
         array (
             'cweagans\\Composer\\' => 18,
@@ -176,6 +180,7 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
             'Grasmash\\YamlExpander\\' => 22,
             'Grasmash\\Expander\\' => 18,
             'Goutte\\' => 7,
+            'Giggsey\\Locale\\' => 15,
         ),
         'E' => 
         array (
@@ -245,6 +250,10 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'libphonenumber\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src',
         ),
         'cweagans\\Composer\\' => 
         array (
@@ -562,6 +571,10 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         'Goutte\\' => 
         array (
             0 => __DIR__ . '/..' . '/fabpot/goutte/Goutte',
+        ),
+        'Giggsey\\Locale\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/giggsey/locale/src',
         ),
         'Egulias\\EmailValidator\\' => 
         array (
