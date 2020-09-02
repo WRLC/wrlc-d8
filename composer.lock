@@ -6333,29 +6333,26 @@
         },
         {
             "name": "drupal/noreqnewpass",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/noreqnewpass.git",
-                "reference": "8.x-1.1"
+                "reference": "8.x-1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/noreqnewpass-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "1f3dbf2a9dfdb2706f068fd67cac10ce9a0a78fe"
+                "url": "https://ftp.drupal.org/files/projects/noreqnewpass-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "682ab4ed80f0c9334fe39e11f5e44fbbbc2cfb56"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1487593983",
+                    "version": "8.x-1.2",
+                    "datestamp": "1596909039",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6368,12 +6365,13 @@
             ],
             "authors": [
                 {
-                    "name": "University of Colorado Boulder",
-                    "homepage": "https://www.drupal.org/user/3299791"
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+                    "role": "Maintainer"
                 },
                 {
-                    "name": "j2r",
-                    "homepage": "https://www.drupal.org/user/804034"
+                    "name": "University of Colorado Boulder",
+                    "homepage": "https://www.drupal.org/user/3299791"
                 },
                 {
                     "name": "kreynen",
@@ -6382,16 +6380,13 @@
                 {
                     "name": "pedrofaria",
                     "homepage": "https://www.drupal.org/user/27805"
-                },
-                {
-                    "name": "str8",
-                    "homepage": "https://www.drupal.org/user/2865063"
                 }
             ],
-            "description": "Disable link to request a new password",
+            "description": "Disable link to request a new password.",
             "homepage": "https://www.drupal.org/project/noreqnewpass",
             "support": {
-                "source": "https://git.drupalcode.org/project/noreqnewpass"
+                "source": "https://git.drupalcode.org/project/noreqnewpass",
+                "issues": "https://www.drupal.org/project/issues/noreqnewpass"
             }
         },
         {
