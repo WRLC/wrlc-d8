@@ -59,7 +59,7 @@ node_modules
 !core/**/*.gz
 
 # Development modules
-web/modules/contrib/devel/
+# web/modules/contrib/devel/
 
 # Local Keys #
 /keys
