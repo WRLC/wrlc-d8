@@ -1,0 +1,26 @@
+uuid: e4db46d0-fbc8-49a6-b9d2-3bfa1d4a37af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_scholarly_basic
+  module:
+    - user
+id: user.user.field_scholarly_basic
+field_name: field_scholarly_basic
+entity_type: user
+bundle: user
+label: Basic
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: grouped_skills
+      display_name: entity_reference_2
+      arguments: {  }
+field_type: entity_reference

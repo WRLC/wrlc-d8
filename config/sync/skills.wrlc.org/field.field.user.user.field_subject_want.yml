@@ -1,0 +1,26 @@
+uuid: 233dc26a-2f2f-482f-a422-5df144849166
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_subject_want
+  module:
+    - user
+id: user.user.field_subject_want
+field_name: field_subject_want
+entity_type: user
+bundle: user
+label: 'Want to Learn'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: grouped_skills
+      display_name: entity_reference_6
+      arguments: {  }
+field_type: entity_reference

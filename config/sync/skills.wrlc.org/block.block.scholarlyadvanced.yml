@@ -1,0 +1,33 @@
+uuid: 92e77347-18bb-4f5a-acf6-077d04005c75
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.scholarly_advanced
+  module:
+    - collapsiblock
+    - facets
+    - system
+  theme:
+    - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '3'
+id: scholarlyadvanced
+theme: bootstrap_subtheme
+region: scholarly_facets
+weight: -17
+provider: null
+plugin: 'facet_block:scholarly_advanced'
+settings:
+  id: 'facet_block:scholarly_advanced'
+  label: Advanced
+  provider: facets
+  label_display: visible
+  block_id: scholarlyadvanced
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/directory\r\n/directory/*"
+    negate: false
+    context_mapping: {  }

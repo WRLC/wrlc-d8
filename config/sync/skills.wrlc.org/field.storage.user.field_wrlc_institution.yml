@@ -1,0 +1,63 @@
+uuid: 85ef9f36-6273-4278-8569-6201c031c2cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_wrlc_institution
+field_name: field_wrlc_institution
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: au
+      label: 'American University'
+    -
+      value: au-law
+      label: 'AU - Pence Law Library'
+    -
+      value: cu
+      label: 'The Catholic University of America'
+    -
+      value: ga
+      label: 'Gallaudet University'
+    -
+      value: gm
+      label: 'George Mason University'
+    -
+      value: gw
+      label: 'The George Washington University'
+    -
+      value: hi
+      label: 'GW - Himmelfarb Health Sciences Library'
+    -
+      value: gw-law
+      label: 'GW - Jacob Burns Law Library'
+    -
+      value: gt
+      label: 'Georgetown University'
+    -
+      value: gt-law
+      label: 'Georgetown Law Library'
+    -
+      value: hu
+      label: 'Howard University'
+    -
+      value: mu
+      label: 'Marymount University'
+    -
+      value: dc
+      label: 'The University of the District of Columbia'
+    -
+      value: wr
+      label: 'Washington Research Library Consortium'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

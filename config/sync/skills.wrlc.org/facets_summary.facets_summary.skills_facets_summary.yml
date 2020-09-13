@@ -1,0 +1,133 @@
+uuid: 370ee4b3-f186-4c8a-bea3-f9c433739420
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.profiles
+    - views.view.directory
+  module:
+    - search_api
+id: skills_facets_summary
+name: 'Skills Facets Summary'
+facets:
+  admin_advanced:
+    checked: true
+    label: 'Admin & Management: Advanced'
+    separator: ', '
+    show_count: true
+    weight: 0
+  admin_basic:
+    checked: true
+    label: 'Admin & Management: Basic'
+    separator: ', '
+    show_count: true
+    weight: 0
+  admin_want_to_learn:
+    checked: true
+    label: 'Admin & Management: Want to Learn'
+    separator: ', '
+    show_count: true
+    weight: 0
+  scholarly_advanced:
+    checked: true
+    label: 'Scholarly Communication: Advanced'
+    separator: ', '
+    show_count: true
+    weight: 0
+  scholarly_basic:
+    checked: true
+    label: 'Scholarly Communication: Basic'
+    separator: ', '
+    show_count: true
+    weight: 0
+  scholarly_want_to_learn:
+    checked: true
+    label: 'Scholarly Communication: Want to Learn'
+    separator: ', '
+    show_count: true
+    weight: 0
+  public_advanced:
+    checked: true
+    label: 'Public & Access Services: Advanced'
+    separator: ', '
+    show_count: true
+    weight: 0
+  public_basic:
+    checked: true
+    label: 'Public & Access Services: Basic'
+    separator: ', '
+    show_count: true
+    weight: 0
+  public_want_to_learn:
+    checked: true
+    label: 'Public & Access Services: Want to Learn'
+    separator: ', '
+    show_count: true
+    weight: 0
+  systems_advanced:
+    checked: true
+    label: 'Systems & Technology: Advanced'
+    separator: ', '
+    show_count: true
+    weight: 0
+  systems_basic:
+    checked: true
+    label: 'Systems & Technology: Basic'
+    separator: ', '
+    show_count: true
+    weight: 0
+  systems_want_to_learn:
+    checked: true
+    label: 'Systems & Technology: Want to Learn'
+    separator: ', '
+    show_count: true
+    weight: 0
+  technical_advanced:
+    checked: true
+    label: 'Technical Services: Advanced'
+    separator: ', '
+    show_count: true
+    weight: 0
+  technical_basic:
+    checked: true
+    label: 'Technical Services: Basic'
+    separator: ', '
+    show_count: true
+    weight: 0
+  technical_want_to_learn:
+    checked: true
+    label: 'Technical Services: Want to Learn'
+    separator: ', '
+    show_count: true
+    weight: 0
+  subject_advanced:
+    checked: true
+    label: 'Subject Specialty: Advanced'
+    separator: ', '
+    show_count: true
+    weight: 0
+  subject_basic:
+    checked: true
+    label: 'Subject Specialty: Basic'
+    separator: ', '
+    show_count: true
+    weight: 0
+  subject_want_to_learn:
+    checked: true
+    label: 'Subject Specialty: Want to Learn'
+    separator: ', '
+    show_count: true
+    weight: 0
+facet_source_id: 'search_api:views_page__directory__page_1'
+processor_configs:
+  hide_when_not_rendered:
+    processor_id: hide_when_not_rendered
+    weights:
+      build: '45'
+    settings: {  }
+  reset_facets:
+    processor_id: reset_facets
+    weights:
+      build: '30'
+    settings:
+      link_text: 'Reset all filters'

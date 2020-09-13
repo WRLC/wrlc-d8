@@ -1,0 +1,26 @@
+uuid: 3b2403e2-b3be-4afb-9109-11651d112e20
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets_summary.facets_summary.skills_facets_summary
+  module:
+    - collapsiblock
+    - facets_summary
+  theme:
+    - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '0'
+id: skillsfacetssummary
+theme: bootstrap_subtheme
+region: sidebar_first
+weight: -17
+provider: null
+plugin: 'facets_summary_block:skills_facets_summary'
+settings:
+  id: 'facets_summary_block:skills_facets_summary'
+  label: 'Skills Facets Summary'
+  provider: facets_summary
+  label_display: '0'
+visibility: {  }

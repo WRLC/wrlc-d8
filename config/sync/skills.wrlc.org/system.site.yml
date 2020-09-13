@@ -1,0 +1,14 @@
+uuid: 72ce09c3-233f-4650-84d3-121560aab164
+name: 'WRLC Skills Inventory & Directory'
+mail: no-reply@wrlc.org
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /directory
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

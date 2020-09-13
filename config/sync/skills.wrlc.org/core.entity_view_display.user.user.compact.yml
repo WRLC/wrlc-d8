@@ -1,0 +1,70 @@
+uuid: 436d5fcf-45ce-45dc-b603-69226446fcee
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.compact
+    - field.field.user.user.field_admin_advanced
+    - field.field.user.user.field_admin_basic
+    - field.field.user.user.field_admin_want
+    - field.field.user.user.field_email_address
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_job_title
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_middle_name_initial
+    - field.field.user.user.field_phone_number
+    - field.field.user.user.field_public_advanced
+    - field.field.user.user.field_public_basic
+    - field.field.user.user.field_public_want
+    - field.field.user.user.field_scholarly_advanced
+    - field.field.user.user.field_scholarly_basic
+    - field.field.user.user.field_scholarly_want
+    - field.field.user.user.field_subject_advanced
+    - field.field.user.user.field_subject_basic
+    - field.field.user.user.field_subject_want
+    - field.field.user.user.field_systems_advanced
+    - field.field.user.user.field_systems_basic
+    - field.field.user.user.field_systems_want
+    - field.field.user.user.field_technical_advanced
+    - field.field.user.user.field_technical_basic
+    - field.field.user.user.field_technical_want
+    - field.field.user.user.field_wrlc_institution
+  module:
+    - user
+_core:
+  default_config_hash: '-cLsS3M3JycipXQt9rEb81_HxKneReoGuRh8ijcOPXs'
+id: user.user.compact
+targetEntityType: user
+bundle: user
+mode: compact
+content: {  }
+hidden:
+  field_admin_advanced: true
+  field_admin_basic: true
+  field_admin_want: true
+  field_email_address: true
+  field_first_name: true
+  field_job_title: true
+  field_last_name: true
+  field_middle_name_initial: true
+  field_phone_number: true
+  field_public_advanced: true
+  field_public_basic: true
+  field_public_want: true
+  field_scholarly_advanced: true
+  field_scholarly_basic: true
+  field_scholarly_want: true
+  field_subject_advanced: true
+  field_subject_basic: true
+  field_subject_want: true
+  field_systems_advanced: true
+  field_systems_basic: true
+  field_systems_want: true
+  field_technical_advanced: true
+  field_technical_basic: true
+  field_technical_want: true
+  field_wrlc_institution: true
+  langcode: true
+  member_for: true
+  realname: true
+  search_api_excerpt: true

@@ -1,0 +1,26 @@
+uuid: 52165f66-c4d7-41f9-8957-61281b9d0674
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_technical_basic
+  module:
+    - user
+id: user.user.field_technical_basic
+field_name: field_technical_basic
+entity_type: user
+bundle: user
+label: Basic
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: grouped_skills
+      display_name: entity_reference_5
+      arguments: {  }
+field_type: entity_reference

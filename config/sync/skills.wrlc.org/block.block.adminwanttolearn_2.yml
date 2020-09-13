@@ -1,0 +1,33 @@
+uuid: 2b58593e-5794-44f2-95d4-c246dd96be11
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.admin_want_to_learn
+  module:
+    - collapsiblock
+    - facets
+    - system
+  theme:
+    - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '3'
+id: adminwanttolearn_2
+theme: bootstrap_subtheme
+region: admin_facets
+weight: -15
+provider: null
+plugin: 'facet_block:admin_want_to_learn'
+settings:
+  id: 'facet_block:admin_want_to_learn'
+  label: 'Want to Learn'
+  provider: facets
+  label_display: visible
+  block_id: adminwanttolearn_2
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/directory\r\n/directory/*"
+    negate: false
+    context_mapping: {  }

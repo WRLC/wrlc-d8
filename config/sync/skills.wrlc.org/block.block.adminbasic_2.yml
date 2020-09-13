@@ -1,0 +1,33 @@
+uuid: fe895a44-5b0b-4f2f-998a-25d0f1b381e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.admin_basic
+  module:
+    - collapsiblock
+    - facets
+    - system
+  theme:
+    - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '3'
+id: adminbasic_2
+theme: bootstrap_subtheme
+region: admin_facets
+weight: -16
+provider: null
+plugin: 'facet_block:admin_basic'
+settings:
+  id: 'facet_block:admin_basic'
+  label: Basic
+  provider: facets
+  label_display: visible
+  block_id: adminbasic_2
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/directory\r\n/directory/*"
+    negate: false
+    context_mapping: {  }

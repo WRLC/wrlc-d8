@@ -1,0 +1,20 @@
+uuid: 4e9535d8-31fd-40ff-9005-2dc0c5ed7f1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - user
+id: user.field_technical_want
+field_name: field_technical_want
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

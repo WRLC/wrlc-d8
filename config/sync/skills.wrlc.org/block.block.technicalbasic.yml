@@ -1,0 +1,27 @@
+uuid: 7f0489ec-4d3d-4b14-80dd-edd31cb40ac1
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.technical_basic
+  module:
+    - collapsiblock
+    - facets
+  theme:
+    - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '3'
+id: technicalbasic
+theme: bootstrap_subtheme
+region: technical_facets
+weight: -16
+provider: null
+plugin: 'facet_block:technical_basic'
+settings:
+  id: 'facet_block:technical_basic'
+  label: Basic
+  provider: facets
+  label_display: visible
+  block_id: technicalbasic
+visibility: {  }

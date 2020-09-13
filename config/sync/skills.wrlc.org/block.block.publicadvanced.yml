@@ -1,0 +1,27 @@
+uuid: 2af6b573-76cb-464b-ad98-f926a8f7c03d
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.public_advanced
+  module:
+    - collapsiblock
+    - facets
+  theme:
+    - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '3'
+id: publicadvanced
+theme: bootstrap_subtheme
+region: public_facets
+weight: -17
+provider: null
+plugin: 'facet_block:public_advanced'
+settings:
+  id: 'facet_block:public_advanced'
+  label: Advanced
+  provider: facets
+  label_display: visible
+  block_id: publicadvanced
+visibility: {  }

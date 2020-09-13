@@ -1,0 +1,368 @@
+uuid: 3fc48c0a-75a0-4863-a545-806a1e6fa49d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_admin_advanced
+    - field.field.user.user.field_admin_basic
+    - field.field.user.user.field_admin_want
+    - field.field.user.user.field_email_address
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_job_title
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_middle_name_initial
+    - field.field.user.user.field_phone_number
+    - field.field.user.user.field_public_advanced
+    - field.field.user.user.field_public_basic
+    - field.field.user.user.field_public_want
+    - field.field.user.user.field_scholarly_advanced
+    - field.field.user.user.field_scholarly_basic
+    - field.field.user.user.field_scholarly_want
+    - field.field.user.user.field_subject_advanced
+    - field.field.user.user.field_subject_basic
+    - field.field.user.user.field_subject_want
+    - field.field.user.user.field_systems_advanced
+    - field.field.user.user.field_systems_basic
+    - field.field.user.user.field_systems_want
+    - field.field.user.user.field_technical_advanced
+    - field.field.user.user.field_technical_basic
+    - field.field.user.user.field_technical_want
+    - field.field.user.user.field_wrlc_institution
+  module:
+    - field_group
+    - path
+    - telephone
+    - user
+third_party_settings:
+  field_group:
+    group_skills:
+      children:
+        - group_admin_and_management
+        - group_scholarly_communication
+        - group_public_and_access_services
+        - group_systems_and_technology
+        - group_technical_services
+        - group_subject_specialty
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+        open: false
+      label: Skills
+    group_admin_and_management:
+      children:
+        - field_admin_advanced
+        - field_admin_basic
+        - field_admin_want
+      parent_name: group_skills
+      weight: 20
+      format_type: fieldset
+      region: content
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Admin and Management'
+    group_scholarly_communication:
+      children:
+        - field_scholarly_advanced
+        - field_scholarly_basic
+        - field_scholarly_want
+      parent_name: group_skills
+      weight: 21
+      format_type: fieldset
+      region: content
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Scholarly Communication'
+    group_public_and_access_services:
+      children:
+        - field_public_advanced
+        - field_public_basic
+        - field_public_want
+      parent_name: group_skills
+      weight: 22
+      format_type: fieldset
+      region: content
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Public and Access Services'
+    group_account_access:
+      children:
+        - account
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      region: content
+      format_settings:
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Account Settings'
+    group_systems_and_technology:
+      children:
+        - field_systems_advanced
+        - field_systems_basic
+        - field_systems_want
+      parent_name: group_skills
+      weight: 23
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Systems and Technology'
+    group_technical_services:
+      children:
+        - field_technical_advanced
+        - field_technical_basic
+        - field_technical_want
+      parent_name: group_skills
+      weight: 24
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Technical Services'
+    group_wrlc_profile:
+      children:
+        - field_first_name
+        - field_middle_name_initial
+        - field_last_name
+        - field_wrlc_institution
+        - field_job_title
+        - field_email_address
+        - field_phone_number
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'WRLC Profile'
+    group_subject_specialty:
+      children:
+        - field_subject_advanced
+        - field_subject_basic
+        - field_subject_want
+      parent_name: group_skills
+      weight: 25
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Subject Specialty'
+_core:
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  contact:
+    weight: 5
+    region: content
+  field_admin_advanced:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_admin_basic:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_admin_want:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_email_address:
+    weight: 41
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_first_name:
+    weight: 36
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_job_title:
+    weight: 40
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_last_name:
+    weight: 38
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_middle_name_initial:
+    weight: 37
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_phone_number:
+    weight: 42
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_public_advanced:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_public_basic:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_public_want:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_scholarly_advanced:
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_scholarly_basic:
+    weight: 23
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_scholarly_want:
+    weight: 24
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_subject_advanced:
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_subject_basic:
+    weight: 35
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_subject_want:
+    weight: 36
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_systems_advanced:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_systems_basic:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_systems_want:
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_technical_advanced:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_technical_basic:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_technical_want:
+    weight: 33
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_wrlc_institution:
+    weight: 39
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  language: true

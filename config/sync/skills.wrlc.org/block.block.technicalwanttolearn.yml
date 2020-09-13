@@ -1,0 +1,27 @@
+uuid: 51f8830b-cb8e-43c7-94da-94855311df1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.technical_want_to_learn
+  module:
+    - collapsiblock
+    - facets
+  theme:
+    - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '3'
+id: technicalwanttolearn
+theme: bootstrap_subtheme
+region: technical_facets
+weight: -15
+provider: null
+plugin: 'facet_block:technical_want_to_learn'
+settings:
+  id: 'facet_block:technical_want_to_learn'
+  label: 'Want to Learn'
+  provider: facets
+  label_display: visible
+  block_id: technicalwanttolearn
+visibility: {  }

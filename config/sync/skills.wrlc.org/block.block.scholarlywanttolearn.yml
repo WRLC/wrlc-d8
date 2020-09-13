@@ -1,0 +1,33 @@
+uuid: 0d96a1d5-8cae-422c-bc0c-7a6f88805ce8
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.scholarly_want_to_learn
+  module:
+    - collapsiblock
+    - facets
+    - system
+  theme:
+    - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '3'
+id: scholarlywanttolearn
+theme: bootstrap_subtheme
+region: scholarly_facets
+weight: -15
+provider: null
+plugin: 'facet_block:scholarly_want_to_learn'
+settings:
+  id: 'facet_block:scholarly_want_to_learn'
+  label: 'Want to Learn'
+  provider: facets
+  label_display: visible
+  block_id: scholarlywanttolearn
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/directory\r\n/directory/*"
+    negate: false
+    context_mapping: {  }

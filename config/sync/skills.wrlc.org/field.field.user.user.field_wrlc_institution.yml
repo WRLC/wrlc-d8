@@ -1,0 +1,21 @@
+uuid: 6839b34b-b365-4d62-bc80-5858c5941d9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_wrlc_institution
+  module:
+    - options
+    - user
+id: user.user.field_wrlc_institution
+field_name: field_wrlc_institution
+entity_type: user
+bundle: user
+label: 'WRLC Institution'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: c6986ef4-a6d3-4273-b126-3ee78ede978b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: user_profile
+label: 'User Profile'
+code: "// Add class to each skill's <ul>\nvar skillSpan = document.querySelectorAll('.view-user-profile.view-display-id-block_1 .views-field ul li > span');\nskillSpan.forEach(assignClass);\n\nfunction assignClass(item) {\n  // get skill category\n  var skill = item.className;\n\n  // create fontawesome element\n  var svg = document.createElement('i');\n  svg.classList.add('fas');\n\n  // add icon based on skill\n  if (skill == 'admin') {\n    svg.classList.add('fa-sitemap');\n    toolTip = 'Admin & Management';\n  }\n  else if (skill == 'scholarly') {\n    svg.classList.add('fa-bullhorn');\n    toolTip = 'Scholarly Communications';\n  }\n  else if (skill == 'public') {\n    svg.classList.add('fa-concierge-bell');\n    toolTip = 'Public & Access Services';\n  }\n  else if (skill == 'systems') {\n    svg.classList.add('fa-laptop-code');\n    toolTip = 'Systems & Technology';\n  }\n  else if (skill == 'technical') {\n    svg.classList.add('fa-cogs');\n    toolTip = 'Technical Services';\n  }\n  else if (skill == 'subject') {\n    svg.classList.add('fa-chalkboard-teacher');\n    toolTip = 'Subject Specialty'\n  }\n  item.before(svg);\n  \n  // add skill class to parent <li>\n  var parListItem = item.closest('li');\n  parListItem.classList.add(skill);\n  parListItem.setAttribute('title', toolTip);\n}"
+conditions_require_all: true
+conditions:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+contexts: {  }
+header: false
+preprocess: true
+jquery: false
+noscript: ''
+noscriptRegion: {  }

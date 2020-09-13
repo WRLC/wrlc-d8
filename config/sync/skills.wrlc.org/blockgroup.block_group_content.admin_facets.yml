@@ -1,0 +1,6 @@
+uuid: 17dafb99-8e1a-4c2e-b43b-1265362c7211
+langcode: en
+status: true
+dependencies: {  }
+id: admin_facets
+label: 'Admin Facets'

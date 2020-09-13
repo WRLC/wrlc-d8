@@ -1,0 +1,26 @@
+uuid: 9b9da410-2e03-4b36-9ca5-13617cb49931
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_admin_advanced
+  module:
+    - user
+id: user.user.field_admin_advanced
+field_name: field_admin_advanced
+entity_type: user
+bundle: user
+label: Advanced
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: grouped_skills
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

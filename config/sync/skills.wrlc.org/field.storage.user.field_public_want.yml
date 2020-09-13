@@ -1,0 +1,20 @@
+uuid: cba38065-c64a-4c8e-90ab-f28e4aea7b92
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - user
+id: user.field_public_want
+field_name: field_public_want
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

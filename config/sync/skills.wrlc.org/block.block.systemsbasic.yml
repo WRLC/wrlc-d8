@@ -1,0 +1,27 @@
+uuid: 83e99c3b-02d6-4eb1-9516-77720f30470a
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.systems_basic
+  module:
+    - collapsiblock
+    - facets
+  theme:
+    - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '3'
+id: systemsbasic
+theme: bootstrap_subtheme
+region: systems_facets
+weight: -16
+provider: null
+plugin: 'facet_block:systems_basic'
+settings:
+  id: 'facet_block:systems_basic'
+  label: Basic
+  provider: facets
+  label_display: visible
+  block_id: systemsbasic
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 7e541f52-56ba-40f5-8b4c-40c2486d3751
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_email_address
+  module:
+    - user
+id: user.user.field_email_address
+field_name: field_email_address
+entity_type: user
+bundle: user
+label: 'Email Address'
+description: 'This email address will be displayed to other users of the WRLC Skills Inventory and Directory. Only fill out this field if you wish your address to be visible.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

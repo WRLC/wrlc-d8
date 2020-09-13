@@ -1,0 +1,6 @@
+uuid: dedfd9c0-3a93-4799-860c-0fa71b852e06
+langcode: en
+status: true
+dependencies: {  }
+id: technical_facets
+label: 'Technical Facets'

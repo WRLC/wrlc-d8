@@ -1,0 +1,27 @@
+uuid: a1dbefe8-1663-441f-b8fb-5710292c6384
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.subject_advanced
+  module:
+    - collapsiblock
+    - facets
+  theme:
+    - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '3'
+id: subjectadvanced
+theme: bootstrap_subtheme
+region: subject_facets
+weight: -17
+provider: null
+plugin: 'facet_block:subject_advanced'
+settings:
+  id: 'facet_block:subject_advanced'
+  label: Advanced
+  provider: facets
+  label_display: visible
+  block_id: subjectadvanced
+visibility: {  }

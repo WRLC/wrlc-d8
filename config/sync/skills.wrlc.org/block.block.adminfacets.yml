@@ -1,0 +1,32 @@
+uuid: e7601352-f482-41ea-9bfd-b5cc747eef63
+langcode: en
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.admin_facets
+  module:
+    - blockgroup
+    - collapsiblock
+    - system
+  theme:
+    - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '3'
+id: adminfacets
+theme: bootstrap_subtheme
+region: sidebar_first
+weight: -15
+provider: null
+plugin: 'block_group:admin_facets'
+settings:
+  id: 'block_group:admin_facets'
+  label: 'Admin & Management'
+  provider: blockgroup
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/directory\r\n/directory/*"
+    negate: false
+    context_mapping: {  }

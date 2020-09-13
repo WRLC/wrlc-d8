@@ -1,0 +1,39 @@
+uuid: e7a2d127-49f7-43f5-a582-5b0960f24119
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_type
+field_name: field_type
+entity_type: taxonomy_term
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 1
+      label: 'Admin and Management'
+    -
+      value: 2
+      label: 'Scholarly Communication'
+    -
+      value: 3
+      label: 'Public and Access Services'
+    -
+      value: 4
+      label: 'Systems and Technology'
+    -
+      value: 5
+      label: 'Technical Services'
+    -
+      value: 6
+      label: 'Subject Specialty'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

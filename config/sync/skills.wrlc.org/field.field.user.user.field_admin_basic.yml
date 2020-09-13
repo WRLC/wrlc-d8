@@ -1,0 +1,26 @@
+uuid: dcbc5bcf-b0f4-4c06-93d6-7de785370f18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_admin_basic
+  module:
+    - user
+id: user.user.field_admin_basic
+field_name: field_admin_basic
+entity_type: user
+bundle: user
+label: Basic
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: grouped_skills
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

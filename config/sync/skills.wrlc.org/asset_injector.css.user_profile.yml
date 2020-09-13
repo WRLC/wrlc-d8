@@ -1,0 +1,18 @@
+uuid: 462a15f1-aa28-4c42-bb32-8efc7af54be6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: user_profile
+label: 'User Profile'
+code: ".view-user-profile.view-display-id-block_1 .views-field ul {\n  list-style-type: none;\n  padding-left: 0;\n  margin-bottom: 20px;\n}\n\n.view-user-profile.view-display-id-block_1 .views-field ul li {\n  padding: 5px 10px;\n  margin-bottom: 5px;\n  border-radius: 5px;\n  display: flex;\n}\n\n.view-user-profile.view-display-id-block_1 .views-field ul > .admin {\n  background-color: #F7DFCC;\n}\n\n.view-user-profile.view-display-id-block_1 .views-field ul > .scholarly {\n  background-color: #DCD8EE;\n}\n\n.view-user-profile.view-display-id-block_1 .views-field ul > .public {\n  background-color: #CCECE3;\n}\n\n.view-user-profile.view-display-id-block_1 .views-field ul > .systems {\n  background-color: #FAECCC;\n}\n\n.view-user-profile.view-display-id-block_1 .views-field ul > .technical {\n  background-color: #FCFAD9;\n}\n\n.view-user-profile.view-display-id-block_1 .views-field ul > .subject {\n  background-color: #CCE3F0;\n}\n\n.view-user-profile.view-display-id-block_1 .views-field ul li > .svg-inline--fa {\n  position: relative;\n  top: 2px;\n}\n\n.view-user-profile.view-display-id-block_1 .views-field ul li > span {\n  padding-left: 10px;\n  display: inline-block;\n}\n\n.view-user-profile.view-display-id-block_1 th {\n  padding-top: 0;\n  border-bottom-width: 1px;\n  text-transform: uppercase;\n  width: 33%;\n}\n\n.view-user-profile.view-display-id-block_2 .views-field-field-wrlc-institution {\n  font-weight: bold;\n  font-size: 1.25em;\n}\n\n.view-user-profile.view-display-id-block_2 .views-field-field-job-title {\n  font-style: italic;\n}"
+conditions_require_all: true
+conditions:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+contexts: {  }
+media: all
+preprocess: true

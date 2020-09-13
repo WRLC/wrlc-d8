@@ -1,0 +1,28 @@
+schemas:
+  bootstrap: 8000
+  bootstrap_subtheme: 8000
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'https://skills.wrlc8.lndo.site/themes/custom/bootstrap_subtheme/favicon.ico'
+  use_default: true
+logo:
+  path: 'public://wrlc-logo-website-header-50.png'
+  url: ''
+  use_default: false
+table_responsive: '-1'
+cdn_theme: bootstrap
+cdn_cache_ttl_versions: '604800'
+cdn_cache_ttl_themes: '604800'
+cdn_cache_ttl_assets: '0'
+cdn_cache_ttl_library: '0'
+reset_http_request_cache: ''
+table: ''
+forms_smart_descriptions: 0
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+table_hover: 0
+table_striped: 0

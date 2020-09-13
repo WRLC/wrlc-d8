@@ -1,0 +1,14 @@
+uuid: aea8d027-2d04-434e-85e9-76c16c81953e
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user_profile
+label: 'User Profile'
+type: 'canonical_entities:user'
+pattern: 'user/[user:account-name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

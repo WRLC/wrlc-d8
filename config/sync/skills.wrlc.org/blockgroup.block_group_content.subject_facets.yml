@@ -1,0 +1,6 @@
+uuid: 4f22744e-bd2b-4ef3-b701-ef757ca2672c
+langcode: en
+status: true
+dependencies: {  }
+id: subject_facets
+label: 'Subject Facets'

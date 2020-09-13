@@ -1,0 +1,31 @@
+uuid: 77b64dc9-a3af-429e-ad25-89811c7e0b05
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.user_profile
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap_subtheme
+id: views_block__user_profile_block_2
+theme: bootstrap_subtheme
+region: sidebar_first
+weight: -18
+provider: null
+plugin: 'views_block:user_profile-block_2'
+settings:
+  id: 'views_block:user_profile-block_2'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/*\r\n!/user/*/edit"
+    negate: false
+    context_mapping: {  }

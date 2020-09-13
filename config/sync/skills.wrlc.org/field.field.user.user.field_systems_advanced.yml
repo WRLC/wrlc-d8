@@ -1,0 +1,26 @@
+uuid: a54b61fd-967c-4d85-996f-e01a10c66c34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_systems_advanced
+  module:
+    - user
+id: user.user.field_systems_advanced
+field_name: field_systems_advanced
+entity_type: user
+bundle: user
+label: Advanced
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: grouped_skills
+      display_name: entity_reference_4
+      arguments: {  }
+field_type: entity_reference

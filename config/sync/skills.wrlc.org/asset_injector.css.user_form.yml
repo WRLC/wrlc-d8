@@ -1,0 +1,18 @@
+uuid: e6b07c0a-1150-41e0-94d9-907c1b4da0ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: user_form
+label: 'User Form'
+code: "#user-form #edit-group-skills .panel-body .panel-body {\n  display: flex;\n}\n\n#user-form #edit-group-skills .panel-body .panel-body .field--type-entity-reference {\n  margin-bottom: 0;\n  min-width: 33.333%;\n}\n\n#user-form #edit-group-skills .panel-body .panel-body .field--type-entity-reference legend {\n  margin-bottom: 0;\n}\n\n#user-form #edit-group-skills .panel-body .panel-body .field--type-entity-reference .form-item {\n  border-bottom: 1px solid #e5e5e5;\n  margin: 0;\n  padding-bottom: 5px;\n  padding-top: 5px;\n}\n\n#user-form #edit-group-skills .panel-body .panel-body .field--type-entity-reference fieldset .form-item:nth-child(odd) {\n  background-color: #f5f5f5;\n}\n\n#user-form #edit-group-skills .panel-body .panel-body .field--type-entity-reference fieldset .form-item:last-child {\n  border-bottom: none;\n}"
+conditions_require_all: true
+conditions:
+  request_path:
+    id: request_path
+    pages: '/user/*/edit'
+    negate: false
+contexts: {  }
+media: all
+preprocess: true

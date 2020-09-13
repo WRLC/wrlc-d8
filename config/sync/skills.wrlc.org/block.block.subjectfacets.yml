@@ -1,0 +1,32 @@
+uuid: 0f38eead-6935-4b32-a02e-076863f3599c
+langcode: en
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.subject_facets
+  module:
+    - blockgroup
+    - collapsiblock
+    - system
+  theme:
+    - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '3'
+id: subjectfacets
+theme: bootstrap_subtheme
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'block_group:subject_facets'
+settings:
+  id: 'block_group:subject_facets'
+  label: 'Subject Specialty'
+  provider: blockgroup
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/directory\r\n/directory/*"
+    negate: false
+    context_mapping: {  }

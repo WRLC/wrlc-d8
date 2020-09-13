@@ -1,0 +1,21 @@
+uuid: fe3f64ce-813f-46c0-a4e0-b8c867efa710
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: directory
+label: Directory
+code: "// Get all the top-level skill facet blocks\nvar skillBlockTitle = document.querySelectorAll('.block-blockgroup > .collapsiblock');\n\n// Get each block's anchor tag\nskillBlockTitle.forEach(placeIcon);\n\nfunction placeIcon(item) {\n  var skillTitle = item.firstElementChild;\n  var skillTitleText = skillTitle.textContent\n\n  // Create FontAwesome element\n  var svg = document.createElement('i');\n  svg.classList.add('fas');\n  \n  // Add correct icon\n  if (skillTitleText == 'Admin & Management') {\n    svg.classList.add('fa-sitemap');\n  }\n  if (skillTitleText == 'Scholarly Communication') {\n    svg.classList.add('fa-bullhorn');\n  }\n  if (skillTitleText == 'Public & Access Services') {\n    svg.classList.add('fa-concierge-bell');\n  }\n  if (skillTitleText == 'Systems & Technology') {\n    svg.classList.add('fa-laptop-code');\n  }\n  if (skillTitleText == 'Technical Services') {\n    svg.classList.add('fa-cogs');\n  }\n  if (skillTitleText == 'Subject Specialty') {\n    svg.classList.add('fa-chalkboard-teacher');\n  }\n  skillTitle.before(svg);\n}"
+conditions_require_all: true
+conditions:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/directory\r\n/directory/*"
+    negate: false
+contexts: {  }
+header: false
+preprocess: true
+jquery: false
+noscript: ''
+noscriptRegion: {  }

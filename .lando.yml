@@ -10,7 +10,7 @@ proxy:
     - libraries.wrlc8.lndo.site  # www.libraries.wrlc.org
     - skills.wrlc8.lndo.site  # skills.wrlc.org
   search:
-    - skills-search.wrlc8.lndo.site:8983  # skills solr server
+    - search.wrlc8.lndo.site:8983  # skills solr server
 services:
   # wrlc.org D7 database for migration
   wrlc7:
@@ -36,9 +36,7 @@ services:
   skills:
     type: mariadb:10.1
     portforward: true
-  skills-search:
+  search:
     type: solr
     portforward: true
     core: skills
-    config:
-      dir: config/solr-conf/7.x

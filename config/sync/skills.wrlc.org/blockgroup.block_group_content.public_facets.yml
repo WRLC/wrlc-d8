@@ -1,0 +1,6 @@
+uuid: 651f17bc-4b60-46ed-b3f0-f77b1609347b
+langcode: en
+status: true
+dependencies: {  }
+id: public_facets
+label: 'Public Facets'

@@ -1,0 +1,27 @@
+uuid: b0a92b4c-a024-49a5-8043-83f4b3dfd867
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.subject_basic
+  module:
+    - collapsiblock
+    - facets
+  theme:
+    - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '3'
+id: subjectbasic
+theme: bootstrap_subtheme
+region: subject_facets
+weight: -16
+provider: null
+plugin: 'facet_block:subject_basic'
+settings:
+  id: 'facet_block:subject_basic'
+  label: Basic
+  provider: facets
+  label_display: visible
+  block_id: subjectbasic
+visibility: {  }

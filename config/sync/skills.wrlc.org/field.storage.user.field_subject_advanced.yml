@@ -1,0 +1,20 @@
+uuid: 3079e33d-ea92-4892-8a58-e4dd17cdb95e
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - user
+id: user.field_subject_advanced
+field_name: field_subject_advanced
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
