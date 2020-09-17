@@ -3843,18 +3843,18 @@
     },
     {
         "name": "drupal/collapsiblock",
-        "version": "2.1.0",
-        "version_normalized": "2.1.0.0",
+        "version": "3.0.0",
+        "version_normalized": "3.0.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/collapsiblock.git",
-            "reference": "8.x-2.1"
+            "reference": "3.0.0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/collapsiblock-8.x-2.1.zip",
-            "reference": "8.x-2.1",
-            "shasum": "e90acb456f6cfb52378478214c7435d95e93970f"
+            "url": "https://ftp.drupal.org/files/projects/collapsiblock-3.0.0.zip",
+            "reference": "3.0.0",
+            "shasum": "49fb169ad62d061b15c868a036ebc38b48906299"
         },
         "require": {
             "drupal/core": "^8 || ^9"
@@ -3862,8 +3862,8 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "8.x-2.1",
-                "datestamp": "1588032521",
+                "version": "3.0.0",
+                "datestamp": "1599195573",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
