@@ -2816,28 +2816,28 @@
         },
         {
             "name": "drupal/calendar",
-            "version": "1.0.0-alpha2",
+            "version": "1.0.0-alpha3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/calendar.git",
-                "reference": "8.x-1.0-alpha2"
+                "reference": "8.x-1.0-alpha3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/calendar-8.x-1.0-alpha2.zip",
-                "reference": "8.x-1.0-alpha2",
-                "shasum": "5835cb7a27941f4a144e925114a167954b29d355"
+                "url": "https://ftp.drupal.org/files/projects/calendar-8.x-1.0-alpha3.zip",
+                "reference": "8.x-1.0-alpha3",
+                "shasum": "ddbf8841e7433134031993381cf34bce8a63cdac"
             },
             "require": {
                 "drupal/calendar_datetime": "*",
-                "drupal/core": "^8",
-                "drupal/views_templates": "1.*"
+                "drupal/core": "^8 || ^9",
+                "drupal/views_templates": "^1.1"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-alpha2",
-                    "datestamp": "1584438256",
+                    "version": "8.x-1.0-alpha3",
+                    "datestamp": "1599764833",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -2846,20 +2846,26 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
-                    "name": "KarenS",
-                    "homepage": "https://www.drupal.org/user/45874"
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+                    "role": "Maintainer"
                 },
                 {
-                    "name": "Neslee Canil Pinto",
-                    "homepage": "https://www.drupal.org/user/3580850"
+                    "name": "Eric Sol",
+                    "homepage": "https://www.drupal.org/u/solide-echt",
+                    "role": "Maintainer"
                 },
                 {
                     "name": "fizk",
                     "homepage": "https://www.drupal.org/user/473174"
+                },
+                {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
                 },
                 {
                     "name": "solide-echt",
@@ -2867,27 +2873,24 @@
                 }
             ],
             "description": "Provides a Views plugin to display views containing dates as Calendars.",
-            "homepage": "http://drupal.org/project/calendar",
-            "keywords": [
-                "Drupal"
-            ],
+            "homepage": "https://www.drupal.org/project/calendar",
             "support": {
-                "source": "http://cgit.drupalcode.org/calendar",
+                "source": "https://git.drupalcode.org/project/calendar",
                 "issues": "https://www.drupal.org/project/issues/calendar"
             }
         },
         {
             "name": "drupal/calendar_datetime",
-            "version": "1.0.0-alpha2",
+            "version": "1.0.0-alpha3",
             "require": {
                 "drupal/calendar": "self.version",
-                "drupal/core": "~8.0"
+                "drupal/core": "^8 || ^9"
             },
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-alpha2",
-                    "datestamp": "1584438256",
+                    "version": "8.x-1.0-alpha3",
+                    "datestamp": "1599764833",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -2910,6 +2913,10 @@
                 {
                     "name": "fizk",
                     "homepage": "https://www.drupal.org/user/473174"
+                },
+                {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
                 },
                 {
                     "name": "solide-echt",
@@ -15629,5 +15636,6 @@
     "platform": {
         "php": ">=7.0.8"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
