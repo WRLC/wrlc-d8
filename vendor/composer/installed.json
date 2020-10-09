@@ -3998,18 +3998,18 @@
     },
     {
         "name": "drupal/content_access",
-        "version": "1.0.0-alpha2",
-        "version_normalized": "1.0.0.0-alpha2",
+        "version": "1.0.0-alpha3",
+        "version_normalized": "1.0.0.0-alpha3",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/content_access.git",
-            "reference": "8.x-1.0-alpha2"
+            "reference": "8.x-1.0-alpha3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/content_access-8.x-1.0-alpha2.zip",
-            "reference": "8.x-1.0-alpha2",
-            "shasum": "f8ad93ee13bfd7901742071ce9399ac1731c6100"
+            "url": "https://ftp.drupal.org/files/projects/content_access-8.x-1.0-alpha3.zip",
+            "reference": "8.x-1.0-alpha3",
+            "shasum": "38715d271d166cbf7ed801acd6cee6010962bc79"
         },
         "require": {
             "drupal/core": "^8 || ^9"
@@ -4020,8 +4020,8 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "8.x-1.0-alpha2",
-                "datestamp": "1594551206",
+                "version": "8.x-1.0-alpha3",
+                "datestamp": "1600327861",
                 "security-coverage": {
                     "status": "not-covered",
                     "message": "Project has not opted into security advisory coverage!"
