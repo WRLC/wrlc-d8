@@ -11,6 +11,7 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\datetime\Plugin\Field\FieldWidget\DateTimeWidgetBase;
 use Drupal\datetime\Plugin\Field\FieldType\DateTimeItem;
+use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
 
 /**
  * Plugin implementation of the BootstrapDateTimeWidget widget.
@@ -143,17 +144,17 @@ class BootstrapDateTimeWidget extends DateTimeWidgetBase implements ContainerFac
           case DateTimeItem::DATETIME_TYPE_DATE:
             // If this is a date-only field, set it to the default time so the
             // timezone conversion can be reversed.
-            datetime_date_default_time($date);
-            $format = DATETIME_DATE_STORAGE_FORMAT;
+            $date->setDefaultDateTime();
+            $format = DateTimeItemInterface::DATE_STORAGE_FORMAT;
             break;
 
           default:
-            $format = DATETIME_DATETIME_STORAGE_FORMAT;
+            $format = DateTimeItemInterface::DATETIME_STORAGE_FORMAT;
             break;
         }
 
         // Adjust the date for storage.
-        $date->setTimezone(new \DateTimezone(DATETIME_STORAGE_TIMEZONE));
+        $date->setTimezone(new \DateTimezone(DateTimeItemInterface::STORAGE_TIMEZONE));
         $item['value'] = $date->format($format);
       }
 
@@ -212,10 +213,10 @@ class BootstrapDateTimeWidget extends DateTimeWidgetBase implements ContainerFac
       case DateTimeItem::DATETIME_TYPE_DATE:
         // A date-only field should have no timezone conversion performed, so
         // use the same timezone as for storage.
-        $element['value']['#date_timezone'] = DATETIME_STORAGE_TIMEZONE;
+        $element['value']['#date_timezone'] = DateTimeItemInterface::STORAGE_TIMEZONE;
 
         // If field is date only, use default time format.
-        $format = DATETIME_DATE_STORAGE_FORMAT;
+        $format = DateTimeItemInterface::DATE_STORAGE_FORMAT;
 
         // Type of the field.
         $element['value']['#date_type'] = $this->getFieldSetting('datetime_type');
@@ -239,7 +240,7 @@ class BootstrapDateTimeWidget extends DateTimeWidgetBase implements ContainerFac
       if ($this->getFieldSetting('datetime_type') == DateTimeItem::DATETIME_TYPE_DATE) {
         // A date without time will pick up the current time, use the default
         // time.
-        datetime_date_default_time($date);
+        $date->setDefaultDateTime();
       }
 
       $date->setTimezone(new \DateTimeZone($element['value']['#date_timezone']));

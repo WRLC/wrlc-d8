@@ -74,7 +74,7 @@ class CloudBuilder implements CloudBuilderInterface {
  */
 private function displayTermLinkWeight($name, $tid, $weight, $description) {
   if ($term = Term::load($tid)) {
-    $uri = $term->urlInfo();
+    $uri = $term->toUrl();
     $options = $uri->getOptions();
     $options['attributes']['class'][] = 'tagclouds';
     $options['attributes']['class'][] = 'level' . $weight;
@@ -93,8 +93,8 @@ private function displayTermLinkWeight($name, $tid, $weight, $description) {
 }
 
 private function displayNodeLinkWeight($name, $tid, $nid, $weight, $description) {
-  if ($term = Term::load($tid) && $node = Node::load($nid)) {
-    $uri = $node->urlInfo();
+  if (($term = Term::load($tid)) && ($node = Node::load($nid))) {
+    $uri = $node->toUrl();
     $options = $uri->getOptions();
     $options['attributes']['class'][] = 'tagclouds';
     $options['attributes']['class'][] = 'level' . $weight;
@@ -116,8 +116,8 @@ private function displayNodeLinkWeight($name, $tid, $nid, $weight, $description)
  * Display Single Tag with Style
  */
 private function displayNodeLinkCount($name, $tid, $nid, $count, $description) {
-  if ($term = Term::load($tid) && $node = Node::load($nid)) {
-    $uri = $node->urlInfo();
+  if (($term = Term::load($tid)) && ($node = Node::load($nid))) {
+    $uri = $node->toUrl();
     $options = $uri->getOptions();
     $options['attributes']['class'][] = 'tagclouds';
 
@@ -135,7 +135,7 @@ private function displayNodeLinkCount($name, $tid, $nid, $count, $description) {
 
 private function displayTermLinkCount($name, $tid, $count, $description) {
   if ($term = Term::load($tid)) {
-    $uri = $term->urlInfo();
+    $uri = $term->toUrl();
     $options = $uri->getOptions();
     $options['options']['attributes']['class'][] = 'tagclouds';
 
