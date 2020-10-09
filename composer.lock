@@ -2716,29 +2716,26 @@
         },
         {
             "name": "drupal/bootstrap_datetime_picker",
-            "version": "1.2.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/bootstrap_datetime_picker.git",
-                "reference": "8.x-1.2"
+                "reference": "8.x-1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap_datetime_picker-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "5b4a79b4d5aa91a420c0d9d54db7f70056e007f9"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap_datetime_picker-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "2c5a93f848a5afe365733f1ae031a806f6a25105"
             },
             "require": {
                 "drupal/core": "~8.0"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1535537884",
+                    "version": "8.x-1.4",
+                    "datestamp": "1600068166",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"

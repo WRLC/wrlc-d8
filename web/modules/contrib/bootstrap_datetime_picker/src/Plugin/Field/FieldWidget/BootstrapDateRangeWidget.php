@@ -9,22 +9,22 @@ use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\datetime\Plugin\Field\FieldWidget\DateTimeWidgetBase;
+use Drupal\datetime_range\Plugin\Field\FieldWidget\DateRangeWidgetBase;
+use Drupal\datetime_range\Plugin\Field\FieldType\DateRangeItem;
 use Drupal\datetime\Plugin\Field\FieldType\DateTimeItem;
-use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
 
 /**
  * Plugin implementation of the BootstrapDateTimeWidget widget.
  *
  * @FieldWidget(
- *   id = "bootstrap_date_time_widget",
- *   label = @Translation("Bootstrap DateTime Picker"),
+ *   id = "bootstrap_date_range_widget",
+ *   label = @Translation("Bootstrap DateRange Picker"),
  *   field_types = {
- *     "datetime"
+ *     "daterange"
  *   }
  * )
  */
-class BootstrapDateTimeWidget extends DateTimeWidgetBase implements ContainerFactoryPluginInterface {
+class BootstrapDateRangeWidget extends DateRangeWidgetBase implements ContainerFactoryPluginInterface {
 
   /**
    * {@inheritdoc}
@@ -139,23 +139,45 @@ class BootstrapDateTimeWidget extends DateTimeWidgetBase implements ContainerFac
       if (!empty($item['value'])) {
 
         // Date value is now string not instance of DrupalDateTime (without T).
-        $date = new DrupalDateTime($item['value']);
+        $start_date = new DrupalDateTime($item['value']);
         switch ($this->getFieldSetting('datetime_type')) {
-          case DateTimeItem::DATETIME_TYPE_DATE:
+          case DateRangeItem::DATETIME_TYPE_DATE:
             // If this is a date-only field, set it to the default time so the
             // timezone conversion can be reversed.
-            $date->setDefaultDateTime();
-            $format = DateTimeItemInterface::DATE_STORAGE_FORMAT;
+            datetime_date_default_time($start_date);
+            $format = DATETIME_DATE_STORAGE_FORMAT;
             break;
 
           default:
-            $format = DateTimeItemInterface::DATETIME_STORAGE_FORMAT;
+            $format = DATETIME_DATETIME_STORAGE_FORMAT;
             break;
         }
 
         // Adjust the date for storage.
-        $date->setTimezone(new \DateTimezone(DateTimeItemInterface::STORAGE_TIMEZONE));
-        $item['value'] = $date->format($format);
+        $start_date->setTimezone(new \DateTimezone(DATETIME_STORAGE_TIMEZONE));
+        $item['value'] = $start_date->format($format);
+      }
+
+      if (!empty($item['end_value'])) {
+
+        // Date value is now string not instance of DrupalDateTime (without T).
+        $end_date = new DrupalDateTime($item['end_value']);
+        switch ($this->getFieldSetting('datetime_type')) {
+          case DateRangeItem::DATETIME_TYPE_DATE:
+            // If this is a date-only field, set it to the default time so the
+            // timezone conversion can be reversed.
+            datetime_date_default_time($end_date);
+            $format = DATETIME_DATE_STORAGE_FORMAT;
+            break;
+
+          default:
+            $format = DATETIME_DATETIME_STORAGE_FORMAT;
+            break;
+        }
+
+        // Adjust the date for storage.
+        $end_date->setTimezone(new \DateTimezone(DATETIME_STORAGE_TIMEZONE));
+        $item['end_value'] = $end_date->format($format);
       }
 
     }
@@ -200,7 +222,7 @@ class BootstrapDateTimeWidget extends DateTimeWidgetBase implements ContainerFac
 
     // Field type.
     $element['value'] = [
-      '#title' => $element['#title'],
+      '#title' => $this->t('Start date'),
       '#type' => 'bootstrap_date_time',
       '#date_timezone' => drupal_get_user_timezone(),
       '#default_value' => NULL,
@@ -208,23 +230,35 @@ class BootstrapDateTimeWidget extends DateTimeWidgetBase implements ContainerFac
       '#required' => $element['#required'],
     ];
 
+    $element['end_value'] = [
+      '#title' => $this->t('End date'),
+      '#type' => 'bootstrap_date_time',
+      '#date_timezone' => drupal_get_user_timezone(),
+      '#default_value' => NULL,
+      '#date_type' => NULL,
+      '#required' => $element['#required'],
+    ] + $element['value'];
+
     // Identify the type of date and time elements to use.
     switch ($this->getFieldSetting('datetime_type')) {
-      case DateTimeItem::DATETIME_TYPE_DATE:
+      case DateRangeItem::DATETIME_TYPE_DATE:
         // A date-only field should have no timezone conversion performed, so
         // use the same timezone as for storage.
-        $element['value']['#date_timezone'] = DateTimeItemInterface::STORAGE_TIMEZONE;
+        $element['value']['#date_timezone'] = DATETIME_STORAGE_TIMEZONE;
+        $element['end_value']['#date_timezone'] = DATETIME_STORAGE_TIMEZONE;
 
         // If field is date only, use default time format.
-        $format = DateTimeItemInterface::DATE_STORAGE_FORMAT;
+        $format = DATETIME_DATE_STORAGE_FORMAT;
 
         // Type of the field.
         $element['value']['#date_type'] = $this->getFieldSetting('datetime_type');
+        $element['end_value']['#date_type'] = $this->getFieldSetting('datetime_type');
         break;
 
       default:
         // Type of the field.
         $element['value']['#date_type'] = $this->getFieldSetting('datetime_type');
+        $element['end_value']['#date_type'] = $this->getFieldSetting('datetime_type');
 
         // Assign the time format, because time will be saved in 24hrs format
         // in database.
@@ -232,27 +266,50 @@ class BootstrapDateTimeWidget extends DateTimeWidgetBase implements ContainerFac
         break;
     }
 
-    if ($items[$delta]->date) {
-      $date = $items[$delta]->date;
+    if ($items[$delta]->start_date) {
+      $start_date = $items[$delta]->start_date;
 
       // The date was created and verified during field_load(), so it is safe to
       // use without further inspection.
       if ($this->getFieldSetting('datetime_type') == DateTimeItem::DATETIME_TYPE_DATE) {
         // A date without time will pick up the current time, use the default
         // time.
-        $date->setDefaultDateTime();
+        datetime_date_default_time($start_date);
       }
 
-      $date->setTimezone(new \DateTimeZone($element['value']['#date_timezone']));
+      $start_date->setTimezone(new \DateTimeZone($element['value']['#date_timezone']));
 
       // Manual define form for input field.
-      $element['value']['#default_value'] = $date->format($format);
+      $element['value']['#default_value'] = $start_date->format($format);
+    }
+
+    if ($items[$delta]->end_date) {
+      $end_date = $items[$delta]->end_date;
+
+      // The date was created and verified during field_load(), so it is safe to
+      // use without further inspection.
+      if ($this->getFieldSetting('datetime_type') == DateTimeItem::DATETIME_TYPE_DATE) {
+        // A date without time will pick up the current time, use the default
+        // time.
+        datetime_date_default_time($end_date);
+      }
+
+      $end_date->setTimezone(new \DateTimeZone($element['end_value']['#date_timezone']));
+
+      // Manual define form for input field.
+      $element['end_value']['#default_value'] = $end_date->format($format);
     }
 
     $element['value']['#hour_format'] = $this->getSetting('hour_format');
     $element['value']['#allow_times'] = $this->getSetting('allow_times');
     $element['value']['#disable_days'] = $this->getSetting('disable_days');
     $element['value']['#exclude_date'] = $this->getSetting('exclude_date');
+
+    $element['end_value']['#hour_format'] = $this->getSetting('hour_format');
+    $element['end_value']['#allow_times'] = $this->getSetting('allow_times');
+    $element['end_value']['#disable_days'] = $this->getSetting('disable_days');
+    $element['end_value']['#exclude_date'] = $this->getSetting('exclude_date');
+
     return $element;
   }
 
