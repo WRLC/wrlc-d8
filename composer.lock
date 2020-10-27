@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9893a1442234c40ce6e317b0f0d7441e",
+    "content-hash": "a14a53c6df5b0734de35bc2be7768cc6",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3696,6 +3696,9 @@
                         "[web-root]/profiles/README.txt": "assets/scaffold/files/profiles.README.txt",
                         "[web-root]/themes/README.txt": "assets/scaffold/files/themes.README.txt"
                     }
+                },
+                "patches_applied": {
+                    "Workaround for \"Call to a member function getLabel() after enabling layout_builder\"": "https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch"
                 }
             },
             "autoload": {

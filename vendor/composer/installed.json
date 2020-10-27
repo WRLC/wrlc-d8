@@ -4385,6 +4385,9 @@
                     "[web-root]/profiles/README.txt": "assets/scaffold/files/profiles.README.txt",
                     "[web-root]/themes/README.txt": "assets/scaffold/files/themes.README.txt"
                 }
+            },
+            "patches_applied": {
+                "Workaround for \"Call to a member function getLabel() after enabling layout_builder\"": "https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch"
             }
         },
         "installation-source": "dist",

@@ -162,6 +162,9 @@
             },
             "drupal/collapsiblock": {
                 "Isssue with BlockGroup": "https://www.drupal.org/files/issues/2020-03-06/issue-with-blockgroup-3084050-4.patch"
+            },
+            "drupal/core": {
+                "Workaround for \"Call to a member function getLabel() after enabling layout_builder\"": "https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch"
             }
         },
         "drupal-scaffold": {
