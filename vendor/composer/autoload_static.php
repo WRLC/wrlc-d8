@@ -97,7 +97,6 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
             'Symfony\\Polyfill\\Iconv\\' => 23,
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Contracts\\EventDispatcher\\' => 34,
-            'Symfony\\Contracts\\' => 18,
             'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\VarDumper\\' => 28,
             'Symfony\\Component\\Validator\\' => 28,
@@ -327,10 +326,6 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         'Symfony\\Contracts\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher-contracts',
-        ),
-        'Symfony\\Contracts\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/contracts',
         ),
         'Symfony\\Component\\Yaml\\' => 
         array (
