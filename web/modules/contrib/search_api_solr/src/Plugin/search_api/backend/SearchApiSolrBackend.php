@@ -5,6 +5,7 @@ namespace Drupal\search_api_solr\Plugin\search_api\backend;
 use Drupal\Component\Utility\Html;
 use Drupal\Component\Utility\Unicode;
 use Drupal\Core\Config\Config;
+use Drupal\Core\DependencyInjection\DependencySerializationTrait;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Entity\TypedData\EntityDataDefinitionInterface;
@@ -89,6 +90,8 @@ class SearchApiSolrBackend extends BackendPluginBase implements SolrBackendInter
   }
 
   use PluginDependencyTrait;
+
+  use DependencySerializationTrait;
 
   use SolrCommitTrait;
 
@@ -4308,6 +4311,13 @@ class SearchApiSolrBackend extends BackendPluginBase implements SolrBackendInter
   public function extractContentFromFile($filepath) {
     $connector = $this->getSolrConnector();
 
+    $solr_version = $connector->getSolrVersion();
+    if (version_compare($solr_version, '8.6', '>=') && version_compare($solr_version, '8.6.3', '<')) {
+      $this->getLogger()
+        ->error('Solr 8.6.0, 8.6.1 and 8.6.2 contain a bug that breaks content extraction form files. Upgrade to 8.6.3 at least.');
+      return '';
+    }
+
     $query = $connector->getExtractQuery();
     $query->setExtractOnly(TRUE);
     $query->setFile($filepath);
@@ -4507,6 +4517,11 @@ class SearchApiSolrBackend extends BackendPluginBase implements SolrBackendInter
    */
   protected function doDocumentCounts(Endpoint $endpoint): array {
     $connector = $this->getSolrConnector();
+
+    if (version_compare($connector->getSolrVersion(), '5.0.0', '<')) {
+      // The code below doesn't work in Solr below 5.x anyway.
+      return ['#total' => 0];
+    }
 
     $facet_key = Client::checkMinimal('5.2') ? 'local_key' : 'key';
 
