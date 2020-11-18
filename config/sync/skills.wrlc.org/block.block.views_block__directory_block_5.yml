@@ -1,0 +1,34 @@
+uuid: 767f0ea5-27fd-42fe-a2dd-6989eb8a4cc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.directory
+  module:
+    - collapsiblock
+    - system
+    - views
+  theme:
+    - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '0'
+id: views_block__directory_block_5
+theme: bootstrap_subtheme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:directory-block_5'
+settings:
+  id: 'views_block:directory-block_5'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/skills/public-and-access-services/*'
+    negate: false
+    context_mapping: {  }

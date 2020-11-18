@@ -4,13 +4,16 @@ status: true
 dependencies:
   module:
     - search_api_solr
+    - taxonomy
     - search_api
     - user
   config:
     - field.storage.user.field_admin_advanced
     - field.storage.user.field_admin_basic
     - field.storage.user.field_admin_want
+    - field.storage.user.field_systems_basic
     - field.storage.user.field_first_name
+    - field.storage.user.field_job_title
     - field.storage.user.field_last_name
     - field.storage.user.field_middle_name_initial
     - field.storage.user.field_public_advanced
@@ -23,11 +26,10 @@ dependencies:
     - field.storage.user.field_subject_basic
     - field.storage.user.field_subject_want
     - field.storage.user.field_systems_advanced
-    - field.storage.user.field_systems_basic
-    - field.storage.user.field_systems_want
     - field.storage.user.field_technical_advanced
     - field.storage.user.field_technical_basic
     - field.storage.user.field_technical_want
+    - field.storage.user.field_systems_want
     - field.storage.user.field_wrlc_institution
     - search_api.server.skills
 third_party_settings:
@@ -73,8 +75,38 @@ name: Profiles
 description: ''
 read_only: false
 field_settings:
+  admin_advanced_name:
+    label: 'Admin & Management - Advanced » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_admin_advanced:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.user.field_admin_advanced
+      module:
+        - taxonomy
+  admin_basic_name:
+    label: 'Admin & Management - Basic » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_admin_basic:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.user.field_admin_basic
+      module:
+        - taxonomy
+  admin_want_name:
+    label: 'Admin & Management - Want to Learn » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_admin_want:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.user.field_admin_want
+      module:
+        - taxonomy
   field_admin_advanced:
-    label: Advanced
+    label: 'Admin & Management - Advanced'
     datasource_id: 'entity:user'
     property_path: field_admin_advanced
     type: integer
@@ -82,7 +114,7 @@ field_settings:
       config:
         - field.storage.user.field_admin_advanced
   field_admin_basic:
-    label: Basic
+    label: 'Admin & Management - Basic'
     datasource_id: 'entity:user'
     property_path: field_admin_basic
     type: integer
@@ -90,7 +122,7 @@ field_settings:
       config:
         - field.storage.user.field_admin_basic
   field_admin_want:
-    label: 'Want to Learn'
+    label: 'Admin & Management - Want to Learn'
     datasource_id: 'entity:user'
     property_path: field_admin_want
     type: integer
@@ -101,15 +133,26 @@ field_settings:
     label: 'First Name'
     datasource_id: 'entity:user'
     property_path: field_first_name
-    type: string
+    type: text
+    boost: !!float 13
     dependencies:
       config:
         - field.storage.user.field_first_name
+  field_job_title:
+    label: 'Job Title'
+    datasource_id: 'entity:user'
+    property_path: field_job_title
+    type: text
+    boost: !!float 8
+    dependencies:
+      config:
+        - field.storage.user.field_job_title
   field_last_name:
     label: 'Last Name'
     datasource_id: 'entity:user'
     property_path: field_last_name
-    type: string
+    type: text
+    boost: !!float 21
     dependencies:
       config:
         - field.storage.user.field_last_name
@@ -117,12 +160,12 @@ field_settings:
     label: 'Middle Name/Initial'
     datasource_id: 'entity:user'
     property_path: field_middle_name_initial
-    type: string
+    type: text
     dependencies:
       config:
         - field.storage.user.field_middle_name_initial
   field_public_advanced:
-    label: Advanced
+    label: 'Public & Access Services - Advanced'
     datasource_id: 'entity:user'
     property_path: field_public_advanced
     type: integer
@@ -130,7 +173,7 @@ field_settings:
       config:
         - field.storage.user.field_public_advanced
   field_public_basic:
-    label: Basic
+    label: 'Public & Access Services - Basic'
     datasource_id: 'entity:user'
     property_path: field_public_basic
     type: integer
@@ -138,7 +181,7 @@ field_settings:
       config:
         - field.storage.user.field_public_basic
   field_public_want:
-    label: 'Want to Learn'
+    label: 'Public & Access Services - Want to Learn'
     datasource_id: 'entity:user'
     property_path: field_public_want
     type: integer
@@ -146,7 +189,7 @@ field_settings:
       config:
         - field.storage.user.field_public_want
   field_scholarly_advanced:
-    label: Advanced
+    label: 'Scholarly Communication - Advanced'
     datasource_id: 'entity:user'
     property_path: field_scholarly_advanced
     type: integer
@@ -154,7 +197,7 @@ field_settings:
       config:
         - field.storage.user.field_scholarly_advanced
   field_scholarly_basic:
-    label: Basic
+    label: 'Scholarly Communication - Basic'
     datasource_id: 'entity:user'
     property_path: field_scholarly_basic
     type: integer
@@ -162,7 +205,7 @@ field_settings:
       config:
         - field.storage.user.field_scholarly_basic
   field_scholarly_want:
-    label: 'Want to Learn'
+    label: 'Scholarly Communication - Want to Learn'
     datasource_id: 'entity:user'
     property_path: field_scholarly_want
     type: integer
@@ -170,7 +213,7 @@ field_settings:
       config:
         - field.storage.user.field_scholarly_want
   field_subject_advanced:
-    label: Advanced
+    label: 'Subject Specialty - Advanced'
     datasource_id: 'entity:user'
     property_path: field_subject_advanced
     type: integer
@@ -178,7 +221,7 @@ field_settings:
       config:
         - field.storage.user.field_subject_advanced
   field_subject_basic:
-    label: Basic
+    label: 'Subject Specialty - Basic'
     datasource_id: 'entity:user'
     property_path: field_subject_basic
     type: integer
@@ -186,7 +229,7 @@ field_settings:
       config:
         - field.storage.user.field_subject_basic
   field_subject_want:
-    label: 'Want to Learn'
+    label: 'Subject Specialty - Want to Learn'
     datasource_id: 'entity:user'
     property_path: field_subject_want
     type: integer
@@ -194,7 +237,7 @@ field_settings:
       config:
         - field.storage.user.field_subject_want
   field_systems_advanced:
-    label: Advanced
+    label: 'Systems & Technology - Advanced'
     datasource_id: 'entity:user'
     property_path: field_systems_advanced
     type: integer
@@ -202,7 +245,7 @@ field_settings:
       config:
         - field.storage.user.field_systems_advanced
   field_systems_basic:
-    label: Basic
+    label: 'Systems & Technology - Basic'
     datasource_id: 'entity:user'
     property_path: field_systems_basic
     type: integer
@@ -210,7 +253,7 @@ field_settings:
       config:
         - field.storage.user.field_systems_basic
   field_systems_want:
-    label: 'Want to Learn'
+    label: 'Systems & Technology - Want to Learn'
     datasource_id: 'entity:user'
     property_path: field_systems_want
     type: integer
@@ -218,7 +261,7 @@ field_settings:
       config:
         - field.storage.user.field_systems_want
   field_technical_advanced:
-    label: Advanced
+    label: 'Technical Services - Advanced'
     datasource_id: 'entity:user'
     property_path: field_technical_advanced
     type: integer
@@ -226,7 +269,7 @@ field_settings:
       config:
         - field.storage.user.field_technical_advanced
   field_technical_basic:
-    label: Basic
+    label: 'Technical Services - Basic'
     datasource_id: 'entity:user'
     property_path: field_technical_basic
     type: integer
@@ -234,7 +277,7 @@ field_settings:
       config:
         - field.storage.user.field_technical_basic
   field_technical_want:
-    label: 'Want to Learn'
+    label: 'Technical Services - Want to Learn'
     datasource_id: 'entity:user'
     property_path: field_technical_want
     type: integer
@@ -245,10 +288,161 @@ field_settings:
     label: 'WRLC Institution'
     datasource_id: 'entity:user'
     property_path: field_wrlc_institution
-    type: string
+    type: text
+    boost: !!float 8
     dependencies:
       config:
         - field.storage.user.field_wrlc_institution
+  public_advanced_name:
+    label: 'Public & Access Services - Advanced » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_public_advanced:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.user.field_public_advanced
+      module:
+        - taxonomy
+  public_basic_name:
+    label: 'Public & Access Services - Basic » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_public_basic:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.user.field_public_basic
+      module:
+        - taxonomy
+  public_want_name:
+    label: 'Public & Access Services - Want to Learn » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_public_want:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.user.field_public_want
+      module:
+        - taxonomy
+  scholarly_advanced_name:
+    label: 'Scholarly Communication - Advanced » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_scholarly_advanced:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.user.field_scholarly_advanced
+      module:
+        - taxonomy
+  scholarly_basic_name:
+    label: 'Scholarly Communication - Basic » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_scholarly_basic:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.user.field_scholarly_basic
+      module:
+        - taxonomy
+  scholarly_want_name:
+    label: 'Scholarly Communication - Want to Learn » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_scholarly_want:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.user.field_scholarly_want
+      module:
+        - taxonomy
+  subject_advanced_name:
+    label: 'Subject Specialty - Advanced » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_subject_advanced:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.user.field_subject_advanced
+      module:
+        - taxonomy
+  subject_basic_name:
+    label: 'Subject Specialty - Basic » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_subject_basic:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.user.field_subject_basic
+      module:
+        - taxonomy
+  subject_want_name:
+    label: 'Subject Specialty - Want to Learn » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_subject_want:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.user.field_subject_want
+      module:
+        - taxonomy
+  systems_advanced_name:
+    label: 'Systems & Technology - Advanced » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_systems_advanced:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.user.field_systems_advanced
+      module:
+        - taxonomy
+  systems_basic_name:
+    label: 'Systems & Technology - Basic » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_systems_basic:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.user.field_systems_basic
+      module:
+        - taxonomy
+  systems_want_name:
+    label: 'Systems & Technology - Want to Learn » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_systems_want:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.user.field_systems_want
+      module:
+        - taxonomy
+  technical_advanced_name:
+    label: 'Technical Services - Advanced » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_technical_advanced:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.user.field_technical_advanced
+      module:
+        - taxonomy
+  technical_basic_name:
+    label: 'Technical Services - Basic » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_technical_basic:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.user.field_technical_basic
+      module:
+        - taxonomy
+  technical_want_name:
+    label: 'Technical Services - Want to Learn » Name'
+    datasource_id: 'entity:user'
+    property_path: 'field_technical_want:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.user.field_technical_want
+      module:
+        - taxonomy
 datasource_settings:
   'entity:user':
     languages:
@@ -263,8 +457,6 @@ processor_settings:
     fields:
       - field_first_name
       - field_last_name
-      - field_middle_name_initial
-      - field_wrlc_institution
     ignorable: '[''¿¡!?,.:;]'
     ignorable_classes:
       - Pc

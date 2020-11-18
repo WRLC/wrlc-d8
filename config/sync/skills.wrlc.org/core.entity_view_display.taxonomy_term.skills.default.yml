@@ -22,7 +22,7 @@ content:
     third_party_settings: {  }
   field_type:
     weight: 1
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default

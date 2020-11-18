@@ -1,8 +1,9 @@
-uuid: 3fc48c0a-75a0-4863-a545-806a1e6fa49d
+uuid: 38116d4c-73e0-450f-beeb-787f2fe7402d
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.user.register
     - field.field.user.user.field_admin_advanced
     - field.field.user.user.field_admin_basic
     - field.field.user.user.field_admin_want
@@ -44,16 +45,15 @@ third_party_settings:
         - group_technical_services
         - group_subject_specialty
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: fieldset
-      region: content
+      region: hidden
       format_settings:
+        description: ''
         id: ''
         classes: ''
-        description: ''
-        required_fields: true
-        open: false
-      label: Skills
+        required_fields: false
+      label: ''
     group_admin_and_management:
       children:
         - field_admin_advanced
@@ -62,7 +62,7 @@ third_party_settings:
       parent_name: group_skills
       weight: 20
       format_type: fieldset
-      region: content
+      region: hidden
       format_settings:
         description: ''
         required_fields: true
@@ -77,7 +77,7 @@ third_party_settings:
       parent_name: group_skills
       weight: 21
       format_type: fieldset
-      region: content
+      region: hidden
       format_settings:
         description: ''
         required_fields: true
@@ -92,7 +92,7 @@ third_party_settings:
       parent_name: group_skills
       weight: 22
       format_type: fieldset
-      region: content
+      region: hidden
       format_settings:
         description: ''
         required_fields: true
@@ -120,7 +120,7 @@ third_party_settings:
       parent_name: group_skills
       weight: 23
       format_type: fieldset
-      region: content
+      region: hidden
       format_settings:
         id: ''
         classes: ''
@@ -135,7 +135,7 @@ third_party_settings:
       parent_name: group_skills
       weight: 24
       format_type: fieldset
-      region: content
+      region: hidden
       format_settings:
         id: ''
         classes: ''
@@ -169,7 +169,7 @@ third_party_settings:
       parent_name: group_skills
       weight: 25
       format_type: fieldset
-      region: content
+      region: hidden
       format_settings:
         id: ''
         classes: ''
@@ -178,10 +178,10 @@ third_party_settings:
       label: 'Subject Specialty'
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
-id: user.user.default
+id: user.user.register
 targetEntityType: user
 bundle: user
-mode: default
+mode: register
 content:
   account:
     weight: 1
@@ -191,24 +191,6 @@ content:
   contact:
     weight: 5
     region: content
-  field_admin_advanced:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_admin_basic:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_admin_want:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_email_address:
     weight: 41
     settings:
@@ -256,96 +238,6 @@ content:
     third_party_settings: {  }
     type: telephone_default
     region: content
-  field_public_advanced:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_public_basic:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_public_want:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_scholarly_advanced:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_scholarly_basic:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_scholarly_want:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_subject_advanced:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_subject_basic:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_subject_want:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_systems_advanced:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_systems_basic:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_systems_want:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_technical_advanced:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_technical_basic:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_technical_want:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_wrlc_institution:
     weight: 39
     settings: {  }
@@ -354,7 +246,7 @@ content:
     region: content
   path:
     type: path
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -364,5 +256,23 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_admin_advanced: true
+  field_admin_basic: true
+  field_admin_want: true
+  field_public_advanced: true
+  field_public_basic: true
+  field_public_want: true
+  field_scholarly_advanced: true
+  field_scholarly_basic: true
+  field_scholarly_want: true
+  field_subject_advanced: true
+  field_subject_basic: true
+  field_subject_want: true
+  field_systems_advanced: true
+  field_systems_basic: true
+  field_systems_want: true
+  field_technical_advanced: true
+  field_technical_basic: true
+  field_technical_want: true
   langcode: true
   language: true

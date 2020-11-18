@@ -1,0 +1,34 @@
+uuid: 26cb971b-9041-4715-80e2-c9a81d316d6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.directory
+  module:
+    - collapsiblock
+    - system
+    - views
+  theme:
+    - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '0'
+id: views_block__directory_block_12
+theme: bootstrap_subtheme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:directory-block_12'
+settings:
+  id: 'views_block:directory-block_12'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/skills/systems-and-technology/*'
+    negate: false
+    context_mapping: {  }

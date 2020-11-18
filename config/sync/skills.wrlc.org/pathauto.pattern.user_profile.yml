@@ -7,7 +7,7 @@ dependencies:
 id: user_profile
 label: 'User Profile'
 type: 'canonical_entities:user'
-pattern: 'user/[user:account-name]'
+pattern: 'user/[user:display-name]'
 selection_criteria: {  }
 selection_logic: and
 weight: 0

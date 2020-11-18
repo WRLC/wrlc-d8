@@ -12,46 +12,46 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: au
+      value: 'AU American University'
       label: 'American University'
     -
-      value: au-law
-      label: 'AU - Pence Law Library'
+      value: 'AU American University - Pence Law Library'
+      label: 'American University - Pence Law Library'
     -
-      value: cu
+      value: 'CUA CU The Catholic University of America'
       label: 'The Catholic University of America'
     -
-      value: ga
+      value: 'GA Gallaudet University'
       label: 'Gallaudet University'
     -
-      value: gm
+      value: 'GMU GM George Mason University'
       label: 'George Mason University'
     -
-      value: gw
+      value: 'GW The George Washington University'
       label: 'The George Washington University'
     -
-      value: hi
-      label: 'GW - Himmelfarb Health Sciences Library'
+      value: 'GW The George Washington University - Himmelfarb Health Sciences Library'
+      label: 'The George Washington University - Himmelfarb Health Sciences Library'
     -
-      value: gw-law
-      label: 'GW - Jacob Burns Law Library'
+      value: 'GW The George Washington University - Jacob Burns Law Library'
+      label: 'The George Washington University - Jacob Burns Law Library'
     -
-      value: gt
+      value: 'GU Georgetown University'
       label: 'Georgetown University'
     -
-      value: gt-law
+      value: 'GU Georgetown Law Library'
       label: 'Georgetown Law Library'
     -
-      value: hu
+      value: 'HU Howard University'
       label: 'Howard University'
     -
-      value: mu
+      value: 'MU Marymount University'
       label: 'Marymount University'
     -
-      value: dc
+      value: 'UDC The University of the District of Columbia'
       label: 'The University of the District of Columbia'
     -
-      value: wr
+      value: 'WRLC Washington Research Library Consortium'
       label: 'Washington Research Library Consortium'
   allowed_values_function: ''
 module: options

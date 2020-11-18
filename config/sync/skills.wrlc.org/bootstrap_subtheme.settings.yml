@@ -7,7 +7,7 @@ favicon:
   url: 'https://skills.wrlc8.lndo.site/themes/custom/bootstrap_subtheme/favicon.ico'
   use_default: true
 logo:
-  path: 'public://wrlc-logo-website-header-50.png'
+  path: 'public://wrlc-logo-2_0.png'
   url: ''
   use_default: false
 table_responsive: '-1'
@@ -19,10 +19,26 @@ cdn_cache_ttl_library: '0'
 reset_http_request_cache: ''
 table: ''
 forms_smart_descriptions: 0
+table_hover: 0
+table_striped: 0
 features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
   node_user_picture: true
-table_hover: 0
-table_striped: 0
+region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: well
+  footer: ''
+  admin_facets: ''
+  public_facets: ''
+  scholarly_facets: ''
+  subject_facets: ''
+  systems_facets: ''
+  technical_facets: ''
