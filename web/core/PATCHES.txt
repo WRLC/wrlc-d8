@@ -5,3 +5,7 @@ Workaround for "Call to a member function getLabel() after enabling layout_build
 Source: https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch
 
 
+Views output field as a custom link options all ignored if path is routed
+Source: https://www.drupal.org/files/issues/2018-03-27/2645954-26.views-output-field-as-link-for-routed-paths.patch
+
+
