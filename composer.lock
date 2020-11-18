@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a14a53c6df5b0734de35bc2be7768cc6",
+    "content-hash": "564fdf10efe4c6093b21a32b00fad336",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3720,7 +3720,8 @@
                     }
                 },
                 "patches_applied": {
-                    "Workaround for \"Call to a member function getLabel() after enabling layout_builder\"": "https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch"
+                    "Workaround for \"Call to a member function getLabel() after enabling layout_builder\"": "https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch",
+                    "Views output field as a custom link options all ignored if path is routed": "https://www.drupal.org/files/issues/2018-03-27/2645954-26.views-output-field-as-link-for-routed-paths.patch"
                 }
             },
             "autoload": {

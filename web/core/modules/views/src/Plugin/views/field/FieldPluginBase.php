@@ -1449,15 +1449,34 @@ abstract class FieldPluginBase extends HandlerBase implements FieldHandlerInterf
     }
 
     $options = $alter['url']->getOptions() + $options;
-
     $path = $alter['url']->setOptions($options)->toUriString();
 
-    if (!empty($alter['path_case']) && $alter['path_case'] != 'none' && !$alter['url']->isRouted()) {
-      $path = str_replace($alter['path'], $this->caseTransform($alter['path'], $this->options['alter']['path_case']), $path);
+    // If the URL we're working on is routed, the path and spaces replacements
+    // need to happen to the route parameters, not the route path itself.
+    $transform_case = !empty($alter['path_case']) && $alter['path_case'] != 'none';
+    $replace_spaces = !empty($alter['replace_spaces']);
+    if ($alter['url']->isRouted()) {
+      if ($transform_case || $replace_spaces) {
+        $route_parameters = $alter['url']->getRouteParameters();
+        foreach ($route_parameters as $key => $parameter) {
+          if ($transform_case) {
+            $route_parameters[$key] = str_replace($parameter, $this->caseTransform($parameter, $this->options['alter']['path_case']), $parameter);
+          }
+          if ($replace_spaces) {
+            $route_parameters[$key] = str_replace(' ', '-', $route_parameters[$key]);
+          }
+        }
+        $alter['url']->setRouteParameters($route_parameters);
+        $path = $alter['url']->toUriString();
+      }
     }
-
-    if (!empty($alter['replace_spaces'])) {
-      $path = str_replace(' ', '-', $path);
+    else {
+      if ($transform_case) {
+        $path = str_replace($alter['path'], $this->caseTransform($alter['path'], $this->options['alter']['path_case']), $path);
+      }
+      if ($replace_spaces) {
+        $path = str_replace(' ', '-', $path);
+      }
     }
 
     // Parse the URL and move any query and fragment parameters out of the path.
