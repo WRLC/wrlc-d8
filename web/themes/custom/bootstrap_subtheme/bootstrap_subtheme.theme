@@ -6,3 +6,17 @@
  *
  * Place your custom PHP code in this file.
  */
+ function bootstrap_subtheme_preprocess_views_view_field(&$variables) {
+   $view = $variables['view'];
+   # Rewrite link to lowercase in skills type list
+   if ($view->id() == 'skills_category_list') {
+     if ($variables['field']->field = 'field_type') {
+       preg_match_all('/<a href="(.+)">/', $variables['output'], $matches);
+       if (count($matches[0]) > 0) {
+         $link = $matches[0][0];
+         $fixedLink = strtolower($link);
+         $variables['output'] = Drupal\Core\Render\Markup::create(str_replace($link, $fixedLink, $variables['output']));
+       }
+     }
+   }
+ }

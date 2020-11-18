@@ -1,0 +1,12 @@
+uuid: a31c6a66-4271-4def-9027-d87f8a340a04
+langcode: en
+status: true
+dependencies: {  }
+id: sitewide
+label: Sitewide
+code: ".region-navigation a img {\n    width: 180px;\n    margin: 0;\n}"
+conditions_require_all: true
+conditions: {  }
+contexts: {  }
+media: all
+preprocess: true
