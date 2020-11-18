@@ -1,4 +1,4 @@
-uuid: e7a2d127-49f7-43f5-a582-5b0960f24119
+uuid: bfbe414c-dd8d-4d50-b3d4-fbbb0c7ef984
 langcode: en
 status: true
 dependencies:
@@ -8,26 +8,26 @@ dependencies:
 id: taxonomy_term.field_type
 field_name: field_type
 entity_type: taxonomy_term
-type: list_integer
+type: list_string
 settings:
   allowed_values:
     -
-      value: 1
+      value: admin-and-management
       label: 'Admin and Management'
     -
-      value: 2
+      value: scholarly-communication
       label: 'Scholarly Communication'
     -
-      value: 3
+      value: public-and-access-services
       label: 'Public and Access Services'
     -
-      value: 4
+      value: systems-and-technology
       label: 'Systems and Technology'
     -
-      value: 5
+      value: technical-services
       label: 'Technical Services'
     -
-      value: 6
+      value: subject_specialty
       label: 'Subject Specialty'
   allowed_values_function: ''
 module: options
