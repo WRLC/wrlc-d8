@@ -41,6 +41,7 @@
         "drupal/core": "^8.7.0",
         "drupal/ctools": "^3.2",
         "drupal/devel": "^4.0",
+        "drupal/devel_entity_updates": "^3.0",
         "drupal/devel_kint_extras": "^1.0",
         "drupal/draggableviews": "^1.2",
         "drupal/drupal8_zymphonies_theme": "^1.4",
