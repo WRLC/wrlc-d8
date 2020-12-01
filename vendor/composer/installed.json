@@ -8157,18 +8157,18 @@
     },
     {
         "name": "drupal/search_api_solr",
-        "version": "4.1.8",
-        "version_normalized": "4.1.8.0",
+        "version": "4.1.10",
+        "version_normalized": "4.1.10.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/search_api_solr.git",
-            "reference": "4.1.8"
+            "reference": "4.1.10"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.1.8.zip",
-            "reference": "4.1.8",
-            "shasum": "258a66c0ad1e93979cf29d6bbc6e3e17fe8d1641"
+            "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.1.10.zip",
+            "reference": "4.1.10",
+            "shasum": "b91fb84785d92b26b9c456e4491aa07553c397b3"
         },
         "require": {
             "consolidation/annotated-command": "^2.12|^4.1",
@@ -8205,8 +8205,8 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "4.1.8",
-                "datestamp": "1604599305",
+                "version": "4.1.10",
+                "datestamp": "1605773021",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -11036,17 +11036,17 @@
     },
     {
         "name": "myclabs/php-enum",
-        "version": "1.7.6",
-        "version_normalized": "1.7.6.0",
+        "version": "1.7.7",
+        "version_normalized": "1.7.7.0",
         "source": {
             "type": "git",
             "url": "https://github.com/myclabs/php-enum.git",
-            "reference": "5f36467c7a87e20fbdc51e524fd8f9d1de80187c"
+            "reference": "d178027d1e679832db9f38248fcc7200647dc2b7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/myclabs/php-enum/zipball/5f36467c7a87e20fbdc51e524fd8f9d1de80187c",
-            "reference": "5f36467c7a87e20fbdc51e524fd8f9d1de80187c",
+            "url": "https://api.github.com/repos/myclabs/php-enum/zipball/d178027d1e679832db9f38248fcc7200647dc2b7",
+            "reference": "d178027d1e679832db9f38248fcc7200647dc2b7",
             "shasum": ""
         },
         "require": {
@@ -11058,7 +11058,7 @@
             "squizlabs/php_codesniffer": "1.*",
             "vimeo/psalm": "^3.8"
         },
-        "time": "2020-02-14T08:15:52+00:00",
+        "time": "2020-11-14T18:14:52+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -11080,6 +11080,16 @@
         "homepage": "http://github.com/myclabs/php-enum",
         "keywords": [
             "enum"
+        ],
+        "funding": [
+            {
+                "url": "https://github.com/mnapoli",
+                "type": "github"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/myclabs/php-enum",
+                "type": "tidelift"
+            }
         ]
     },
     {
@@ -13653,8 +13663,8 @@
     },
     {
         "name": "symfony/console",
-        "version": "v3.4.46",
-        "version_normalized": "3.4.46.0",
+        "version": "v3.4.47",
+        "version_normalized": "3.4.47.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/console.git",
@@ -13791,8 +13801,8 @@
     },
     {
         "name": "symfony/debug",
-        "version": "v3.4.46",
-        "version_normalized": "3.4.46.0",
+        "version": "v3.4.47",
+        "version_normalized": "3.4.47.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/debug.git",
@@ -14201,23 +14211,23 @@
     },
     {
         "name": "symfony/finder",
-        "version": "v3.4.46",
-        "version_normalized": "3.4.46.0",
+        "version": "v3.4.47",
+        "version_normalized": "3.4.47.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/finder.git",
-            "reference": "4e1da3c110c52d868f8a9153b7de3ebc381fba78"
+            "reference": "b6b6ad3db3edb1b4b1c1896b1975fb684994de6e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/finder/zipball/4e1da3c110c52d868f8a9153b7de3ebc381fba78",
-            "reference": "4e1da3c110c52d868f8a9153b7de3ebc381fba78",
+            "url": "https://api.github.com/repos/symfony/finder/zipball/b6b6ad3db3edb1b4b1c1896b1975fb684994de6e",
+            "reference": "b6b6ad3db3edb1b4b1c1896b1975fb684994de6e",
             "shasum": ""
         },
         "require": {
             "php": "^5.5.9|>=7.0.8"
         },
-        "time": "2020-10-24T10:57:07+00:00",
+        "time": "2020-11-16T17:02:08+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
