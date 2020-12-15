@@ -8,6 +8,7 @@ dependencies:
     - collapsiblock
     - facets_summary
     - system
+    - user
   theme:
     - bootstrap_subtheme
 third_party_settings:
@@ -27,6 +28,14 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/skills/*'
+    pages: "/skills/*\r\n/skills\r\n/user\r\n/user/*"
     negate: true
     context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

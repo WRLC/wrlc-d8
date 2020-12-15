@@ -16,7 +16,7 @@ third_party_settings:
 id: views_block__directory_block_8
 theme: bootstrap_subtheme
 region: content
-weight: 0
+weight: -17
 provider: null
 plugin: 'views_block:directory-block_8'
 settings:

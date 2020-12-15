@@ -12,8 +12,8 @@ _core:
   default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
 id: bootstrap_subtheme_main_menu
 theme: bootstrap_subtheme
-region: navigation_collapsible
-weight: -4
+region: header
+weight: -26
 provider: null
 plugin: 'system_menu_block:main'
 settings:

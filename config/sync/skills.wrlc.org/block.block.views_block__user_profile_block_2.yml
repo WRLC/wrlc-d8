@@ -5,10 +5,15 @@ dependencies:
   config:
     - views.view.user_profile
   module:
+    - collapsiblock
     - system
+    - user
     - views
   theme:
     - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '0'
 id: views_block__user_profile_block_2
 theme: bootstrap_subtheme
 region: sidebar_first
@@ -29,3 +34,11 @@ visibility:
     pages: "/user/*\r\n!/user/*/edit"
     negate: false
     context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

@@ -1,0 +1,21 @@
+uuid: 223a5dd2-e5d5-4f52-98ad-c171fe26f9dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: user_form
+label: 'User Form'
+code: "// Add class to each skill's <ul>\nvar skillSpan = document.querySelectorAll('#edit-group-skills > .panel-body > .field-group-fieldset > .panel-heading > .panel-title');\nskillSpan.forEach(setIcon);\n\nfunction setIcon(item) {\n  // get skill category\n  var skill = item.innerText;\n\n  // create fontawesome element\n  var svg = document.createElement('i');\n  svg.classList.add('fas');\n\n  // add icon based on skill\n  if (skill == 'Admin and Management') {\n    svg.classList.add('fa-sitemap');\n    toolTip = 'admin';\n  }\n  else if (skill == 'Scholarly Communication') {\n    svg.classList.add('fa-bullhorn');\n    toolTip = 'scholarly';\n  }\n  else if (skill == 'Public and Access Services') {\n    svg.classList.add('fa-concierge-bell');\n    toolTip = 'public';\n  }\n  else if (skill == 'Systems and Technology') {\n    svg.classList.add('fa-laptop-code');\n    toolTip = 'systems';\n  }\n  else if (skill == 'Technical Services') {\n    svg.classList.add('fa-cogs');\n    toolTip = 'technical';\n  }\n  else if (skill == 'Subject Specialty') {\n    svg.classList.add('fa-chalkboard-teacher');\n    toolTip = 'subject'\n  }\n  item.before(svg);\n}"
+conditions_require_all: true
+conditions:
+  request_path:
+    id: request_path
+    pages: '/user/*/edit'
+    negate: false
+contexts: {  }
+header: false
+preprocess: true
+jquery: false
+noscript: ''
+noscriptRegion: {  }

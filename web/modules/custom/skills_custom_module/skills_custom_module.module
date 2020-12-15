@@ -23,12 +23,28 @@ function skills_custom_module_help($route_name, RouteMatchInterface $route_match
   }
 }
 
+/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function skills_custom_module_menu_local_tasks_alter(&$data, $route_name, \Drupal\Core\Cache\RefinableCacheableDependencyInterface &$cacheability) {
+  if($route_name == 'user.login') {
+    $data['tabs'][0]['user.pass']['#access'] = FALSE;
+  }
+}
 
 /**
- * Implements hook_form_alter().
+ * Implements hook_form_FORM_ID_alter().
  */
-function skills_custom_module_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  if ($form_id == 'user_form') {
-    ksm($form);
-  }
+function skills_custom_module_form_user_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['account']['mail']['#attributes']['disabled'] = 'disabled';
+  $form['account']['name']['#attributes']['disabled'] = 'disabled';
+  $form['account']['current_pass']['#attributes']['disabled'] = 'disabled';
+  $form['account']['pass']['#process'][] = 'skills_custom_module_form_user_form_process_pass';
+}
+
+function skills_custom_module_form_user_form_process_pass(&$element, \Drupal\Core\Form\FormStateInterface $form_state, &$complete_form) {
+  $element = \Drupal\Core\Render\Element\PasswordConfirm::processPasswordConfirm($element, $form_state, $complete_form);
+  $element['pass1']['#attributes']['disabled'] = 'disabled';
+  $element['pass2']['#attributes']['disabled'] = 'disabled';
+  return $element;
 }

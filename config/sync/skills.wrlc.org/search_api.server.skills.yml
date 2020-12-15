@@ -34,7 +34,7 @@ backend_config:
   connector: standard
   connector_config:
     scheme: http
-    host: search
+    host: localhost
     port: 8983
     path: /
     core: skills
@@ -43,8 +43,9 @@ backend_config:
     optimize_timeout: 10
     finalize_timeout: 30
     commit_within: 1000
-    solr_version: '7'
+    solr_version: ''
     http_method: AUTO
+    skip_schema_check: false
     jmx: false
     solr_install_dir: ''
   disabled_field_types: {  }
@@ -59,7 +60,7 @@ backend_config:
   index_single_documents_fallback_count: 10
   retrieve_data: false
   highlight_data: false
-  skip_schema_check: false
+  fallback_multiple: true
   server_prefix: ''
   domain: generic
   environment: default

@@ -1,0 +1,29 @@
+uuid: c6d92da3-9ee1-4f44-99ce-e4eed3670f0d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e10af686-3191-40a0-a1c7-e72c4024f7ac'
+  module:
+    - block_content
+    - collapsiblock
+  theme:
+    - bootstrap_subtheme
+third_party_settings:
+  collapsiblock:
+    collapse_action: '0'
+id: copyright
+theme: bootstrap_subtheme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:e10af686-3191-40a0-a1c7-e72c4024f7ac'
+settings:
+  id: 'block_content:e10af686-3191-40a0-a1c7-e72c4024f7ac'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

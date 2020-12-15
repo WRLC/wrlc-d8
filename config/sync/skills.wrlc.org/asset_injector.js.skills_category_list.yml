@@ -1,0 +1,21 @@
+uuid: 0207d155-15da-4ec6-b14b-ab1172a91762
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: skills_category_list
+label: 'Skills category list'
+code: "// Add class to each skill's <ul>\nvar skillSpan = document.querySelectorAll('.views-row > .js-views-accordion-group-header');\nskillSpan.forEach(putIcon);\n\nfunction putIcon(item) {\n  var skillTitle = item.innerText;\n  console.log(item);\n  var skill = '';\n\n  // Create FontAwesome element\n  var svg = document.createElement('i');\n  svg.classList.add('fas');\n  \n  // Add correct icon\n  if (skillTitle == 'Admin and Management') {\n    svg.classList.add('fa-sitemap');\n    skill = 'admin';\n  }\n  if (skillTitle == 'Scholarly Communication') {\n    svg.classList.add('fa-bullhorn');\n    skill = 'scholarly';\n  }\n  if (skillTitle == 'Public and Access Services') {\n    svg.classList.add('fa-concierge-bell');\n    skill = 'public';\n  }\n  if (skillTitle == 'Systems and Technology') {\n    svg.classList.add('fa-laptop-code');\n    skill = 'systems';\n  }\n  if (skillTitle == 'Technical Services') {\n    svg.classList.add('fa-cogs');\n    skill = 'technical';\n  }\n  if (skillTitle == 'Subject Specialty') {\n    svg.classList.add('fa-chalkboard-teacher');\n    skill = 'subject';\n  }\n  item.insertAdjacentElement('beforeend', svg);\n  \n  // add skill class to parent <li>\n  item.classList.add(skill);\n  item.setAttribute('title', skillTitle);\n}"
+conditions_require_all: true
+conditions:
+  request_path:
+    id: request_path
+    pages: /skills
+    negate: false
+contexts: {  }
+header: false
+preprocess: true
+jquery: false
+noscript: ''
+noscriptRegion: {  }

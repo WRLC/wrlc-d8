@@ -1,0 +1,21 @@
+uuid: 94776724-d1d1-4aba-a334-398526610df8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: taxonomy_terms
+label: 'Taxonomy Terms'
+code: "// Get all the top-level skill facet blocks\nvar skillBlockTitle = document.querySelectorAll('.field--name-field-type');\n\n// Get each block's anchor tag\nskillBlockTitle.forEach(placeIcon);\n\nfunction placeIcon(item) {\n  var skillTitleText = item.innerText\n  var skill = '';\n\n    // Create FontAwesome element\n  var svg = document.createElement('i');\n  svg.classList.add('fas');\n  \n  // Add correct icon\n  if (skillTitleText == 'Admin and Management') {\n    svg.classList.add('fa-sitemap');\n    skill = 'admin';\n  }\n  if (skillTitleText == 'Scholarly Communication') {\n    svg.classList.add('fa-bullhorn');\n    skill = 'scholarly';\n  }\n  if (skillTitleText == 'Public and Access Services') {\n    svg.classList.add('fa-concierge-bell');\n    skill = 'public';\n  }\n  if (skillTitleText == 'Systems and Technology') {\n    svg.classList.add('fa-laptop-code');\n    skill = 'systems';\n  }\n  if (skillTitleText == 'Technical Services') {\n    svg.classList.add('fa-cogs');\n    skill = 'technical';\n  }\n  if (skillTitleText == 'Subject Specialty') {\n    svg.classList.add('fa-chalkboard-teacher');\n    skill = 'subject';\n  }\n  item.before(svg);\n  \n  // add skill class to parent <li>\n  var parListItem = item.closest('div').parentElement;\n  parListItem.classList.add(skill);\n  parListItem.setAttribute('title', skillTitleText);\n}"
+conditions_require_all: true
+conditions:
+  request_path:
+    id: request_path
+    pages: '/skills/*'
+    negate: false
+contexts: {  }
+header: false
+preprocess: true
+jquery: false
+noscript: ''
+noscriptRegion: {  }

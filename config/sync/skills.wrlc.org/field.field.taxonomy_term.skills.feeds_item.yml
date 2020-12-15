@@ -1,0 +1,23 @@
+uuid: 5753437f-5e35-48ec-813a-927b1afaadfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.feeds_item
+    - taxonomy.vocabulary.skills
+  module:
+    - feeds
+id: taxonomy_term.skills.feeds_item
+field_name: feeds_item
+entity_type: taxonomy_term
+bundle: skills
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

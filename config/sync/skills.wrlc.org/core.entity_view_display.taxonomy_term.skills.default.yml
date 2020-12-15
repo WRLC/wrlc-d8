@@ -1,8 +1,9 @@
-uuid: 9355ed36-4c8f-49a9-acad-fc69025c64a4
+uuid: bdd2f88e-2e83-439c-8ec3-4aa569c7162b
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.skills.feeds_item
     - field.field.taxonomy_term.skills.field_type
     - taxonomy.vocabulary.skills
   module:
@@ -22,11 +23,12 @@ content:
     third_party_settings: {  }
   field_type:
     weight: 1
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
 hidden:
+  feeds_item: true
   langcode: true
   search_api_excerpt: true

@@ -1,0 +1,18 @@
+uuid: 10ca3982-a657-4297-bd96-e6a9e1062f7e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: taxonomy_page
+label: 'Taxonomy page'
+code: ".view-taxonomy-term > .view-header > .contextual-region {\n  padding: 5px 10px;\n  margin-bottom: 5px;\n  border-radius: 5px;\n}\n\n.view-taxonomy-term > .view-header > .contextual-region.admin {\n  background-color: #F7DFCC;\n}\n\n.view-taxonomy-term > .view-header > .contextual-region.scholarly {\n  background-color: #DCD8EE;\n}\n\n.view-taxonomy-term > .view-header > .contextual-region.public {\n  background-color: #CCECE3;\n}\n\n.view-taxonomy-term > .view-header > .contextual-region.systems {\n  background-color: #FAECCC;\n}\n\n.view-taxonomy-term > .view-header > .contextual-region.technical {\n  background-color: #FCFAD9;\n}\n\n.view-taxonomy-term > .view-header > .contextual-region.subject {\n  background-color: #CCE3F0;\n}\n\n.view-taxonomy-term > .view-header > .contextual-region > .svg-inline--fa {\n  position: relative;\n}\n\n.view-taxonomy-term > .view-header > .contextual-region > .field--name-field-type {\n  padding-left: 10px;\n  display: inline-block;\n  font-weight: bold;\n}"
+conditions_require_all: true
+conditions:
+  request_path:
+    id: request_path
+    pages: '/skills/*'
+    negate: false
+contexts: {  }
+media: all
+preprocess: true

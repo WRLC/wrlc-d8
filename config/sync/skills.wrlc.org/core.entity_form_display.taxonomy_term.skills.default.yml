@@ -1,19 +1,29 @@
-uuid: 6dc1abd4-dca2-4f84-9ec4-e0324f34626e
+uuid: 4b1d15ad-d152-4356-863b-950fcba105b5
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.skills.feeds_item
     - field.field.taxonomy_term.skills.field_type
     - taxonomy.vocabulary.skills
   module:
     - path
+    - text
 id: taxonomy_term.skills.default
 targetEntityType: taxonomy_term
 bundle: skills
 mode: default
 content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_type:
-    weight: 5
+    weight: 101
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -27,7 +37,7 @@ content:
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
@@ -35,7 +45,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 3
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -43,8 +53,8 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 100
     region: content
     third_party_settings: {  }
 hidden:
-  description: true
+  feeds_item: true

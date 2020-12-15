@@ -104,13 +104,14 @@ third_party_settings:
         - account
       parent_name: ''
       weight: 0
-      format_type: fieldset
+      format_type: details
       region: content
       format_settings:
         description: ''
         required_fields: true
         id: ''
         classes: ''
+        open: false
       label: 'Account Settings'
     group_systems_and_technology:
       children:

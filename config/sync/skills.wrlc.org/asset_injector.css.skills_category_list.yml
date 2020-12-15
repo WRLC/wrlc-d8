@@ -1,0 +1,18 @@
+uuid: be9aee69-6392-44a5-b894-e7ce74a2dd72
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: skills_category_list
+label: 'Skills category list'
+code: ".view-skills-type-list .view-header {\n  margin-bottom: 10px;\n  font-style: italic;\n}\n\n.view-skills-type-list > .view-content > .views-row {\n  margin-bottom: 10px;\n}\n\n.view-skills-type-list .js-views-accordion-group-header {\n  color: inherit;\n  font-weight: bold;\n  font-size: 1.25em;\n}\n\n.js-views-accordion-group-header > .svg-inline--fa {\n  float: left;\n}\n\n.js-views-accordion-group-header.admin {\n  background-color: #F7DFCC;\n}\n\n.js-views-accordion-group-header.scholarly {\n  background-color: #DCD8EE;\n}\n\n.js-views-accordion-group-header.public {\n  background-color: #CCECE3;\n}\n\n.js-views-accordion-group-header.systems {\n  background-color: #FAECCC;\n}\n\n.js-views-accordion-group-header.technical {\n  background-color: #FCFAD9;\n}\n\n.js-views-accordion-group-header.subject {\n  background-color: #CCE3F0;\n}\n\n.ui-accordion-content > .views-row {\n  padding-bottom: 5px;\n  margin-bottom: 5px;\n  border-bottom: 1px solid #c5c5c5;\n}"
+conditions_require_all: true
+conditions:
+  request_path:
+    id: request_path
+    pages: /skills
+    negate: false
+contexts: {  }
+media: all
+preprocess: true

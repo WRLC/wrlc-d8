@@ -11,7 +11,6 @@ dependencies:
     - field.storage.user.field_admin_advanced
     - field.storage.user.field_admin_basic
     - field.storage.user.field_admin_want
-    - field.storage.user.field_systems_basic
     - field.storage.user.field_first_name
     - field.storage.user.field_job_title
     - field.storage.user.field_last_name
@@ -26,10 +25,11 @@ dependencies:
     - field.storage.user.field_subject_basic
     - field.storage.user.field_subject_want
     - field.storage.user.field_systems_advanced
+    - field.storage.user.field_systems_basic
+    - field.storage.user.field_systems_want
     - field.storage.user.field_technical_advanced
     - field.storage.user.field_technical_basic
     - field.storage.user.field_technical_want
-    - field.storage.user.field_systems_want
     - field.storage.user.field_wrlc_institution
     - search_api.server.skills
 third_party_settings:
@@ -70,6 +70,9 @@ third_party_settings:
       index_prefix: ''
       collection: ''
       timezone: ''
+    term_modifiers:
+      slop: 10000000
+      fuzzy: 2
 id: profiles
 name: Profiles
 description: ''
@@ -89,7 +92,7 @@ field_settings:
     label: 'Admin & Management - Basic » Name'
     datasource_id: 'entity:user'
     property_path: 'field_admin_basic:entity:name'
-    type: string
+    type: text
     dependencies:
       config:
         - field.storage.user.field_admin_basic
@@ -307,7 +310,7 @@ field_settings:
     label: 'Public & Access Services - Basic » Name'
     datasource_id: 'entity:user'
     property_path: 'field_public_basic:entity:name'
-    type: string
+    type: text
     dependencies:
       config:
         - field.storage.user.field_public_basic
@@ -337,7 +340,7 @@ field_settings:
     label: 'Scholarly Communication - Basic » Name'
     datasource_id: 'entity:user'
     property_path: 'field_scholarly_basic:entity:name'
-    type: string
+    type: text
     dependencies:
       config:
         - field.storage.user.field_scholarly_basic
@@ -367,7 +370,7 @@ field_settings:
     label: 'Subject Specialty - Basic » Name'
     datasource_id: 'entity:user'
     property_path: 'field_subject_basic:entity:name'
-    type: string
+    type: text
     dependencies:
       config:
         - field.storage.user.field_subject_basic
@@ -397,7 +400,7 @@ field_settings:
     label: 'Systems & Technology - Basic » Name'
     datasource_id: 'entity:user'
     property_path: 'field_systems_basic:entity:name'
-    type: string
+    type: text
     dependencies:
       config:
         - field.storage.user.field_systems_basic
@@ -427,7 +430,7 @@ field_settings:
     label: 'Technical Services - Basic » Name'
     datasource_id: 'entity:user'
     property_path: 'field_technical_basic:entity:name'
-    type: string
+    type: text
     dependencies:
       config:
         - field.storage.user.field_technical_basic

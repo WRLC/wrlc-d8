@@ -2,10 +2,10 @@ schemas:
   bootstrap: 8000
   bootstrap_subtheme: 8000
 favicon:
-  mimetype: image/vnd.microsoft.icon
-  path: ''
-  url: 'https://skills.wrlc8.lndo.site/themes/custom/bootstrap_subtheme/favicon.ico'
-  use_default: true
+  mimetype: image/png
+  path: 'public://favicon.png'
+  url: 'https://skills.wrlc.org/themes/custom/bootstrap_subtheme/favicon.ico'
+  use_default: false
 logo:
   path: 'public://wrlc-logo-2_0.png'
   url: ''
@@ -21,11 +21,6 @@ table: ''
 forms_smart_descriptions: 0
 table_hover: 0
 table_striped: 0
-features:
-  comment_user_picture: true
-  comment_user_verification: true
-  favicon: true
-  node_user_picture: true
 region_wells:
   navigation: ''
   navigation_collapsible: ''
@@ -34,7 +29,7 @@ region_wells:
   help: ''
   content: ''
   sidebar_first: ''
-  sidebar_second: well
+  sidebar_second: ''
   footer: ''
   admin_facets: ''
   public_facets: ''
@@ -42,3 +37,10 @@ region_wells:
   subject_facets: ''
   systems_facets: ''
   technical_facets: ''
+breadcrumb_home: 1
+breadcrumb_title: 0
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
