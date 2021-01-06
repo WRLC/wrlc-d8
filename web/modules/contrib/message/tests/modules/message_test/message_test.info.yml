@@ -1,14 +1,12 @@
-name: Message example
+name: 'Message test'
 type: module
-description: "Example message for working with the message module."
+description: 'Support module for message testing.'
+package: Testing
 core: 8.x
 core_version_requirement: ^8 || ^9
-package: Message
 dependencies:
- - message:message
- - token:token
- - drupal:node
- - drupal:comment
+  - drupal:views
+  - message:message
 
 # Information added by Drupal.org packaging script on 2020-12-03
 version: '8.x-1.2'

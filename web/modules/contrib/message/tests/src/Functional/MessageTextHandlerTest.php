@@ -21,7 +21,7 @@ class MessageTextHandlerTest extends MessageTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = ['filter_test'];
+  public static $modules = ['filter_test', 'message_test'];
 
   /**
    * {@inheritdoc}
@@ -44,6 +44,9 @@ class MessageTextHandlerTest extends MessageTestBase {
 
     $this->drupalLogin($this->account);
     $this->drupalGet('admin/content/messages');
+    $this->assertText('Dummy text message');
+
+    $this->drupalGet('message-test');
     $this->assertText('Dummy text message');
   }
 
