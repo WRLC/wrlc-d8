@@ -10,7 +10,7 @@ dependencies:
  - drupal:node
  - drupal:comment
 
-# Information added by Drupal.org packaging script on 2020-10-01
-version: '8.x-1.1'
+# Information added by Drupal.org packaging script on 2020-12-03
+version: '8.x-1.2'
 project: 'message'
-datestamp: 1601574368
+datestamp: 1607017389

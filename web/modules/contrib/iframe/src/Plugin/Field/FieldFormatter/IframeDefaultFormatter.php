@@ -85,6 +85,7 @@ class IframeDefaultFormatter extends FormatterBase {
     // Collect styles, but leave it overwritable.
     $style = '';
     $itemName = $item->getFieldDefinition()->getName();
+    $itemParentId = $item->getParent()->getParent()->getEntity()->ID();
 
     if (!empty($item->frameborder) && $item->frameborder > 0) {
       $style .= '/*frameborder*/ border-width:2px;';
@@ -108,7 +109,7 @@ class IframeDefaultFormatter extends FormatterBase {
       $style .= '/*transparency*/ background-color:transparent;';
     }
 
-    $htmlid = 'iframe-' . $itemName;
+    $htmlid = 'iframe-' . $itemName . '-' . $itemParentId;
     if (isset($item->htmlid) && !empty($item->htmlid)) {
       $htmlid = $item->htmlid;
     }
