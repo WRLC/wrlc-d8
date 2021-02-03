@@ -29,7 +29,15 @@ class IframeWidgetBase extends WidgetBase {
    */
   public static function defaultSettings() {
     return [
-      // Here if *own* default value not the one from edit-type-field.
+        'width' => '',
+        'height' => '',
+        'class' => '',
+        'expose_class' => 0,
+        'frameborder' => '0',
+        'scrolling' => 'auto',
+        'transparency' => '0',
+        'tokensupport' => '0',
+        'allowfullscreen' => '0',
     ] + parent::defaultSettings();
   }
 
