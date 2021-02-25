@@ -56,6 +56,7 @@
         "drupal/faq": "^1.0@alpha",
         "drupal/feeds": "^3.0@alpha",
         "drupal/feeds_ex": "^1.0@alpha",
+        "drupal/feeds_tamper": "^2.0@beta",
         "drupal/fences": "^2.0@RC",
         "drupal/field_group": "^3.1",
         "drupal/filefield_paths": "^1.0@beta",
