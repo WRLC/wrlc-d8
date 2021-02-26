@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "356eb69e58e48620fc23a7154264c175",
+    "content-hash": "98b44032edeec63189bf978187225418",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -8583,6 +8583,56 @@
             }
         },
         {
+            "name": "drupal/views_entity_form_field",
+            "version": "1.0.0-beta9",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_entity_form_field.git",
+                "reference": "8.x-1.0-beta9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_entity_form_field-8.x-1.0-beta9.zip",
+                "reference": "8.x-1.0-beta9",
+                "shasum": "85fce734cde9936ed921bd34782c746dfacf0291"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta9",
+                    "datestamp": "1608835302",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Garrett Rathbone",
+                    "homepage": "https://www.drupal.org/u/grathbone",
+                    "email": "garrett.rathbone@gmail.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Add entity form field widgets to a view.",
+            "homepage": "https://www.drupal.org/project/views_entity_form_field",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/views_entity_form_field",
+                "issues": "https://www.drupal.org/project/issues/views_entity_form_field"
+            }
+        },
+        {
             "name": "drupal/views_templates",
             "version": "1.1.0",
             "source": {
@@ -16502,7 +16552,8 @@
         "drupal/og": 15,
         "drupal/plupload": 10,
         "drupal/realname": 5,
-        "drupal/rules": 15
+        "drupal/rules": 15,
+        "drupal/views_entity_form_field": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,
