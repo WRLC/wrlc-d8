@@ -4837,33 +4837,30 @@
     },
     {
         "name": "drupal/draggableviews",
-        "version": "1.2.0",
-        "version_normalized": "1.2.0.0",
+        "version": "2.0.0",
+        "version_normalized": "2.0.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/draggableviews.git",
-            "reference": "8.x-1.2"
+            "reference": "2.0.0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/draggableviews-8.x-1.2.zip",
-            "reference": "8.x-1.2",
-            "shasum": "0f5e9195ceec209552aa50f8ce3c230692c284db"
+            "url": "https://ftp.drupal.org/files/projects/draggableviews-2.0.0.zip",
+            "reference": "2.0.0",
+            "shasum": "3796f0e478c8119dcd10e1d114c5fcf4492b8a1c"
         },
         "require": {
-            "drupal/core": "*"
+            "drupal/core": "^8 || ^9"
         },
         "require-dev": {
             "drupal/draggableviews_demo": "*"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
             "drupal": {
-                "version": "8.x-1.2",
-                "datestamp": "1541518680",
+                "version": "2.0.0",
+                "datestamp": "1592329896",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
