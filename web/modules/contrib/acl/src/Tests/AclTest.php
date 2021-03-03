@@ -2,23 +2,25 @@
 
 namespace Drupal\acl\Tests;
 
-use Drupal\simpletest\WebTestBase;
 use Drupal\node\Entity\NodeType;
 use Drupal\node\Entity\Node;
+use Drupal\Tests\BrowserTestBase;
 
 /**
  * Test case for ACL module.
  *
  * @group Access
  */
-class AclTest extends WebTestBase {
+class AclTest extends BrowserTestBase {
 
   /**
    * Modules to enable.
    *
    * @var array
    */
-  public static $modules = ['node', 'acl', 'acl_node_test'];
+  protected static $modules = ['node', 'acl', 'acl_node_test'];
+
+  protected $defaultTheme = 'classy';
 
   /**
    * Implements getInfo().
@@ -36,7 +38,7 @@ class AclTest extends WebTestBase {
   /**
    * Implements setUp().
    */
-  function setUp() {
+  function setUp(): void {
     parent::setUp();
 
     NodeType::create([
@@ -58,17 +60,17 @@ class AclTest extends WebTestBase {
   function testNodeAclCreateDelete() {
     // Add a node.
     $node1 = $this->drupalCreateNode(array('type' => 'page', 'promote' => 0));
-    $this->assertTrue(Node::load($node1->id()), t('Page node created.'));
+    $this->assertTrue((bool) Node::load($node1->id()), t('Page node created.'));
 
     acl_create_acl('test1', $node1->getTitle());
     $acl_id = acl_get_id_by_name('test1', $node1->getTitle());
-    $this->assertNotNull($acl_id, t('ACL ID was successfully found.'), $group = 'ACL');
+    $this->assertNotNull($acl_id, t('ACL ID was successfully found.'));
     $records = \Drupal::database()->select('acl')
       ->fields('acl', ['acl_id', 'name'])
       ->condition('acl_id', $acl_id)
       ->execute()
       ->fetchAll();
-    $this->assertEqual(count($records), 1, t('ACL was successfully created.'), $group = 'ACL');
+    $this->assertEquals(count($records), 1, t('ACL was successfully created.'));
     acl_delete_acl($records[0]->acl_id);
 
     $records = \Drupal::database()->select('acl')
@@ -76,8 +78,8 @@ class AclTest extends WebTestBase {
       ->condition('acl_id', $records[0]->acl_id)
       ->execute()
       ->fetchAll();
-    $this->pass(var_export($records, TRUE));
-    $this->assertEqual(count($records), 0, t('ACL was successfully removed.'), $group = 'ACL');
+    $this->assertTrue(TRUE, var_export($records, TRUE));
+    $this->assertEquals(count($records), 0, t('ACL was successfully removed.'));
   }
 
   /**
@@ -87,7 +89,7 @@ class AclTest extends WebTestBase {
   function testNodeAclSingleUserAddRemove() {
     // Add a node.
     $node1 = $this->drupalCreateNode(array('type' => 'page', 'promote' => 0));
-    $this->assertTrue(Node::load($node1->id()), t('Page node created.'));
+    $this->assertTrue((bool) Node::load($node1->id()), t('Page node created.'));
 
     acl_create_acl('test2', $node1->getTitle());
     // Check to see if grants added by node_test_node_access_records()
@@ -130,11 +132,11 @@ class AclTest extends WebTestBase {
   function testNodeAclAddRemoveFromNode() {
     // Add nodes.
     $node1 = $this->drupalCreateNode(array('type' => 'page', 'promote' => 0));
-    $this->assertTrue(Node::load($node1->id()), t('Page node created.'));
+    $this->assertTrue((bool) Node::load($node1->id()), t('Page node created.'));
     $node2 = $this->drupalCreateNode(array('type' => 'page', 'promote' => 0));
-    $this->assertTrue(Node::load($node2->id()), t('Page node created.'));
+    $this->assertTrue((bool) Node::load($node2->id()), t('Page node created.'));
     $node3 = $this->drupalCreateNode(array('type' => 'page', 'promote' => 0));
-    $this->assertTrue(Node::load($node3->id()), t('Page node created.'));
+    $this->assertTrue((bool) Node::load($node3->id()), t('Page node created.'));
 
     // Create an ACL and add nodes.
     $acl_id1 = acl_create_acl('test3', 'test', 1);

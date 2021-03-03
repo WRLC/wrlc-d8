@@ -1,13 +1,21 @@
 
-CHANGELOG for ACL for Drupal 8
+CHANGELOG for ACL for Drupal 8 & 9
 
 
 acl 8.x-1.x-dev:
 
 
+acl 8.x-1.0-beta1 (2021-02-19):
+  Fixes:
+    - #3191157 by EclipseGc: Get tests passing.
+  Tasks:
+    - #3160344 by the_turk: Add Drupal 9 compatibility for test module.
+    - #3124588 by unrealauk: Update core_version_requirement and test base class for D9 compatibility.
+
+
 acl 8.x-1.0-alpha2 (2019-09-23):
   Enhancements:
-    - #2650302 by pc-wurm: acl_save_form() insert query optimization.
+    - #2650302 by Elin Yordanov: acl_save_form() insert query optimization.
     - #3013368 by volkswagenchick: README - formatting, configs and useful links.
     - #2851571 by Tomazetti: Add user using entity_autocomplete instead of textfield.
     - #3080658 by salvis: Add acl_edit_form_get_user_list() function.
@@ -27,7 +35,6 @@ acl 8.x-1.0-alpha2 (2019-09-23):
     - #2720005 by pashupathi nath gajawada, salvis: Replace deprecated entityManager().
     - #3082852 by salvis: Replace deprecated getUsername() with getAccountName().
     - #2610538 by id.tarzanych: Replace Database::getConnection() with \Drupal::database().
-
 
 acl 8.x-1.0-alpha1 (2015-10-19):
   Port to D8:
