@@ -3106,25 +3106,28 @@
     },
     {
         "name": "drupal/authorization",
-        "version": "dev-1.x",
-        "version_normalized": "dev-1.x",
+        "version": "1.0.0-beta5",
+        "version_normalized": "1.0.0.0-beta5",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/authorization.git",
-            "reference": "7bc70e84573abde03a3025b4d43ddc26c72f4b89"
+            "reference": "8.x-1.0-beta5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/authorization-8.x-1.0-beta5.zip",
+            "reference": "8.x-1.0-beta5",
+            "shasum": "e90297c2a3b6faaa26954a399a4bd121b6e96894"
         },
         "require": {
-            "drupal/core": "~8.0",
+            "drupal/core": "^8.7.7 || ^9",
             "drupal/externalauth": "*"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
             "drupal": {
-                "version": "8.x-1.x-dev",
-                "datestamp": "1537294080",
+                "version": "8.x-1.0-beta5",
+                "datestamp": "1601842121",
                 "security-coverage": {
                     "status": "not-covered",
                     "message": "Project has not opted into security advisory coverage!"
@@ -3134,7 +3137,7 @@
         "installation-source": "source",
         "notification-url": "https://packages.drupal.org/8/downloads",
         "license": [
-            "GPL-2.0+"
+            "GPL-2.0-or-later"
         ],
         "authors": [
             {
@@ -3154,7 +3157,7 @@
                 "homepage": "https://www.drupal.org/user/254778"
             }
         ],
-        "description": "Authorization API connects up providers (for example LDAP) with consumers (for example Organic Groups or Drupal roles).",
+        "description": "An abstraction layer for providers and consumers of authorizations.",
         "homepage": "https://www.drupal.org/project/authorization",
         "support": {
             "source": "https://git.drupalcode.org/project/authorization"

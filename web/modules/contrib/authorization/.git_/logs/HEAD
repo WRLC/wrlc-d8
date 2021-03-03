@@ -1,2 +1,2 @@
-0000000000000000000000000000000000000000 7bc70e84573abde03a3025b4d43ddc26c72f4b89 Tom Boone <boone@wrlc.org> 1584392930 +0000	clone: from /var/www/.composer/cache/vcs/https---git.drupalcode.org-project-authorization.git/
-7bc70e84573abde03a3025b4d43ddc26c72f4b89 7bc70e84573abde03a3025b4d43ddc26c72f4b89 Tom Boone <boone@wrlc.org> 1584392930 +0000	checkout: moving from 8.x-1.x to 7bc70e84573abde03a3025b4d43ddc26c72f4b89
+0000000000000000000000000000000000000000 e06cd21d4a8865f003ecec1fc10c4a5caf395cc0 tomboone <tom@tomboone.com> 1614802189 +0000	clone: from /var/www/.composer/cache/vcs/https---git.drupalcode.org-project-authorization.git/
+e06cd21d4a8865f003ecec1fc10c4a5caf395cc0 6fbcf03c035a2c4ffcad6978991f6510f1407f48 tomboone <tom@tomboone.com> 1614802189 +0000	checkout: moving from 8.x-1.x to 8.x-1.0-beta5

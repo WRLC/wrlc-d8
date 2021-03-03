@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\Tests\authorization_drupal_user\Kernel;
+namespace Drupal\Tests\authorization_drupal_roles\Kernel;
 
 use Drupal\authorization_drupal_roles\Plugin\authorization\Consumer\DrupalRolesConsumer;
 use Drupal\KernelTests\Core\Entity\EntityKernelTestBase;
@@ -11,7 +11,7 @@ use Drupal\user\Entity\User;
  *
  * @group authorization
  */
-class DrupalRolesIntegrationTests extends EntityKernelTestBase {
+class DrupalRolesIntegrationTest extends EntityKernelTestBase {
 
   /**
    * {@inheritdoc}
