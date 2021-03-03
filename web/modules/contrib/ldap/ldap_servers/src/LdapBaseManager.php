@@ -94,6 +94,7 @@ abstract class LdapBaseManager {
    *   Binding successful.
    */
   public function setServerById(string $sid): bool {
+    /** @var \Drupal\ldap_servers\Entity\Server $server */
     $server = $this->entityTypeManager
       ->getStorage('ldap_server')
       ->load($sid);
@@ -207,7 +208,7 @@ abstract class LdapBaseManager {
    * @return \Symfony\Component\Ldap\Entry[]
    *   An array of matching entries combined from all DN.
    */
-  public function searchAllBaseDns($filter, array $attributes = []) {
+  public function searchAllBaseDns($filter, array $attributes = []): array {
     $all_entries = [];
 
     if (!$this->checkAvailability()) {
@@ -316,7 +317,7 @@ abstract class LdapBaseManager {
     catch (LdapException $e) {
       $this->logger->error("LDAP entry '%dn' could not be delete from from server @sid: @message", [
         '%dn' => $dn,
-        '@sid' => $this->id(),
+        '@sid' => $this->server->id(),
         '@message' => $e->getMessage(),
       ]
       );
@@ -324,7 +325,7 @@ abstract class LdapBaseManager {
     }
     $this->logger->info("LDAP entry '%dn' deleted from server @sid", [
       '%dn' => $dn,
-      '@sid' => $this->id(),
+      '@sid' => $this->server->id(),
     ]);
 
     return TRUE;
@@ -401,7 +402,7 @@ abstract class LdapBaseManager {
    * @param string $drupal_username
    *   Drupal username.
    *
-   * @return \Symfony\Component\Ldap\Entry
+   * @return \Symfony\Component\Ldap\Entry|null
    *   LDAP Entry.
    */
   public function sanitizeUserDataResponse(Entry $entry, string $drupal_username): ?Entry {
@@ -420,6 +421,7 @@ abstract class LdapBaseManager {
         }
       }
     }
+    return NULL;
   }
 
   /**
@@ -447,7 +449,15 @@ abstract class LdapBaseManager {
 
     $query = sprintf('(%s=%s)', $this->server->getAuthenticationNameAttribute(), $this->ldapEscapeFilter($drupal_username));
     try {
-      $ldap_response = $this->ldap->query($base_dn, $query)->execute();
+      // We are requesting regular and operational attributes with this filter
+      // since some directories (e.g. OpenLDAP) have common overlays such as
+      // "memberOf" in operational attributes.
+      // @see https://www.drupal.org/i/2939308
+      $ldap_response = $this->ldap->query(
+        $base_dn,
+        $query,
+        ['filter' => ['*', '+']]
+      )->execute();
     }
     catch (LdapException $e) {
       // Must find exactly one user for authentication to work.

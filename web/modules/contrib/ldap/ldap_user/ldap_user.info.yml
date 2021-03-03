@@ -12,8 +12,3 @@ stylesheets:
     - ldap_user.css
 
 configure: ldap_user.admin_form
-
-# Information added by Drupal.org packaging script on 2020-12-17
-version: '8.x-4.0-beta1'
-project: 'ldap'
-datestamp: 1608240929

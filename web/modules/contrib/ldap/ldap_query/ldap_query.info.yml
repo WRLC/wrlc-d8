@@ -8,8 +8,3 @@ dependencies:
   - views
 
 configure: entity.ldap_query_entity.collection
-
-# Information added by Drupal.org packaging script on 2020-12-17
-version: '8.x-4.0-beta1'
-project: 'ldap'
-datestamp: 1608240929
