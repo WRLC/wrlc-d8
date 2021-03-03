@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "17fa3f60164d1f69cf319825bcf32304",
+    "content-hash": "2dc105639df962cb2407827ea5e3c15f",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5581,17 +5581,17 @@
         },
         {
             "name": "drupal/iframe",
-            "version": "1.21.0",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/iframe.git",
-                "reference": "8.x-1.21"
+                "reference": "8.x-2.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/iframe-8.x-1.21.zip",
-                "reference": "8.x-1.21",
-                "shasum": "17f6da7331da19df56f6eb6dc74a5405e6c307a4"
+                "url": "https://ftp.drupal.org/files/projects/iframe-8.x-2.9.zip",
+                "reference": "8.x-2.9",
+                "shasum": "06639bd6b4f7890be162139df7cd99d6c8870fc3"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -5599,8 +5599,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.21",
-                    "datestamp": "1610921588",
+                    "version": "8.x-2.9",
+                    "datestamp": "1614545076",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
