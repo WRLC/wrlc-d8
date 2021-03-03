@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Drupal\ldap_query\Plugin\views\filter;
 
 use Drupal\ldap_query\Plugin\views\VariableAttributeCustomization;
@@ -16,7 +18,7 @@ class LdapVariableAttribute extends LdapAttribute {
   use VariableAttributeCustomization;
 
   /**
-   * Adjust the query.
+   * {@inheritdoc}
    */
   public function query() {
     $this->ensureMyTable();

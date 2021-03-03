@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Drupal\ldap_query\Plugin\views\field;
 
 use Drupal\Core\Form\FormStateInterface;
@@ -68,7 +70,7 @@ class LdapAttribute extends FieldPluginBase {
     $form['multi_value'] = [
       '#type' => 'select',
       '#title' => $this->t('Values to show'),
-      '#description' => t('What to do with multi-value attributes'),
+      '#description' => $this->t('What to do with multi-value attributes'),
       '#options' => [
         'v-all' => $this->t('All values'),
         'v-index' => $this->t('Show Nth value'),
