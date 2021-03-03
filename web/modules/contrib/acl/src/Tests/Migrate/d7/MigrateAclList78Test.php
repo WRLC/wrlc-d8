@@ -3,7 +3,7 @@
 namespace Drupal\acl\Tests\Migrate\d7;
 
 use Drupal\acl\Tests\AclMigrationTestTrait;
-use Drupal\taxonomy\Entity\Vocabulary;
+use Drupal\Core\DependencyInjection\DependencySerializationTrait;
 use Drupal\Tests\migrate_drupal\Kernel\d7\MigrateDrupal7TestBase;
 
 /**
@@ -14,6 +14,7 @@ use Drupal\Tests\migrate_drupal\Kernel\d7\MigrateDrupal7TestBase;
 class MigrateAclList78Test extends MigrateDrupal7TestBase {
 
   use AclMigrationTestTrait;
+  use DependencySerializationTrait;
 
   /**
    * Modules to load.
@@ -39,7 +40,7 @@ class MigrateAclList78Test extends MigrateDrupal7TestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
 
     $this->loadFixture(__DIR__ . '/../../../../tests/fixtures/d6_d7_table.php');
@@ -50,27 +51,7 @@ class MigrateAclList78Test extends MigrateDrupal7TestBase {
     $this->executeMigration('d6_d7_acl_user');
     $this->executeMigration('d6_d7_acl_node');
 
-    $this->installEntitySchema('node');
-    $this->installEntitySchema('file');
-    $this->installEntitySchema('comment');
-    $this->installEntitySchema('taxonomy_vocabulary');
-    $this->installEntitySchema('taxonomy_term');
-    $this->installConfig(static::$modules);
-    $this->installSchema('system', ['sequences']);
-    Vocabulary::create(['name' => 'TestVocabulary', 'vid' => 'test_vocabulary'])->save();
-
-    $this->executeMigrations([
-      'd7_user_role',
-      'd7_user',
-      'd7_node_type',
-      'd7_comment_type',
-      'd7_field',
-      'd7_field_instance',
-      'd7_node:test_content_type',
-      'd7_node_settings',
-      'd7_node:*',
-      'd7_node_revision:*',
-    ]);
+    $this->migrateContent();
   }
 
 }

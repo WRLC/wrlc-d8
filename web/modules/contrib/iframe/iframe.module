@@ -66,7 +66,7 @@ function iframe_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function BRANCH81_iframe_theme() {
+function iframe_theme() {
   return [
     'iframe' => [
       'variables' => [

@@ -21,7 +21,7 @@ return array (
   22508 => 'Orange',
   22509 => 'Orange',
   225208 => 'Moov',
-  225218 => 'Moov',
+  2252180 => 'Moov',
   225228 => 'Moov',
   225238 => 'Moov',
   22540 => 'Moov',
@@ -68,6 +68,9 @@ return array (
   22587 => 'Orange',
   22588 => 'Orange',
   22589 => 'Orange',
+  22594 => 'MTN',
   22595 => 'MTN',
+  22596 => 'MTN',
   22597 => 'Orange',
+  22598 => 'Orange',
 );

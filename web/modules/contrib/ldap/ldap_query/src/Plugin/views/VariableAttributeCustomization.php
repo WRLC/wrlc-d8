@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Drupal\ldap_query\Plugin\views;
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\ldap_query\Controller\QueryController;
 
 /**
  * Collates the variable attribute customization to apply it to more than one.
@@ -32,7 +33,10 @@ trait VariableAttributeCustomization {
       ];
       return;
     }
-    $controller = new QueryController($queryOptions['query_id']);
+    // FIXME: DI.
+    /** @var \Drupal\ldap_query\Controller\QueryController $controller */
+    $controller = \Drupal::service('ldap.query');
+    $controller->load($queryOptions['query_id']);
     $controller->execute();
     $options = $controller->availableFields();
 
@@ -47,7 +51,7 @@ trait VariableAttributeCustomization {
   }
 
   /**
-   * Called to add the field to a query.
+   * {@inheritdoc}
    */
   public function query() {
     $this->realField = $this->options['attribute_name'];

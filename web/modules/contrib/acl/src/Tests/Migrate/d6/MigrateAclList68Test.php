@@ -3,8 +3,6 @@
 namespace Drupal\acl\Tests\Migrate\d6;
 
 use Drupal\acl\Tests\AclMigrationTestTrait;
-use Drupal\node\Entity\Node;
-use Drupal\Core\Cache\Cache;
 use Drupal\Tests\migrate_drupal\Kernel\d6\MigrateDrupal6TestBase;
 
 
@@ -25,7 +23,7 @@ class MigrateAclList68Test extends MigrateDrupal6TestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
 
     $this->loadFixture(__DIR__ . '/../../../../tests/fixtures/d6_d7_table.php');

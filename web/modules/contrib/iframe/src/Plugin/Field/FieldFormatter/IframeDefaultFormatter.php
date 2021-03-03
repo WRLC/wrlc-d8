@@ -5,10 +5,8 @@ namespace Drupal\iframe\Plugin\Field\FieldFormatter;
 use Drupal\Component\Render\HtmlEscapedText;
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Field\FieldItemListInterface;
-use Drupal\Core\Link;
 use Drupal\Core\Url;
 use Drupal\Core\Template\Attribute;
-use Drupal\Core\Render\Markup;
 
 /**
  * Class IframeDefaultFormatter.
@@ -60,10 +58,7 @@ class IframeDefaultFormatter extends FormatterBase {
       if (!isset($item->title)) {
         $item->title = '';
       }
-      $elements[$delta] = [
-        '#markup' => Markup::create(self::iframeIframe($item->title, $item->url, $item)),
-        '#allowed_tags' => ['iframe', 'a', 'h3', 'style'],
-      ];
+      $elements[$delta] = self::iframeIframe($item->title, $item->url, $item);
       // Tokens can be dynamic, so its not cacheable.
       if (isset($settings['tokensupport']) && $settings['tokensupport']) {
         $elements[$delta]['cache'] = ['max-age' => 0];
@@ -140,7 +135,7 @@ class IframeDefaultFormatter extends FormatterBase {
     $allow[] = 'geolocation';
     $allow[] = 'encrypted-media';
     $allow[] = 'gyroscope';
-    $options['allow'] = implode(',', $allow);
+    $options['allow'] = implode(';', $allow);
 
     if (\Drupal::moduleHandler()->moduleExists('token')) {
       // Token Support for field "url" and "title".
@@ -164,16 +159,14 @@ class IframeDefaultFormatter extends FormatterBase {
     $options['src'] = $src;
     $drupal_attributes = new Attribute($options);
 
-    // Style attribute is filtered while rendering => use style block.
-    $output =
-      '<div class="' . (!empty($options['class']) ? new HtmlEscapedText($options['class']) : '') . '">'
-        . (empty($text) ? '' : '<h3 class="iframe_title">' . (isset($options['html']) && $options['html'] ? $text : new HtmlEscapedText($text)) . '</h3>')
-        . '<style type="text/css">iframe#' . $htmlid . ' {' . $style . '}</style>' . "\n"
-        . '  <iframe ' . $drupal_attributes->__toString() . '>'
-        . t('Your browser does not support iframes, but you can use the following link:') . ' ' . Link::fromTextAndUrl('Link', $srcuri)->toString()
-        . '</iframe>'
-      . '</div>';
-    return $output;
+    $render_array = [
+      '#theme' => 'iframe',
+      '#src' => $src,
+      '#attributes' => $drupal_attributes,
+      '#text' => (isset($options['html']) && $options['html'] ? $text : new HtmlEscapedText($text)),
+      '#style' => 'iframe#' . $htmlid . ' {' . $style . '}',
+    ];
+    return $render_array;
   }
 
 }
