@@ -36,7 +36,7 @@ abstract class LdapUserMappingBaseForm extends LdapUserBaseForm {
   /**
    * {@inheritdoc}
    */
-  public function validateForm(array &$form, FormStateInterface $form_state): void {
+  public function validateForm(array &$form, FormStateInterface $form_state) {
     $values = $form_state->getValues();
 
     foreach ($values['mappings'] as $key => $mapping) {
@@ -64,7 +64,7 @@ abstract class LdapUserMappingBaseForm extends LdapUserBaseForm {
    * @param array $mappings
    *   Field mappings.
    */
-  private function checkEmptyEvents(array $mappings): void {
+  private function checkEmptyEvents(array $mappings) {
     foreach ($mappings as $key => $mapping) {
       if (empty($mapping['prov_events'])) {
 
@@ -85,7 +85,7 @@ abstract class LdapUserMappingBaseForm extends LdapUserBaseForm {
    * @return array
    *   Mappings.
    */
-  protected function loadAvailableMappings(string $direction, string $sid): array {
+  protected function loadAvailableMappings($direction, $sid): array {
     $attributes = [];
     if ($sid) {
       try {
@@ -207,13 +207,9 @@ abstract class LdapUserMappingBaseForm extends LdapUserBaseForm {
    *   Attributes of Drupal user target options.
    * @param int $row_id
    *   Only needed for LDAP.
-   *
-   * @return array
-   *   Row.
    */
   protected function getMappingRow(Mapping $mapping, array $target_fields, int $row_id): array {
     // Sub form does it's variant here.
-    return [];
   }
 
   /**
@@ -222,10 +218,10 @@ abstract class LdapUserMappingBaseForm extends LdapUserBaseForm {
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   Form State.
    *
-   * @return array
+   * @return array|bool
    *   Returns the mappings
    */
-  protected function getServerMappingFields(FormStateInterface $form_state): array {
+  protected function getServerMappingFields(FormStateInterface $form_state) {
     $rows = [];
     $user_attribute_options = ['0' => $this->t('Select option')];
 
@@ -285,7 +281,7 @@ abstract class LdapUserMappingBaseForm extends LdapUserBaseForm {
    * @return array
    *   The form element we are changing via ajax
    */
-  public function mappingsAjaxCallback(array &$form, FormStateInterface $form_state): array {
+  public function mappingsAjaxCallback(array &$form, FormStateInterface $form_state) {
     return $form['mappings'];
   }
 
@@ -297,7 +293,7 @@ abstract class LdapUserMappingBaseForm extends LdapUserBaseForm {
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The form state, passed by reference so we can modify.
    */
-  public function mappingsAddAnother(array &$form, FormStateInterface $form_state): void {
+  public function mappingsAddAnother(array &$form, FormStateInterface $form_state) {
     $form_state->set('row_count', ($form_state->get('row_count') + 1));
     $form_state->setRebuild();
   }

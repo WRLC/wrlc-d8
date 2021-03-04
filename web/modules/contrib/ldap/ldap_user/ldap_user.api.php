@@ -7,7 +7,6 @@
 
 declare(strict_types = 1);
 
-use Drupal\user\UserInterface;
 use Symfony\Component\Ldap\Entry;
 
 /**
@@ -50,10 +49,10 @@ function hook_ldap_user_attributes_alter(array &$available_user_attrs, array &$p
 /**
  * Alter the user object in the context of an LDAP entry during synchronization.
  *
- * @param \Drupal\user\UserInterface $account
+ * @param User $account
  *   The edit array (see hook_user_insert). Make changes to this object as
  *   required.
- * @param \Symfony\Component\Ldap\Entry $entry
+ * @param \Symfony\Component\Ldap\Entry $ldap_user
  *   The LDAP entry for the Drupal user.
  * @param array $context
  *   Contains ldap_server and provisioning events.
@@ -61,10 +60,8 @@ function hook_ldap_user_attributes_alter(array &$available_user_attrs, array &$p
  * @see \Drupal\ldap_user\Processor\DrupalUserProcessor::applyAttributesToAccount()
  * @see \Drupal\ldap_user\Processor\DrupalUserProcessor::applyAttributesToAccountOnCreate()
  */
-function hook_ldap_user_edit_user_alter(UserInterface $account, Entry $entry, array $context) {
-  /** @var \Drupal\ldap_servers\Processor\TokenProcessor $tokenProcessor */
+function hook_ldap_user_edit_user_alter(User $account, Entry $ldap_user, array $context) {
   $tokenProcessor = \Drupal::service('ldap.token_processor');
-
-  $value = $tokenProcessor->ldapEntryReplacementsForDrupalAccount($entry, '[sn]');
+  $value = $tokenProcessor->ldapEntryReplacementsForDrupalAccount($ldap_user['attr'], '[sn]');
   $account->set('myfield', $value);
 }

@@ -26,8 +26,7 @@ class LdapVariableImageAttribute extends LdapVariableAttribute {
    * @return array|null
    *   Markup with image if available.
    */
-  public function render(ResultRow $values): array {
-    $formatter = '';
+  public function render(ResultRow $values) {
     if ($this->getValue($values)) {
       $data = $this->getValue($values)[0];
       $formatter = new FormattableMarkup(
@@ -35,14 +34,14 @@ class LdapVariableImageAttribute extends LdapVariableAttribute {
           ':src' => base64_encode($data),
         ]
       );
+      return ['#markup' => $formatter];
     }
-    return ['#markup' => $formatter];
   }
 
   /**
    * {@inheritdoc}
    */
-  public function buildOptionsForm(&$form, FormStateInterface $form_state): void {
+  public function buildOptionsForm(&$form, FormStateInterface $form_state) {
     parent::buildOptionsForm($form, $form_state);
     // To avoid code complexity, multi-value is removed for images, since
     // that is in unusual scenario.

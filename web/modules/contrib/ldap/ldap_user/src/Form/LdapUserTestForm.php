@@ -115,14 +115,15 @@ class LdapUserTestForm extends FormBase implements LdapUserAttributesInterface {
       $container->get('ldap.user_manager'),
       $container->get('entity_type.manager'),
       $container->get('externalauth.authmap'),
-      $container->get('ldap.drupal_user_processor')
+      $container->get('ldap.drupal_user_processor'),
+      $container->get('ldap.user_manager')
     );
   }
 
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state, $op = NULL): array {
+  public function buildForm(array $form, FormStateInterface $form_state, $op = NULL) {
 
     $form['#prefix'] = $this->t('<h1>Debug LDAP synchronization events</h1>');
 
@@ -163,7 +164,7 @@ class LdapUserTestForm extends FormBase implements LdapUserAttributesInterface {
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state): void {
+  public function submitForm(array &$form, FormStateInterface $form_state) {
 
     $username = $form_state->getValue(['testing_drupal_username']);
     $selected_action = $form_state->getValue(['action']);
@@ -229,7 +230,7 @@ class LdapUserTestForm extends FormBase implements LdapUserAttributesInterface {
       }
     }
 
-    if (\function_exists('kint')) {
+    if (function_exists('kint')) {
       // @phpcs:ignore
       kint($results);
     }
@@ -259,15 +260,15 @@ class LdapUserTestForm extends FormBase implements LdapUserAttributesInterface {
    * @return bool
    *   Provisioning enabled.
    */
-  private function provisionEnabled(int $direction, int $provision_trigger): bool {
+  private function provisionEnabled($direction, $provision_trigger): bool {
     $result = FALSE;
 
     $config = $this->configFactory()->get('ldap_user.settings');
     if ($direction === self::PROVISION_TO_LDAP) {
-      $result = \in_array($provision_trigger, $config->get('ldapEntryProvisionTriggers'), TRUE);
+      $result = in_array($provision_trigger, $config->get('ldapEntryProvisionTriggers'), TRUE);
     }
     elseif ($direction === self::PROVISION_TO_DRUPAL) {
-      $result = \in_array($provision_trigger, $config->get('drupalAcctProvisionTriggers'), TRUE);
+      $result = in_array($provision_trigger, $config->get('drupalAcctProvisionTriggers'), TRUE);
     }
 
     return $result;

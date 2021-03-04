@@ -94,9 +94,9 @@ class LoginValidatorLoginForm extends LoginValidatorBase {
   /**
    * {@inheritdoc}
    */
-  public function testCredentials(): int {
-    $authenticationResult = self::AUTHENTICATION_FAILURE_UNKNOWN;
+  protected function testCredentials() {
     foreach ($this->authenticationServers->getAvailableAuthenticationServers() as $server) {
+      $authenticationResult = NULL;
       $this->serverDrupalUser = $this->entityTypeManager
         ->getStorage('ldap_server')
         ->load($server);
@@ -111,7 +111,7 @@ class LoginValidatorLoginForm extends LoginValidatorBase {
 
       // @todo Verify new usage of CredentialsStorage here.
       $bindResult = $this->bindToServer();
-      if ($bindResult !== self::AUTHENTICATION_SUCCESS) {
+      if ($bindResult !== TRUE) {
         $authenticationResult = $bindResult;
         // If bind fails, onto next server.
         continue;
@@ -142,9 +142,10 @@ class LoginValidatorLoginForm extends LoginValidatorBase {
         // Next server, please.
         continue;
       }
-
-      $authenticationResult = self::AUTHENTICATION_SUCCESS;
-      break;
+      else {
+        $authenticationResult = self::AUTHENTICATION_SUCCESS;
+        break;
+      }
     }
 
     $this->detailLog->log(

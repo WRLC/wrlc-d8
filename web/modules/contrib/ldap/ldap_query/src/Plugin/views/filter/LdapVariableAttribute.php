@@ -20,7 +20,7 @@ class LdapVariableAttribute extends LdapAttribute {
   /**
    * {@inheritdoc}
    */
-  public function query($group_by = FALSE): void {
+  public function query() {
     $this->ensureMyTable();
     $this->realField = $this->options['attribute_name'];
     $field = "$this->tableAlias.$this->realField";

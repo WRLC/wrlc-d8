@@ -46,7 +46,7 @@ class FakeLdap implements LdapInterface {
   /**
    * {@inheritdoc}
    */
-  public function bind(string $dn = NULL, string $password = NULL): void {
+  public function bind($dn = NULL, $password = NULL) {
     if ($this->bindException) {
       throw new ConnectionException('Failed connection');
     }
@@ -64,14 +64,14 @@ class FakeLdap implements LdapInterface {
   /**
    * {@inheritdoc}
    */
-  public function getEntryManager(): EntryManagerInterface {
+  public function getEntryManager() {
     return $this->entryManagerResponse;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function escape($subject, $ignore = '', $flags = 0): string {
+  public function escape($subject, $ignore = '', $flags = 0) {
     return $this->escapeResponse;
   }
 
@@ -96,7 +96,7 @@ class FakeLdap implements LdapInterface {
   }
 
   /**
-   * Set the escape response.
+   * Set the escape resonse.
    *
    * @param string $escapeResponse
    *   Response.

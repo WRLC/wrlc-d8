@@ -91,7 +91,7 @@ abstract class LdapUserBaseForm extends ConfigFormBase implements LdapUserAttrib
   /**
    * {@inheritdoc}
    */
-  public function getEditableConfigNames(): array {
+  public function getEditableConfigNames() {
     return ['ldap_user.settings'];
   }
 
@@ -100,7 +100,7 @@ abstract class LdapUserBaseForm extends ConfigFormBase implements LdapUserAttrib
    *
    * @todo Duplicated in LdapUserAdminForm.
    */
-  protected function prepareBaseData(): void {
+  protected function prepareBaseData() {
     $storage = $this->entityTypeManager->getStorage('ldap_server');
     $ids = $storage
       ->getQuery()

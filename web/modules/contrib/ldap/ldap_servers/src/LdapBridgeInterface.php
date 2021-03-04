@@ -1,11 +1,8 @@
 <?php
 
-declare(strict_types = 1);
-
 namespace Drupal\ldap_servers;
 
 use Drupal\ldap_servers\Entity\Server;
-use Symfony\Component\Ldap\LdapInterface;
 
 /**
  * Ldap Bridge to symfony/ldap.
@@ -38,10 +35,7 @@ interface LdapBridgeInterface {
 
   /**
    * Get LDAP service.
-   *
-   * @return \Symfony\Component\Ldap\LdapInterface
-   *   LDAP.
    */
-  public function get(): LdapInterface;
+  public function get();
 
 }

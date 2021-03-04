@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7815b9da2f69b29cb1b5324548add6a2",
+    "content-hash": "c07cbd7ec49d6a68f0895a555a34f408",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6136,11 +6136,17 @@
         },
         {
             "name": "drupal/ldap",
-            "version": "dev-4.x",
+            "version": "4.0.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ldap.git",
-                "reference": "5f22c239416ad77f5f9df283984e653c801af5c4"
+                "reference": "8.x-4.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ldap-8.x-4.0-beta1.zip",
+                "reference": "8.x-4.0-beta1",
+                "shasum": "1ded1f011d7682f1f16bbec74f8a56c13ffc2e2e"
             },
             "require": {
                 "drupal/authorization": "^1.0",
@@ -6159,15 +6165,12 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-4.x": "4.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-4.0-beta1+9-dev",
-                    "datestamp": "1608666865",
+                    "version": "8.x-4.0-beta1",
+                    "datestamp": "1608241039",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -6209,7 +6212,7 @@
         },
         {
             "name": "drupal/ldap_servers",
-            "version": "dev-4.x",
+            "version": "4.0.0-beta1",
             "require": {
                 "drupal/core": "^8.7.7 || ^9",
                 "drupal/externalauth": "*",
@@ -6217,15 +6220,12 @@
             },
             "type": "metapackage",
             "extra": {
-                "branch-alias": {
-                    "dev-4.x": "4.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-4.0-beta1+9-dev",
-                    "datestamp": "1608666865",
+                    "version": "8.x-4.0-beta1",
+                    "datestamp": "1608241039",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -12476,7 +12476,7 @@
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v5.2.3",
+            "version": "v5.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
@@ -16959,7 +16959,7 @@
         "drupal/fences": 5,
         "drupal/filefield_paths": 10,
         "drupal/front": 10,
-        "drupal/ldap": 20,
+        "drupal/ldap": 10,
         "drupal/libraries": 15,
         "drupal/og": 15,
         "drupal/plupload": 10,

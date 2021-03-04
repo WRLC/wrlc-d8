@@ -46,7 +46,7 @@ class QueryTestForm extends FormBase {
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state, $ldap_query_entity = NULL): array {
+  public function buildForm(array $form, FormStateInterface $form_state, $ldap_query_entity = NULL) {
     if ($ldap_query_entity) {
       $this->ldapQuery->load($ldap_query_entity);
       $this->ldapQuery->execute();
@@ -86,21 +86,21 @@ class QueryTestForm extends FormBase {
         '#header' => $header,
         '#rows' => $rows,
       ];
+      return $form;
     }
-    return $form;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function validateForm(array &$form, FormStateInterface $form_state): void {
+  public function validateForm(array &$form, FormStateInterface $form_state) {
 
   }
 
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state): void {
+  public function submitForm(array &$form, FormStateInterface $form_state) {
 
   }
 

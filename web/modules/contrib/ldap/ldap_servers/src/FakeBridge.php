@@ -7,7 +7,6 @@ namespace Drupal\ldap_servers;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\ldap_servers\Entity\Server;
 use Psr\Log\LoggerInterface;
-use Symfony\Component\Ldap\LdapInterface;
 
 /**
  * Fake LdapBridge to instantiate a fake server for testing.
@@ -94,9 +93,12 @@ class FakeBridge implements LdapBridgeInterface {
   }
 
   /**
-   * {@inheritdoc}
+   * Get LDAP service.
+   *
+   * @return \Drupal\ldap_servers\FakeLdap
+   *   LDAP service.
    */
-  public function get(): LdapInterface {
+  public function get() {
     return $this->ldap;
   }
 

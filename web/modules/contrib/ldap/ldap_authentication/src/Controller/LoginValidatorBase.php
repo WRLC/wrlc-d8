@@ -26,16 +26,9 @@ use Symfony\Component\Ldap\Entry;
 /**
  * Handles the actual testing of credentials and authentication of users.
  */
-abstract class LoginValidatorBase implements LdapUserAttributesInterface, LoginValidatorInterface {
+abstract class LoginValidatorBase implements LdapUserAttributesInterface {
 
   use StringTranslationTrait;
-
-  /**
-   * Failure value.
-   *
-   * @var int
-   */
-  public const AUTHENTICATION_FAILURE_UNKNOWN = 0;
 
   /**
    * Failure value.
@@ -73,6 +66,13 @@ abstract class LoginValidatorBase implements LdapUserAttributesInterface, LoginV
   public const AUTHENTICATION_SUCCESS = 6;
 
   /**
+   * Failure value.
+   *
+   * @var int
+   */
+  public const AUTHENTICATION_FAILURE_SERVER = 8;
+
+  /**
    * Authname.
    *
    * @var bool|string
@@ -105,7 +105,7 @@ abstract class LoginValidatorBase implements LdapUserAttributesInterface, LoginV
    *
    * @var \Drupal\user\Entity\User
    */
-  protected $drupalUser;
+  protected $drupalUser = FALSE;
 
   /**
    * LDAP Entry.
@@ -161,7 +161,7 @@ abstract class LoginValidatorBase implements LdapUserAttributesInterface, LoginV
   /**
    * Logger.
    *
-   * @var \Drupal\Core\Logger\LoggerChannelInterface
+   * @var LoggerInterface
    */
   protected $logger;
 
@@ -187,7 +187,7 @@ abstract class LoginValidatorBase implements LdapUserAttributesInterface, LoginV
   protected $ldapBridge;
 
   /**
-   * External authentication mapper.
+   * Externalauth.
    *
    * @var \Drupal\externalauth\Authmap
    */
@@ -283,7 +283,7 @@ abstract class LoginValidatorBase implements LdapUserAttributesInterface, LoginV
   protected function initializeDrupalUserFromAuthName(): void {
     $load_by_name = $this->entityTypeManager->getStorage('user')
       ->loadByProperties(['name' => $this->authName]);
-    $this->drupalUser = $load_by_name ? reset($load_by_name) : NULL;
+    $this->drupalUser = $load_by_name ? reset($load_by_name) : FALSE;
     $authmap_uid = $this->externalAuth->getUid($this->authName, 'ldap_user');
     if (!$this->drupalUser && $authmap_uid) {
       // Drupal username differs but we have a UID in the authmap table for it.
@@ -346,7 +346,7 @@ abstract class LoginValidatorBase implements LdapUserAttributesInterface, LoginV
    * @return bool
    *   Whether to allow user login and creation.
    */
-  protected function verifyAccountCreation(): bool {
+  protected function verifyAccountCreation() {
     if (
       $this->configFactory->get('ldap_user.settings')->get('acctCreation') === self::ACCOUNT_CREATION_LDAP_BEHAVIOUR ||
       $this->configFactory->get('user.settings')->get('register') === UserInterface::REGISTER_VISITORS
@@ -357,13 +357,14 @@ abstract class LoginValidatorBase implements LdapUserAttributesInterface, LoginV
       );
       return TRUE;
     }
-
-    $this->detailLog->log(
-      '%username: Drupal user account not found and configuration is set to not create new accounts.',
-      ['%username' => $this->authName],
-      'ldap_authentication'
-    );
-    return FALSE;
+    else {
+      $this->detailLog->log(
+        '%username: Drupal user account not found and configuration is set to not create new accounts.',
+        ['%username' => $this->authName],
+        'ldap_authentication'
+      );
+      return FALSE;
+    }
   }
 
   /**
@@ -372,7 +373,7 @@ abstract class LoginValidatorBase implements LdapUserAttributesInterface, LoginV
    * @return bool
    *   Valid login.
    */
-  protected function testUserPassword(): bool {
+  protected function testUserPassword() {
     $loginValid = FALSE;
     if ($this->serverDrupalUser->get('bind_method') === 'user') {
       $loginValid = TRUE;
@@ -489,7 +490,7 @@ abstract class LoginValidatorBase implements LdapUserAttributesInterface, LoginV
   /**
    * {@inheritdoc}
    */
-  public function checkAllowedExcluded(string $authName, Entry $ldap_user): bool {
+  public function checkAllowedExcluded($authName, Entry $ldap_user) {
 
     // Do one of the exclude attribute pairs match? If user does not already
     // exists and deferring to user settings AND user settings only allow.
@@ -685,7 +686,7 @@ abstract class LoginValidatorBase implements LdapUserAttributesInterface, LoginV
         $this->logger
           ->error('Derived Drupal username from attribute %account_name_attr returned no username for authname %authname.', [
             '%authname' => $this->authName,
-            '%account_name_attr' => $this->serverDrupalUser->getAccountNameAttribute(),
+            '%account_name_attr' => $user_attribute,
           ]
           );
         return FALSE;
@@ -887,10 +888,10 @@ abstract class LoginValidatorBase implements LdapUserAttributesInterface, LoginV
   /**
    * Bind to server.
    *
-   * @return int
+   * @return int|true
    *   Success or failure result.
    */
-  protected function bindToServer(): int {
+  protected function bindToServer() {
     if ($this->serverDrupalUser->get('bind_method') === 'user') {
       return $this->bindToServerAsUser();
     }
@@ -908,16 +909,16 @@ abstract class LoginValidatorBase implements LdapUserAttributesInterface, LoginV
 
       return self::AUTHENTICATION_FAILURE_BIND;
     }
-    return self::AUTHENTICATION_SUCCESS;
+    return TRUE;
   }
 
   /**
    * Bind to server.
    *
-   * @return int
+   * @return int|true
    *   Success or failure result.
    */
-  protected function bindToServerAsUser(): int {
+  protected function bindToServerAsUser() {
     $bindResult = FALSE;
 
     foreach ($this->serverDrupalUser->getBaseDn() as $base_dn) {
@@ -942,13 +943,13 @@ abstract class LoginValidatorBase implements LdapUserAttributesInterface, LoginV
 
       return self::AUTHENTICATION_FAILURE_CREDENTIALS;
     }
-    return self::AUTHENTICATION_SUCCESS;
+    return TRUE;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function getDrupalUser(): ?UserInterface {
+  public function getDrupalUser(): UserInterface {
     return $this->drupalUser;
   }
 

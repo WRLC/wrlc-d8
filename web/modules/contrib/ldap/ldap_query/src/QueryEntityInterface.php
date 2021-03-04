@@ -4,12 +4,10 @@ declare(strict_types = 1);
 
 namespace Drupal\ldap_query;
 
-use Drupal\Core\Config\Entity\ConfigEntityInterface;
-
 /**
  * LDAP Query config entity interface.
  */
-interface QueryEntityInterface extends ConfigEntityInterface {
+interface QueryEntityInterface {
 
   /**
    * Returns all base DN.

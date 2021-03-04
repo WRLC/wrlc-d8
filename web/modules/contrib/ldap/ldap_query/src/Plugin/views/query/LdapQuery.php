@@ -82,7 +82,7 @@ class LdapQuery extends QueryPluginBase {
     }
     $start = microtime(TRUE);
 
-    // @todo Dependency Injection.
+    // FIXME: DI.
     /** @var \Drupal\ldap_query\Controller\QueryController $controller */
     $controller = \Drupal::service('ldap.query');
     $controller->load($this->options['query_id']);
@@ -136,37 +136,46 @@ class LdapQuery extends QueryPluginBase {
   /**
    * Sort the results.
    *
-   * @param array $rows
+   * @param array $results
    *   Results to operate on.
    *
    * @return array
    *   Result data.
-   *
-   * @todo Should be private, public for easier testing.
    */
-  public function sortResults(array $rows): array {
-    $sorts = $this->orderby;
-    foreach ($sorts as $sort) {
-      foreach ($rows as $key => $row) {
-        $rows[$key]['sort_' . $sort['field']] = $row[$sort['field']][0] ?? '';
+  private function sortResults(array $results): array {
+    $parameters = [];
+    $orders = $this->orderby;
+    $set = [];
+    foreach ($orders as $orderCriterion) {
+      foreach ($results as $key => $row) {
+        // @todo Could be improved by making the element index configurable.
+        $orderCriterion['data'][$key] = $row[$orderCriterion['field']][0];
+        $set[$key][$orderCriterion['field']] = $row[$orderCriterion['field']][0];
+        $set[$key]['index'] = $key;
+      }
+      $parameters[] = $orderCriterion['data'];
+      if ($orderCriterion['direction'] === 'ASC') {
+        $parameters[] = SORT_ASC;
+      }
+      else {
+        $parameters[] = SORT_DESC;
       }
     }
+    $parameters[] = &$set;
+    array_multisort(...$parameters);
 
-    $multisortParameters = [];
-    foreach ($sorts as $sort) {
-      $multisortParameters[] = array_column($rows, 'sort_' . $sort['field']);
-      $multisortParameters[] = mb_strtoupper($sort['direction']) === 'ASC' ? SORT_ASC : SORT_DESC;
+    $processedResults = [];
+    foreach ($set as $row) {
+      $processedResults[] = $results[$row['index']];
     }
-    $multisortParameters[] = &$rows;
-    array_multisort(...$multisortParameters);
 
-    return $rows;
+    return $processedResults;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function ensureTable($table, $relationship = NULL): string {
+  public function ensureTable($table, $relationship = NULL) {
     return '';
   }
 
@@ -201,16 +210,16 @@ class LdapQuery extends QueryPluginBase {
   /**
    * {@inheritdoc}
    */
-  public function buildOptionsForm(&$form, FormStateInterface $form_state): void {
+  public function buildOptionsForm(&$form, FormStateInterface $form_state) {
     parent::buildOptionsForm($form, $form_state);
 
-    $queries = \Drupal::EntityQuery('ldap_query_entity')
+    $qids = \Drupal::EntityQuery('ldap_query_entity')
       ->condition('status', 1)
       ->execute();
 
     $form['query_id'] = [
       '#type' => 'select',
-      '#options' => $queries,
+      '#options' => $qids,
       '#title' => $this->t('Ldap Query'),
       '#default_value' => $this->options['query_id'],
       '#description' => $this->t('The LDAP query you want Views to use.'),
@@ -219,24 +228,9 @@ class LdapQuery extends QueryPluginBase {
   }
 
   /**
-   * Add a simple WHERE clause to the query.
-   *
-   * @param mixed $group
-   *   The WHERE group to add these to; groups are used to create AND/OR
-   *   sections. Groups cannot be nested. Use 0 as the default group.
-   *   If the group does not yet exist it will be created as an AND group.
-   * @param mixed $field
-   *   The name of the field to check.
-   * @param mixed $value
-   *   The value to test the field against. In most cases, this is a scalar. For
-   *   more complex options, it is an array. The meaning of each element in the
-   *   array is dependent on the $operator.
-   * @param mixed $operator
-   *   The comparison operator, such as =, <, or >=. It also accepts more
-   *   complex options such as IN, LIKE, LIKE BINARY, or BETWEEN. Defaults to =.
-   *   If $field is a string you have to use 'formula' here.
+   * {@inheritdoc}
    */
-  public function addWhere($group, $field, $value = NULL, $operator = NULL): void {
+  public function addWhere($group, $field, $value = NULL, $operator = NULL) {
     // Ensure all variants of 0 are actually 0. Thus '', 0 and NULL are all
     // the default group.
     if (empty($group)) {
@@ -258,10 +252,10 @@ class LdapQuery extends QueryPluginBase {
   /**
    * Compiles all conditions into a set of LDAP requirements.
    *
-   * @return string|null
+   * @return string
    *   Condition string.
    */
-  public function buildConditions(): ?string {
+  public function buildConditions() {
 
     $groups = [];
     foreach ($this->where as $group) {
@@ -298,7 +292,7 @@ class LdapQuery extends QueryPluginBase {
    * @return string
    *   Combined string.
    */
-  private function buildLdapFilter(string $standardFilter): string {
+  private function buildLdapFilter($standardFilter): string {
     $searchFilter = $this->buildConditions();
     if (!empty($searchFilter)) {
       $finalFilter = '(&' . $standardFilter . $searchFilter . ')';
@@ -322,7 +316,7 @@ class LdapQuery extends QueryPluginBase {
    * @return string
    *   LDAP filter such as (cn=Example).
    */
-  private function translateCondition(string $field, string $value, string $operator): string {
+  private function translateCondition($field, $value, $operator): string {
     if (mb_strpos($operator, '!') === 0) {
       $condition = sprintf('(!(%s=%s))', $field, Html::escape($value));
     }
@@ -334,11 +328,8 @@ class LdapQuery extends QueryPluginBase {
 
   /**
    * Let modules modify the query just prior to finalizing it.
-   *
-   * @param \Drupal\views\ViewExecutable $view
-   *   View.
    */
-  public function alter(ViewExecutable $view): void {
+  public function alter(ViewExecutable $view) {
     \Drupal::moduleHandler()->invokeAll('views_query_alter', [$view, $this]);
   }
 

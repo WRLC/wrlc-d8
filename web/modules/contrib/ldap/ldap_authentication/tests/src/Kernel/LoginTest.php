@@ -8,6 +8,7 @@ use Drupal\Core\Form\FormState;
 use Drupal\Core\Messenger\MessengerInterface;
 use Drupal\ldap_authentication\Controller\LoginValidatorLoginForm;
 use Drupal\KernelTests\KernelTestBase;
+use Drupal\ldap_authentication\Controller\LoginValidatorSso;
 use Drupal\ldap_servers\FakeBridge;
 use Drupal\ldap_servers\FakeCollection;
 use Drupal\ldap_servers\LdapUserAttributesInterface;
@@ -53,7 +54,6 @@ class LoginTest extends KernelTestBase {
 
     /** @var \Drupal\Core\Entity\EntityTypeManager $manager */
     $manager = $this->container->get('entity_type.manager');
-    /** @var \Drupal\ldap_servers\Entity\Server $server */
     $server = $manager->getStorage('ldap_server')->create([
       'id' => 'test',
       'timeout' => 30,
@@ -225,6 +225,37 @@ class LoginTest extends KernelTestBase {
       ->getStorage('user')
       ->loadMultiple()
     );
+  }
+
+  /**
+   * Test SSO login.
+   */
+  public function testSso() {
+    $_SERVER['REMOTE_USER'] = 'hpotter';
+    $validator = new LoginValidatorSso(
+      $this->container->get('config.factory'),
+      $this->container->get('ldap.detail_log'),
+      $this->container->get('logger.channel.ldap_authentication'),
+      $this->container->get('entity_type.manager'),
+      $this->container->get('module_handler'),
+      $this->container->get('ldap.bridge'),
+      $this->container->get('externalauth.authmap'),
+      $this->container->get('ldap_authentication.servers'),
+      $this->container->get('ldap.user_manager'),
+      $this->container->get('messenger'),
+      $this->container->get('ldap.drupal_user_processor')
+    );
+    $validator->processLogin('hpotter');
+    self::assertCount(1, $this->container
+      ->get('entity_type.manager')
+      ->getStorage('user')
+      ->loadMultiple()
+    );
+    // @todo assert local Drupal user without mapping
+    // (associated, not associated)
+    // test exclusive/mixed
+    // see example data.
+    // consider moving to ldap_sso.
   }
 
 }

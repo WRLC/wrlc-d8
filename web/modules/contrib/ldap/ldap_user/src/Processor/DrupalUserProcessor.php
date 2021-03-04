@@ -454,7 +454,7 @@ class DrupalUserProcessor implements LdapUserAttributesInterface {
     $triggers = $this->config->get('drupalAcctProvisionTriggers');
     $server = $this->config->get('drupalAcctProvisionServer');
 
-    if ($server && \in_array(self::PROVISION_DRUPAL_USER_ON_USER_AUTHENTICATION, $triggers, TRUE)) {
+    if ($server && in_array(self::PROVISION_DRUPAL_USER_ON_USER_AUTHENTICATION, $triggers, TRUE)) {
       $this->syncToDrupalAccount();
     }
 
@@ -522,36 +522,41 @@ class DrupalUserProcessor implements LdapUserAttributesInterface {
   /**
    * Process user picture from LDAP entry.
    *
-   * @return array
+   * @return false|\Drupal\file\Entity\File
    *   Drupal file object image user's thumbnail or FALSE if none present or
    *   an error occurs.
    */
-  private function userPictureFromLdapEntry(): ?array {
+  private function userPictureFromLdapEntry() {
     $picture_attribute = $this->server->getPictureAttribute();
-    if (!$this->ldapEntry || !$picture_attribute || !$this->ldapEntry->hasAttribute($picture_attribute, FALSE)) {
-      return NULL;
-    }
+    if ($this->ldapEntry && $picture_attribute) {
+      // Check if LDAP entry has been provisioned.
+      if ($this->ldapEntry->hasAttribute($picture_attribute, FALSE)) {
+        $ldapUserPicture = $this->ldapEntry->getAttribute($picture_attribute, FALSE)[0];
+      }
+      else {
+        // No picture present.
+        return FALSE;
+      }
 
-    $ldapUserPicture = $this->ldapEntry->getAttribute($picture_attribute, FALSE)[0];
-    $currentUserPicture = $this->account->get('user_picture')->getValue();
+      $currentUserPicture = $this->account->get('user_picture')->getValue();
+      if (empty($currentUserPicture)) {
+        return $this->saveUserPicture($this->account->get('user_picture'), $ldapUserPicture);
+      }
 
-    if (empty($currentUserPicture)) {
+      /** @var \Drupal\file\Entity\File $file */
+      $file = $this->entityTypeManager
+        ->getStorage('file')
+        ->load($currentUserPicture[0]['target_id']);
+      if ($file && file_exists($file->getFileUri())) {
+        $file_data = file_get_contents($file->getFileUri());
+        if (md5($file_data) === md5($ldapUserPicture)) {
+          // Same image, do nothing.
+          return FALSE;
+        }
+      }
+
       return $this->saveUserPicture($this->account->get('user_picture'), $ldapUserPicture);
     }
-
-    /** @var \Drupal\file\Entity\File $file */
-    $file = $this->entityTypeManager
-      ->getStorage('file')
-      ->load($currentUserPicture[0]['target_id']);
-    if ($file && file_exists($file->getFileUri())) {
-      $file_data = file_get_contents($file->getFileUri());
-      if (md5($file_data) === md5($ldapUserPicture)) {
-        // Same image, do nothing.
-        return NULL;
-      }
-    }
-
-    return $this->saveUserPicture($this->account->get('user_picture'), $ldapUserPicture);
   }
 
   /**
@@ -562,10 +567,10 @@ class DrupalUserProcessor implements LdapUserAttributesInterface {
    * @param string $ldapUserPicture
    *   The picture itself.
    *
-   * @return array|null
-   *   Nullable array of form ['target_id' => 123].
+   * @return array|bool
+   *   Returns file ID wrapped in target or false.
    */
-  private function saveUserPicture(FieldItemListInterface $field, string $ldapUserPicture): ?array {
+  private function saveUserPicture(FieldItemListInterface $field, string $ldapUserPicture) {
     // Create tmp file to get image format and derive extension.
     $fileName = uniqid('', FALSE);
     $unmanagedFile = $this->fileSystem->getTempDirectory() . '/' . $fileName;
@@ -596,15 +601,17 @@ class DrupalUserProcessor implements LdapUserAttributesInterface {
     if ($managed_file && empty(file_validate($managed_file, $validators))) {
       return ['target_id' => $managed_file->id()];
     }
+    else {
+      // @todo Verify file garbage collection.
+      foreach ($errors as $error) {
+        $this->detailLog
+          ->log('File upload error for user image with validation error @error',
+            ['@error' => $error]
+          );
+      }
 
-    // @todo Verify file garbage collection.
-    foreach ($errors as $error) {
-      $this->detailLog
-        ->log('File upload error for user image with validation error @error',
-          ['@error' => $error]
-        );
+      return FALSE;
     }
-    return NULL;
   }
 
   /**
@@ -711,7 +718,6 @@ class DrupalUserProcessor implements LdapUserAttributesInterface {
     }
     if (!$this->account->getPassword()) {
       if (version_compare(\Drupal::VERSION, '9.1', '>=')) {
-        // phpcs:ignore
         $this->account->set('pass', \Drupal::service('password_generator')->generate(20));
       }
       else {

@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Drupal\ldap_query\Plugin\views\argument;
 
-use Drupal\views\Plugin\views\argument\ArgumentPluginBase;
+use Drupal\views\Plugin\views\argument\Standard;
 
 /**
  * LDAP Attribute Views Argument.
@@ -13,13 +13,13 @@ use Drupal\views\Plugin\views\argument\ArgumentPluginBase;
  *
  * @ViewsArgument("ldap_attribute")
  */
-class LdapAttribute extends ArgumentPluginBase {
+class LdapAttribute extends Standard {
 
   /**
    * {@inheritdoc}
    */
-  public function query($group_by = FALSE): void {
-    $this->ensureMyTable();
+  public function query($group_by = FALSE) {
+    parent::query($group_by);
     $this->query->addWhere(0, $this->realField, $this->argument, '=');
   }
 

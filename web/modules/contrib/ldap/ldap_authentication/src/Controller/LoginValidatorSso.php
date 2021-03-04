@@ -10,19 +10,11 @@ namespace Drupal\ldap_authentication\Controller;
 class LoginValidatorSso extends LoginValidatorBase {
 
   /**
-   * Set authname.
-   *
-   * @param string $authname
-   *   Authname.
-   */
-  public function setAuthname(string $authname): void {
-    $this->authName = $authname;
-  }
-
-  /**
    * {@inheritdoc}
    */
-  public function processLogin(): void {
+  public function processLogin($authName): void {
+    $this->authName = $authName;
+
     if (!$this->validateCommonLoginConstraints()) {
       return;
     }
@@ -62,8 +54,7 @@ class LoginValidatorSso extends LoginValidatorBase {
    *
    * @todo Reduce code duplication w/ LoginValidator, split this function up.
    */
-  public function testCredentials(): int {
-    $authenticationResult = self::AUTHENTICATION_FAILURE_UNKNOWN;
+  protected function testCredentials() {
     foreach ($this->authenticationServers->getAvailableAuthenticationServers() as $server) {
       $this->serverDrupalUser = $this->entityTypeManager
         ->getStorage('ldap_server')
@@ -79,7 +70,7 @@ class LoginValidatorSso extends LoginValidatorBase {
 
       // @todo Verify new usage of CredentialsStorage here.
       $bindResult = $this->bindToServer();
-      if ($bindResult !== self::AUTHENTICATION_SUCCESS) {
+      if ($bindResult !== TRUE) {
         $authenticationResult = $bindResult;
         // If bind fails, onto next server.
         continue;
@@ -123,10 +114,10 @@ class LoginValidatorSso extends LoginValidatorBase {
   /**
    * Bind to server.
    *
-   * @return int
+   * @return int|true
    *   Success or failure result.
    */
-  protected function bindToServerAsUser(): int {
+  protected function bindToServerAsUser() {
     $this->logger->error('Trying to use SSO with user bind method.');
     return self::AUTHENTICATION_FAILURE_CREDENTIALS;
   }

@@ -26,8 +26,7 @@ class LdapAttribute extends FieldPluginBase {
    * @return array
    *   The processed result in a render array.
    */
-  public function render(ResultRow $values): array {
-    $output = '';
+  public function render(ResultRow $values) {
     if ($value = $this->getValue($values)) {
       switch ($this->options['multi_value']) {
         case 'v-all':
@@ -40,23 +39,23 @@ class LdapAttribute extends FieldPluginBase {
 
         case 'v-index':
           if ($this->options['index_value'] >= 0) {
-            $index = (int) $this->options['index_value'];
+            $index = intval($this->options['index_value']);
           }
           else {
             // Allows for negative offset.
             $index = count($value) + $this->options['index_value'];
           }
-          $output = \array_key_exists($index, $value) ? $value[$index] : $value[0];
+          $output = array_key_exists($index, $value) ? $value[$index] : $value[0];
           break;
       }
+      return ['#plain_text' => $output];
     }
-    return ['#plain_text' => $output];
   }
 
   /**
    * {@inheritdoc}
    */
-  protected function defineOptions(): array {
+  protected function defineOptions() {
     $options = parent::defineOptions();
     $options['multi_value'] = ['default' => 'v-all'];
     $options['value_separator'] = ['default' => ''];
@@ -67,7 +66,7 @@ class LdapAttribute extends FieldPluginBase {
   /**
    * {@inheritdoc}
    */
-  public function buildOptionsForm(&$form, FormStateInterface $form_state): void {
+  public function buildOptionsForm(&$form, FormStateInterface $form_state) {
     $form['multi_value'] = [
       '#type' => 'select',
       '#title' => $this->t('Values to show'),
@@ -114,14 +113,6 @@ class LdapAttribute extends FieldPluginBase {
    */
   public function usesGroupBy() {
     return FALSE;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function clickSort($order): void {
-    $params = $this->options['group_type'] !== 'group' ? ['function' => $this->options['group_type']] : [];
-    $this->query->addOrderBy(NULL, $this->realField, $order, $this->field_alias, $params);
   }
 
 }

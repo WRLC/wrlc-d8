@@ -151,7 +151,7 @@ class ConversionHelper {
    * @return array
    *   Array of all tokens in the template such as array('cn').
    */
-  public static function findTokensNeededForTemplate(string $template): array {
+  public static function findTokensNeededForTemplate($template) {
     preg_match_all('/
     \[             # [ - pattern start
     ([^\[\]]*)  # match $type not containing whitespace : [ or ]
