@@ -1,13 +1,15 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Drupal\Tests\og\Unit;
 
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Tests\UnitTestCase;
 use Drupal\og\Entity\OgRole;
 use Drupal\og\Event\DefaultRoleEvent;
 use Drupal\og\OgRoleInterface;
-use Drupal\Tests\UnitTestCase;
 
 /**
  * Tests default role events.
@@ -34,7 +36,7 @@ class DefaultRoleEventTest extends UnitTestCase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  protected function setUp(): void {
     parent::setUp();
 
     $entity_type_manager = $this->prophesize(EntityTypeManagerInterface::class);

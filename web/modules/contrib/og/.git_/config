@@ -1,0 +1,14 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://git.drupalcode.org/project/og.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "7.x-2.x"]
+	remote = origin
+	merge = refs/heads/7.x-2.x
+[remote "composer"]
+	url = https://git.drupalcode.org/project/og.git
+	fetch = +refs/heads/*:refs/remotes/composer/*

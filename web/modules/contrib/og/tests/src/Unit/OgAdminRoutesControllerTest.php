@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Drupal\Tests\og\Unit;
 
 use Drupal\Component\EventDispatcher\ContainerAwareEventDispatcher;
@@ -8,10 +10,10 @@ use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Url;
+use Drupal\Tests\UnitTestCase;
 use Drupal\og\Controller\OgAdminRoutesController;
 use Drupal\og\Event\OgAdminRoutesEvent;
 use Drupal\og\Event\OgAdminRoutesEventInterface;
-use Drupal\Tests\UnitTestCase;
 use Prophecy\Argument;
 use Symfony\Component\Routing\Route;
 
@@ -103,7 +105,7 @@ class OgAdminRoutesControllerTest extends UnitTestCase {
   /**
    * {@inheritdoc}
    */
-  public function setUp() {
+  protected function setUp(): void {
 
     $this->accessManager = $this->prophesize(AccessManagerInterface::class);
     $this->routeMatch = $this->prophesize(RouteMatchInterface::class);

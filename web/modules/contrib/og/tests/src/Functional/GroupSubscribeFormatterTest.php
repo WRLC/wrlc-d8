@@ -1,13 +1,15 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Drupal\Tests\og\Functional;
 
+use Drupal\Tests\BrowserTestBase;
 use Drupal\node\Entity\Node;
 use Drupal\node\Entity\NodeType;
+use Drupal\og\Entity\OgRole;
 use Drupal\og\Og;
 use Drupal\og\OgRoleInterface;
-use Drupal\og\Entity\OgRole;
-use Drupal\Tests\BrowserTestBase;
 
 /**
  * Tests subscribe and un-subscribe formatter.
@@ -57,14 +59,17 @@ class GroupSubscribeFormatterTest extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
 
     // Create bundle.
     $this->groupBundle = mb_strtolower($this->randomMachineName());
 
     // Create a node type.
-    $node_type = NodeType::create(['type' => $this->groupBundle, 'name' => $this->groupBundle]);
+    $node_type = NodeType::create([
+      'type' => $this->groupBundle,
+      'name' => $this->groupBundle,
+    ]);
     $node_type->save();
 
     // Define the bundles as groups.
