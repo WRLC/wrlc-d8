@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "abb3fde80fada9cffa71a95985fa3345",
+    "content-hash": "f698010f6036cc6aedda41384cd9457b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4282,17 +4282,11 @@
         },
         {
             "name": "drupal/ds",
-            "version": "3.10.0",
+            "version": "dev-3.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ds.git",
-                "reference": "8.x-3.10"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ds-8.x-3.10.zip",
-                "reference": "8.x-3.10",
-                "shasum": "c35b87ad8e96a3a893af197678ce34dfeea82f99"
+                "reference": "bd1ae0d06e4ef5844b9705bfb2728bab3640a988"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -4303,12 +4297,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-3.10",
-                    "datestamp": "1614505794",
+                    "version": "8.x-3.x-dev",
+                    "datestamp": "1615842610",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -4348,7 +4345,8 @@
                 "source": "http://git.drupal.org/project/ds.git",
                 "issues": "https://www.drupal.org/project/issues/ds",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
-            }
+            },
+            "time": "2021-03-15T21:09:22+00:00"
         },
         {
             "name": "drupal/easy_breadcrumb",
@@ -7049,8 +7047,7 @@
                 "issues": "https://drupal.org/project/issues/og",
                 "irc": "irc://irc.freenode.org/drupal-og",
                 "slack": "https://drupal.slack.com/messages/CELR48EA0"
-            },
-            "time": "2021-01-19T09:53:12+00:00"
+            }
         },
         {
             "name": "drupal/panels",
@@ -16955,6 +16952,7 @@
         "drupal/captcha": 10,
         "drupal/content_access": 15,
         "drupal/context": 10,
+        "drupal/ds": 20,
         "drupal/empty_fields": 10,
         "drupal/faq": 15,
         "drupal/feeds": 15,
