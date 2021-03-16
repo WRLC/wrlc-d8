@@ -1,0 +1,53 @@
+diff --git a/web/modules/contrib/php/php.services.yml b/web/modules/contrib/php/php.services.yml
+deleted file mode 100644
+index fb998b529..000000000
+--- a/web/modules/contrib/php/php.services.yml
++++ /dev/null
+@@ -1,7 +0,0 @@
+-services:
+-  filter.uninstall_validator:
+-    class: Drupal\php\PhpUninstallValidator
+-    tags:
+-      - { name: module_install.uninstall_validator }
+-    arguments: ['@plugin.manager.filter', '@entity_type.manager', '@string_translation']
+-    lazy: false
+diff --git a/web/modules/contrib/php/src/PhpUninstallValidator.php b/web/modules/contrib/php/src/PhpUninstallValidator.php
+deleted file mode 100644
+index 87bbf3f17..000000000
+--- a/web/modules/contrib/php/src/PhpUninstallValidator.php
++++ /dev/null
+@@ -1,34 +0,0 @@
+-<?php
+-
+-namespace Drupal\php;
+-
+-use Drupal\filter\FilterUninstallValidator;
+-
+-/**
+- * Remove filter preventing Php uninstall.
+- */
+-class PhpUninstallValidator extends FilterUninstallValidator {
+-
+-  /**
+-   * {@inheritdoc}
+-   */
+-  public function validate($module) {
+-    $reasons = [];
+-    if ($module == 'php') {
+-      $this->removeFilterConfig();
+-    }
+-    return $reasons;
+-  }
+-
+-  /**
+-   * Deletes configuration.
+-   */
+-  protected function removeFilterConfig() {
+-    $php_filter = \Drupal::configFactory()->getEditable('filter.format.php_code');
+-    $php_filter->delete();
+-
+-    // Clear cache.
+-    drupal_flush_all_caches();
+-  }
+-
+-}
