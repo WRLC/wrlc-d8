@@ -38,7 +38,6 @@
         "drupal/ckeditor_drupalbreaks": "^2.0",
         "drupal/collapsiblock": "^3.0",
         "drupal/composer_deploy": "^1.6",
-        "drupal/console": "^1.0.2",
         "drupal/content_access": "^1.0@alpha",
         "drupal/context": "^4.0@beta",
         "drupal/core": "^8.7.0",
