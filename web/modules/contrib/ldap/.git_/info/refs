@@ -1,11 +1,11 @@
-5f22c239416ad77f5f9df283984e653c801af5c4	refs/heads/8.x-4.x
+601fc8a5a21b067a155f5a523ce237982f7a8993	refs/heads/8.x-4.x
 aa08b73888fc6a169d28bdc9e90b941a3aeb6dbb	refs/remotes/origin/6.x-1.x
 14add12c17227f46d4cbee51ac7ceb8d52749c12	refs/remotes/origin/7.x-1.x
 8710e79e19381461ac6e40b02139bdb9b3cd25e8	refs/remotes/origin/7.x-2.x
 4e2260b5e969966d75c0133a55e9cd107a3c8714	refs/remotes/origin/8.x-2.x
 e68a868daf7629b0b5a7d50b373e353254d7e9f5	refs/remotes/origin/8.x-3.x
-5f22c239416ad77f5f9df283984e653c801af5c4	refs/remotes/origin/8.x-4.x
-5f22c239416ad77f5f9df283984e653c801af5c4	refs/remotes/origin/HEAD
+601fc8a5a21b067a155f5a523ce237982f7a8993	refs/remotes/origin/8.x-4.x
+601fc8a5a21b067a155f5a523ce237982f7a8993	refs/remotes/origin/HEAD
 c849c32a8f6686863b51a51705087f4b12caed57	refs/remotes/origin/feeds
 0d9aa9a076009277abeaae8abbe597240e701865	refs/remotes/origin/test-ci
 c2e711fcbd0cc0978fde42de8ebebd1fb031747e	refs/tags/7.x-1.0-beta1
@@ -47,6 +47,7 @@ c658b5505974388b9b5178e64625fbce3cdf01f9	refs/tags/7.x-2.0-beta4
 9f8c7f242b3e4e6c4e0df5ebd91bb97a6935cc7b	refs/tags/7.x-2.3
 e043ebdd9fbc1d8c5c7604efc81042edc4d0b0a0	refs/tags/7.x-2.4
 47d0d17ce17acbc9d21de239b3ed680496a4eadc	refs/tags/7.x-2.5
+8710e79e19381461ac6e40b02139bdb9b3cd25e8	refs/tags/7.x-2.6
 b9b32951903f8d40aa2e2d09072331bb417776e2	refs/tags/8.x-3.0-alpha1
 8b70bafd3e67e253667cf43dd9c34868ffdc73c2	refs/tags/8.x-3.0-alpha2
 438a91dc711a56d6b124cd647c2e9288f8ce2d02	refs/tags/8.x-3.0-alpha3
@@ -62,3 +63,4 @@ b9b32951903f8d40aa2e2d09072331bb417776e2	refs/tags/8.x-3.0-unstable1
 a671a92d53ce636d3a9a342dc8385709f55b69e2	refs/tags/8.x-4.0-alpha2
 58b06324a8dcf67d29bd4abe1dd4650af3121e75	refs/tags/8.x-4.0-alpha3
 ae79284ddb5eab20942bc8549804953a1667467d	refs/tags/8.x-4.0-beta1
+e65979a5a6c4143d9506a48cac471e097a3fa148	refs/tags/8.x-4.0-beta2

@@ -34,7 +34,7 @@ trait LdapTransformationTraits {
     if (!empty($value) && strpos($value, ' ') === 0) {
       $value = '\\20' . substr($value, 1);
     }
-    if (!empty($value) && ' ' === $value[\strlen($value) - 1]) {
+    if (!empty($value) && $value[\strlen($value) - 1] === ' ') {
       $value = substr($value, 0, -1) . '\\20';
     }
 
@@ -161,11 +161,11 @@ trait LdapTransformationTraits {
    * @param string $dn
    *   DN to explode.
    *
-   * @return array|false
+   * @return array
    *   Exploded DN.
    */
-  public static function splitDnWithAttributes(string $dn) {
-    if (function_exists('ldap_explode_dn')) {
+  public static function splitDnWithAttributes(string $dn): array {
+    if (\function_exists('ldap_explode_dn')) {
       return ldap_explode_dn($dn, 0);
     }
 
