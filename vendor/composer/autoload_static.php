@@ -38,12 +38,11 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         '786bf90caabc9e09b6ad4cc5ca8f0e30' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/normalize_uploaded_files.legacy.php',
         '751a5a3f463e4be759be31748b61737c' => __DIR__ . '/..' . '/laminas/laminas-diactoros/src/functions/parse_cookie_header.legacy.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
-        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '952683d815ff0a7bf322b93c0be7e4e4' => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src/bootstrap.php',
+        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '3917c79c5052b270641b5a200963dbc2' => __DIR__ . '/..' . '/kint-php/kint/init.php',
-        '5a12a5271c58108e0aa33355e6ac54ea' => __DIR__ . '/..' . '/drupal/console-core/src/functions.php',
         'b067bc7112e384b61c701452d53a14a8' => __DIR__ . '/..' . '/mtdowling/jmespath.php/src/JmesPath.php',
         'e9b046393eb3376a21bcc1a30bd2fe64' => __DIR__ . '/..' . '/querypath/querypath/src/qp_functions.php',
         'ae3d48d62f3a5efa110fd4725eafae90' => __DIR__ . '/..' . '/kint-php/kint-js/init.php',
@@ -122,13 +121,11 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
-            'Symfony\\Component\\Config\\' => 25,
             'Symfony\\Component\\ClassLoader\\' => 30,
             'Symfony\\Component\\BrowserKit\\' => 29,
             'Symfony\\Cmf\\Component\\Routing\\' => 30,
             'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
             'Symfony\\Bridge\\PhpUnit\\' => 23,
-            'Stecman\\Component\\Symfony\\Console\\BashCompletion\\' => 49,
             'Solarium\\' => 9,
             'SelfUpdate\\' => 11,
             'Seld\\PharUtils\\' => 15,
@@ -173,8 +170,6 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         array (
             'JsonSchema\\' => 11,
             'JmesPath\\' => 9,
-            'JakubOnderka\\PhpConsoleHighlighter\\' => 35,
-            'JakubOnderka\\PhpConsoleColor\\' => 29,
         ),
         'I' => 
         array (
@@ -200,9 +195,6 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
             'Drush\\' => 6,
             'Drupal\\Driver\\' => 14,
             'Drupal\\Core\\' => 12,
-            'Drupal\\Console\\Core\\' => 20,
-            'Drupal\\Console\\Composer\\Plugin\\' => 31,
-            'Drupal\\Console\\' => 15,
             'Drupal\\Component\\' => 17,
             'Drupal\\' => 7,
             'DrupalPractice\\' => 15,
@@ -244,7 +236,6 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         'A' => 
         array (
             'Asm89\\Stack\\' => 12,
-            'Alchemy\\Zippy\\' => 14,
         ),
     );
 
@@ -419,10 +410,6 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
-        'Symfony\\Component\\Config\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/config',
-        ),
         'Symfony\\Component\\ClassLoader\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/class-loader',
@@ -442,10 +429,6 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         'Symfony\\Bridge\\PhpUnit\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/phpunit-bridge',
-        ),
-        'Stecman\\Component\\Symfony\\Console\\BashCompletion\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/stecman/symfony-console-completion/src',
         ),
         'Solarium\\' => 
         array (
@@ -552,14 +535,6 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         array (
             0 => __DIR__ . '/..' . '/mtdowling/jmespath.php/src',
         ),
-        'JakubOnderka\\PhpConsoleHighlighter\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src',
-        ),
-        'JakubOnderka\\PhpConsoleColor\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src',
-        ),
         'Interop\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
@@ -611,18 +586,6 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         'Drupal\\Core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/web/core/lib/Drupal/Core',
-        ),
-        'Drupal\\Console\\Core\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/drupal/console-core/src',
-        ),
-        'Drupal\\Console\\Composer\\Plugin\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/drupal/console-extend-plugin/src',
-        ),
-        'Drupal\\Console\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/drupal/console/src',
         ),
         'Drupal\\Component\\' => 
         array (
@@ -757,10 +720,6 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         array (
             0 => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack',
         ),
-        'Alchemy\\Zippy\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/alchemy/zippy/src',
-        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -819,17 +778,9 @@ class ComposerStaticInite38b51563a7dfa0b708caf3b19e9e7e6
         ),
         'D' => 
         array (
-            'Dflydev\\PlaceholderResolver' => 
-            array (
-                0 => __DIR__ . '/..' . '/dflydev/placeholder-resolver/src',
-            ),
             'Dflydev\\DotAccessData' => 
             array (
                 0 => __DIR__ . '/..' . '/dflydev/dot-access-data/src',
-            ),
-            'Dflydev\\DotAccessConfiguration' => 
-            array (
-                0 => __DIR__ . '/..' . '/dflydev/dot-access-configuration/src',
             ),
         ),
         'C' => 

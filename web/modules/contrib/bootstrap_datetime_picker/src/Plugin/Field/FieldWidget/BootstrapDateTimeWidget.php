@@ -31,6 +31,8 @@ class BootstrapDateTimeWidget extends DateTimeWidgetBase implements ContainerFac
    */
   public static function defaultSettings() {
     return [
+      'wrapper_class' => 'container',
+      'column_size_class' => 'col-sm-6',
       'hour_format' => '24h',
       'allow_times' => '15',
       'disable_days' => [],
@@ -44,6 +46,40 @@ class BootstrapDateTimeWidget extends DateTimeWidgetBase implements ContainerFac
   public function settingsForm(array $form, FormStateInterface $form_state) {
 
     $elements = [];
+
+    $elements['wrapper_class'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Wrapper Class'),
+      '#options' => [
+        'container' => $this->t('Container'),
+        'fluid-container' => $this->t('Fluid Container'),
+      ],
+      '#description' => $this->t('Select the wrapper class. Check https://getbootstrap.com/docs/4.3/layout/overview/'),
+      '#default_value' => $this->getSetting('wrapper_class'),
+    ];
+
+    $elements['column_size_class'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Column Size'),
+      '#description' => $this->t('Select the column size based on bootstrap\'s grid system. Check https://getbootstrap.com/docs/4.0/layout/grid/'),
+      '#options' => [
+        'col-sm-1' => 1,
+        'col-sm-2' => 2,
+        'col-sm-3' => 3,
+        'col-sm-4' => 4,
+        'col-sm-5' => 5,
+        'col-sm-6' => 6,
+        'col-sm-7' => 7,
+        'col-sm-8' => 8,
+        'col-sm-9' => 9,
+        'col-sm-10' => 10,
+        'col-sm-11' => 11,
+        'col-sm-12' => 12,
+      ],
+      '#default_value' => $this->getSetting('column_size_class'),
+    ];
+
+
     $elements['hour_format'] = [
       '#type' => 'select',
       '#title' => $this->t('Hours Format'),
@@ -101,6 +137,8 @@ class BootstrapDateTimeWidget extends DateTimeWidgetBase implements ContainerFac
   public function settingsSummary() {
     $summary = [];
 
+    $summary[] = t('Wrapper Class: @wrapper_class', ['@wrapper_class' => $this->getSetting('wrapper_class')]);
+    $summary[] = t('Column Size: @column_size_class', ['@column_size_class' => $this->getSetting('column_size_class')]);
     $summary[] = t('Hours Format: @hour_format', ['@hour_format' => $this->getSetting('hour_format')]);
     $summary[] = t('Minutes Granularity: @allow_times', ['@allow_times' => $this->getSetting('allow_times')]);
 
@@ -249,6 +287,8 @@ class BootstrapDateTimeWidget extends DateTimeWidgetBase implements ContainerFac
       $element['value']['#default_value'] = $date->format($format);
     }
 
+    $element['value']['#wrapper_class'] = $this->getSetting('wrapper_class');
+    $element['value']['#column_size_class'] = $this->getSetting('column_size_class');
     $element['value']['#hour_format'] = $this->getSetting('hour_format');
     $element['value']['#allow_times'] = $this->getSetting('allow_times');
     $element['value']['#disable_days'] = $this->getSetting('disable_days');

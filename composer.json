@@ -38,7 +38,6 @@
         "drupal/ckeditor_drupalbreaks": "^2.0",
         "drupal/collapsiblock": "^3.0",
         "drupal/composer_deploy": "^1.6",
-        "drupal/console": "^1.0.2",
         "drupal/content_access": "^1.0@alpha",
         "drupal/context": "^4.0@beta",
         "drupal/core": "^8.7.0",
@@ -77,6 +76,7 @@
         "drupal/menu_breadcrumb": "^1.11",
         "drupal/message": "^1.0",
         "drupal/message_notify": "^1.1",
+        "drupal/metatag": "^1.16",
         "drupal/migrate_tools": "^5.0",
         "drupal/migrate_upgrade": "^3.2",
         "drupal/nexus": "^1.4",
@@ -176,9 +176,6 @@
             "drupal/core": {
                 "Workaround for \"Call to a member function getLabel() after enabling layout_builder\"": "https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch",
                 "Views output field as a custom link options all ignored if path is routed": "https://www.drupal.org/files/issues/2018-03-27/2645954-26.views-output-field-as-link-for-routed-paths.patch"
-            },
-            "drupal/php": {
-                "php-filter-delete": "patches/php_filter_delete.patch"
             }
         },
         "drupal-scaffold": {

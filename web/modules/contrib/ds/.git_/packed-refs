@@ -7,8 +7,8 @@ a6e7722e69b5f103982ffd5289d5a7677bc62e54 refs/remotes/origin/6.x-3.x
 af6f50ff1cacbc6c2ba017e81aedf475e3625a7b refs/remotes/origin/8.x-1.x
 c47013a21bfe07f35d3f4336ee061f1ea0c1bdce refs/remotes/origin/8.x-2.x
 5dd376304415a0fa80ed2c3695e10f150d525b79 refs/remotes/origin/8.x-2.x-drush_ds_plugin
-bd1ae0d06e4ef5844b9705bfb2728bab3640a988 refs/remotes/origin/8.x-3.x
-6594500c7d4e4a0babc995b32e8fdc5b99e121fd refs/remotes/origin/8.x-4.x
+4e5689b0278c17d76cd4b43d3a3c4c59958cd463 refs/remotes/origin/8.x-3.x
+4d40dbfdab501d8966cbb025d6d568b9e67b329c refs/remotes/origin/8.x-4.x
 feb9e9dca2aefed4aecb3d2e6ca7d4838f4f7f26 refs/remotes/origin/ds_search
 a517c123ca44a97e50c35b3210ec759ad34eaba8 refs/remotes/origin/master
 13e8294787deb830a745851510180012d5c2acee refs/tags/6.x-1.0
@@ -103,6 +103,7 @@ d2b9dfe81d5393ed8fd6d45c25157d341043d87a refs/tags/8.x-3.0-beta3
 35de455d684184920c535d98cb7f367ee97e2ac0 refs/tags/8.x-3.1
 279de1bf279694d2597db3a6ef131cc93c3c9d8a refs/tags/8.x-3.10
 bd1ae0d06e4ef5844b9705bfb2728bab3640a988 refs/tags/8.x-3.11
+4e5689b0278c17d76cd4b43d3a3c4c59958cd463 refs/tags/8.x-3.12
 3139e4f64cf2959d9d58b13f70ab96a79a6279a1 refs/tags/8.x-3.2
 3c7464dfc61a08629f8947eb21ef93ed0af91f5d refs/tags/8.x-3.3
 1db7f184db2f973fe6f153fba6a4ddc046d65116 refs/tags/8.x-3.4

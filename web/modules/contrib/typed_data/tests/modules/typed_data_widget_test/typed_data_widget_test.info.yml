@@ -4,4 +4,5 @@ package: Testing
 description: 'Implements example forms using typed data widgets.'
 dependencies:
   - typed_data:typed_data
+
 configure: typed_data_widget_test.examples
