@@ -3165,30 +3165,27 @@
     },
     {
         "name": "drupal/better_search",
-        "version": "1.4.0",
-        "version_normalized": "1.4.0.0",
+        "version": "1.5.0",
+        "version_normalized": "1.5.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/better_search.git",
-            "reference": "8.x-1.4"
+            "reference": "8.x-1.5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/better_search-8.x-1.4.zip",
-            "reference": "8.x-1.4",
-            "shasum": "ceef7d8c9bff6516a45aeafdaf28af2c7fb8fc50"
+            "url": "https://ftp.drupal.org/files/projects/better_search-8.x-1.5.zip",
+            "reference": "8.x-1.5",
+            "shasum": "4bb389ce6329b6c517cae851baf1cee6a7693eef"
         },
         "require": {
-            "drupal/core": "~8.0"
+            "drupal/core": "^8 || ^9"
         },
         "type": "drupal-module",
         "extra": {
-            "branch-alias": {
-                "dev-1.x": "1.x-dev"
-            },
             "drupal": {
-                "version": "8.x-1.4",
-                "datestamp": "1558019886",
+                "version": "8.x-1.5",
+                "datestamp": "1575117481",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -3386,18 +3383,18 @@
     },
     {
         "name": "drupal/bootstrap_datetime_picker",
-        "version": "1.4.0",
-        "version_normalized": "1.4.0.0",
+        "version": "1.5.0",
+        "version_normalized": "1.5.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/bootstrap_datetime_picker.git",
-            "reference": "8.x-1.4"
+            "reference": "8.x-1.5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/bootstrap_datetime_picker-8.x-1.4.zip",
-            "reference": "8.x-1.4",
-            "shasum": "2c5a93f848a5afe365733f1ae031a806f6a25105"
+            "url": "https://ftp.drupal.org/files/projects/bootstrap_datetime_picker-8.x-1.5.zip",
+            "reference": "8.x-1.5",
+            "shasum": "ee3a0f5bfc914d7858e343e571970a5eba35a1c6"
         },
         "require": {
             "drupal/core": "~8.0"
@@ -3405,8 +3402,8 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "8.x-1.4",
-                "datestamp": "1600068166",
+                "version": "8.x-1.5",
+                "datestamp": "1614841569",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -3419,6 +3416,10 @@
             "GPL-2.0-or-later"
         ],
         "authors": [
+            {
+                "name": "B-Prod",
+                "homepage": "https://www.drupal.org/user/407852"
+            },
             {
                 "name": "Prashant.c",
                 "homepage": "https://www.drupal.org/user/1936756"
