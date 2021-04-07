@@ -176,9 +176,6 @@
             "drupal/core": {
                 "Workaround for \"Call to a member function getLabel() after enabling layout_builder\"": "https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch",
                 "Views output field as a custom link options all ignored if path is routed": "https://www.drupal.org/files/issues/2018-03-27/2645954-26.views-output-field-as-link-for-routed-paths.patch"
-            },
-            "drupal/php": {
-                "php-filter-delete": "patches/php_filter_delete.patch"
             }
         },
         "drupal-scaffold": {
