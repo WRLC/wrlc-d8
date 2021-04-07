@@ -30,7 +30,6 @@ class IframeDefaultFormatter extends FormatterBase {
       'width' => '',
       'height' => '',
       'class' => '',
-      'expose_class' => '',
       'frameborder' => '0',
       'scrolling' => '',
       'transparency' => '0',
@@ -152,21 +151,26 @@ class IframeDefaultFormatter extends FormatterBase {
       }
     }
 
-    $options_link = []; $options_link['attributes'] = [];
+    $options_link = [];
+    $options_link['attributes'] = [];
     $options_link['attributes']['title'] = $options['title'];
-    $srcuri = Url::fromUri($path, $options_link);
-    $src = $srcuri->toString();
-    $options['src'] = $src;
-    $drupal_attributes = new Attribute($options);
+    try {
+      $srcuri = Url::fromUri($path, $options_link);
+      $src = $srcuri->toString();
+      $options['src'] = $src;
+      $drupal_attributes = new Attribute($options);
 
-    $render_array = [
-      '#theme' => 'iframe',
-      '#src' => $src,
-      '#attributes' => $drupal_attributes,
-      '#text' => (isset($options['html']) && $options['html'] ? $text : new HtmlEscapedText($text)),
-      '#style' => 'iframe#' . $htmlid . ' {' . $style . '}',
-    ];
-    return $render_array;
+      $render_array = [
+        '#theme' => 'iframe',
+        '#src' => $src,
+        '#attributes' => $drupal_attributes,
+        '#text' => (isset($options['html']) && $options['html'] ? $text : new HtmlEscapedText($text)),
+        '#style' => 'iframe#' . $htmlid . ' {' . $style . '}',
+      ];
+      return $render_array;
+    } catch (\Exception $excep) {
+      watchdog_exception(__METHOD__, $excep);
+      return [];
+    }
   }
-
 }
