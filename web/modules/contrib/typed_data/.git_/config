@@ -3,7 +3,6 @@
 	filemode = true
 	bare = false
 	logallrefupdates = true
-	ignorecase = true
 [remote "origin"]
 	url = https://git.drupalcode.org/project/typed_data.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
