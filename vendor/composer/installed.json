@@ -5318,30 +5318,30 @@
     },
     {
         "name": "drupal/faq",
-        "version": "1.0.0-alpha1",
-        "version_normalized": "1.0.0.0-alpha1",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/faq.git",
-            "reference": "8.x-1.0-alpha1"
+            "reference": "8.x-1.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/faq-8.x-1.0-alpha1.zip",
-            "reference": "8.x-1.0-alpha1",
-            "shasum": "ac2d0b2384d863c720f09ddabb14ddf5b828ef99"
+            "url": "https://ftp.drupal.org/files/projects/faq-8.x-1.1.zip",
+            "reference": "8.x-1.1",
+            "shasum": "1ccfbc193543995637c7707bb27435d47c92f095"
         },
         "require": {
-            "drupal/core": "^8"
+            "drupal/core": "^8 || ^9"
         },
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "8.x-1.0-alpha1",
-                "datestamp": "1555473485",
+                "version": "8.x-1.1",
+                "datestamp": "1620028167",
                 "security-coverage": {
-                    "status": "not-covered",
-                    "message": "Alpha releases are not covered by Drupal security advisories."
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
                 }
             }
         },
@@ -5351,6 +5351,10 @@
             "GPL-2.0-or-later"
         ],
         "authors": [
+            {
+                "name": "Mohammed J. Razem",
+                "homepage": "https://www.drupal.org/user/255384"
+            },
             {
                 "name": "vijaycs85",
                 "homepage": "https://www.drupal.org/user/93488"
