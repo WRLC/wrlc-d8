@@ -54,7 +54,7 @@
         "drupal/eva": "^2.1",
         "drupal/expandable_search": "^1.1",
         "drupal/facets": "^1.5",
-        "drupal/faq": "^1.0@alpha",
+        "drupal/faq": "^1.0",
         "drupal/feeds": "^3.0@alpha",
         "drupal/feeds_ex": "^1.0@alpha",
         "drupal/feeds_tamper": "^2.0@beta",
