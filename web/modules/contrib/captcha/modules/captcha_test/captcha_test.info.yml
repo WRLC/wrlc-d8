@@ -1,6 +1,6 @@
-name: captcha long form id test module
+name: 'Captcha Test'
 type: module
-description: 'Test module for testing captchas added to forms with ids longer than 64 characters'
+description: 'Provides captcha types for tests.'
 package: Testing
 core_version_requirement: ^8.8 || ^9
 hidden: true
