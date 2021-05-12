@@ -63,3 +63,4 @@ $sites['libraries.wrlc8.lndo.site'] = 'www.libraries.wrlc.org';
 $sites['beta.wrlc.org.libraries'] = 'www.libraries.wrlc.org';
 $sites['skills.wrlc.org'] = 'skills.wrlc.org';
 $sites['skills.wrlc8.lndo.site'] = 'skills.wrlc.org';
+$sites['expertise.wrlc.org'] = 'skills.wrlc.org';
