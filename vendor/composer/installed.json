@@ -9116,6 +9116,80 @@
         }
     },
     {
+        "name": "drupal/views_delimited_list",
+        "version": "2.0.0-alpha1",
+        "version_normalized": "2.0.0.0-alpha1",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/views_delimited_list.git",
+            "reference": "2.0.0-alpha1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/views_delimited_list-2.0.0-alpha1.zip",
+            "reference": "2.0.0-alpha1",
+            "shasum": "53194a7d21cff1baa8be44478c6683241c664284"
+        },
+        "require": {
+            "drupal/core": "^8.9 || ^9"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "drupal": {
+                "version": "2.0.0-alpha1",
+                "datestamp": "1620756882",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Project has not opted into security advisory coverage!"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Seonaid",
+                "homepage": "https://www.drupal.org/user/3642013"
+            },
+            {
+                "name": "colan",
+                "homepage": "https://www.drupal.org/user/58704"
+            },
+            {
+                "name": "ergonlogic",
+                "homepage": "https://www.drupal.org/user/368613"
+            },
+            {
+                "name": "llamech",
+                "homepage": "https://www.drupal.org/user/3607172"
+            },
+            {
+                "name": "mparker17",
+                "homepage": "https://www.drupal.org/user/536298"
+            },
+            {
+                "name": "spiderman",
+                "homepage": "https://www.drupal.org/user/1631"
+            },
+            {
+                "name": "szhu",
+                "homepage": "https://www.drupal.org/user/3525295"
+            },
+            {
+                "name": "zhangtaihao",
+                "homepage": "https://www.drupal.org/user/858312"
+            }
+        ],
+        "description": "Displays the results of a view as a delimited text list.",
+        "homepage": "https://www.drupal.org/project/views_delimited_list",
+        "support": {
+            "source": "https://git.drupalcode.org/project/views_delimited_list"
+        }
+    },
+    {
         "name": "drupal/views_entity_form_field",
         "version": "1.0.0-beta9",
         "version_normalized": "1.0.0.0-beta9",
