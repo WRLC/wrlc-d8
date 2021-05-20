@@ -103,6 +103,7 @@
         "drupal/view_profiles_perms": "^2.0",
         "drupal/views_accordion": "^2.0",
         "drupal/views_bulk_operations": "^3.8",
+        "drupal/views_delimited_list": "^2.0@alpha",
         "drupal/views_entity_form_field": "^1.0@beta",
         "drupal/webform": "^5.6",
         "drush/drush": "^9.0.0",
