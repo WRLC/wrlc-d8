@@ -43,22 +43,22 @@ function template_preprocess_calendar_month(&$vars) {
           $month_rows[$weekno][$day]['data'] = $cell;
           continue;
         }
-        $data = $cell['datebox'];
+        $data = [$cell['datebox']];
         if ($cell['empty']) {
-          $data .= $cell['empty'];
+          $data[] = $cell['empty'];
         }
         else {
-          $data .= implode($cell['all_day']);
+          $data[] = $cell['all_day'];
           foreach ($cell['items'] as $hour => $item) {
-            $data .= implode($item);
+            $data[] = $item;
           }
-          $data .= $cell['link'];
+          $data[] = $cell['link'];
         }
         if ($view->styleInfo->isMini()) {
-          $month_rows[$weekno][$day]['data'] = $data;
+          $month_rows[$weekno][$day]['data'] = \Drupal::service('renderer')->render($data);
         }
         else {
-          $month_rows[$weekno][$day]['data'] = '<div class="inner">' . $data . '</div>';
+          $month_rows[$weekno][$day]['data'] = '<div class="inner">' . \Drupal::service('renderer')->render($data) . '</div>';
         }
       }
     }
@@ -70,6 +70,7 @@ function template_preprocess_calendar_month(&$vars) {
   $vars['display_type'] = $view->dateInfo->getGranularity();
   $vars['min_date_formatted'] = $view->dateInfo->getMinDate()->format(DateTimeItemInterface::DATE_STORAGE_FORMAT);
   $vars['max_date_formatted'] = $view->dateInfo->getMaxDate()->format(DateTimeItemInterface::DATE_STORAGE_FORMAT);
+  $vars['date'] = $view->dateInfo->getMinDate()->format('Y-m');
 }
 
 /**
@@ -87,8 +88,6 @@ function template_preprocess_calendar_mini(&$vars) {
   $full_date_arg = str_replace('-', '', $date);
   $view->override_path = CalendarHelper::getURLForGranularity($view, 'month', [$full_date_arg]);
 
-  $view->date_info->show_title = !empty($view->date_info->show_title) ? $view->date_info->show_title : FALSE;
-  $vars['show_title'] = $view->date_info->show_title;
   $vars['view'] = $view;
 }
 
@@ -114,9 +113,9 @@ function template_preprocess_calendar_year(&$vars) {
     $view->styleInfo->setMini(TRUE);
     $view->styleInfo->setShowNavigation(FALSE);
     $view->styleInfo->setShowTitle(TRUE);
-    // TODO implement
+    // @todo implement
     // $view->dateInfo->url = date_pager_url($view, NULL, \Drupal\Component\Datetime\DateTimePlus::datePad($year, 4) . '-' . \Drupal\Component\Datetime\DateTimePlus::datePad($month));
-    // TODO handle timezone.
+    // @todo handle timezone.
     $view->dateInfo->setMinDate(new DateTime($view->dateInfo->getMinYear() . '-' . DateTimePlus::datePad($month) . '-01 00:00:00', new DateTimeZone('europe/brussels')));
     $maxDate = clone($view->dateInfo->getMinDate());
     $maxDate->modify('+1 month');
@@ -406,7 +405,7 @@ function template_preprocess_calendar_week(&$vars) {
     for ($i = 0; $i < 7; $i++) {
       if (count($rows['singleday_buckets'][$i]) > 0) {
         $time_slot = reset($rows['singleday_buckets'][$i]);
-        // TODO item should not be empty at this point, find out why empty days
+        // @todo item should not be empty at this point, find out why empty days
         // get to this point, fix that, and remove this hack.
         if (isset($time_slot[0]['item'])) {
           $time = date_format($time_slot[0]['item']->getStartDate(), 'H:i:s');
@@ -445,12 +444,12 @@ function template_preprocess_calendar_week(&$vars) {
         $start_time = array_shift($start_times);
         $next_start_time = count($start_times) ? array_shift($start_times) : $end_start_time;
         foreach ($row as &$item) {
-          // Todo find out how empty days should be handled properly.
-          if ($item['entry']['#theme'] === 'calendar_empty_day') {
+          // @todo find out how empty days should be handled properly.
+          if (isset($item['entry']) && ($item['entry']['#theme'] === 'calendar_empty_day')) {
             continue;
           }
-          // Todo find out what to do when the item is no event.
-          if (!is_object($item['item'])) {
+          // @todo find out what to do when the item is no event.
+          if (!isset($item['item']) || !is_object($item['item'])) {
             continue;
           }
           $time = date_format($item['item']->getStartDate(), 'H:i:s');
@@ -661,14 +660,14 @@ function template_preprocess_calendar_month_multiple_entity(&$vars) {
  * $vars['item'] = The source data for this item.
  * $vars['view'] = The view that this item is displayed on.
  *
- * @TODO We need some options about how to combine rendered fields.
+ * @todo We need some options about how to combine rendered fields.
  * Fields rendered in multiday containers need to be inline.
  */
 
 /**
  * Format the time row headings in the week and day view.
  *
- * TODO find out if this should be helper function instead of a preprocessor.
+ * @todo find out if this should be helper function instead of a preprocessor.
  */
 function template_preprocess_calendar_time_row_heading($vars) {
   $start_time = $vars['start_time'];
@@ -804,7 +803,7 @@ function template_preprocess_calendar_stripe_legend(array &$vars) {
  *   Returns an array with the max depth of the branch and whether an overlap
  *   occurred.
  */
-function _calc_indents(array &$overlapped_items, $start, $end, array &$item, $depth = 0) {
+function _calc_indents(array &$overlapped_items, $start, $end, &$item, $depth = 0) {
 
   // Are there any items at this depth?
   if (!empty($overlapped_items)) {

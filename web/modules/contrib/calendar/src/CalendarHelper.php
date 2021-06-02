@@ -2,8 +2,6 @@
 
 namespace Drupal\calendar;
 
-use Datetime;
-use DateTimeZone;
 use Drupal\Core\Datetime\DateHelper;
 use Drupal\Core\Url;
 use Drupal\views\Plugin\views\argument\ArgumentPluginBase;
@@ -100,9 +98,9 @@ class CalendarHelper extends DateHelper {
   /**
    * Computes difference between two days using a given measure.
    *
-   * @param DateTime $start_date
+   * @param \DateTime $start_date
    *   The start date.
-   * @param DateTime $stop_date
+   * @param \DateTime $stop_date
    *   The stop date.
    * @param string $measure
    *   (optional) A granularity date part. Defaults to 'seconds'.
@@ -113,7 +111,7 @@ class CalendarHelper extends DateHelper {
    * @return int
    *   The difference between the 2 dates in the given measure.
    */
-  public static function difference(DateTime $start_date, DateTime $stop_date, $measure = 'seconds', $absolute = TRUE) {
+  public static function difference(\DateTime $start_date, \DateTime $stop_date, $measure = 'seconds', $absolute = TRUE) {
     // Create cloned objects or original dates will be impacted by the
     // date_modify() operations done in this code.
     $date1 = clone($start_date);
@@ -175,7 +173,7 @@ class CalendarHelper extends DateHelper {
             $item_diff = 0 - $item1;
             for ($i = 1; $i < abs($year_diff); $i++) {
               $date1->modify('-1 year');
-              // @TODO self::daysInYear() throws a warning when used with a
+              // @todo self::daysInYear() throws a warning when used with a
               // \DateTime object. See https://www.drupal.org/node/2596043
               // $item_diff -= self::daysInYear($date1);
               $item_diff -= 365;
@@ -184,7 +182,7 @@ class CalendarHelper extends DateHelper {
             return $item_diff - (365 - $item2);
           }
           else {
-            // @TODO self::daysInYear() throws a warning when used with a
+            // @todo self::daysInYear() throws a warning when used with a
             // \DateTime object. See https://www.drupal.org/node/2596043
             // $item_diff = self::daysInYear($date1) - $item1;
             $item_diff = 365 - $item1;
@@ -228,10 +226,10 @@ class CalendarHelper extends DateHelper {
    */
   public static function isoWeeksInYear($date = NULL) {
     if (empty($date)) {
-      $date = new DateTime();
+      $date = new \DateTime();
     }
     elseif (!is_object($date)) {
-      $date = new DateTime($date);
+      $date = new \DateTime($date);
     }
 
     if (is_object($date)) {
@@ -357,10 +355,10 @@ class CalendarHelper extends DateHelper {
     $date = substr($date, 0, 10);
     $parts = explode('-', $date);
 
-    $timezone = new DateTimeZone('UTC');
-    $date = new DateTime($date . ' 12:00:00', $timezone);
+    $timezone = new \DateTimeZone('UTC');
+    $date = new \DateTime($date . ' 12:00:00', $timezone);
 
-    $year_date = new DateTime($parts[0] . '-01-01 12:00:00', $timezone);
+    $year_date = new \DateTime($parts[0] . '-01-01 12:00:00', $timezone);
     $week = intval($date->format('W'));
     $year_week = intval(date_format($year_date, 'W'));
     $date_year = intval($date->format('o'));
@@ -587,7 +585,7 @@ class CalendarHelper extends DateHelper {
   private static function viewsFetchFields($base, $type, $grouping = FALSE) {
     static $fields = [];
     if (empty($fields)) {
-      $data = Views::viewsData()->get();
+      $data = Views::viewsData()->getAll();
       $start = microtime(TRUE);
       // This constructs this ginormous multi dimensional array to
       // collect the important data about fields. In the end,
@@ -905,7 +903,7 @@ class CalendarHelper extends DateHelper {
       // Check if route exists. $router->getRoutesByName will throw error if no match.
       $routes = $router->getRoutesByNames([$route_name]);
       if ($routes) {
-        return Url::fromRoute($route_name, static::getViewRouteParameters($arguments));
+        return Url::fromRoute($route_name, static::getViewRouteParameters($arguments, $view));
       }
     }
     if ($display_id = static::getDisplayForGranularity($view, $granularity)) {
@@ -929,8 +927,8 @@ class CalendarHelper extends DateHelper {
    *   Returns url.
    */
   public static function getViewsURL(ViewExecutable $view, $display_id, array $args = []) {
+    $route_parameters = static::getViewRouteParameters($args, $view);
     $route_name = static::getDisplayRouteName($view->id(), $display_id);
-    $route_parameters = static::getViewRouteParameters($args, $route_name);
     return Url::fromRoute($route_name, $route_parameters);
   }
 
@@ -950,21 +948,35 @@ class CalendarHelper extends DateHelper {
   }
 
   /**
-   * @param $args
-   *
-   * @param $route_name
+   * @param array $args
+   *   The provided arguments.
+   * @param \Drupal\views\ViewExecutable $view
+   *   The view.
    *
    * @return array
    */
-  public static function getViewRouteParameters($args, $route_name) {
-    $provider = \Drupal::service('router.route_provider');
-    $route = $provider->getRouteByName($route_name);
-    $map = $route->getOption('_view_argument_map');
+  public static function getViewRouteParameters($args, ViewExecutable $view) {
     $route_parameters = [];
-    $arg_position = 0;
-    foreach ($args as $arg) {
-      $route_parameters[$map['arg_' . $arg_position]] = $arg;
-      $arg_position++;
+    $path = $view->getPath();
+    $views_arguments = $view->args;
+    $bits = explode('/', $path);
+    $arg_counter = 0;
+    foreach ($bits as $pos => $bit) {
+      if ($bit == '%') {
+        // Generate the name of the parameter using the key of the argument
+        // handler.
+        $arg_id = 'arg_' . $arg_counter++;
+        $route_parameters[$arg_id] = array_shift($views_arguments);
+      }
+      elseif (strpos($bit, '%') === 0) {
+        // Use the name defined in the path.
+        $parameter_name = substr($bit, 1);
+        $route_parameters[$parameter_name] = array_shift($views_arguments);
+        $arg_counter++;
+      }
+    }
+    for ($i = $arg_counter; $i < $i + count($args); $i++) {
+      $route_parameters['arg_' . $i] = array_shift($args);
     }
     return $route_parameters;
   }

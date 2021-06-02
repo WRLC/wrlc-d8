@@ -2581,18 +2581,18 @@
     },
     {
         "name": "drupal/admin_toolbar",
-        "version": "3.0.0",
-        "version_normalized": "3.0.0.0",
+        "version": "3.0.1",
+        "version_normalized": "3.0.1.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-            "reference": "3.0.0"
+            "reference": "3.0.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.0.0.zip",
-            "reference": "3.0.0",
-            "shasum": "204f7a0e8b62a8a54256142cf38ca139739fb65c"
+            "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.0.1.zip",
+            "reference": "3.0.1",
+            "shasum": "e25ca22db1317174a7fba4734c0412293b573f43"
         },
         "require": {
             "drupal/core": "^8.8.0 || ^9.0"
@@ -2603,8 +2603,8 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "3.0.0",
-                "datestamp": "1611311186",
+                "version": "3.0.1",
+                "datestamp": "1622644077",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -3288,18 +3288,18 @@
     },
     {
         "name": "drupal/calendar",
-        "version": "1.0.0-alpha3",
-        "version_normalized": "1.0.0.0-alpha3",
+        "version": "1.0.0-alpha4",
+        "version_normalized": "1.0.0.0-alpha4",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/calendar.git",
-            "reference": "8.x-1.0-alpha3"
+            "reference": "8.x-1.0-alpha4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/calendar-8.x-1.0-alpha3.zip",
-            "reference": "8.x-1.0-alpha3",
-            "shasum": "ddbf8841e7433134031993381cf34bce8a63cdac"
+            "url": "https://ftp.drupal.org/files/projects/calendar-8.x-1.0-alpha4.zip",
+            "reference": "8.x-1.0-alpha4",
+            "shasum": "3c829439260591c4fbcc2a55737a7c9cb4908b05"
         },
         "require": {
             "drupal/calendar_datetime": "*",
@@ -3309,8 +3309,8 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "8.x-1.0-alpha3",
-                "datestamp": "1599764833",
+                "version": "8.x-1.0-alpha4",
+                "datestamp": "1621960842",
                 "security-coverage": {
                     "status": "not-covered",
                     "message": "Alpha releases are not covered by Drupal security advisories."
@@ -3342,6 +3342,10 @@
                 "homepage": "https://www.drupal.org/user/160302"
             },
             {
+                "name": "paulocs",
+                "homepage": "https://www.drupal.org/user/3640109"
+            },
+            {
                 "name": "solide-echt",
                 "homepage": "https://www.drupal.org/user/46176"
             }
@@ -3355,8 +3359,8 @@
     },
     {
         "name": "drupal/calendar_datetime",
-        "version": "1.0.0-alpha3",
-        "version_normalized": "1.0.0.0-alpha3",
+        "version": "1.0.0-alpha4",
+        "version_normalized": "1.0.0.0-alpha4",
         "require": {
             "drupal/calendar": "self.version",
             "drupal/core": "^8 || ^9"
@@ -3364,8 +3368,8 @@
         "type": "metapackage",
         "extra": {
             "drupal": {
-                "version": "8.x-1.0-alpha3",
-                "datestamp": "1599764833",
+                "version": "8.x-1.0-alpha4",
+                "datestamp": "1621960842",
                 "security-coverage": {
                     "status": "not-covered",
                     "message": "Alpha releases are not covered by Drupal security advisories."
@@ -3392,6 +3396,10 @@
             {
                 "name": "joelpittet",
                 "homepage": "https://www.drupal.org/user/160302"
+            },
+            {
+                "name": "paulocs",
+                "homepage": "https://www.drupal.org/user/3640109"
             },
             {
                 "name": "solide-echt",
@@ -4427,18 +4435,18 @@
     },
     {
         "name": "drupal/draggableviews",
-        "version": "2.0.0",
-        "version_normalized": "2.0.0.0",
+        "version": "2.0.1",
+        "version_normalized": "2.0.1.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/draggableviews.git",
-            "reference": "2.0.0"
+            "reference": "2.0.1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/draggableviews-2.0.0.zip",
-            "reference": "2.0.0",
-            "shasum": "3796f0e478c8119dcd10e1d114c5fcf4492b8a1c"
+            "url": "https://ftp.drupal.org/files/projects/draggableviews-2.0.1.zip",
+            "reference": "2.0.1",
+            "shasum": "e13a6c625fb8ca370a32b76dfd9f8bea9b2e27e9"
         },
         "require": {
             "drupal/core": "^8 || ^9"
@@ -4449,8 +4457,8 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "2.0.0",
-                "datestamp": "1592329896",
+                "version": "2.0.1",
+                "datestamp": "1620931210",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -4460,7 +4468,7 @@
         "installation-source": "dist",
         "notification-url": "https://packages.drupal.org/8/downloads",
         "license": [
-            "GPL-2.0+"
+            "GPL-2.0-or-later"
         ],
         "authors": [
             {
@@ -6746,18 +6754,18 @@
     },
     {
         "name": "drupal/menu_breadcrumb",
-        "version": "1.15.0",
-        "version_normalized": "1.15.0.0",
+        "version": "1.16.0",
+        "version_normalized": "1.16.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/menu_breadcrumb.git",
-            "reference": "8.x-1.15"
+            "reference": "8.x-1.16"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/menu_breadcrumb-8.x-1.15.zip",
-            "reference": "8.x-1.15",
-            "shasum": "ff0a7bb7131273a55e8d75027c471ad905f6896f"
+            "url": "https://ftp.drupal.org/files/projects/menu_breadcrumb-8.x-1.16.zip",
+            "reference": "8.x-1.16",
+            "shasum": "e7faa28edcd703c5512b480117d35718d0dd7441"
         },
         "require": {
             "drupal/core": "^8 || ^9"
@@ -6765,8 +6773,8 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "8.x-1.15",
-                "datestamp": "1620207284",
+                "version": "8.x-1.16",
+                "datestamp": "1620238102",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
