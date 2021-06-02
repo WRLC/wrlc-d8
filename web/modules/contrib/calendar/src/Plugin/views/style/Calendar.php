@@ -206,6 +206,7 @@ class Calendar extends StylePluginBase {
       'default' => [
         'day' => '',
         'week' => '',
+        'month' => '',
       ],
     ];
 
@@ -461,6 +462,13 @@ class Calendar extends StylePluginBase {
       '#description' => $this->t("Optionally select a View display to use for Week links."),
       '#options' => ['' => $this->t('Default display')] + $this->viewOptionsForGranularity('week'),
     ];
+    $form['granularity_links']['month'] = [
+      '#title' => $this->t('Month link displays'),
+      '#type' => 'select',
+      '#default_value' => $this->options['granularity_links']['month'],
+      '#description' => $this->t("Optionally select a View display to use for Month links."),
+      '#options' => ['' => $this->t('Default display')] + $this->viewOptionsForGranularity('month'),
+    ];
   }
 
   /**
@@ -573,14 +581,14 @@ class Calendar extends StylePluginBase {
     }
     $this->styleInfo->setCustomGroupByField($this->options['groupby_field']);
 
-    // TODO make this an option setting.
+    // @todo make this an option setting.
     $this->styleInfo->setShowEmptyTimes(!empty($this->options['groupby_times_custom']) ? TRUE : FALSE);
 
     // Set up parameters for the current view that can be used by row plugin.
     $display_timezone = date_timezone_get($this->dateInfo->getMinDate());
     $this->dateInfo->setTimezone($display_timezone);
 
-    // @TODO min and max date timezone info shouldn't be stored separately.
+    // @todo min and max date timezone info shouldn't be stored separately.
     $date = clone($this->dateInfo->getMinDate());
     date_timezone_set($date, $display_timezone);
     // $this->dateInfo->min_zone_string = date_format($date, DATETIME_DATE_STORAGE_FORMAT);
@@ -735,7 +743,7 @@ class Calendar extends StylePluginBase {
         $day_week_day = $this->currentDay->format('w');
         $this->currentDay->modify('-' . ((7 + $day_week_day - $first_day) % 7) . ' days');
 
-        for ($week_day = 0; $week_day < 7; $week_day++) {
+        foreach ($week_days as $week_day => $day_object) {
 
           $current_day_date = $this->currentDay->format(DateTimeItemInterface::DATE_STORAGE_FORMAT);
           $item = NULL;
@@ -758,7 +766,7 @@ class Calendar extends StylePluginBase {
               'class' => 'date-box',
               'date' => $current_day_date,
               'id' => $this->view->id() . '-' . $current_day_date . '-date-box',
-              'header_id' => $week_days[$week_day],
+              'header_id' => $day_object->render(),
               'day_of_month' => $this->currentDay->format('j'),
             ];
             $item['class'] .= ($current_day_date == $today && $in_month ? ' today' : '') .
@@ -862,7 +870,7 @@ class Calendar extends StylePluginBase {
               ];
 
               // Hack for ie to help it properly space single day rows.
-              // todo do we still need this?
+              // @todo do we still need this?
               if ($rowspan > 1 && $in_month && $single_day_count > 0) {
                 $max_multirow_count = max($max_multirow_count, $single_day_count);
               }
@@ -979,20 +987,24 @@ class Calendar extends StylePluginBase {
    *   buckets and the total row count.
    */
   public function calendarBuildWeek($check_month = FALSE) {
+    $week_days = CalendarHelper::weekDays(TRUE);
+    $week_days = CalendarHelper::weekDaysOrdered($week_days);
     $current_day_date = $this->currentDay->format(DateTimeItemInterface::DATE_STORAGE_FORMAT);
     $month = $this->currentDay->format('n');
     $first_day = \Drupal::config('system.date')->get('first_day');
 
     // Set up buckets.
     $total_rows = 0;
-    $multiday_buckets = [[], [], [], [], [], [], []];
-    $singleday_buckets = [[], [], [], [], [], [], []];
 
     // Move backwards to the first day of the week.
     $day_week_day = $this->currentDay->format('w');
     $this->currentDay->modify('-' . ((7 + $day_week_day - $first_day) % 7) . ' days');
 
-    for ($i = 0; $i < 7; $i++) {
+    foreach ($week_days as $i => $day_object) {
+      // Create each bucket on the fly so it goes with the correct key order.
+      $multiday_buckets[$i] = [];
+      $singleday_buckets[$i] = [];
+
       if ($check_month && ($current_day_date < $this->dateInfo->getMinDate()
         ->format(DateTimeItemInterface::DATE_STORAGE_FORMAT) || $current_day_date > $this->dateInfo->getMaxDate()
         ->format(DateTimeItemInterface::DATE_STORAGE_FORMAT) || $this->currentDay->format('n') != $month)) {
@@ -1251,7 +1263,12 @@ class Calendar extends StylePluginBase {
                   // this week.
                   for ($i = 0; $i < $bucket_cnt; $i++) {
                     $bucket = &$multiday_buckets[$i + $wday + 1];
-                    $bucket_row_count = count($bucket);
+                    if (!empty($bucket)) {
+                      $bucket_row_count = count($bucket);
+                    }
+                    else {
+                      $bucket_row_count = 0;
+                    }
                     $row_diff = $bucket_index - $bucket_row_count;
 
                     // Fill up the preceding buckets - these are available for
@@ -1343,7 +1360,7 @@ class Calendar extends StylePluginBase {
         $selected = TRUE;
         ksort($day);
         foreach ($day as $time => $hour) {
-          /** @var $item \Drupal\calendar\CalendarEvent */
+          /** @var \Drupal\calendar\CalendarEvent $item */
           foreach ($hour as $key => $item) {
             $count++;
             $ids[$item->getType()] = $item;
@@ -1396,8 +1413,8 @@ class Calendar extends StylePluginBase {
         '#items' => $this->items,
         '#selected' => $selected,
       ],
-      '#empty' => $empty,
-      '#link' => $link,
+      'empty' => $empty,
+      'link' => $link,
       'all_day' => $all_day,
       'items' => $inner,
     ];
