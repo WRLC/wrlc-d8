@@ -9,3 +9,11 @@ Views output field as a custom link options all ignored if path is routed
 Source: https://www.drupal.org/files/issues/2018-03-27/2645954-26.views-output-field-as-link-for-routed-paths.patch
 
 
+Make StylePluginBase::renderFields public
+Source: https://www.drupal.org/files/issues/StylePluginBase-public-renderFields-2824920-11.patch
+
+
+Create a public read/write interface for $StylePluginBase::rendered_fields
+Source: https://www.drupal.org/files/issues/StylePluginBase-getRenderedFields_and_setRenderedField-2826755-10.patch
+
+
