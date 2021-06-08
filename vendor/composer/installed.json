@@ -4118,6 +4118,17 @@
         "name": "drupal/core-dev",
         "version": "8.9.16",
         "version_normalized": "8.9.16.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/drupal/core-dev.git",
+            "reference": "36370b3f42911c09ffb35f08fc72853d20e6efd7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/drupal/core-dev/zipball/36370b3f42911c09ffb35f08fc72853d20e6efd7",
+            "reference": "36370b3f42911c09ffb35f08fc72853d20e6efd7",
+            "shasum": ""
+        },
         "require": {
             "behat/mink": "^1.8",
             "behat/mink-goutte-driver": "^1.2",
@@ -9249,6 +9260,60 @@
         "support": {
             "source": "http://cgit.drupalcode.org/views_entity_form_field",
             "issues": "https://www.drupal.org/project/issues/views_entity_form_field"
+        }
+    },
+    {
+        "name": "drupal/views_merge_rows",
+        "version": "2.1.0",
+        "version_normalized": "2.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/views_merge_rows.git",
+            "reference": "8.x-2.1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/views_merge_rows-8.x-2.1.zip",
+            "reference": "8.x-2.1",
+            "shasum": "64b68cbe2ed1ea50b74bf0c924d947adefb6bd9e"
+        },
+        "require": {
+            "drupal/core": "^8"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "drupal": {
+                "version": "8.x-2.1",
+                "datestamp": "1490106483",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Grimreaper",
+                "homepage": "https://www.drupal.org/user/2388214"
+            },
+            {
+                "name": "dgagne",
+                "homepage": "https://www.drupal.org/user/3504808"
+            },
+            {
+                "name": "diolan",
+                "homepage": "https://www.drupal.org/user/2336786"
+            }
+        ],
+        "description": "Adds possibility to merge rows with the same values in the specified fields.",
+        "homepage": "https://www.drupal.org/project/views_merge_rows",
+        "support": {
+            "source": "https://git.drupalcode.org/project/views_merge_rows"
         }
     },
     {
@@ -15154,6 +15219,17 @@
         "name": "symfony/polyfill-php56",
         "version": "v1.20.0",
         "version_normalized": "1.20.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-php56.git",
+            "reference": "54b8cd7e6c1643d78d011f3be89f3ef1f9f4c675"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/54b8cd7e6c1643d78d011f3be89f3ef1f9f4c675",
+            "reference": "54b8cd7e6c1643d78d011f3be89f3ef1f9f4c675",
+            "shasum": ""
+        },
         "require": {
             "php": ">=7.1"
         },
@@ -15195,6 +15271,17 @@
         "name": "symfony/polyfill-php70",
         "version": "v1.20.0",
         "version_normalized": "1.20.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-php70.git",
+            "reference": "5f03a781d984aae42cebd18e7912fa80f02ee644"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/5f03a781d984aae42cebd18e7912fa80f02ee644",
+            "reference": "5f03a781d984aae42cebd18e7912fa80f02ee644",
+            "shasum": ""
+        },
         "require": {
             "php": ">=7.1"
         },
