@@ -1,0 +1,71 @@
+uuid: 229625de-3e42-4770-a563-cccaa238aca3
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d6_d7_acl_node
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 6'
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Drupal 6/7 Access Control Lists node grants table'
+source:
+  plugin: d6_d7_acl_table
+  table_name: acl_node
+  fields_list:
+    - acl_id
+    - nid
+    - grant_view
+    - grant_update
+    - grant_delete
+    - priority
+  ids:
+    acl_id:
+      type: integer
+    nid:
+      type: integer
+process:
+  acl_id:
+    -
+      plugin: get
+      source: acl_id
+  nid:
+    -
+      plugin: get
+      source: nid
+  grant_view:
+    -
+      plugin: get
+      source: grant_view
+  grant_update:
+    -
+      plugin: get
+      source: grant_update
+  grant_delete:
+    -
+      plugin: get
+      source: grant_delete
+  priority:
+    -
+      plugin: get
+      source: priority
+destination:
+  plugin: acl_table
+  table_name: acl_node
+  fields_list:
+    - acl_id
+    - nid
+    - grant_view
+    - grant_update
+    - grant_delete
+    - priority
+  ids:
+    acl_id:
+      type: integer
+    nid:
+      type: integer
+migration_dependencies:
+  required: {  }
+  optional: {  }

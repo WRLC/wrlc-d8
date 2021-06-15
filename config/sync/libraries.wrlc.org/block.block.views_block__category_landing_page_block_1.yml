@@ -1,0 +1,42 @@
+uuid: c585e1b4-dd92-416f-bc38-7624f1ec8f3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.category_landing_page
+  module:
+    - context
+    - system
+    - views
+  theme:
+    - bootstrap_subtheme
+id: views_block__category_landing_page_block_1
+theme: bootstrap_subtheme
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:category_landing_page-block_1'
+settings:
+  id: 'views_block:category_landing_page-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '/category/*'
+    negate: false
+    context_mapping: {  }

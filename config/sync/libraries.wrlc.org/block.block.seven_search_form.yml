@@ -1,0 +1,26 @@
+uuid: f7670e21-18e6-47c6-9da9-ee4295f22695
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+    - system
+  theme:
+    - seven
+id: seven_search_form
+theme: seven
+region: content
+weight: -10
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: ''
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/metrics/primo-metrics-dashboard\n/2019-wrlc-annual-meeting/message-board"

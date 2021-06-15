@@ -1,0 +1,42 @@
+uuid: 4315bb72-8d8d-4706-9728-04aa6e645bb1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:da60b6ca-b25f-481c-a1ff-8ca476268cdb'
+  module:
+    - block_content
+    - context
+    - system
+  theme:
+    - bootstrap_subtheme
+id: feedackform
+theme: bootstrap_subtheme
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'block_content:da60b6ca-b25f-481c-a1ff-8ca476268cdb'
+settings:
+  id: 'block_content:da60b6ca-b25f-481c-a1ff-8ca476268cdb'
+  label: Feedback
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

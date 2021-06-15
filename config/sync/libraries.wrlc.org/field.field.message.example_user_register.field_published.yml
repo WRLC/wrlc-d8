@@ -1,0 +1,21 @@
+uuid: 0276fb27-2ccb-4589-a42a-653f584092f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.message.field_published
+    - message.template.example_user_register
+id: message.example_user_register.field_published
+field_name: field_published
+entity_type: message
+bundle: example_user_register
+label: Published
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Published
+  off_label: Unpublished
+field_type: boolean

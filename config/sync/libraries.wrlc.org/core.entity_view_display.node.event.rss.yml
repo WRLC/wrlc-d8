@@ -1,0 +1,64 @@
+uuid: d525fb06-15b3-4401-bc05-e2aac6210a49
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - field.field.node.event.body
+    - field.field.node.event.comment_node_event
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_location
+    - field.field.node.event.field_file
+    - field.field.node.event.field_tags
+    - field.field.node.event.og_group_ref
+    - node.type.event
+  module:
+    - datetime
+    - file
+    - text
+    - user
+id: node.event.rss
+targetEntityType: node
+bundle: event
+mode: rss
+content:
+  body:
+    label: hidden
+    weight: 2
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_event_date:
+    label: hidden
+    weight: 0
+    type: datetime_default
+    settings:
+      format_type: long
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_event_location:
+    label: hidden
+    weight: 1
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_file:
+    label: above
+    weight: 3
+    type: file_url_plain
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_event: true
+  field_tags: true
+  og_group_ref: true

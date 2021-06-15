@@ -1,0 +1,8 @@
+uuid: 340bb838-4bc8-4459-8436-532820f5d980
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_basecamp
+label: 'Basecamp comment'
+target_entity_type_id: node
+description: null

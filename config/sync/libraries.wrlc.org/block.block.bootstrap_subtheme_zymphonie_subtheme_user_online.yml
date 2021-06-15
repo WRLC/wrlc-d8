@@ -1,0 +1,37 @@
+uuid: b6e568d5-8a36-4004-b2e1-7b425820711d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.who_s_online
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_zymphonie_subtheme_user_online
+theme: bootstrap_subtheme
+region: sidebar_first
+weight: -8
+provider: null
+plugin: 'views_block:who_s_online-who_s_online_block'
+settings:
+  id: 'views_block:who_s_online-who_s_online_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: '10'
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      3: '3'
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    negate: false
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/2016-wrlc-annual-meeting/*\n/2016-wrlc-annual-meeting\n/my-preferences/*\n/my-registration-preferences/*\n/my-registration-preferences/my-account\n/metrics/primo-metrics-dashboard\n/basecamp\n/service-desk-stats\n/service-desk-stats/*\n/member-list\n/project-inventory\n/alma-implementation/*\n/alma-implementation"

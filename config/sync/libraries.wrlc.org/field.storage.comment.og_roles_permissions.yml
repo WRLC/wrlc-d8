@@ -1,0 +1,18 @@
+uuid: c2f6c791-0ba5-457e-bcec-4051f1c71cd5
+langcode: und
+status: true
+dependencies:
+  module:
+    - comment
+id: comment.og_roles_permissions
+field_name: og_roles_permissions
+entity_type: comment
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

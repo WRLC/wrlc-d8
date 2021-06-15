@@ -1,0 +1,17 @@
+uuid: 42d9f374-315f-48a6-ae43-05806e28ed62
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+template: example_create_comment
+label: 'Example - Create comment'
+description: message_type
+text:
+  -
+    value: '<a href="[message:user:url]">@{message:user:name}</a> <a href="[message:field-comment-ref:url]">commented</a> on [message:field-node-ref:title]'
+    format: full_html
+  -
+    value: '[message:field-comment-ref:comment-teaser]'
+    format: full_html
+settings: {  }

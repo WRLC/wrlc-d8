@@ -1,0 +1,18 @@
+uuid: 9314cd18-41d7-40ed-9f91-3e33a108419b
+langcode: und
+status: true
+dependencies:
+  module:
+    - message
+id: message.field_published
+field_name: field_published
+entity_type: message
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

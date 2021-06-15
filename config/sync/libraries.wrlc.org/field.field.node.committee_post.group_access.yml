@@ -1,0 +1,23 @@
+uuid: 965610cd-d4ac-4d2c-a7e4-919f6947fc12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.group_access
+    - node.type.committee_post
+id: node.committee_post.group_access
+field_name: group_access
+entity_type: node
+bundle: committee_post
+label: 'Committee visibility'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Private - accessible only to group members'
+  off_label: 'Public - accessible to all site users'
+field_type: boolean

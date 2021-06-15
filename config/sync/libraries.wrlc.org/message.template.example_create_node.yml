@@ -1,0 +1,17 @@
+uuid: efb9f794-b9f9-4f35-ba4a-c906e4814e6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+template: example_create_node
+label: 'Example - Create node'
+description: message_type
+text:
+  -
+    value: '<a href="[message:user:url]">@{message:user:name}</a> created <a href="[message:field-node-ref:url]">[message:field-node-ref:title]</a>'
+    format: full_html
+  -
+    value: '[message:field-node-ref:node-teaser]'
+    format: full_html
+settings: {  }

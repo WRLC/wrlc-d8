@@ -1,10 +1,10 @@
-uuid: 5dce1b8a-149c-4482-a3b8-1b06714fc910
+uuid: 3295bcf7-eb06-4703-b1a4-1b82aed0d697
 langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: BCM-vV1zzRaLHN18dqAR_CuGOj8AFJvTx7BKl_8Gcxc
 id: tools
-label: Tools
-description: 'User tool links, often added by modules'
+label: Navigation
+description: 'The <em>Navigation</em> menu contains links intended for site visitors. Links are added to the <em>Navigation</em> menu automatically by some modules.'
 locked: true

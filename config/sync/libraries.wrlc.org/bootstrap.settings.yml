@@ -4,15 +4,26 @@ _core:
   default_config_hash: 1uFogeFphl0Hg6oVCacZZ8mM_0wMZ7PS_RrmLbK5tf0
 favicon:
   mimetype: image/vnd.microsoft.icon
-  path: ''
-  url: ''
-  use_default: true
+  path: 'public://favicon_3.ico'
+  url: 'https://beta.libraries.wrlc.org/sites/www.libraries.wrlc.org/files/favicon.ico'
+  use_default: false
 features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
-  node_user_picture: false
+  node_user_picture: true
+  logo: true
+  name: true
+  slogan: true
 logo:
   path: ''
   url: ''
-  use_default: true
+  use_default: false
+table_responsive: '-1'
+cdn_theme: bootstrap
+cdn_cache_ttl_versions: '604800'
+cdn_cache_ttl_themes: '604800'
+cdn_cache_ttl_assets: '0'
+cdn_cache_ttl_library: '0'
+reset_http_request_cache: ''
+table: ''

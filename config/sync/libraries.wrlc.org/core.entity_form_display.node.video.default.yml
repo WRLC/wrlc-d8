@@ -1,0 +1,106 @@
+uuid: afb6ce8c-c7b9-47f7-b3d3-ef95538c7dad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.video.comment_node_video
+    - field.field.node.video.field_caption
+    - field.field.node.video.field_tags
+    - field.field.node.video.field_video
+    - node.type.video
+  module:
+    - comment
+    - path
+    - video
+id: node.video.default
+targetEntityType: node
+bundle: video
+mode: default
+content:
+  comment_node_video:
+    type: comment_default
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_caption:
+    weight: 4
+    type: string_textarea
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_tags:
+    weight: 8
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_video:
+    weight: 5
+    type: video_upload
+    settings:
+      file_extensions: 'mp4 ogv webm'
+      file_directory: 'videos/[date:custom:Y]-[date:custom:m]'
+      max_filesize: ''
+      uri_scheme: public
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,27 @@
+uuid: 7e4d3dfd-a725-4888-a3eb-5af6cd9406c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.article
+  module:
+    - file
+id: node.article.field_file
+field_name: field_file
+entity_type: node
+bundle: article
+label: File
+description: 'Attache a file to this article.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'txt doc docx xls xlsx ppt pptx jpg jpeg gif png psd pdf'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

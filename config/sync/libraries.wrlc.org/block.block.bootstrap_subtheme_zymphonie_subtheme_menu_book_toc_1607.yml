@@ -1,0 +1,29 @@
+uuid: b810942b-37b8-4936-9af4-71b31ff96146
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.book-toc-1607
+  module:
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_zymphonie_subtheme_menu_book_toc_1607
+theme: bootstrap_subtheme
+region: sidebar_second
+weight: -13
+provider: null
+plugin: 'system_menu_block:book-toc-1607'
+settings:
+  id: broken
+  label: ''
+  provider: core
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/forums/alma-implementation\n/forums/alma-implementation/*\n/forums/*\n/forum/*"

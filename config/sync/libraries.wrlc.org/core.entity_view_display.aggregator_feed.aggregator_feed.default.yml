@@ -1,4 +1,4 @@
-uuid: 27609bd4-b33b-476a-aae3-b20f2d85ca75
+uuid: 13d914f4-264d-401c-9ef2-053e3a25b295
 langcode: en
 status: true
 dependencies:
@@ -13,31 +13,30 @@ mode: default
 content:
   checked:
     type: timestamp_ago
+    weight: 3
+    region: content
+    settings:
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
+    third_party_settings: {  }
+    label: inline
+  description:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  image:
     weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
-    label: inline
-  description:
-    weight: 3
-    region: content
-  feed_icon:
-    weight: 5
-    region: content
-  image:
-    weight: 2
-    region: content
   items:
     weight: 0
     region: content
-  link:
-    type: uri_link
-    weight: 4
-    region: content
     settings: {  }
     third_party_settings: {  }
-    label: inline
 hidden:
-  langcode: true
+  feed_icon: true
+  link: true
   more_link: true
-  search_api_excerpt: true

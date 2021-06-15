@@ -1,0 +1,38 @@
+uuid: 93680a6b-b0a7-4bf6-bb63-db07786401fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_file
+    - node.type.newsletter
+  module:
+    - image
+id: node.newsletter.field_image_file
+field_name: field_image_file
+entity_type: node
+bundle: newsletter
+label: 'Image File'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  title_field: false
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+    uuid: ''
+  alt_field_required: true
+  title_field_required: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

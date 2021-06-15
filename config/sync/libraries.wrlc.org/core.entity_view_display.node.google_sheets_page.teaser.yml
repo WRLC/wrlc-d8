@@ -1,0 +1,36 @@
+uuid: 72548938-5dca-41dd-8231-060c98edfca4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.google_sheets_page.comment_node_google_sheets_page
+    - field.field.node.google_sheets_page.field_categories
+    - field.field.node.google_sheets_page.field_files
+    - field.field.node.google_sheets_page.field_php_sheets_body
+    - node.type.google_sheets_page
+  module:
+    - text
+    - user
+id: node.google_sheets_page.teaser
+targetEntityType: node
+bundle: google_sheets_page
+mode: teaser
+content:
+  field_php_sheets_body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_google_sheets_page: true
+  field_categories: true
+  field_files: true

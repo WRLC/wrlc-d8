@@ -1,0 +1,26 @@
+uuid: 22866b0c-b1f8-4c22-a3f9-41a6fb0e5e9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_access_level
+    - node.type.page
+    - taxonomy.vocabulary.staff_access
+id: node.page.field_access_level
+field_name: field_access_level
+entity_type: node
+bundle: page
+label: 'Access Level'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      staff_access: staff_access
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

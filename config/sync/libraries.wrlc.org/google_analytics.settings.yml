@@ -1,13 +1,13 @@
-account: ''
+account: UA-9172733-9
 premium: false
 domain_mode: 0
 cross_domains: ''
 visibility:
   request_path_mode: 0
-  request_path_pages: "/admin\n/admin/*\n/batch\n/node/add*\n/node/*/*\n/user/*/*"
+  request_path_pages: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/node/*/*\r\n/user/*/*"
   user_role_mode: 0
   user_role_roles: {  }
-  user_account_mode: 0
+  user_account_mode: 1
 track:
   outbound: true
   mailto: true
@@ -34,4 +34,4 @@ translation_set: false
 cache: false
 debug: false
 _core:
-  default_config_hash: Vx5EGxHruJuiMSwDv8Mg3PBf9RaPo8o2MCj8_QeTUhg
+  default_config_hash: HD-kJquDfx3JureBUmIIt_ADNReD_jLvKg4fwKISoJs

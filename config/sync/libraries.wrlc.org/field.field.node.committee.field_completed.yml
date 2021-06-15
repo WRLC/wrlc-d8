@@ -1,0 +1,23 @@
+uuid: da208b5e-945a-48ef-8819-2f8eab644752
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_completed
+    - node.type.committee
+id: node.committee.field_completed
+field_name: field_completed
+entity_type: node
+bundle: committee
+label: completed
+description: 'If a committee/Task Force has COMPLETED their work and disbanded, check this box to hide from display.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Completed
+  off_label: ''
+field_type: boolean

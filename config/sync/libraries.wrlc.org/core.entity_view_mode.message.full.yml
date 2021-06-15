@@ -1,4 +1,4 @@
-uuid: b056ff9d-f8ba-4f72-9a51-8d9ae2ec5313
+uuid: 1a404379-ac5b-4769-8277-956274516a66
 langcode: en
 status: false
 dependencies:
@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: Pl6xok1fBCKaPlLC4iDJVaucp2W72csXt7M3Jwa95nU
 id: message.full
-label: 'Full content'
+label: Full
 targetEntityType: message
 cache: true

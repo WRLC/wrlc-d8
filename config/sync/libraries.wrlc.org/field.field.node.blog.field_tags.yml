@@ -1,0 +1,26 @@
+uuid: 1c277ded-1c49-49b8-b71a-d3ee415a8e71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.blog
+    - taxonomy.vocabulary.category
+id: node.blog.field_tags
+field_name: field_tags
+entity_type: node
+bundle: blog
+label: Tags
+description: 'Add a descriptive tag to your post.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      category: category
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

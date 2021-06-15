@@ -1,0 +1,27 @@
+uuid: 1b5d250f-8d13-4475-b528-c0d4319de6d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_files
+    - node.type.google_sheets_page
+  module:
+    - file
+id: node.google_sheets_page.field_files
+field_name: field_files
+entity_type: node
+bundle: google_sheets_page
+label: Files
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'txt png gif jpg jpeg doc docx xsl xslx pdf csv'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

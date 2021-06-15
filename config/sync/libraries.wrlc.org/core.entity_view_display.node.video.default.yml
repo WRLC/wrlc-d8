@@ -1,0 +1,50 @@
+uuid: 106a017f-55b2-4c12-a4b5-5f1df7dadfa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_video.default
+    - field.field.node.video.comment_node_video
+    - field.field.node.video.field_caption
+    - field.field.node.video.field_tags
+    - field.field.node.video.field_video
+    - node.type.video
+  module:
+    - comment
+    - user
+id: node.video.default
+targetEntityType: node
+bundle: video
+mode: default
+content:
+  comment_node_video:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_caption:
+    label: hidden
+    weight: 2
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_tags:
+    label: hidden
+    weight: 3
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_video: true

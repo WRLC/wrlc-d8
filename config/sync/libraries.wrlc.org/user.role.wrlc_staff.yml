@@ -1,0 +1,33 @@
+uuid: 2e9d4657-af3c-4872-98f4-09624010f662
+langcode: en
+status: true
+dependencies: {  }
+id: wrlc_staff
+label: 'WRLC Staff'
+weight: 4
+is_admin: null
+permissions:
+  - 'access statistics'
+  - 'create page content'
+  - 'delete any handbook content'
+  - 'delete any page content'
+  - 'delete any video content'
+  - 'delete own event content'
+  - 'delete own google_sheets_page content'
+  - 'delete own handbook content'
+  - 'delete own page content'
+  - 'delete revisions'
+  - 'edit any handbook content'
+  - 'edit any page content'
+  - 'edit any video content'
+  - 'edit own event content'
+  - 'edit own google_sheets_page content'
+  - 'edit own handbook content'
+  - 'edit own page content'
+  - 'grant content access'
+  - 'grant own content access'
+  - 'revert revisions'
+  - 'subscribe to a group'
+  - 'view post access counter'
+  - 'view revisions'
+  - 'view the administration theme'

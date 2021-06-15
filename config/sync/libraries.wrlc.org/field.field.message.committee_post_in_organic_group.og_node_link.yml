@@ -1,0 +1,21 @@
+uuid: ca06963a-a138-42c0-ad64-a370b5d825ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.message.og_node_link
+    - message.template.committee_post_in_organic_group
+  module:
+    - options
+id: message.committee_post_in_organic_group.og_node_link
+field_name: og_node_link
+entity_type: message
+bundle: committee_post_in_organic_group
+label: 'Group content links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,28 @@
+uuid: 0040040a-1f6d-4cfb-bc90-1843687a83fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.message.field_node_ref
+    - message.template.example_og_post_in_group
+id: message.example_og_post_in_group.field_node_ref
+field_name: field_node_ref
+entity_type: message
+bundle: example_og_post_in_group
+label: 'Node reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      views-select-list:
+        status: 0
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles: null
+field_type: entity_reference

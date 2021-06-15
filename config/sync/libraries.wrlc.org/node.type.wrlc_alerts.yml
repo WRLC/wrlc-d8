@@ -1,0 +1,18 @@
+uuid: b334c26c-09fe-4cb0-b8c5-c50f11d2b184
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'WRLC Alerts'
+type: wrlc_alerts
+description: 'WRLC alerts sent via email posted as nodes.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

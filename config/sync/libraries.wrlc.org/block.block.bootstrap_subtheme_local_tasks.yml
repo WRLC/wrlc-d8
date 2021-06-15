@@ -1,15 +1,15 @@
-uuid: c5220ea7-2379-4b44-b089-1cc160f06898
+uuid: 47749812-acf1-45d5-97f8-5a4f292144ba
 langcode: en
 status: true
 dependencies:
   theme:
     - bootstrap_subtheme
 _core:
-  default_config_hash: c-06bbElRY5sKmglk74ppgTW93Et4-EJFyNiUZMb8JY
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
 id: bootstrap_subtheme_local_tasks
 theme: bootstrap_subtheme
 region: content
-weight: -20
+weight: -13
 provider: null
 plugin: local_tasks_block
 settings:

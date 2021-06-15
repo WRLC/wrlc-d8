@@ -1,0 +1,41 @@
+uuid: 8836966c-0123-4ea9-bca2-8e0647d4bcfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.annual_meetings
+  module:
+    - context
+    - system
+    - views
+  theme:
+    - bootstrap_subtheme
+id: views_block__annual_meetings_block_1
+theme: bootstrap_subtheme
+region: sidebar_second
+weight: -10
+provider: null
+plugin: 'views_block:annual_meetings-block_1'
+settings:
+  id: 'views_block:annual_meetings-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: "/2020-wrlc-annual-meeting/*\r\n/2020-wrlc-annual-meeting\r\n/2019-wrlc-annual-meeting/*\r\n/2019-wrlc-annual-meeting\r\n/2018-wrlc-annual-meeting/*\r\n/2018-wrlc-annual-meeting\r\n/2016-wrlc-annual-meeting/*\r\n/2016-wrlc-annual-meeting"
+    negate: false
+    context_mapping: {  }

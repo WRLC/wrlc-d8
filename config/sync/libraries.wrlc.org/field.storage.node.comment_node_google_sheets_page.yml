@@ -1,0 +1,20 @@
+uuid: 898223c0-7605-4fdf-baf8-14c9dff83d3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_google_sheets_page
+field_name: comment_node_google_sheets_page
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_google_sheets_page
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

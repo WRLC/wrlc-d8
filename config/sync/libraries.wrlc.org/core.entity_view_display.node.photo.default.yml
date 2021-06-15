@@ -1,0 +1,52 @@
+uuid: efae45c2-762e-44a6-bb00-1463a046c337
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_photo.default
+    - field.field.node.photo.comment_node_photo
+    - field.field.node.photo.field_album
+    - field.field.node.photo.field_caption
+    - field.field.node.photo.field_image_file
+    - node.type.photo
+  module:
+    - comment
+    - image
+    - user
+id: node.photo.default
+targetEntityType: node
+bundle: photo
+mode: default
+content:
+  comment_node_photo:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_caption:
+    label: hidden
+    weight: 1
+    type: basic_string
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image_file:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_album: true

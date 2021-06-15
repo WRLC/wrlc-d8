@@ -1,0 +1,121 @@
+uuid: 5d4441ef-42b9-4591-ba51-ae18ff900d12
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_committee
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Committee)'
+source:
+  plugin: d7_node_complete
+  node_type: committee
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_committee/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+  group_group:
+    -
+      plugin: get
+      source: group_group
+  group_access:
+    -
+      plugin: get
+      source: group_access
+  group_content_access:
+    -
+      plugin: get
+      source: group_content_access
+  og_node_link:
+    -
+      plugin: get
+      source: og_node_link
+  field_completed:
+    -
+      plugin: get
+      source: field_completed
+  og_group_ref:
+    -
+      plugin: get
+      source: og_group_ref
+  og_roles_permissions:
+    -
+      plugin: get
+      source: og_roles_permissions
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: committee
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_comment_field_instance

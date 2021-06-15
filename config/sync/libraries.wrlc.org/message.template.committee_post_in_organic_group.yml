@@ -1,0 +1,21 @@
+uuid: a4107a2b-7505-4535-be79-e20507ac3929
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+    - filter.format.full_html
+template: committee_post_in_organic_group
+label: 'Committee post in Organic Group'
+description: message_type
+text:
+  -
+    value: '[message:user:picture]'
+    format: filtered_html
+  -
+    value: "<p><a href=\"[message:user:url]\">[message:user:name]</a> posted <a href=\"[message:field-node-ref:url]\">[message:field-node-ref:title]</a> in !groups.</p>\r\n"
+    format: full_html
+  -
+    value: '[message:field-node-ref:node-teaser]'
+    format: filtered_html
+settings: {  }

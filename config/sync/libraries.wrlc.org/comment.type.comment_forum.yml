@@ -1,4 +1,4 @@
-uuid: c05b9923-12c5-44b8-8e76-6d2d9fd2c473
+uuid: 450e4a25-3ded-49e8-91e3-14122356a8fb
 langcode: en
 status: true
 dependencies:
@@ -8,6 +8,6 @@ dependencies:
 _core:
   default_config_hash: ASMYOUZX4c3xSgNTeKYhnhde-J9Zq899Z-gV2emoyr8
 id: comment_forum
-label: Comment_forum
+label: 'Forum topic comment'
 target_entity_type_id: node
 description: 'Default comment field'

@@ -1,13 +1,20 @@
-uuid: 9e95dfcc-4f60-46ac-bc68-5d045363d8e4
+uuid: ae2bd9b8-719e-4914-a315-5c6d15308a22
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:4578:'
 _core:
   default_config_hash: L5fQmHilstpn-pY2na8uhk7qeWxa3Ac3x3LsBrZORQg
 name: FAQ
 type: faq
 description: 'A frequently asked question and its answer.'
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 1
-display_submitted: true
+display_submitted: false

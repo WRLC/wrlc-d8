@@ -1,0 +1,19 @@
+uuid: 7eab7dfd-0b34-4176-8144-cf82a9458d02
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.message.mail_subject
+    - field.field.message.example_user_register.field_published
+    - message.template.example_user_register
+id: message.example_user_register.mail_subject
+targetEntityType: message
+bundle: example_user_register
+mode: mail_subject
+content:
+  partial_0:
+    weight: 0
+    region: content
+hidden:
+  field_published: true
+  partial_1: true

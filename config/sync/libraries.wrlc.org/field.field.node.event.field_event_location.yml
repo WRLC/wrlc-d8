@@ -1,0 +1,19 @@
+uuid: d108cb9d-b774-4773-bacf-7c789bb317b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_location
+    - node.type.event
+id: node.event.field_event_location
+field_name: field_event_location
+entity_type: node
+bundle: event
+label: 'Event Location'
+description: 'Provide the location of the event. For example, "The Marvin Center at George Washington University"'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

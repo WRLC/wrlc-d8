@@ -1,0 +1,125 @@
+uuid: d380babb-fcc0-456e-b378-070d82e04795
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.committee_post.field_tags
+    - field.field.node.committee_post.og_group_ref
+    - node.type.committee_post
+  module:
+    - feeds_ex
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      3b8eaa40-e510-48c8-8c81-255f16b7a1bd:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: committee
+        weight: 0
+        label: Explode
+        uuid: 3b8eaa40-e510-48c8-8c81-255f16b7a1bd
+      2b6faf34-4d14-4f0e-8287-b2249923cd6a:
+        default_value: ''
+        only_if_empty: true
+        plugin: default_value
+        source: field_tags
+        weight: 0
+        label: 'Set value or default value'
+        uuid: 2b6faf34-4d14-4f0e-8287-b2249923cd6a
+      396d40db-0fc2-4e65-a1ad-bcf0b00a37d6:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: field_tags
+        weight: 1
+        label: Explode
+        uuid: 396d40db-0fc2-4e65-a1ad-bcf0b00a37d6
+id: committee_post_relationships
+label: 'Committee Post relationships'
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: json
+  directory: 'public://feeds'
+parser: jsonpath
+parser_configuration:
+  context:
+    value: '$.nodes.*.node'
+  sources:
+    nid:
+      label: nid
+      value: nid
+    committee:
+      label: committee
+      value: committee
+    field_tags:
+      label: field_tags
+      value: field_tags
+  display_errors: false
+  source_encoding:
+    - auto
+  debug_mode: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+  authorize: true
+  skip_hash_check: true
+  values:
+    type: committee_post
+custom_sources:
+  nid:
+    label: nid
+    value: nid
+    machine_name: nid
+  uid:
+    label: uid
+    value: uid
+    machine_name: uid
+  committee:
+    label: committee
+    value: committee
+    machine_name: committee
+  tags:
+    label: tags
+    value: tags
+    machine_name: tags
+  field_tags:
+    label: field_tags
+    value: field_tags
+    machine_name: field_tags
+mappings:
+  -
+    target: nid
+    map:
+      value: nid
+    unique:
+      value: '1'
+    settings: {  }
+  -
+    target: og_group_ref
+    map:
+      target_id: committee
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_tags
+    map:
+      target_id: field_tags
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false

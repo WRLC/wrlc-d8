@@ -1,0 +1,14 @@
+uuid: 0c89cf79-5a07-471e-97b3-024476079c89
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+template: example_user_register
+label: 'Example - User register'
+description: message_type
+text:
+  -
+    value: '<a href="[message:user:url]">@{message:user:name}</a> registered.'
+    format: full_html
+settings: {  }

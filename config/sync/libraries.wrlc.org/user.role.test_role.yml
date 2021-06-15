@@ -1,0 +1,10 @@
+uuid: 37f48a01-26a6-49bf-bafe-6ebe652ac982
+langcode: en
+status: true
+dependencies: {  }
+id: test_role
+label: 'test role'
+weight: 5
+is_admin: null
+permissions:
+  - 'subscribe to a group'

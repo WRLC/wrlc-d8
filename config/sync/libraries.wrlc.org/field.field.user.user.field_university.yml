@@ -1,0 +1,21 @@
+uuid: 2201fb32-62ba-4d45-831f-3b31f5a220a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_university
+  module:
+    - options
+    - user
+id: user.user.field_university
+field_name: field_university
+entity_type: user
+bundle: user
+label: University
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

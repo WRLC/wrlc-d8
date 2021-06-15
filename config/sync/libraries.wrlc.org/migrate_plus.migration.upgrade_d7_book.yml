@@ -1,0 +1,59 @@
+uuid: 63d84d66-473f-4f42-8570-f2054ef48da6
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_book
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: Books
+source:
+  plugin: book
+process:
+  nid:
+    -
+      plugin: get
+      source: nid
+  book/bid:
+    -
+      plugin: get
+      source: bid
+  book/weight:
+    -
+      plugin: get
+      source: weight
+  book/pid:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: plid
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_book
+destination:
+  plugin: book
+migration_dependencies:
+  required:
+    - upgrade_d7_node_complete_album
+    - upgrade_d7_node_complete_article
+    - upgrade_d7_node_complete_basecamp
+    - upgrade_d7_node_complete_blog
+    - upgrade_d7_node_complete_committee
+    - upgrade_d7_node_complete_committee_post
+    - upgrade_d7_node_complete_event
+    - upgrade_d7_node_complete_faq
+    - upgrade_d7_node_complete_forum
+    - upgrade_d7_node_complete_google_sheets_page
+    - upgrade_d7_node_complete_handbook
+    - upgrade_d7_node_complete_newsletter
+    - upgrade_d7_node_complete_page
+    - upgrade_d7_node_complete_panel
+    - upgrade_d7_node_complete_photo
+    - upgrade_d7_node_complete_video
+    - upgrade_d7_node_complete_wrlc_alerts
+  optional:
+    - upgrade_d7_book

@@ -1,0 +1,8 @@
+uuid: 578a4110-d081-4949-a88a-a99caaaa1f1a
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_google_sheets_page
+label: 'Google Sheets Page comment'
+target_entity_type_id: node
+description: null

@@ -1,0 +1,42 @@
+uuid: eba3fc59-dcc8-43da-86f6-7153bfe6bc3a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:daa98a83-749c-4194-85e6-96d113d65295'
+  module:
+    - block_content
+    - context
+    - system
+  theme:
+    - bootstrap_subtheme
+id: newslettersubscribeformfull
+theme: bootstrap_subtheme
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'block_content:daa98a83-749c-4194-85e6-96d113d65295'
+settings:
+  id: 'block_content:daa98a83-749c-4194-85e6-96d113d65295'
+  label: 'Newsletter subscribe form full'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: /newsletter
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,22 @@
+uuid: 62ab344b-dbcd-439c-8455-d052e27e1dac
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: wrlc_communications_post
+label: 'WRLC Communications Post'
+type: 'canonical_entities:node'
+pattern: 'blog/[node:title]'
+selection_criteria:
+  6e9ce45d-b800-4c9e-95eb-b449e9a4bbc4:
+    id: node_type
+    bundles:
+      blog: blog
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 6e9ce45d-b800-4c9e-95eb-b449e9a4bbc4
+selection_logic: and
+weight: -4
+relationships: {  }

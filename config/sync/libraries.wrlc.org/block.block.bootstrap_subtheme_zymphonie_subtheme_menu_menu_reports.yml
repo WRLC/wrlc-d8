@@ -1,0 +1,29 @@
+uuid: e59e962b-3a4c-4f7a-8543-405beccb2081
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-reports
+  module:
+    - system
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_zymphonie_subtheme_menu_menu_reports
+theme: bootstrap_subtheme
+region: content
+weight: -12
+provider: null
+plugin: 'system_menu_block:menu-reports'
+settings:
+  id: broken
+  label: Reports
+  provider: core
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /content/reports

@@ -1,0 +1,42 @@
+uuid: 618b79ba-efc5-4da8-a10c-a667605ddc08
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_album.default
+    - field.field.node.album.body
+    - field.field.node.album.comment_node_album
+    - field.field.node.album.field_cover_image
+    - node.type.album
+  module:
+    - comment
+    - text
+    - user
+id: node.album.default
+targetEntityType: node
+bundle: album
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_node_album:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_cover_image: true

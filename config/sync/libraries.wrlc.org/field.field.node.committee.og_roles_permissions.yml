@@ -1,0 +1,23 @@
+uuid: b5c3a190-bb82-4ab3-a0a9-b864b41ffe7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_roles_permissions
+    - node.type.committee
+id: node.committee.og_roles_permissions
+field_name: og_roles_permissions
+entity_type: node
+bundle: committee
+label: 'Group roles and permissions'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Override default roles and permissions'
+  off_label: 'Use default roles and permissions'
+field_type: boolean

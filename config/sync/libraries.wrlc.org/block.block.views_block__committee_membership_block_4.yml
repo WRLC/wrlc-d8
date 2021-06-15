@@ -1,0 +1,31 @@
+uuid: a79e9f45-6c09-4445-9728-9e85e01c91a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.committee_membership
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap_subtheme
+id: views_block__committee_membership_block_4
+theme: bootstrap_subtheme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:committee_membership-block_4'
+settings:
+  id: 'views_block:committee_membership-block_4'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/committee/*'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,69 @@
+uuid: 7f22aa6c-d6b6-44a8-8bc4-89ff1240bca7
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_university
+field_name: field_university
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: AU
+      label: AU
+    -
+      value: 'AU Law'
+      label: 'AU Law'
+    -
+      value: CU
+      label: CU
+    -
+      value: DC
+      label: DC
+    -
+      value: GA
+      label: GA
+    -
+      value: GM
+      label: GM
+    -
+      value: 'GM Law'
+      label: 'GM Law'
+    -
+      value: GT
+      label: GT
+    -
+      value: 'GT Law'
+      label: 'GT Law'
+    -
+      value: GW
+      label: GW
+    -
+      value: 'GW HS'
+      label: 'GW HS'
+    -
+      value: 'GW Law'
+      label: 'GW Law'
+    -
+      value: HU
+      label: HU
+    -
+      value: MU
+      label: MU
+    -
+      value: TR
+      label: TR
+    -
+      value: WRLC
+      label: WRLC
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

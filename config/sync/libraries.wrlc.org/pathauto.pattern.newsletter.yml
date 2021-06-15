@@ -1,0 +1,22 @@
+uuid: e347131b-3aa7-421e-9ad7-3e5cf96b7be7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: newsletter
+label: Newsletter
+type: 'canonical_entities:node'
+pattern: 'newsletter/[node:title]'
+selection_criteria:
+  e25d1561-72a0-4a6d-ad05-4145983800af:
+    id: node_type
+    bundles:
+      newsletter: newsletter
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e25d1561-72a0-4a6d-ad05-4145983800af
+selection_logic: and
+weight: -5
+relationships: {  }

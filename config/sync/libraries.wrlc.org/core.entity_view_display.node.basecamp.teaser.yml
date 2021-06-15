@@ -1,0 +1,32 @@
+uuid: 298e6c08-5544-43dc-b438-1bb69b1634ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.basecamp.body
+    - field.field.node.basecamp.comment_node_basecamp
+    - node.type.basecamp
+  module:
+    - text
+    - user
+id: node.basecamp.teaser
+targetEntityType: node
+bundle: basecamp
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_basecamp: true

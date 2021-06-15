@@ -1,0 +1,8 @@
+uuid: f028914d-eb0f-4e49-b6fa-b4f83f2dfca3
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_committee_post
+label: 'Committee Post comment'
+target_entity_type_id: node
+description: null

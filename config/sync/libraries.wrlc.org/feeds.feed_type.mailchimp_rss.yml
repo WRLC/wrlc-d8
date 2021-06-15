@@ -1,0 +1,68 @@
+uuid: 71b55160-ce2f-41ac-87cf-cffd29b902ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.newsletter.body
+    - field.field.node.newsletter.feeds_item
+    - node.type.newsletter
+  module:
+    - node
+id: mailchimp_rss
+label: 'Mailchimp RSS'
+description: ''
+help: ''
+import_period: 3600
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: syndication
+parser_configuration: {  }
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 0
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+  authorize: false
+  skip_hash_check: false
+  values:
+    type: newsletter
+custom_sources: {  }
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: feeds_item
+    map:
+      url: url
+      guid: guid
+    unique:
+      guid: '1'
+    settings: {  }
+  -
+    target: created
+    map:
+      value: timestamp
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: body
+    map:
+      value: content
+      summary: ''
+    settings:
+      language: ''
+      format: full_html

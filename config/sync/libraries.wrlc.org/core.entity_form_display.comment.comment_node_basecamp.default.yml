@@ -1,0 +1,29 @@
+uuid: cdc54baf-33a5-4a4f-b5f4-3f4de3eebf82
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_basecamp
+    - field.field.comment.comment_node_basecamp.comment_body
+  module:
+    - text
+id: comment.comment_node_basecamp.default
+targetEntityType: comment
+bundle: comment_node_basecamp
+mode: default
+content:
+  author:
+    weight: -2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_body:
+    weight: 0
+    type: text_textarea
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  subject: true

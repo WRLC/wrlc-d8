@@ -1,0 +1,28 @@
+uuid: ae8e3aba-c4c7-494d-91ad-97cd9757e2dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.message.field_node_ref
+    - message.template.committee_post_in_organic_group
+id: message.committee_post_in_organic_group.field_node_ref
+field_name: field_node_ref
+entity_type: message
+bundle: committee_post_in_organic_group
+label: 'Node reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      views-select-list:
+        status: 0
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles: null
+field_type: entity_reference

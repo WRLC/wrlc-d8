@@ -1,0 +1,52 @@
+uuid: f87f02c3-b6e1-4d30-af19-fdb71876d37b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.committee_post
+    - taxonomy.vocabulary.category
+id: node.committee_post.field_tags
+field_name: field_tags
+entity_type: node
+bundle: committee_post
+label: Tags
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tid: '5'
+    vid: '1'
+    name: 'Meeting Minutes'
+    description: ''
+    format: filtered_html
+    weight: '10'
+    vocabulary_machine_name: category
+    rdf_mapping:
+      rdftype:
+        - 'skos:Concept'
+      name:
+        predicates:
+          - 'rdfs:label'
+          - 'skos:prefLabel'
+      description:
+        predicates:
+          - 'skos:definition'
+      vid:
+        predicates:
+          - 'skos:inScheme'
+        type: rel
+      parent:
+        predicates:
+          - 'skos:broader'
+        type: rel
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      category: category
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

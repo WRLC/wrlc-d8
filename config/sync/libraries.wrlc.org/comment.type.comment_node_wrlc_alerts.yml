@@ -1,0 +1,8 @@
+uuid: 8c8a7117-68de-4935-b030-d542b1fe32ea
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_wrlc_alerts
+label: 'WRLC Alerts comment'
+target_entity_type_id: node
+description: null

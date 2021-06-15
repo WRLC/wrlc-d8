@@ -1,0 +1,33 @@
+uuid: acc2d94d-b358-4048-a266-21939c025356
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.message.og_group_ref
+    - message.template.committee_post_in_organic_group
+    - node.type.committee
+id: message.committee_post_in_organic_group.og_group_ref
+field_name: og_group_ref
+entity_type: message
+bundle: committee_post_in_organic_group
+label: 'Groups audience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      committee: committee
+    sort:
+      field: title
+      direction: ASC
+    membership_type: og_membership_type_default
+    behaviors:
+      og_behavior:
+        status: true
+      views-select-list:
+        status: 0
+field_type: entity_reference

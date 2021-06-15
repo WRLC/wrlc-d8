@@ -1,0 +1,42 @@
+uuid: d4c0d6bb-8008-4638-a096-8252e8654fce
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a4ba69ea-77e6-4545-abcc-404be198a8a0'
+  module:
+    - block_content
+    - context
+    - system
+  theme:
+    - bootstrap_subtheme
+id: primopageviews
+theme: bootstrap_subtheme
+region: sidebar_second
+weight: -12
+provider: null
+plugin: 'block_content:a4ba69ea-77e6-4545-abcc-404be198a8a0'
+settings:
+  id: 'block_content:a4ba69ea-77e6-4545-abcc-404be198a8a0'
+  label: 'Primo Pageviews'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: /performance-and-alerts
+    negate: false
+    context_mapping: {  }

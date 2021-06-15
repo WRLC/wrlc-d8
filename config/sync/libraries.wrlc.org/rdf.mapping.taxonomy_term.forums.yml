@@ -1,4 +1,4 @@
-uuid: a4148479-ce58-478d-9a6d-93a034bf7366
+uuid: 667da4e9-0f0a-4d87-98f0-4c06985c7402
 langcode: en
 status: true
 dependencies:
@@ -17,7 +17,16 @@ types:
 fieldMappings:
   name:
     properties:
-      - 'schema:name'
+      - 'rdfs:label'
+      - 'skos:prefLabel'
   description:
     properties:
-      - 'schema:description'
+      - 'skos:definition'
+  vid:
+    properties:
+      - 'skos:inScheme'
+    mapping_type: rel
+  parent:
+    properties:
+      - 'skos:broader'
+    mapping_type: rel

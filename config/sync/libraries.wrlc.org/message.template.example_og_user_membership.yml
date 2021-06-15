@@ -1,0 +1,18 @@
+uuid: dedcf426-78f6-4bd0-8e4e-df8d0ddbf417
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+    - filter.format.full_html
+template: example_og_user_membership
+label: 'Example - OG user membership'
+description: message_type
+text:
+  -
+    value: '[message:user:picture]'
+    format: filtered_html
+  -
+    value: '<a href="[message:user:url]">@{message:user:name}</a> joined <a href="[message:field-node-groups-ref:0:url]">[message:field-node-groups-ref:0:title]</a> group.'
+    format: full_html
+settings: {  }

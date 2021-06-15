@@ -1,0 +1,44 @@
+uuid: 56af778b-2f38-4ecb-a5cd-f0db68788a4d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:30669b1b-a1b5-4183-b56f-098e769d1406'
+  module:
+    - block_content
+    - context
+    - user
+  theme:
+    - bootstrap_subtheme
+id: useraccountlinks
+theme: bootstrap_subtheme
+region: sidebar_first
+weight: -13
+provider: null
+plugin: 'block_content:30669b1b-a1b5-4183-b56f-098e769d1406'
+settings:
+  id: 'block_content:30669b1b-a1b5-4183-b56f-098e769d1406'
+  label: 'Post Content'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

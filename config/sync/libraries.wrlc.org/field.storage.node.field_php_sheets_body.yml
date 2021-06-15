@@ -1,0 +1,19 @@
+uuid: 7409a202-6bf8-466c-b03a-d91b1bbf7c08
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_php_sheets_body
+field_name: field_php_sheets_body
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,9 +1,9 @@
-uuid: 76a7e048-7851-4e50-b965-138b2a17f5ca
+uuid: aada1853-c9bc-4fbf-bcae-8f2d6de81a9c
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: L59DkG-L2m47tA_R0sTtkHnuGzbHakmGgxgMO9VVZzc
+  default_config_hash: q8UTnSNpuX1XEqOBEnYY84ssgPvSNwHIrSyVE21G5Fk
 id: member
 label: 'Member profile'
 description: 'Configuration for site members'
@@ -15,6 +15,7 @@ conf:
   maxheight: 1024
   replace: 0
   thumbnail_style: ''
+  thumbnail_grid_style: false
   folders:
     -
       path: 'users/user[user:uid]'

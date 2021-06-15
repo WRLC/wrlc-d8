@@ -1,0 +1,27 @@
+uuid: 896c9f50-c074-4230-adb4-00731502919e
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_basecamp
+    - field.field.comment.comment_node_basecamp.comment_body
+  module:
+    - text
+id: comment.comment_node_basecamp.default
+targetEntityType: comment
+bundle: comment_node_basecamp
+mode: default
+content:
+  comment_body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

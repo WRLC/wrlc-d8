@@ -1,0 +1,20 @@
+uuid: 86a3145f-5e78-4b81-80e0-e84ad7b070dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_about_me
+  module:
+    - user
+id: user.user.field_about_me
+field_name: field_about_me
+entity_type: user
+bundle: user
+label: 'About Me'
+description: 'Tell us about yourself, what you do at your library, or anything you would like to share.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

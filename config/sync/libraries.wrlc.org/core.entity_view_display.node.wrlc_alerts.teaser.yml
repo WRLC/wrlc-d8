@@ -1,0 +1,28 @@
+uuid: f354a849-92b0-42c7-9527-86ce6afb6c65
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.wrlc_alerts.body
+    - field.field.node.wrlc_alerts.comment_node_wrlc_alerts
+    - field.field.node.wrlc_alerts.feeds_item
+    - field.field.node.wrlc_alerts.field_file
+    - node.type.wrlc_alerts
+  module:
+    - user
+id: node.wrlc_alerts.teaser
+targetEntityType: node
+bundle: wrlc_alerts
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  comment_node_wrlc_alerts: true
+  feeds_item: true
+  field_file: true

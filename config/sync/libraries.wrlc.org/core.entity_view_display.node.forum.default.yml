@@ -1,4 +1,4 @@
-uuid: c29cff0b-a262-4257-80fd-c1a06ae61e91
+uuid: c510a4b9-ebaf-4fe8-b105-0d28bec3b945
 langcode: en
 status: true
 dependencies:
@@ -21,31 +21,29 @@ mode: default
 content:
   body:
     label: hidden
+    weight: 11
     type: text_default
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
   comment_forum:
     label: hidden
     type: comment_default
     weight: 20
-    region: content
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
     region: content
   taxonomy_forums:
-    type: entity_reference_label
-    weight: -1
-    region: content
     label: above
+    weight: 10
+    type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
-hidden:
-  langcode: true
-  search_api_excerpt: true
+    region: content
+hidden: {  }

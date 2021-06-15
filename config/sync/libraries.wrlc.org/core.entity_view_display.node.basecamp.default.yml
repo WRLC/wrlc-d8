@@ -1,0 +1,40 @@
+uuid: 5eb50444-96a8-418d-8b08-be0c509dc8e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_basecamp.default
+    - field.field.node.basecamp.body
+    - field.field.node.basecamp.comment_node_basecamp
+    - node.type.basecamp
+  module:
+    - comment
+    - text
+    - user
+id: node.basecamp.default
+targetEntityType: node
+bundle: basecamp
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_node_basecamp:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

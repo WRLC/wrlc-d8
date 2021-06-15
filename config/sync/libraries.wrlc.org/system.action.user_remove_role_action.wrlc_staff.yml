@@ -1,0 +1,14 @@
+uuid: 84a10f7a-84e5-435d-80d0-73cd948b7f2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.wrlc_staff
+  module:
+    - user
+id: user_remove_role_action.wrlc_staff
+label: 'Remove the WRLC Staff role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: wrlc_staff

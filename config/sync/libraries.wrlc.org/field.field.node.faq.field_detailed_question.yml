@@ -1,4 +1,4 @@
-uuid: b491d6a2-4ef9-4f64-a7da-e75755a9498e
+uuid: 10e2e9cf-fe36-4c14-a957-e510003b9d18
 langcode: en
 status: true
 dependencies:
@@ -13,10 +13,10 @@ id: node.faq.field_detailed_question
 field_name: field_detailed_question
 entity_type: node
 bundle: faq
-label: 'Detailed Question'
-description: ''
+label: 'Detailed question'
+description: 'Enter the detailed question text'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -1,10 +1,17 @@
-uuid: d8fc17f5-9785-431a-b52c-ac8c8544eb39
+uuid: d1f39c16-c022-48bf-96e9-c3651319541c
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - book
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: 2gWGA-X4ERc4McStS7cMEG3ZBpDEqfNRDPTjB1v674Y
 name: 'Book page'
@@ -13,4 +20,4 @@ description: '<em>Books</em> have a built-in hierarchical navigation. Use for ha
 help: ''
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false

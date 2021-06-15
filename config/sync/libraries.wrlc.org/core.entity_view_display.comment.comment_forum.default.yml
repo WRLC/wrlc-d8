@@ -1,4 +1,4 @@
-uuid: bd5d6a54-906a-44c0-87a6-86c6400fcfae
+uuid: af2eb384-95c1-4bb0-a2e0-2eecf2cee376
 langcode: en
 status: true
 dependencies:
@@ -16,14 +16,12 @@ mode: default
 content:
   comment_body:
     label: hidden
-    type: text_default
     weight: 0
-    region: content
+    type: text_default
     settings: {  }
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
     region: content
-hidden:
-  langcode: true
-  search_api_excerpt: true
+hidden: {  }

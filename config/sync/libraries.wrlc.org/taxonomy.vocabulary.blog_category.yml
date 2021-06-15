@@ -1,0 +1,8 @@
+uuid: 763c8ff7-530c-4c32-a763-7d21b290fbb6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Blog Category'
+vid: blog_category
+description: 'Taxonomy for blog entries'
+weight: 0

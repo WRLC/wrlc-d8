@@ -1,0 +1,15 @@
+uuid: f6d5f68d-2d6c-4bbe-a114-5cfaed428ab5
+langcode: en
+status: true
+dependencies: {  }
+name: 900x800
+label: 900x800
+effects:
+  dcd86bed-5d5a-4433-950a-d7096fb66c9d:
+    uuid: dcd86bed-5d5a-4433-950a-d7096fb66c9d
+    id: image_scale
+    weight: 1
+    data:
+      width: 900
+      height: 800
+      upscale: false

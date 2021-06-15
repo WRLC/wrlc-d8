@@ -1,0 +1,27 @@
+uuid: 5f403004-fa8e-4b88-bc8f-338a223afbab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.handbook
+  module:
+    - file
+id: node.handbook.field_file
+field_name: field_file
+entity_type: node
+bundle: handbook
+label: File
+description: 'Attach a file to this book page.  You may attach up to 10 files per page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'txt doc docx ppt pptx xls xlsx pdf jpg png gif psd mov mp4 mp3'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

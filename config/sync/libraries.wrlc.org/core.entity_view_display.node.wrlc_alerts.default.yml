@@ -1,0 +1,52 @@
+uuid: 5fc0cd8e-2a79-4610-a756-3cbc98c0b547
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_wrlc_alerts.default
+    - field.field.node.wrlc_alerts.body
+    - field.field.node.wrlc_alerts.comment_node_wrlc_alerts
+    - field.field.node.wrlc_alerts.feeds_item
+    - field.field.node.wrlc_alerts.field_file
+    - node.type.wrlc_alerts
+  module:
+    - comment
+    - file
+    - text
+    - user
+id: node.wrlc_alerts.default
+targetEntityType: node
+bundle: wrlc_alerts
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_node_wrlc_alerts:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_file:
+    label: hidden
+    weight: 1
+    type: file_default
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  feeds_item: true

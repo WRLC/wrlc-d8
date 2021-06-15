@@ -1,0 +1,27 @@
+uuid: b5060df0-93eb-4155-bd22-10b637318646
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_google_sheets_page
+    - field.field.comment.comment_node_google_sheets_page.comment_body
+  module:
+    - text
+id: comment.comment_node_google_sheets_page.default
+targetEntityType: comment
+bundle: comment_node_google_sheets_page
+mode: default
+content:
+  comment_body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
