@@ -1,0 +1,33 @@
+uuid: 2292f5a4-3a32-4533-9a64-2fef8f51ec61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_group_ref
+    - node.type.committee
+    - node.type.committee_post
+id: node.committee_post.og_group_ref
+field_name: og_group_ref
+entity_type: node
+bundle: committee_post
+label: Committee
+description: 'Select the committee associated with this post.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      committee: committee
+    sort:
+      field: title
+      direction: ASC
+    membership_type: og_membership_type_default
+    behaviors:
+      og_behavior:
+        status: true
+      views-select-list:
+        status: 0
+field_type: entity_reference

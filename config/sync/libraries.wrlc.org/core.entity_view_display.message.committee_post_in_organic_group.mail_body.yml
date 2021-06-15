@@ -1,0 +1,32 @@
+uuid: 5d1f53aa-bca3-4592-9921-a4b36f7a029e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.message.mail_body
+    - field.field.message.committee_post_in_organic_group.field_node_groups_ref
+    - field.field.message.committee_post_in_organic_group.field_node_ref
+    - field.field.message.committee_post_in_organic_group.field_published
+    - field.field.message.committee_post_in_organic_group.og_group_ref
+    - field.field.message.committee_post_in_organic_group.og_node_link
+    - message.template.committee_post_in_organic_group
+id: message.committee_post_in_organic_group.mail_body
+targetEntityType: message
+bundle: committee_post_in_organic_group
+mode: mail_body
+content:
+  partial_1:
+    weight: 0
+    region: content
+  partial_2:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_node_groups_ref: true
+  field_node_ref: true
+  field_published: true
+  og_group_ref: true
+  og_node_link: true
+  partial_0: true

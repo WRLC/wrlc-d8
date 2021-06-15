@@ -1,0 +1,21 @@
+uuid: bab79641-6e8c-471c-9970-d41d15277d5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.message.field_message_rendered_body
+    - message.template.comment_insert
+  module:
+    - text
+id: message.comment_insert.field_message_rendered_body
+field_name: field_message_rendered_body
+entity_type: message
+bundle: comment_insert
+label: 'Rendered body'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,17 @@
+uuid: ae00fe03-1a9a-4bf4-8eee-db13ab2faa2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.message.mail_subject
+    - message.template.example_arguments
+id: message.example_arguments.mail_subject
+targetEntityType: message
+bundle: example_arguments
+mode: mail_subject
+content:
+  partial_0:
+    weight: 0
+    region: content
+hidden:
+  partial_1: true

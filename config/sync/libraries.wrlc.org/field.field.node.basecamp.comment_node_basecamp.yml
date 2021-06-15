@@ -1,0 +1,33 @@
+uuid: 94c7218d-227b-4f00-b4ce-f334a88676e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_basecamp
+    - node.type.basecamp
+  module:
+    - comment
+id: node.basecamp.comment_node_basecamp
+field_name: comment_node_basecamp
+entity_type: node
+bundle: basecamp
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 0
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 0
+  per_page: 50
+  anonymous: 0
+  form_location: false
+  preview: 1
+field_type: comment

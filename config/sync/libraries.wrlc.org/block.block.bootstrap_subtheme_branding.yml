@@ -1,4 +1,4 @@
-uuid: 0e60e9d1-f752-4a15-afe3-52c856c3ecc5
+uuid: 5539ce4a-19fb-4011-b692-8008639085e8
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - bootstrap_subtheme
 _core:
-  default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: bootstrap_subtheme_branding
 theme: bootstrap_subtheme
 region: navigation
-weight: -3
+weight: -16
 provider: null
 plugin: system_branding_block
 settings:

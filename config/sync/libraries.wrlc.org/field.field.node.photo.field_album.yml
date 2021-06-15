@@ -1,0 +1,30 @@
+uuid: 77a78ce3-0059-4e5d-8b43-d59dc8a47a56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_album
+    - node.type.album
+    - node.type.photo
+id: node.photo.field_album
+field_name: field_album
+entity_type: node
+bundle: photo
+label: Album
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      album: album
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

@@ -1,0 +1,8 @@
+uuid: a3d2725c-0aa8-4f00-8cc1-6255ddd803d7
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_blog
+label: 'WRLC Communications Post comment'
+target_entity_type_id: node
+description: null

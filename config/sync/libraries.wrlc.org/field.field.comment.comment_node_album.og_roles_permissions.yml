@@ -1,0 +1,23 @@
+uuid: 7fc916b1-ee51-4e7f-aa35-290c2a5ae6c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_album
+    - field.storage.comment.og_roles_permissions
+id: comment.comment_node_album.og_roles_permissions
+field_name: og_roles_permissions
+entity_type: comment
+bundle: comment_node_album
+label: 'Group roles and permissions'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Override default roles and permissions'
+  off_label: 'Use default roles and permissions'
+field_type: boolean

@@ -1,0 +1,19 @@
+uuid: b2d27428-3da2-422a-93ff-a01ddd74b07a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.message.field_message_rendered_subject
+    - message.template.comment_insert
+id: message.comment_insert.field_message_rendered_subject
+field_name: field_message_rendered_subject
+entity_type: message
+bundle: comment_insert
+label: 'Rendered subject'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

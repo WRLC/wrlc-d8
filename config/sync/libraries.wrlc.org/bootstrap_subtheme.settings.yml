@@ -3,15 +3,34 @@ schemas:
   bootstrap_subtheme: 8000
 favicon:
   mimetype: image/vnd.microsoft.icon
-  path: ''
-  url: 'https://libraries.wrlc8.lndo.site/themes/contrib/bootstrap/favicon.ico'
-  use_default: true
+  path: 'public://favicon_5.ico'
+  url: 'https://beta.libraries.wrlc.org/sites/www.libraries.wrlc.org/files/favicon_5.ico'
+  use_default: false
+logo:
+  path: 'public://wrlc-logo-7-white.png'
+  url: 'https://beta.libraries.wrlc.org/sites/www.libraries.wrlc.org/files/wrlc-logo-7-white.png'
+  use_default: false
+region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: 'well well-sm'
+  sidebar_second: 'well well-sm'
+  footer: ''
+breadcrumb_home: 1
+navbar_position: fixed-top
 features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
-  node_user_picture: false
-logo:
-  path: ''
-  url: ''
-  use_default: true
+  node_user_picture: true
+  logo: true
+  name: true
+  slogan: true
+table_bordered: 1
+table_condensed: 1
+reset_http_request_cache: ''
+table: ''

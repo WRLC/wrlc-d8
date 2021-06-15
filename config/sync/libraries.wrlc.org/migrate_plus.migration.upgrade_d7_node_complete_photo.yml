@@ -1,0 +1,107 @@
+uuid: 4a6f76b7-23cb-4748-ba5a-f0c4c0a6e1aa
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_photo
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Photo)'
+source:
+  plugin: d7_node_complete
+  node_type: photo
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_photo/0/status:
+    -
+      plugin: get
+      source: comment
+  field_album:
+    -
+      plugin: get
+      source: field_album
+  field_caption:
+    -
+      plugin: get
+      source: field_caption
+  field_image_file:
+    -
+      plugin: sub_process
+      source: field_image_file
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: photo
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_comment_field_instance

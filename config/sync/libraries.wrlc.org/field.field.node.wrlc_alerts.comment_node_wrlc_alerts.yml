@@ -1,0 +1,33 @@
+uuid: 5b01bac1-d0f6-4299-8c41-40e24d329572
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_wrlc_alerts
+    - node.type.wrlc_alerts
+  module:
+    - comment
+id: node.wrlc_alerts.comment_node_wrlc_alerts
+field_name: comment_node_wrlc_alerts
+entity_type: node
+bundle: wrlc_alerts
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 1
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 0
+  per_page: 50
+  anonymous: 0
+  form_location: false
+  preview: 1
+field_type: comment

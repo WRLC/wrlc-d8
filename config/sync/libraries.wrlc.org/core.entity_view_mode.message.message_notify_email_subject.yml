@@ -1,0 +1,10 @@
+uuid: f746438c-d71d-47e4-ac64-aa656ef729b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - message
+id: message.message_notify_email_subject
+label: message_notify_email_subject
+targetEntityType: message
+cache: true

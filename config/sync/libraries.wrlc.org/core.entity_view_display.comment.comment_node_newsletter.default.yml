@@ -1,0 +1,27 @@
+uuid: 8ea117eb-6f85-4377-8a35-2069c4b54f66
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_newsletter
+    - field.field.comment.comment_node_newsletter.comment_body
+  module:
+    - text
+id: comment.comment_node_newsletter.default
+targetEntityType: comment
+bundle: comment_node_newsletter
+mode: default
+content:
+  comment_body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

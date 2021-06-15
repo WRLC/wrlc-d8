@@ -1,0 +1,8 @@
+uuid: f0052f99-0438-412b-8801-e0747cf61a79
+langcode: en
+status: true
+dependencies: {  }
+id: menu-statistics-and-reports
+label: Categories
+description: 'hidden menu to successfully create breadcrumb for Statistics And Reports category'
+locked: false

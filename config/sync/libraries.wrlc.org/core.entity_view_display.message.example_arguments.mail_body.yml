@@ -1,0 +1,17 @@
+uuid: 4e2bc8fc-ef40-4509-b5de-2030ebd2558d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.message.mail_body
+    - message.template.example_arguments
+id: message.example_arguments.mail_body
+targetEntityType: message
+bundle: example_arguments
+mode: mail_body
+content:
+  partial_1:
+    weight: 0
+    region: content
+hidden:
+  partial_0: true

@@ -1,0 +1,91 @@
+uuid: d69e8b9a-c6b9-49e1-a20c-9ec5a9d348d3
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_taxonomy_term_blog_category
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Taxonomy terms (Blog Category)'
+source:
+  plugin: d7_taxonomy_term
+  bundle: blog_category
+process:
+  tid:
+    -
+      plugin: get
+      source: tid
+  vid:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_taxonomy_vocabulary
+      source: vid
+  name:
+    -
+      plugin: get
+      source: name
+  description/value:
+    -
+      plugin: get
+      source: description
+  description/format:
+    -
+      plugin: get
+      source: format
+  weight:
+    -
+      plugin: get
+      source: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_d7_taxonomy_term_committee_and_task_force_reports
+        - upgrade_d7_taxonomy_term_blog_category
+        - upgrade_d7_taxonomy_term_staff_access
+        - upgrade_d7_taxonomy_term_forums
+        - upgrade_d7_taxonomy_term_category
+  parent:
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+  forum_container:
+    -
+      plugin: get
+      source: is_container
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  langcode:
+    -
+      plugin: get
+      source: language
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: blog_category
+migration_dependencies:
+  required:
+    - upgrade_d7_taxonomy_vocabulary
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_taxonomy_vocabulary
+    - upgrade_d7_taxonomy_term_category
+    - upgrade_d7_taxonomy_term_forums
+    - upgrade_d7_taxonomy_term_staff_access
+    - upgrade_d7_taxonomy_term_blog_category
+    - upgrade_d7_taxonomy_term_committee_and_task_force_reports
+    - upgrade_d7_taxonomy_term_committee_and_task_force_reports
+    - upgrade_d7_taxonomy_term_blog_category
+    - upgrade_d7_taxonomy_term_staff_access
+    - upgrade_d7_taxonomy_term_forums
+    - upgrade_d7_taxonomy_term_category

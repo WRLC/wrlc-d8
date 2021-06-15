@@ -1,0 +1,21 @@
+uuid: d4fefb67-6b69-470d-9db1-49aaaac07011
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.message.mail_subject
+    - field.field.message.example_create_node.field_node_ref
+    - field.field.message.example_create_node.field_published
+    - message.template.example_create_node
+id: message.example_create_node.mail_subject
+targetEntityType: message
+bundle: example_create_node
+mode: mail_subject
+content:
+  partial_0:
+    weight: 0
+    region: content
+hidden:
+  field_node_ref: true
+  field_published: true
+  partial_1: true

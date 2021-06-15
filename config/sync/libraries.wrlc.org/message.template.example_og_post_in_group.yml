@@ -1,0 +1,21 @@
+uuid: 36c5532e-9372-4969-8749-0d40e2bbffb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+    - filter.format.full_html
+template: example_og_post_in_group
+label: 'Example - OG post in group'
+description: message_type
+text:
+  -
+    value: '[message:user:picture]'
+    format: filtered_html
+  -
+    value: '<a href="[message:user:url]">[message:user:name]</a> posted <a href="[message:field-node-ref:url]">[message:field-node-ref:title]</a> in !groups.'
+    format: full_html
+  -
+    value: '[message:field-node-ref:node-teaser]'
+    format: filtered_html
+settings: {  }

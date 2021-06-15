@@ -1,0 +1,23 @@
+uuid: 059970c0-a2df-4f73-8201-30dd8ac0b4fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.committee
+  module:
+    - text
+id: node.committee.body
+field_name: body
+entity_type: node
+bundle: committee
+label: 'Committee Description'
+description: 'Enter the description for your committee/Task Force'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

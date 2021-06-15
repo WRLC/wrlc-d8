@@ -1,0 +1,8 @@
+uuid: 3cc736e8-6979-477a-b94a-c6d594948ef8
+langcode: en
+status: true
+dependencies: {  }
+id: menu-my-intranet
+label: 'My Intranet'
+description: ''
+locked: false

@@ -1,0 +1,23 @@
+uuid: a0d3014a-c1bc-404e-b744-d6ce10cc5278
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.wrlc_alerts
+  module:
+    - text
+id: node.wrlc_alerts.body
+field_name: body
+entity_type: node
+bundle: wrlc_alerts
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

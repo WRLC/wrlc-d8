@@ -1,0 +1,256 @@
+uuid: c2b7d81b-54d7-40ca-9dd3-2a12c3df4ffe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.committee_post.body
+    - field.field.node.committee_post.field_report
+    - field.field.node.committee_post.field_tags
+    - field.field.node.committee_post.group_access
+    - field.field.node.committee_post.group_content_access
+    - field.field.node.committee_post.group_group
+    - field.field.node.committee_post.og_group_ref
+    - node.type.committee_post
+  module:
+    - feeds_ex
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      4d4e6416-e173-4881-9ca1-910f988ee9f6:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: field_tags
+        weight: 0
+        label: Explode
+        uuid: 4d4e6416-e173-4881-9ca1-910f988ee9f6
+      98fdddbf-f234-425f-8801-a53ff82dbfb3:
+        default_value: ''
+        only_if_empty: true
+        plugin: default_value
+        source: field_report
+        weight: 0
+        label: 'Set value or default value'
+        uuid: 98fdddbf-f234-425f-8801-a53ff82dbfb3
+id: unmigrated_committee_posts
+label: 'Unmigrated Committee Posts'
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: json
+  directory: 'public://feeds'
+parser: jsonpath
+parser_configuration:
+  context:
+    value: '$.nodes.*.node'
+  sources:
+    uid:
+      label: uid
+      value: uid
+    created:
+      label: created
+      value: created
+    body:
+      label: body
+      value: body
+    body_summary:
+      label: body_summary
+      value: body_summary
+    og_group_ref:
+      label: og_group_ref
+      value: og_group_ref
+    field_report:
+      label: field_report
+      value: field_report
+    group_content_access:
+      label: group_content_access
+      value: group_content_access
+    group_access:
+      label: group_access
+      value: group_access
+    group_group:
+      label: group_group
+      value: group_group
+    nid:
+      label: nid
+      value: nid
+    language:
+      label: language
+      value: language
+    field_tags:
+      label: field_tags
+      value: field_tags
+    title:
+      label: title
+      value: title
+  display_errors: false
+  source_encoding:
+    - auto
+  debug_mode: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  langcode: en
+  update_existing: 0
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+  authorize: false
+  skip_hash_check: false
+  values:
+    type: committee_post
+custom_sources:
+  uid:
+    label: uid
+    value: uid
+    machine_name: uid
+  created:
+    label: created
+    value: created
+    machine_name: created
+  body_text:
+    label: body_text
+    value: body_text
+    machine_name: body_text
+  body_summary:
+    label: body_summary
+    value: body_summary
+    machine_name: body_summary
+  og_group_ref:
+    label: og_group_ref
+    value: og_group_ref
+    machine_name: og_group_ref
+  field_report:
+    label: field_report
+    value: field_report
+    machine_name: field_report
+  group_content_access:
+    label: group_content_access
+    value: group_content_access
+    machine_name: group_content_access
+  group_access:
+    label: group_access
+    value: group_access
+    machine_name: group_access
+  language:
+    label: language
+    value: language
+    machine_name: language
+  group_group:
+    label: group_group
+    value: group_group
+    machine_name: group_group
+  nid:
+    label: nid
+    value: nid
+    machine_name: nid
+  field_tags:
+    label: field_tags
+    value: field_tags
+    machine_name: field_tags
+  title:
+    label: title
+    value: title
+    machine_name: title
+  path:
+    label: path
+    value: path
+    machine_name: path
+  body:
+    label: body
+    value: body
+    machine_name: body
+mappings:
+  -
+    target: uid
+    map:
+      target_id: uid
+    settings:
+      language: ''
+      reference_by: uid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: created
+    map:
+      value: created
+    settings:
+      language: ''
+      timezone: __SITE__
+  -
+    target: body
+    map:
+      value: body
+      summary: body_summary
+    settings:
+      language: ''
+      format: basic_html
+  -
+    target: og_group_ref
+    map:
+      target_id: og_group_ref
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0
+  -
+    target: field_report
+    map:
+      target_id: field_report
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 0
+  -
+    target: group_content_access
+    map:
+      value: group_content_access
+    unique: {  }
+    settings:
+      language: null
+  -
+    target: group_access
+    map:
+      value: group_access
+    settings:
+      language: null
+  -
+    target: group_group
+    map:
+      value: group_group
+    settings:
+      language: null
+  -
+    target: nid
+    map:
+      value: nid
+    unique:
+      value: '1'
+    settings: {  }
+  -
+    target: langcode
+    map:
+      value: language
+    settings:
+      language: null
+  -
+    target: field_tags
+    map:
+      target_id: field_tags
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+  -
+    target: title
+    map:
+      value: title
+    unique: {  }
+    settings:
+      language: null

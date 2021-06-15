@@ -1,0 +1,50 @@
+uuid: 533f20e1-f883-444e-a044-bdc07d233f88
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_handbook.default
+    - field.field.node.handbook.body
+    - field.field.node.handbook.comment_node_handbook
+    - field.field.node.handbook.field_file
+    - node.type.handbook
+  module:
+    - comment
+    - file
+    - text
+    - user
+id: node.handbook.default
+targetEntityType: node
+bundle: handbook
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_node_handbook:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_file:
+    label: hidden
+    weight: 1
+    type: file_table
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

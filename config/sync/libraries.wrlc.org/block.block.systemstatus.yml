@@ -1,0 +1,42 @@
+uuid: 965cc58b-1f6e-41e4-980c-260c5a760c2f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5a20656f-d65d-4fd9-977a-7c5a657ad98a'
+  module:
+    - block_content
+    - context
+    - system
+  theme:
+    - bootstrap_subtheme
+id: systemstatus
+theme: bootstrap_subtheme
+region: sidebar_second
+weight: -11
+provider: null
+plugin: 'block_content:5a20656f-d65d-4fd9-977a-7c5a657ad98a'
+settings:
+  id: 'block_content:5a20656f-d65d-4fd9-977a-7c5a657ad98a'
+  label: 'System Status'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: /performance-and-alerts
+    negate: false
+    context_mapping: {  }

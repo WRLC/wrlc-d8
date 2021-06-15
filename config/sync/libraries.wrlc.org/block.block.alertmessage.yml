@@ -1,0 +1,42 @@
+uuid: 3e91b563-8ca7-48b6-bd12-13c969300fa5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:57381a7b-5740-44a5-aade-820c47482db0'
+  module:
+    - block_content
+    - context
+    - system
+  theme:
+    - bootstrap_subtheme
+id: alertmessage
+theme: bootstrap_subtheme
+region: sidebar_second
+weight: -15
+provider: null
+plugin: 'block_content:57381a7b-5740-44a5-aade-820c47482db0'
+settings:
+  id: 'block_content:57381a7b-5740-44a5-aade-820c47482db0'
+  label: 'Alert Message'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

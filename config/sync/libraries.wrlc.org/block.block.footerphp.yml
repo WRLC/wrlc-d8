@@ -1,0 +1,36 @@
+uuid: 9a67ba78-d7d8-4bf6-993f-c9b898d5e822
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:acaf0501-9893-48f4-85a2-2c3e825a9d6e'
+  module:
+    - block_content
+    - context
+  theme:
+    - bootstrap_subtheme
+id: footerphp
+theme: bootstrap_subtheme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:acaf0501-9893-48f4-85a2-2c3e825a9d6e'
+settings:
+  id: 'block_content:acaf0501-9893-48f4-85a2-2c3e825a9d6e'
+  label: 'Footer PHP'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }

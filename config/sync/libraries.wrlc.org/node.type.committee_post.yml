@@ -1,0 +1,17 @@
+uuid: efffd78a-d80c-4fb2-ab9e-08be24f99ee5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Committee Post'
+type: committee_post
+description: 'Create content for a committee.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

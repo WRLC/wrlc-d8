@@ -1,0 +1,27 @@
+uuid: 98d02873-c952-4121-9d78-86133789de5f
+langcode: en
+status: true
+dependencies:
+  module:
+    - context
+    - system
+id: newsletter
+label: Newsletter
+code: "body,#bodyTable,#templateFooter{\n\t\t\tbackground-color:#fff!important;\n\t\t}\n\tbody#bodyTable{\n\t\t\tmax-width:600px!important;\n\t\t}\t\ntable {max-width:90%!important;}\nimg {max-width:450px!important;}\nh1 {\n    color: #000 !important;\n   \n    font-style: normal;\n    font-weight: normal;\n    line-height: 100%;\n    letter-spacing: normal;\n    text-align: left;\n}\n.templateContainer { max-width:90%!important}\nimg {max-width:400px;}\n\n.region-sidebar-first h2 {\n    \n    color: #ffffff!important;\n    border-radius: 4px;\n    font-size: 16px;\n    padding: 5px;\n    margin:10px 0;\n}\n\n.node-newsletter table, .node-newsletter table td, .node-newsletter table tr {\n\tborder:none !important;\n\tmargin:0 !important;\n\tpadding:0 !important;\n}\n.node-newsletter .mc-toc-title {\n\tbackground-color:#448AFF !important;\n\tborder-radius: 0 10px 10px 0;\n\tpadding:10px !important;\n}\n.node-newsletter .mcnButton {\n\tbackground-color: #C2185B !important;\n\tpadding: 10px;\n\twidth: 200px;\n\tborder-radius: 10px;\n}\n.node-newsletter .mcnDividerBlock {\n\tdisplay:none !important;\n}\n.node-newsletter .mcnBoxedTextBlockInner {\n\tmargin:0 !important;\n}\n\n.newsletterformat td {\n\tborder:none !important;\n\tmargin:0 !important;\n\tpadding:0 !important;\n}\n.newsletterformat td br {\n\tdisplay:none !important;\n}\n.newsletterformat td a {\n\tcolor:#06F !important;\n}\n\n.newsletterformat {\n\tmax-width:600px !important;\n}\n.newsletterformat table {\n\tmax-width:500px !important;\n}\n.newsletter-hide {\n\tdisplay:none;\n}\n\n.newsletterformat table, .newsletterformat td {\n\tborder:none !important;\n\tmargin:0 !important;\n}\n.newsletterformat .mcnButton {\n\tcolor:#fff !important;\n\tpadding:20px 10px;\n}\n.newsletterformat .preheaderContainer {\n\tdisplay:none !important;\n}\n.newsletterformat .mcnImageBlockOuter {\n\tmax-width:500px !important;\n}\n.newsletterformat td .mcnButtonContent {\n\tmargin-bottom:20px !important;\n}\n.newsletterformat h1 {\n\tborder-radius:2px !important;\n\tmargin-bottom:10px !important;\n}\n.newsletterformat .mc-toc-title {\n\tborder-radius:2px !important;\n\tmargin-bottom:10px !important;\n}\n.newsletterformat style, .newsletterformat xml, .newsletterformat title {\n\tdisplay:none;\n\theight:0;\n}\n.type-newsletter {\n\ttext-transform:capitalize;\n}\n\n/* Tom's newsletter tweak to fix <body> tag margin-top */\nbody.navbar-is-fixed-top {\n    margin-top: 65px !important;\n}"
+conditions_require_all: true
+conditions:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+  request_path:
+    id: request_path
+    pages: '/newsletter/*'
+    negate: false
+contexts: {  }
+media: all
+preprocess: true

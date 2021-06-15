@@ -1,0 +1,29 @@
+uuid: 94be0d6f-8e3f-444e-8d48-7b5c5ba4f269
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_wrlc_alerts
+    - field.field.comment.comment_node_wrlc_alerts.comment_body
+  module:
+    - text
+id: comment.comment_node_wrlc_alerts.default
+targetEntityType: comment
+bundle: comment_node_wrlc_alerts
+mode: default
+content:
+  author:
+    weight: -2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_body:
+    weight: 0
+    type: text_textarea
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  subject: true

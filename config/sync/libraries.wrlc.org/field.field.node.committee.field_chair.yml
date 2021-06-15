@@ -1,0 +1,25 @@
+uuid: e904f249-c44c-40ba-b145-4c9b00698b5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chair
+    - node.type.committee
+id: node.committee.field_chair
+field_name: field_chair
+entity_type: node
+bundle: committee
+label: Chair(s)
+description: 'Check the name of the committee chair.  There may be more than one.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: committee_membership
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

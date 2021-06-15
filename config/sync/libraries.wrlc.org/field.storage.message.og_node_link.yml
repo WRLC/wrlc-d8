@@ -1,0 +1,21 @@
+uuid: ca44390b-7d6f-4d56-8b4f-92787e5ceb1a
+langcode: und
+status: true
+dependencies:
+  module:
+    - message
+    - options
+id: message.og_node_link
+field_name: og_node_link
+entity_type: message
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: og_node_link_field_allowed_values
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

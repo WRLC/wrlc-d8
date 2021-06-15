@@ -1,0 +1,30 @@
+uuid: 7203acd9-8405-4388-bd64-e655625693f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.message.mail_body
+    - field.field.message.example_og_post_in_group.field_node_groups_ref
+    - field.field.message.example_og_post_in_group.field_node_ref
+    - field.field.message.example_og_post_in_group.field_published
+    - field.field.message.example_og_post_in_group.og_group_ref
+    - message.template.example_og_post_in_group
+id: message.example_og_post_in_group.mail_body
+targetEntityType: message
+bundle: example_og_post_in_group
+mode: mail_body
+content:
+  partial_1:
+    weight: 0
+    region: content
+  partial_2:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_node_groups_ref: true
+  field_node_ref: true
+  field_published: true
+  og_group_ref: true
+  partial_0: true

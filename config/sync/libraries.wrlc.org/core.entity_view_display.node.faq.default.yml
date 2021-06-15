@@ -1,12 +1,15 @@
-uuid: 0b8d57a1-30b0-4d68-b875-a9d239db29c4
+uuid: 8c3a7055-f42f-442e-ba65-0edb1a154d40
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.comment_node_faq.default
     - field.field.node.faq.body
+    - field.field.node.faq.comment_node_faq
     - field.field.node.faq.field_detailed_question
     - node.type.faq
   module:
+    - comment
     - text
     - user
 _core:
@@ -17,19 +20,28 @@ bundle: faq
 mode: default
 content:
   body:
+    label: hidden
+    weight: 1
     type: text_default
-    weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
+  comment_node_faq:
     label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
     region: content
   field_detailed_question:
+    label: hidden
+    weight: 0
     type: text_default
-    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
-    label: above
   links:
     weight: 100
     region: content
@@ -41,6 +53,4 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden:
-  langcode: true
-  search_api_excerpt: true
+hidden: {  }

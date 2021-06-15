@@ -1,0 +1,22 @@
+uuid: a558b22c-9d41-4f5e-a30f-66598de60b0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: committee
+label: Committee
+type: 'canonical_entities:node'
+pattern: 'committee/[node:title]'
+selection_criteria:
+  894a3d38-640a-498a-92ab-46a6e3fd8ec9:
+    id: node_type
+    bundles:
+      committee: committee
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 894a3d38-640a-498a-92ab-46a6e3fd8ec9
+selection_logic: and
+weight: -8
+relationships: {  }

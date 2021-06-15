@@ -1,0 +1,26 @@
+uuid: 11c7cc1e-f0b5-4af5-b6d8-27f888b0334c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.event
+    - taxonomy.vocabulary.category
+id: node.event.field_tags
+field_name: field_tags
+entity_type: node
+bundle: event
+label: Tags
+description: 'Add at tag to your post. The field will auto-complete with existing terms as you type.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      category: category
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

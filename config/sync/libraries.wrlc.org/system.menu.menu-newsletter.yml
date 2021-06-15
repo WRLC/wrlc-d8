@@ -1,0 +1,8 @@
+uuid: e8b8a639-7c66-4c1b-afd1-bf14499fd177
+langcode: en
+status: true
+dependencies: {  }
+id: menu-newsletter
+label: newsletter
+description: 'holding menu for newsletter archive to display breadcrumb'
+locked: false

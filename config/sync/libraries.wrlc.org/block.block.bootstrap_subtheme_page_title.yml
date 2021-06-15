@@ -1,15 +1,15 @@
-uuid: e0a11bca-fed3-47f6-b427-3b5d2929a99c
+uuid: 17327382-4c72-44ce-b94c-b32a49e1ea04
 langcode: en
 status: true
 dependencies:
   theme:
     - bootstrap_subtheme
 _core:
-  default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
 id: bootstrap_subtheme_page_title
 theme: bootstrap_subtheme
 region: content
-weight: -30
+weight: -14
 provider: null
 plugin: page_title_block
 settings:

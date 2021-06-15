@@ -1,0 +1,23 @@
+uuid: 6b476506-1816-4533-923c-2c715fa7838e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.message.mail_subject
+    - field.field.message.comment_insert.field_comment_ref
+    - field.field.message.comment_insert.field_message_rendered_body
+    - field.field.message.comment_insert.field_message_rendered_subject
+    - message.template.comment_insert
+id: message.comment_insert.mail_subject
+targetEntityType: message
+bundle: comment_insert
+mode: mail_subject
+content:
+  partial_0:
+    weight: 0
+    region: content
+hidden:
+  field_comment_ref: true
+  field_message_rendered_body: true
+  field_message_rendered_subject: true
+  partial_1: true

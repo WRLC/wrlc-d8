@@ -1,0 +1,23 @@
+uuid: e2e1eba1-1a06-46ed-97ad-6a55e2e84760
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.handbook
+  module:
+    - text
+id: node.handbook.body
+field_name: body
+entity_type: node
+bundle: handbook
+label: Body
+description: 'Enter the text for your book page.  For advanced formatting features, select "Full HTML" for the text format.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

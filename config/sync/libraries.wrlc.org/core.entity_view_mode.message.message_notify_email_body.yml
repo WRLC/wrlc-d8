@@ -1,0 +1,10 @@
+uuid: deed102b-5a0c-47ca-a671-2fb54faa80c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - message
+id: message.message_notify_email_body
+label: message_notify_email_body
+targetEntityType: message
+cache: true

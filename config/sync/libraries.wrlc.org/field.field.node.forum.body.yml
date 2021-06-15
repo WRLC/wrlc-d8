@@ -1,4 +1,4 @@
-uuid: d07c0f06-8650-4ea4-98e2-cabaab56a541
+uuid: 5d03cd48-66e8-495d-863f-a16effdfc04d
 langcode: en
 status: true
 dependencies:
@@ -16,7 +16,7 @@ bundle: forum
 label: Body
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

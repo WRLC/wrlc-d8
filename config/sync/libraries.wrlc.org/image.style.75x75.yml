@@ -1,0 +1,15 @@
+uuid: 655afbbb-4127-4791-8013-07059ae8a354
+langcode: en
+status: true
+dependencies: {  }
+name: 75x75
+label: 75x75
+effects:
+  6bec8963-263c-4c37-b31b-fcb6ee9b591c:
+    uuid: 6bec8963-263c-4c37-b31b-fcb6ee9b591c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 75
+      height: 75
+      anchor: center-center

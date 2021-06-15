@@ -1,0 +1,83 @@
+uuid: 5d860adc-edaf-40d3-8421-8456c0b2a22a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.og_group_ref
+  module:
+    - feeds_ex
+    - feeds_tamper
+    - user
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      e77be648-aad8-4c03-8480-7004fd16d101:
+        separator: ','
+        limit: null
+        plugin: explode
+        source: audience
+        weight: 0
+        label: Explode
+        uuid: e77be648-aad8-4c03-8480-7004fd16d101
+id: user_group_assignments
+label: 'User Group assignments'
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: json
+  directory: 'public://feeds'
+parser: jsonpath
+parser_configuration:
+  context:
+    value: '$.nodes.*.node'
+  sources:
+    name:
+      label: name
+      value: name
+    audience:
+      label: audience
+      value: audience
+  display_errors: false
+  source_encoding:
+    - auto
+  debug_mode: false
+  line_limit: 100
+processor: 'entity:user'
+processor_configuration:
+  langcode: en
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  skip_hash_check: true
+  owner_id: 0
+  values: {  }
+  authorize: false
+  owner_feed_author: false
+custom_sources:
+  name:
+    label: name
+    value: name
+    machine_name: name
+  audience:
+    label: audience
+    value: audience
+    machine_name: audience
+mappings:
+  -
+    target: name
+    map:
+      value: name
+    unique:
+      value: '1'
+    settings: {  }
+  -
+    target: og_group_ref
+    map:
+      target_id: audience
+    settings:
+      language: ''
+      reference_by: nid
+      feeds_item: guid
+      autocreate: 0

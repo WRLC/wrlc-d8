@@ -1,0 +1,21 @@
+uuid: be15376c-2ae9-4081-9ef4-366e3b8f2186
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.message.mail_subject
+    - field.field.message.example_og_user_membership.field_node_groups_ref
+    - field.field.message.example_og_user_membership.field_published
+    - message.template.example_og_user_membership
+id: message.example_og_user_membership.mail_subject
+targetEntityType: message
+bundle: example_og_user_membership
+mode: mail_subject
+content:
+  partial_0:
+    weight: 0
+    region: content
+hidden:
+  field_node_groups_ref: true
+  field_published: true
+  partial_1: true

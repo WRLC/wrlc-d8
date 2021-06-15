@@ -1,0 +1,8 @@
+uuid: e2e7b1c8-789f-42e0-96f0-f63b016d4709
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_newsletter
+label: 'newsletter comment'
+target_entity_type_id: node
+description: null

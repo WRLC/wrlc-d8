@@ -1,0 +1,38 @@
+uuid: 127a9732-e713-4b23-a610-d9a9f3b13cce
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.notifications
+    - field.field.node.committee_post.body
+    - field.field.node.committee_post.feeds_item
+    - field.field.node.committee_post.field_file
+    - field.field.node.committee_post.field_report
+    - field.field.node.committee_post.field_tags
+    - field.field.node.committee_post.group_access
+    - field.field.node.committee_post.group_content_access
+    - field.field.node.committee_post.group_group
+    - field.field.node.committee_post.og_group_ref
+    - node.type.committee_post
+  module:
+    - user
+id: node.committee_post.notifications
+targetEntityType: node
+bundle: committee_post
+mode: notifications
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  feeds_item: true
+  field_file: true
+  field_report: true
+  field_tags: true
+  group_access: true
+  group_content_access: true
+  group_group: true
+  og_group_ref: true

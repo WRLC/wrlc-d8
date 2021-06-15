@@ -1,0 +1,34 @@
+uuid: 2d510f39-1a26-43ce-b03c-682088a18486
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.handbook.body
+    - field.field.node.handbook.comment_node_handbook
+    - field.field.node.handbook.field_file
+    - node.type.handbook
+  module:
+    - text
+    - user
+id: node.handbook.teaser
+targetEntityType: node
+bundle: handbook
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_handbook: true
+  field_file: true

@@ -1,0 +1,27 @@
+uuid: aba15151-5404-4a45-bb76-65f00c9e2477
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.page
+  module:
+    - file
+id: node.page.field_file
+field_name: field_file
+entity_type: node
+bundle: page
+label: File
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'txt doc docx xls xlsx ppt pptx jpg jpeg gif png psd pdf'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

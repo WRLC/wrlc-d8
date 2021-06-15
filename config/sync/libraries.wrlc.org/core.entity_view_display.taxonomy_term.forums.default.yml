@@ -1,4 +1,4 @@
-uuid: 209c93be-6c47-4d6f-bcb0-25e5a5f27e75
+uuid: d34afad0-9836-4beb-b2c7-45bba4ed46ee
 langcode: en
 status: true
 dependencies:
@@ -23,5 +23,3 @@ content:
     label: above
 hidden:
   forum_container: true
-  langcode: true
-  search_api_excerpt: true

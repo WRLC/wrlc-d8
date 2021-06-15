@@ -1,0 +1,8 @@
+uuid: 5562aac5-8b37-44e1-a8a1-19b5a8a5a9dc
+langcode: en
+status: true
+dependencies: {  }
+id: quick-links
+label: 'Quick Links'
+description: 'Menu duplicating links from the quicklinks2 custom block'
+locked: false

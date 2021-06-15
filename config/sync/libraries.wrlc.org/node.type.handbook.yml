@@ -1,0 +1,18 @@
+uuid: 22c569c9-a2f9-4d1e-afd0-18a6b580a76e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:3291:'
+name: 'Book page'
+type: handbook
+description: '<em>Books</em> have a built-in hierarchical navigation. Use for handbooks or tutorials.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

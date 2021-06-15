@@ -1,9 +1,9 @@
-uuid: 697bb8cc-1b8f-4b75-99d7-05f2b8212ac0
+uuid: 2afbbe95-5bec-4453-860b-7c9dc32c5d07
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: 57xYwby291wVcGzCWe2XDljIcig8oFCxe0znV9l9LuI
+  default_config_hash: 3NOiSBMBGHe1kVq0fScDAOZPOvZKcoLIezF5_ORAWsw
 id: admin
 label: 'Admin profile'
 description: 'Configuration for site administrators'
@@ -15,6 +15,7 @@ conf:
   maxheight: 0
   replace: 0
   thumbnail_style: ''
+  thumbnail_grid_style: false
   folders:
     -
       path: .

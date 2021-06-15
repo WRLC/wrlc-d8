@@ -1,0 +1,25 @@
+uuid: 777756a6-99ba-466d-be7f-306535ca56b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - seven
+id: seven_user_login
+theme: seven
+region: content
+weight: 10
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: ''
+  provider: user
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/calendar\n/2016-wrlc-annual-meeting/*\n/2016-wrlc-annual-meeting\n/my-preferences/*\n/project-inventory\n/basecamp\n/service-desk-stats/*\n/metrics/primo-metrics-dashboard\n/textbook-affordability\n/textbook-affordability/*"

@@ -1,0 +1,59 @@
+uuid: 0e2e0632-3504-4ad6-b505-5367b1c49502
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.committee_post.body
+    - field.field.node.committee_post.feeds_item
+    - field.field.node.committee_post.field_file
+    - field.field.node.committee_post.field_report
+    - field.field.node.committee_post.field_tags
+    - field.field.node.committee_post.group_access
+    - field.field.node.committee_post.group_content_access
+    - field.field.node.committee_post.group_group
+    - field.field.node.committee_post.og_group_ref
+    - node.type.committee_post
+  module:
+    - file
+    - text
+    - user
+id: node.committee_post.default
+targetEntityType: node
+bundle: committee_post
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 1
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_file:
+    label: hidden
+    weight: 2
+    type: file_table
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  og_group_ref:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  feeds_item: true
+  field_report: true
+  field_tags: true
+  group_access: true
+  group_content_access: true
+  group_group: true

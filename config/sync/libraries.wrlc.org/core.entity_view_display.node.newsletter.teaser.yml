@@ -1,0 +1,28 @@
+uuid: 6a6a30eb-70ca-439d-bba3-f050822e7a1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.newsletter.body
+    - field.field.node.newsletter.feeds_item
+    - field.field.node.newsletter.field_file
+    - field.field.node.newsletter.field_image_file
+    - node.type.newsletter
+  module:
+    - user
+id: node.newsletter.teaser
+targetEntityType: node
+bundle: newsletter
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  feeds_item: true
+  field_file: true
+  field_image_file: true

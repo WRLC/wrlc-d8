@@ -1,0 +1,23 @@
+uuid: a1c95f8f-de61-4b96-82c3-21ee8780a5da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.group_content_access
+    - node.type.committee
+  module:
+    - options
+id: node.committee.group_content_access
+field_name: group_content_access
+entity_type: node
+bundle: committee
+label: 'Committee content visibility'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

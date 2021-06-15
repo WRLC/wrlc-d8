@@ -1,0 +1,18 @@
+uuid: 795c94bf-cb17-4388-a426-f083a0605a47
+langcode: und
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+    - filter.format.full_html
+template: comment_insert
+label: 'Comment insert'
+description: message_type
+text:
+  -
+    value: '[message:field-comment-ref:author] commented on [message:field-comment-ref:node:title]'
+    format: filtered_html
+  -
+    value: "Hello [message:field-comment-ref:node:author],\r\n\r\n<a href=\"[message:field-comment-ref:author:url]\">[message:field-comment-ref:author:name]</a> has commented on your post <a href=\"[message:field-comment-ref:node:url]\">[message:field-comment-ref:node:title]</a>.\r\n\r\nCheers,\r\nMessage notify example robot\r\n"
+    format: full_html
+settings: {  }

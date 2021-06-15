@@ -1,0 +1,28 @@
+uuid: 93951e44-f40e-4038-9dfa-3c42f92828b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - forum
+    - system
+  theme:
+    - seven
+id: seven_forum_active
+theme: seven
+region: content
+weight: 0
+provider: null
+plugin: forum_active_block
+settings:
+  id: forum_active_block
+  label: ''
+  provider: forum
+  label_display: '0'
+  properties:
+    administrative: '1'
+  block_count: 5
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /alma-implementation

@@ -1,0 +1,14 @@
+uuid: 547fb3fb-61ce-426f-9bda-466f1b098862
+langcode: und
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+template: example_arguments
+label: 'Example - arguments'
+description: message_type
+text:
+  -
+    value: "Hi there!\r\n\r\nThis is an example for arguments in Message. Arguments are great! Why? \r\n<ul>\r\n  <li>Easy to define</li>\r\n  <li>Flexible</li>\r\n</ul>\r\n\r\nFor example: Your are @name and the time is %time. And this is a !link to your profile page.\r\n\r\nCool, no?"
+    format: filtered_html
+settings: {  }

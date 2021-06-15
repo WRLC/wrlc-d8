@@ -1,0 +1,21 @@
+uuid: 76b53b79-0b84-4cef-a2ef-042eeaa845c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.message.field_published
+    - message.template.committee_post_in_organic_group
+id: message.committee_post_in_organic_group.field_published
+field_name: field_published
+entity_type: message
+bundle: committee_post_in_organic_group
+label: Published
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Published
+  off_label: Unpublished
+field_type: boolean

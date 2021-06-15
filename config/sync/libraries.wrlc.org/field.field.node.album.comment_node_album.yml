@@ -1,0 +1,33 @@
+uuid: 13b286b5-5e1c-424a-92a3-caf0b4fada8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment_node_album
+    - node.type.album
+  module:
+    - comment
+id: node.album.comment_node_album
+field_name: comment_node_album
+entity_type: node
+bundle: album
+label: Comments
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    status: 2
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 50
+  anonymous: 0
+  form_location: true
+  preview: 1
+field_type: comment

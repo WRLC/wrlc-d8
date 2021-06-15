@@ -1,10 +1,10 @@
-uuid: d96c88a7-d1bb-4a52-b6eb-03f3bae08f3d
+uuid: fb3c7926-3480-45bc-8015-474ad27ecc41
 langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: sapEi2YDGoI9yQIT_WgIV2vUdQ6DScH0V3fAyTadAL0
 id: admin
-label: Administration
-description: 'Administrative task links'
+label: Management
+description: 'The <em>Management</em> menu contains links for administrative tasks.'
 locked: true

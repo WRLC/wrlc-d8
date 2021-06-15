@@ -1,4 +1,4 @@
-uuid: 67dd4035-7e44-4dd7-b55d-1872c2d601ef
+uuid: 5a18caa3-a07b-4688-ab5f-ab780451f24c
 langcode: en
 status: true
 dependencies:
@@ -15,15 +15,14 @@ bundle: forum
 label: Forums
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
   handler_settings:
-    target_bundles:
-      forums: forums
     sort:
       field: _none
-    auto_create: true
+    target_bundles:
+      forums: forums
+  handler: 'default:taxonomy_term'
 field_type: entity_reference

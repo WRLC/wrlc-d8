@@ -1,13 +1,60 @@
-uuid: 3e530ec5-3583-4e18-bfd0-4af09e780307
+uuid: af64ddd0-7b01-495e-9a67-7e3d7eef7906
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
 id: authenticated
-label: 'Authenticated user'
+label: 'authenticated user'
 weight: 1
 is_admin: false
 permissions:
+  - 'access comments'
   - 'access content'
+  - 'access printfriendly'
+  - 'access user profiles'
+  - 'cancel account'
+  - 'change own username'
+  - 'create blog content'
+  - 'create committee_post content'
+  - 'create committee_post_2 content'
+  - 'create event content'
+  - 'create event_2 content'
+  - 'create forum content'
+  - 'create subscriptions'
+  - 'create video content'
+  - 'delete own blog content'
+  - 'delete own committee_post content'
+  - 'delete own committee_post_2 content'
+  - 'delete own event content'
+  - 'delete own event_2 content'
+  - 'delete own forum content'
+  - 'delete own video content'
+  - 'edit own blog content'
+  - 'edit own comments'
+  - 'edit own committee_post content'
+  - 'edit own committee_post_2 content'
+  - 'edit own event content'
+  - 'edit own event_2 content'
+  - 'edit own forum content'
+  - 'edit own video content'
+  - 'maintain own subscriptions'
+  - 'manage own subscriptions'
   - 'opt-in or out of google analytics tracking'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'subscribe to a group'
+  - 'subscribe to blogs'
+  - 'subscribe to content'
+  - 'subscribe to content type'
+  - 'subscribe to content types'
+  - 'subscribe to taxonomy terms'
+  - 'suspend own subscriptions'
+  - 'use advanced search'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'view date repeats'
+  - 'view faq page'
+  - 'view own unpublished content'
+  - 'view the administration theme'

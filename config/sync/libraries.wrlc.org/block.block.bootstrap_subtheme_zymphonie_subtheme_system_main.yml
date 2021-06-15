@@ -1,0 +1,22 @@
+uuid: ee6f8ee5-d20f-4e2d-91fe-5573642113dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bootstrap_subtheme
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: bootstrap_subtheme_zymphonie_subtheme_system_main
+theme: bootstrap_subtheme
+region: content
+weight: -10
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

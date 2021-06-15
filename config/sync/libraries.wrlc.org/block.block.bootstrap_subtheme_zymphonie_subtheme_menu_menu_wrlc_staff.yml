@@ -1,0 +1,38 @@
+uuid: 50fd0975-6e96-4954-98f4-53d9fcc7709d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-wrlc-staff
+  module:
+    - system
+    - user
+  theme:
+    - bootstrap_subtheme
+id: bootstrap_subtheme_zymphonie_subtheme_menu_menu_wrlc_staff
+theme: bootstrap_subtheme
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'system_menu_block:menu-wrlc-staff'
+settings:
+  id: broken
+  label: 'WRLC Staff Intranet Links'
+  provider: core
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      3: '3'
+      4: '4'
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    negate: false
+  request_path:
+    id: request_path
+    negate: false
+    pages: /staff

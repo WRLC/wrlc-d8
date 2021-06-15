@@ -1,0 +1,43 @@
+uuid: 09ee0e44-e829-4021-bf88-a4885c403340
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.committee.body
+    - field.field.node.committee.field_chair
+    - field.field.node.committee.field_completed
+    - field.field.node.committee.group_access
+    - field.field.node.committee.group_content_access
+    - field.field.node.committee.group_group
+    - field.field.node.committee.og_group_ref
+    - field.field.node.committee.og_roles_permissions
+    - node.type.committee
+  module:
+    - text
+    - user
+id: node.committee.default
+targetEntityType: node
+bundle: committee
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_chair: true
+  field_completed: true
+  group_access: true
+  group_content_access: true
+  group_group: true
+  og_group: true
+  og_group_ref: true
+  og_roles_permissions: true

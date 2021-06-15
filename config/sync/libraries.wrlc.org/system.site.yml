@@ -1,14 +1,15 @@
-uuid: 35b5ed5e-b342-47a2-9c17-86971b610cf2
-name: libraries
-mail: no-reply@wrlc.org
+uuid: 0a70e860-4994-4292-b0f2-15e982703836
+name: 'WRLC Library Staff Intranet'
+mail: shields@wrlc.org
 slogan: ''
 page:
   403: ''
-  404: ''
+  404: /node/1015
   front: /node
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
 default_langcode: en
 _core:
-  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+mail_notification: ''

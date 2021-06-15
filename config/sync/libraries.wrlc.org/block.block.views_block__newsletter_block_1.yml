@@ -1,0 +1,41 @@
+uuid: 52626afa-2b71-4fcf-9f62-96d1c1425a38
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.newsletter
+  module:
+    - context
+    - system
+    - views
+  theme:
+    - bootstrap_subtheme
+id: views_block__newsletter_block_1
+theme: bootstrap_subtheme
+region: sidebar_first
+weight: -11
+provider: null
+plugin: 'views_block:newsletter-block_1'
+settings:
+  id: 'views_block:newsletter-block_1'
+  label: 'Recent Newsletters'
+  provider: views
+  label_display: visible
+  views_label: 'Recent Newsletters'
+  items_per_page: none
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: "/newsletter/*\r\n<front>\r\n"
+    negate: false
+    context_mapping: {  }

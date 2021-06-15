@@ -1,0 +1,28 @@
+uuid: 83015703-41db-46ab-bb2c-d5a6bd7c4b0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.message.field_comment_ref
+    - message.template.comment_insert
+id: message.comment_insert.field_comment_ref
+field_name: field_comment_ref
+entity_type: message
+bundle: comment_insert
+label: 'Comment reference'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:comment'
+  handler_settings:
+    behaviors:
+      views-select-list:
+        status: 0
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles: null
+field_type: entity_reference

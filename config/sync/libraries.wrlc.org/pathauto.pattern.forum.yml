@@ -1,0 +1,14 @@
+uuid: f57367c4-3659-4fc3-b45a-a6a4a6b949f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - forum
+id: forum
+label: Forum
+type: forum
+pattern: '[term:vocabulary]/[term:name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

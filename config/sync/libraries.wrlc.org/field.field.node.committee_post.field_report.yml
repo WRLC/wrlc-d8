@@ -1,0 +1,26 @@
+uuid: 86c30d88-b6c0-4977-997e-6ea659a2b8fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_report
+    - node.type.committee_post
+    - taxonomy.vocabulary.committee_and_task_force_repor
+id: node.committee_post.field_report
+field_name: field_report
+entity_type: node
+bundle: committee_post
+label: 'Committee and Task Force Reports'
+description: '<ul><li>Check if this is a WRLC Committee and Task Force Report to be presented as a final document.  This can include task force final reports, committee annual reports, or other specific documents that should be shared as a finalized document.</li></ul>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      committee_and_task_force_repor: committee_and_task_force_repor
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

@@ -1,0 +1,33 @@
+uuid: d65187f6-d5cd-4869-9d96-5448a251e714
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_group_ref
+    - node.type.committee
+    - node.type.event
+id: node.event.og_group_ref
+field_name: og_group_ref
+entity_type: node
+bundle: event
+label: 'Committee Associated Event'
+description: 'If this event is associated with a Committee, for example, a committee meeting is being scheduled, select the committee below.  Leave blank by default.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      committee: committee
+    sort:
+      field: title
+      direction: ASC
+    membership_type: og_membership_type_default
+    behaviors:
+      og_behavior:
+        status: true
+      views-select-list:
+        status: 0
+field_type: entity_reference

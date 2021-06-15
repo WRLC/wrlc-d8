@@ -1,0 +1,23 @@
+uuid: 06b27ce0-6374-49da-8255-9572cb35fc71
+langcode: en
+status: true
+dependencies: {  }
+id: book_editor
+label: 'Book Editor'
+weight: 7
+is_admin: null
+permissions:
+  - 'add content to books'
+  - 'administer book outlines'
+  - 'create book content'
+  - 'create handbook content'
+  - 'create new books'
+  - 'delete any book content'
+  - 'delete any handbook content'
+  - 'delete own book content'
+  - 'delete own handbook content'
+  - 'edit any book content'
+  - 'edit any handbook content'
+  - 'edit own book content'
+  - 'edit own handbook content'
+  - 'view the administration theme'

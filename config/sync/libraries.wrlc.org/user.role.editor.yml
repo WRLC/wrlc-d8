@@ -1,0 +1,22 @@
+uuid: 3507fa56-b860-43f9-bbd3-8658954434b5
+langcode: en
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+weight: 6
+is_admin: null
+permissions:
+  - 'access printer-friendly version'
+  - 'add content to books'
+  - 'administer book outlines'
+  - 'create new books'
+  - 'create page content'
+  - 'delete any page content'
+  - 'delete any video content'
+  - 'delete own page content'
+  - 'edit any page content'
+  - 'edit any video content'
+  - 'edit own page content'
+  - 'subscribe to a group'
+  - 'view the administration theme'

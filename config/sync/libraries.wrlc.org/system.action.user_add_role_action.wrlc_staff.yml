@@ -1,0 +1,14 @@
+uuid: f2151131-b28b-4068-b95a-91a0a2c2405e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.wrlc_staff
+  module:
+    - user
+id: user_add_role_action.wrlc_staff
+label: 'Add the WRLC Staff role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: wrlc_staff

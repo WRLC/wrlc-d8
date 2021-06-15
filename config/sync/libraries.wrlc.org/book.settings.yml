@@ -1,8 +1,10 @@
 allowed_types:
-  - book
+  - handbook
+  - faq
+  - forum
 block:
   navigation:
-    mode: 'all pages'
-child_type: book
+    mode: 'book pages'
+child_type: handbook
 _core:
   default_config_hash: i-_2TVi6FUEAqBgNRJkt6aaYmiw1k_LTrXzJS6wlZ4U

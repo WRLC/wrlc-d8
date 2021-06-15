@@ -1,0 +1,21 @@
+uuid: 39753a63-d7c6-4841-af90-567462974284
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.message.field_published
+    - message.template.example_og_user_membership
+id: message.example_og_user_membership.field_published
+field_name: field_published
+entity_type: message
+bundle: example_og_user_membership
+label: Published
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Published
+  off_label: Unpublished
+field_type: boolean

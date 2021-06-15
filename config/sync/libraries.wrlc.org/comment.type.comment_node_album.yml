@@ -1,0 +1,8 @@
+uuid: 4b534797-d8cf-4ffd-875a-4a49e6f2b2d6
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_album
+label: 'Album comment'
+target_entity_type_id: node
+description: null

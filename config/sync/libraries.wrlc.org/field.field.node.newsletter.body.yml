@@ -1,0 +1,27 @@
+uuid: 527dde49-d5d1-498d-b471-f7c7a6bf1f3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.newsletter
+  module:
+    - text
+id: node.newsletter.body
+field_name: body
+entity_type: node
+bundle: newsletter
+label: Body
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    summary: ''
+    value: "<p>WRLC Newsletter</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+    format: full_html
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

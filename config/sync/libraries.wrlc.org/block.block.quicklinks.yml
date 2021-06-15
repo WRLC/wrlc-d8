@@ -1,0 +1,41 @@
+uuid: 6c8c6ad0-608f-4657-a470-e5d5536c03bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.quick-links
+  module:
+    - context
+    - system
+  theme:
+    - bootstrap_subtheme
+id: quicklinks
+theme: bootstrap_subtheme
+region: sidebar_first
+weight: -12
+provider: null
+plugin: 'system_menu_block:quick-links'
+settings:
+  id: 'system_menu_block:quick-links'
+  label: 'Quick Links'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  view_inclusion:
+    id: view_inclusion
+    negate: null
+    view_inclusion: {  }
+    context_mapping: {  }
+  request_path_exclusion:
+    id: request_path_exclusion
+    pages: ''
+    negate: null
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: "/project-inventory\r\n/textbook-affordability\r\n/textbook-affordability/*\r\n/2020-wrlc-annual-meeting/*\r\n/2020-wrlc-annual-meeting"
+    negate: true
+    context_mapping: {  }

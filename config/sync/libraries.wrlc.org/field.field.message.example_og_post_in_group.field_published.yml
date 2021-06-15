@@ -1,0 +1,21 @@
+uuid: f3098d6a-5583-4249-a560-18c130aa368c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.message.field_published
+    - message.template.example_og_post_in_group
+id: message.example_og_post_in_group.field_published
+field_name: field_published
+entity_type: message
+bundle: example_og_post_in_group
+label: Published
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Published
+  off_label: Unpublished
+field_type: boolean

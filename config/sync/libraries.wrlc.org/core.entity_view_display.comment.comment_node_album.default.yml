@@ -1,0 +1,38 @@
+uuid: 2f995fb6-1734-4f1c-a1a7-42fd3cce3776
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_album
+    - field.field.comment.comment_node_album.comment_body
+    - field.field.comment.comment_node_album.og_group_ref
+    - field.field.comment.comment_node_album.og_roles_permissions
+  module:
+    - options
+    - text
+id: comment.comment_node_album.default
+targetEntityType: comment
+bundle: comment_node_album
+mode: default
+content:
+  comment_body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  og_roles_permissions:
+    label: above
+    weight: 2
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  og_group_ref: true
