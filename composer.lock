@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a6c31d8e2bbf778365bdd686fead60f",
+    "content-hash": "de3c2acb23d158f4747804aa509579e9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8262,6 +8262,50 @@
                 "source": "https://git.drupalcode.org/project/views_bulk_operations/-/tree/8.x-3.x",
                 "issues": "https://www.drupal.org/project/issues/views_bulk_operations?version=8.x",
                 "docs": "https://www.drupal.org/docs/8/modules/views-bulk-operations-vbo"
+            }
+        },
+        {
+            "name": "drupal/views_contact_form",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_contact_form.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_contact_form-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "9c8a83c3ee418238a5ac49cd075496394f4b7a22"
+            },
+            "require": {
+                "drupal/core": "^8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1542310681",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Pol",
+                    "homepage": "https://www.drupal.org/user/47194"
+                }
+            ],
+            "description": "Views Contact Form",
+            "homepage": "https://www.drupal.org/project/views_contact_form",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_contact_form"
             }
         },
         {
