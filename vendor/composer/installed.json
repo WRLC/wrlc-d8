@@ -399,20 +399,6 @@
             "certificate",
             "ssl",
             "tls"
-        ],
-        "funding": [
-            {
-                "url": "https://packagist.com",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/composer",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -4134,17 +4120,6 @@
         "name": "drupal/core-dev",
         "version": "8.9.16",
         "version_normalized": "8.9.16.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/drupal/core-dev.git",
-            "reference": "36370b3f42911c09ffb35f08fc72853d20e6efd7"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/drupal/core-dev/zipball/36370b3f42911c09ffb35f08fc72853d20e6efd7",
-            "reference": "36370b3f42911c09ffb35f08fc72853d20e6efd7",
-            "shasum": ""
-        },
         "require": {
             "behat/mink": "^1.8",
             "behat/mink-goutte-driver": "^1.2",
@@ -4179,18 +4154,18 @@
     },
     {
         "name": "drupal/ctools",
-        "version": "3.6.0",
-        "version_normalized": "3.6.0.0",
+        "version": "3.7.0",
+        "version_normalized": "3.7.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/ctools.git",
-            "reference": "8.x-3.6"
+            "reference": "8.x-3.7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.6.zip",
-            "reference": "8.x-3.6",
-            "shasum": "9a849bb6ac9f4d02603d04b3265b35b7329e1ef5"
+            "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.7.zip",
+            "reference": "8.x-3.7",
+            "shasum": "b11c0981a1d2ab3cc9e8e614a337d8e2a2a70c0e"
         },
         "require": {
             "drupal/core": "^8.8 || ^9"
@@ -4198,8 +4173,8 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "8.x-3.6",
-                "datestamp": "1620838181",
+                "version": "8.x-3.7",
+                "datestamp": "1623860918",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -15066,20 +15041,6 @@
             "ctype",
             "polyfill",
             "portable"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -15145,20 +15106,6 @@
             "polyfill",
             "portable",
             "shim"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -15231,20 +15178,6 @@
             "polyfill",
             "portable",
             "shim"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -15314,20 +15247,6 @@
             "polyfill",
             "portable",
             "shim"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -15393,37 +15312,12 @@
             "polyfill",
             "portable",
             "shim"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
         "name": "symfony/polyfill-php56",
         "version": "v1.20.0",
         "version_normalized": "1.20.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/polyfill-php56.git",
-            "reference": "54b8cd7e6c1643d78d011f3be89f3ef1f9f4c675"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/54b8cd7e6c1643d78d011f3be89f3ef1f9f4c675",
-            "reference": "54b8cd7e6c1643d78d011f3be89f3ef1f9f4c675",
-            "shasum": ""
-        },
         "require": {
             "php": ">=7.1"
         },
@@ -15465,17 +15359,6 @@
         "name": "symfony/polyfill-php70",
         "version": "v1.20.0",
         "version_normalized": "1.20.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/polyfill-php70.git",
-            "reference": "5f03a781d984aae42cebd18e7912fa80f02ee644"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/5f03a781d984aae42cebd18e7912fa80f02ee644",
-            "reference": "5f03a781d984aae42cebd18e7912fa80f02ee644",
-            "shasum": ""
-        },
         "require": {
             "php": ">=7.1"
         },
@@ -15572,20 +15455,6 @@
             "polyfill",
             "portable",
             "shim"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
