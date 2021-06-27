@@ -8186,20 +8186,21 @@
     },
     {
         "name": "drupal/search_api_solr",
-        "version": "4.1.11",
-        "version_normalized": "4.1.11.0",
+        "version": "4.2.0",
+        "version_normalized": "4.2.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/search_api_solr.git",
-            "reference": "4.1.11"
+            "reference": "4.2.0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.1.11.zip",
-            "reference": "4.1.11",
-            "shasum": "aa8b4cdb8255439e6808de7f5694f6a8a0ccdaac"
+            "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.2.0.zip",
+            "reference": "4.2.0",
+            "shasum": "ebdd5e5fdb0169207f544e2e5600bb8bc566f420"
         },
         "require": {
+            "composer/semver": "^1.0|^3.0",
             "consolidation/annotated-command": "^2.12|^4.1",
             "drupal/core": "^8.8 || ^9",
             "drupal/search_api": "~1.17",
@@ -8208,8 +8209,8 @@
             "ext-simplexml": "*",
             "laminas/laminas-stdlib": "^3.2",
             "maennchen/zipstream-php": "^1.2|^2.0",
-            "php": "^7.2|^8.0",
-            "solarium/solarium": "^6.0.4|^6.1.0"
+            "php": "^7.3|^8.0",
+            "solarium/solarium": "^6.1.3"
         },
         "conflict": {
             "drupal/acquia_search_solr": "<1.0.0-beta8",
@@ -8229,13 +8230,14 @@
             "drupal/facets": "Provides facetted search.",
             "drupal/search_api_autocomplete": "Provides auto complete for search boxes.",
             "drupal/search_api_location": "Provides location searches.",
+            "drupal/search_api_solr_nlp": "Highly recommended! Provides Solr field types based on natural language processing (NLP).",
             "drupal/search_api_spellcheck": "Provides spell checking and 'Did You Mean?'."
         },
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "4.1.11",
-                "datestamp": "1612532147",
+                "version": "4.2.0",
+                "datestamp": "1624552136",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -11085,17 +11087,17 @@
     },
     {
         "name": "laminas/laminas-zendframework-bridge",
-        "version": "1.2.0",
-        "version_normalized": "1.2.0.0",
+        "version": "1.3.0",
+        "version_normalized": "1.3.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/laminas/laminas-zendframework-bridge.git",
-            "reference": "6cccbddfcfc742eb02158d6137ca5687d92cee32"
+            "reference": "13af2502d9bb6f7d33be2de4b51fb68c6cdb476e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/6cccbddfcfc742eb02158d6137ca5687d92cee32",
-            "reference": "6cccbddfcfc742eb02158d6137ca5687d92cee32",
+            "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/13af2502d9bb6f7d33be2de4b51fb68c6cdb476e",
+            "reference": "13af2502d9bb6f7d33be2de4b51fb68c6cdb476e",
             "shasum": ""
         },
         "require": {
@@ -11107,7 +11109,7 @@
             "squizlabs/php_codesniffer": "^3.5",
             "vimeo/psalm": "^4.6"
         },
-        "time": "2021-02-25T21:54:58+00:00",
+        "time": "2021-06-24T12:49:22+00:00",
         "type": "library",
         "extra": {
             "laminas": {
@@ -13757,17 +13759,17 @@
     },
     {
         "name": "solarium/solarium",
-        "version": "6.1.1",
-        "version_normalized": "6.1.1.0",
+        "version": "6.1.3",
+        "version_normalized": "6.1.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/solariumphp/solarium.git",
-            "reference": "a161014dea4799c46adeb542d0a25ec334dcccc2"
+            "reference": "f6e18891368400b6a15d8863175310997792848c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/solariumphp/solarium/zipball/a161014dea4799c46adeb542d0a25ec334dcccc2",
-            "reference": "a161014dea4799c46adeb542d0a25ec334dcccc2",
+            "url": "https://api.github.com/repos/solariumphp/solarium/zipball/f6e18891368400b6a15d8863175310997792848c",
+            "reference": "f6e18891368400b6a15d8863175310997792848c",
             "shasum": ""
         },
         "require": {
@@ -13786,11 +13788,11 @@
             "phpstan/extension-installer": "^1.0",
             "phpstan/phpstan": "^0.12",
             "phpstan/phpstan-phpunit": "^0.12",
-            "phpunit/phpunit": "^8.5 || ^9.4",
+            "phpunit/phpunit": "^9.5",
             "roave/security-advisories": "dev-master",
             "symfony/event-dispatcher": "^4.3 || ^5.0"
         },
-        "time": "2021-02-05T13:03:56+00:00",
+        "time": "2021-06-24T15:04:42+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
