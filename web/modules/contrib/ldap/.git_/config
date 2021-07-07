@@ -3,6 +3,8 @@
 	filemode = true
 	bare = false
 	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
 [remote "origin"]
 	url = https://git.drupalcode.org/project/ldap.git
 	fetch = +refs/heads/*:refs/remotes/origin/*

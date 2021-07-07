@@ -118,6 +118,7 @@ class QueryController {
 
       if ($this->ldapBridge->bind()) {
 
+        $base_dn_results = [];
         foreach ($this->query->getProcessedBaseDns() as $base_dn) {
           $options = [
             'filter' => $this->query->getProcessedAttributes(),
@@ -125,6 +126,8 @@ class QueryController {
             'timeout' => $this->query->getTimeLimit(),
             'deref' => $this->query->getDereference(),
             'scope' => $this->query->getScope(),
+            // @todo Make this configurable on query or, ideally, server.
+            'pageSize' => 1000,
           ];
 
           try {
@@ -140,10 +143,10 @@ class QueryController {
           }
 
           if ($ldap_response) {
-            // @todo $this->results[] = $ldap_response should suffice?
-            $this->results = array_merge($this->results, $ldap_response);
+            $base_dn_results[] = $ldap_response;
           }
         }
+        $this->results = array_merge(...$base_dn_results);
       }
     }
     else {
