@@ -5693,18 +5693,18 @@
     },
     {
         "name": "drupal/fontawesome",
-        "version": "2.18.0",
-        "version_normalized": "2.18.0.0",
+        "version": "2.19.0",
+        "version_normalized": "2.19.0.0",
         "source": {
             "type": "git",
             "url": "https://git.drupalcode.org/project/fontawesome.git",
-            "reference": "8.x-2.18"
+            "reference": "8.x-2.19"
         },
         "dist": {
             "type": "zip",
-            "url": "https://ftp.drupal.org/files/projects/fontawesome-8.x-2.18.zip",
-            "reference": "8.x-2.18",
-            "shasum": "6154b2dd86622cec3a2eac006dcb66a1def9a24a"
+            "url": "https://ftp.drupal.org/files/projects/fontawesome-8.x-2.19.zip",
+            "reference": "8.x-2.19",
+            "shasum": "7b921a80f0811d8dcfb0c390157506cd5724a037"
         },
         "require": {
             "drupal/core": "^8 || ^9"
@@ -5712,8 +5712,8 @@
         "type": "drupal-module",
         "extra": {
             "drupal": {
-                "version": "8.x-2.18",
-                "datestamp": "1614784477",
+                "version": "8.x-2.19",
+                "datestamp": "1623794225",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -10922,17 +10922,17 @@
     },
     {
         "name": "laminas/laminas-escaper",
-        "version": "2.7.0",
-        "version_normalized": "2.7.0.0",
+        "version": "2.8.0",
+        "version_normalized": "2.8.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/laminas/laminas-escaper.git",
-            "reference": "5e04bc5ae5990b17159d79d331055e2c645e5cc5"
+            "reference": "2d6dce99668b413610e9544183fa10392437f542"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/laminas/laminas-escaper/zipball/5e04bc5ae5990b17159d79d331055e2c645e5cc5",
-            "reference": "5e04bc5ae5990b17159d79d331055e2c645e5cc5",
+            "url": "https://api.github.com/repos/laminas/laminas-escaper/zipball/2d6dce99668b413610e9544183fa10392437f542",
+            "reference": "2d6dce99668b413610e9544183fa10392437f542",
             "shasum": ""
         },
         "require": {
@@ -10943,7 +10943,7 @@
             "zendframework/zend-escaper": "^2.6.1"
         },
         "require-dev": {
-            "laminas/laminas-coding-standard": "~1.0.0",
+            "laminas/laminas-coding-standard": "~2.3.0",
             "phpunit/phpunit": "^9.3",
             "psalm/plugin-phpunit": "^0.12.2",
             "vimeo/psalm": "^3.16"
@@ -10952,7 +10952,7 @@
             "ext-iconv": "*",
             "ext-mbstring": "*"
         },
-        "time": "2020-11-17T21:26:43+00:00",
+        "time": "2021-06-26T14:26:08+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -11041,17 +11041,17 @@
     },
     {
         "name": "laminas/laminas-stdlib",
-        "version": "3.3.1",
-        "version_normalized": "3.3.1.0",
+        "version": "3.4.0",
+        "version_normalized": "3.4.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/laminas/laminas-stdlib.git",
-            "reference": "d81c7ffe602ed0e6ecb18691019111c0f4bf1efe"
+            "reference": "e89c2268c9cad25099f562f7f015c28c5dd383c9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/d81c7ffe602ed0e6ecb18691019111c0f4bf1efe",
-            "reference": "d81c7ffe602ed0e6ecb18691019111c0f4bf1efe",
+            "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/e89c2268c9cad25099f562f7f015c28c5dd383c9",
+            "reference": "e89c2268c9cad25099f562f7f015c28c5dd383c9",
             "shasum": ""
         },
         "require": {
@@ -11062,11 +11062,13 @@
             "zendframework/zend-stdlib": "^3.2.1"
         },
         "require-dev": {
-            "laminas/laminas-coding-standard": "~1.0.0",
+            "laminas/laminas-coding-standard": "~2.3.0",
             "phpbench/phpbench": "^0.17.1",
-            "phpunit/phpunit": "~9.3.7"
+            "phpunit/phpunit": "~9.3.7",
+            "psalm/plugin-phpunit": "^0.16.0",
+            "vimeo/psalm": "^4.7"
         },
-        "time": "2020-11-19T20:18:59+00:00",
+        "time": "2021-06-28T21:37:31+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -11269,17 +11271,17 @@
     },
     {
         "name": "masterminds/html5",
-        "version": "2.7.4",
-        "version_normalized": "2.7.4.0",
+        "version": "2.7.5",
+        "version_normalized": "2.7.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/Masterminds/html5-php.git",
-            "reference": "9227822783c75406cfe400984b2f095cdf03d417"
+            "reference": "f640ac1bdddff06ea333a920c95bbad8872429ab"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/9227822783c75406cfe400984b2f095cdf03d417",
-            "reference": "9227822783c75406cfe400984b2f095cdf03d417",
+            "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/f640ac1bdddff06ea333a920c95bbad8872429ab",
+            "reference": "f640ac1bdddff06ea333a920c95bbad8872429ab",
             "shasum": ""
         },
         "require": {
@@ -11289,9 +11291,9 @@
             "php": ">=5.3.0"
         },
         "require-dev": {
-            "phpunit/phpunit": "^4.8.35"
+            "phpunit/phpunit": "^4.8.35 || ^5.7.21 || ^6 || ^7"
         },
-        "time": "2020-10-01T13:52:52+00:00",
+        "time": "2021-07-01T14:25:37+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
